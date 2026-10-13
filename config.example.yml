@@ -1,0 +1,58 @@
+# Copia este archivo como config.yml y reemplaza los ejemplos con los links reales.
+#
+# Cada fuente puede apuntar a una pagina de busqueda/listado de una inmobiliaria.
+# Si la pagina muestra datos en tarjetas, usa listingSelector y fields.
+# Si los datos solo estan en la publicacion individual, agrega detailFields.
+#
+# Consejo: los selectores se pueden copiar desde el inspector del navegador.
+
+request:
+  delayMs: 1200
+  timeoutMs: 20000
+  userAgent: "Mozilla/5.0 (compatible; CasasCrawler/0.1; +https://example.local)"
+
+excel:
+  sheetName: "Publicaciones"
+
+filters:
+  price:
+    min: 50000
+    max: 250000
+    currency: "USD"
+  propertyTypes:
+    - "Casa"
+  city: "Mar del Plata"
+  neighborhoods:
+    - "Stella Maris"
+    - "Los Troncos"
+
+sources:
+  - name: "Inmobiliaria de ejemplo"
+    enabled: true
+    startUrls:
+      - "https://www.ejemplo.com/propiedades"
+    pagination:
+      nextSelector: "a[rel='next'], a.next"
+      maxPages: 3
+    listingSelector: "article, .property-card, .listing-card"
+    linkSelector: "a[href]"
+    publicationUrlRegex: "/propiedad|/inmueble|/venta|/alquiler"
+    filters:
+      price:
+        min: 50000
+        max: 250000
+        currency: "USD"
+    fields:
+      address: ".address, .direccion, [data-testid='address']"
+      area: ".area, .metros, [data-testid='area']"
+      price: ".price, .precio, [data-testid='price']"
+      propertyType: ".property-type, .tipo"
+      title: "h2, .title, .titulo"
+      summary: ".description, .descripcion"
+    detailFields:
+      address: "h1, .address, .direccion"
+      area: ".area, .metros, [data-testid='area']"
+      price: ".price, .precio, [data-testid='price']"
+      propertyType: ".property-type, .tipo"
+      title: "h1, .title, .titulo"
+      summary: ".description, .descripcion"

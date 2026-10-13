@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casas Mar del Plata</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Casas Mar del Plata</h1>
+        <p id="status">Cargando publicaciones...</p>
+      </div>
+      <a class="refresh" href="./publicaciones.json" target="_blank" rel="noreferrer">JSON</a>
+    </header>
+
+    <main>
+      <section class="filters" aria-label="Filtros">
+        <label>
+          Buscar
+          <input id="search" type="search" placeholder="Barrio, calle o inmobiliaria">
+        </label>
+        <label>
+          Precio máximo
+          <input id="maxPrice" type="number" min="0" step="1000" placeholder="USD">
+        </label>
+        <label>
+          Inmobiliaria
+          <select id="agency">
+            <option value="">Todas</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="summary" aria-live="polite">
+        <strong id="resultCount">0</strong>
+        <span>publicaciones</span>
+      </section>
+
+      <section id="results" class="results" aria-label="Publicaciones"></section>
+      <p id="empty" class="empty" hidden>No hay publicaciones para esos filtros.</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

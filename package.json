@@ -1,0 +1,24 @@
+{
+  "name": "casas-crawler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Crawler configurable para publicaciones inmobiliarias y exportacion a Excel.",
+  "scripts": {
+    "crawl": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx",
+    "crawl:web": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx --json-output web/publicaciones.json",
+    "crawl:daily": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx --daily",
+    "crawl:example": "node src/cli.js --config config.example.yml --output outputs/publicaciones.xlsx",
+    "build:web": "npm run crawl:web",
+    "check": "node --check src/cli.js && node --check src/crawler.js && node --check src/excel.js && node --check src/json.js && node --check src/utils.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "exceljs": "^4.4.0",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
