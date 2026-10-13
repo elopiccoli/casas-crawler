@@ -33,7 +33,7 @@ async function runOnce(configPath, outputPath) {
 
   await writeListingsWorkbook(listings, outputPath, config.excel || {});
   if (args["json-output"]) {
-    await writeListingsJson(listings, path.resolve(args["json-output"]));
+    await writeListingsJson(listings, path.resolve(args["json-output"]), config);
   }
   console.log(`Exportadas ${listings.length} publicaciones a ${outputPath}`);
   if (args["json-output"]) console.log(`JSON actualizado en ${path.resolve(args["json-output"])}`);

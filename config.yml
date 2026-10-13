@@ -14,6 +14,7 @@ filters:
   propertyTypes:
     - "Casa"
     - "Chalet"
+    - "Departamento"
   city: "Mar del Plata"
   neighborhoods:
     - "Stella Maris"

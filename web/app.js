@@ -3,6 +3,15 @@ const state = {
   filtered: []
 };
 
+const configuredNeighborhoods = [
+  "Stella Maris",
+  "Loma de Stella Maris",
+  "Los Troncos",
+  "Guemes",
+  "Playa Grande",
+  "Divino Rostro"
+];
+
 const elements = {
   status: document.querySelector("#status"),
   resultCount: document.querySelector("#resultCount"),
@@ -10,6 +19,9 @@ const elements = {
   empty: document.querySelector("#empty"),
   search: document.querySelector("#search"),
   maxPrice: document.querySelector("#maxPrice"),
+  neighborhood: document.querySelector("#neighborhood"),
+  operation: document.querySelector("#operation"),
+  propertyType: document.querySelector("#propertyType"),
   agency: document.querySelector("#agency")
 };
 
@@ -22,6 +34,8 @@ async function init() {
     const data = await response.json();
 
     state.listings = Array.isArray(data.listings) ? data.listings : [];
+    hydrateDerivedFields(state.listings);
+    populateNeighborhoods(state.listings);
     populateAgencies(state.listings);
     bindFilters();
     render();
@@ -35,8 +49,33 @@ async function init() {
 }
 
 function bindFilters() {
-  for (const element of [elements.search, elements.maxPrice, elements.agency]) {
+  for (const element of [
+    elements.search,
+    elements.maxPrice,
+    elements.neighborhood,
+    elements.operation,
+    elements.propertyType,
+    elements.agency
+  ]) {
     element.addEventListener("input", render);
+  }
+}
+
+function hydrateDerivedFields(listings) {
+  for (const item of listings) {
+    item.barrio = item.barrio || inferNeighborhood(item);
+    item.operacion = item.operacion || inferOperation(item);
+  }
+}
+
+function populateNeighborhoods(listings) {
+  const detected = listings.map((item) => item.barrio).filter(Boolean);
+  const neighborhoods = [...new Set([...configuredNeighborhoods, ...detected])].sort((a, b) => a.localeCompare(b, "es"));
+  for (const neighborhood of neighborhoods) {
+    const option = document.createElement("option");
+    option.value = neighborhood;
+    option.textContent = neighborhood;
+    elements.neighborhood.appendChild(option);
   }
 }
 
@@ -53,12 +92,18 @@ function populateAgencies(listings) {
 function render() {
   const query = normalize(elements.search.value);
   const maxPrice = Number(elements.maxPrice.value || 0);
+  const neighborhood = elements.neighborhood.value;
+  const operation = elements.operation.value;
+  const propertyType = elements.propertyType.value;
   const agency = elements.agency.value;
 
   state.filtered = state.listings.filter((item) => {
-    const text = normalize([item.inmobiliaria, item.direccion, item.titulo, item.resumen].join(" "));
+    const text = normalize([item.inmobiliaria, item.direccion, item.barrio, item.titulo, item.resumen].join(" "));
     if (query && !text.includes(query)) return false;
     if (agency && item.inmobiliaria !== agency) return false;
+    if (neighborhood && item.barrio !== neighborhood) return false;
+    if (operation && item.operacion !== operation) return false;
+    if (propertyType && !matchesPropertyType(item, propertyType)) return false;
     if (maxPrice && Number(item.precio || 0) > maxPrice) return false;
     return true;
   });
@@ -80,6 +125,8 @@ function createListingElement(item) {
   meta.className = "meta";
   meta.append(
     pill(item.inmobiliaria),
+    pill(item.barrio || "Barrio s/d"),
+    pill(item.operacion || "Operación s/d"),
     pill(item.metros ? `${formatNumber(item.metros)} m²` : "m² s/d"),
     pill(item.tipo || "Casa")
   );
@@ -130,4 +177,23 @@ function normalize(value) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
+}
+
+function inferNeighborhood(item) {
+  const text = normalize([item.direccion, item.titulo, item.resumen, item.link].join(" "));
+  return configuredNeighborhoods.find((neighborhood) => text.includes(normalize(neighborhood))) || "";
+}
+
+function inferOperation(item) {
+  const text = normalize([item.operacion, item.titulo, item.resumen, item.link].join(" "));
+  if (text.includes("alquiler")) return "Alquiler";
+  if (text.includes("venta") || text.includes("comprar")) return "Venta";
+  return "";
+}
+
+function matchesPropertyType(item, propertyType) {
+  const text = normalize([item.tipo, item.titulo, item.link].join(" "));
+  if (propertyType === "Casa") return text.includes("casa") || text.includes("chalet");
+  if (propertyType === "Departamento") return text.includes("departamento");
+  return true;
 }
