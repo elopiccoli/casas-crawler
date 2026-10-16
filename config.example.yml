@@ -14,13 +14,6 @@ request:
 excel:
   sheetName: "Publicaciones"
 
-filters:
-  price:
-    min: 50000
-    max: 250000
-    currency: "USD"
-  city: "Mar del Plata"
-
 sources:
   - name: "Inmobiliaria de ejemplo"
     enabled: true
@@ -32,11 +25,6 @@ sources:
     listingSelector: "article, .property-card, .listing-card"
     linkSelector: "a[href]"
     publicationUrlRegex: "/propiedad|/inmueble|/venta|/alquiler"
-    filters:
-      price:
-        min: 50000
-        max: 250000
-        currency: "USD"
     fields:
       address: ".address, .direccion, [data-testid='address']"
       area: ".area, .metros, [data-testid='area']"
