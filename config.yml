@@ -32,31 +32,6 @@ sources:
       title: "h1, .prop-title"
       summary: ".description, .property-description"
 
-  - name: "Pernice Propiedades"
-    startUrls:
-      - "https://www.pernicepropiedades.com/Venta"
-    pagination:
-      maxPages: 5
-      pageParam: "p"
-      firstPage: 2
-      params:
-        o: "2,2"
-    listingSelector: "a.item.card-prop-short-wide[href^='/p/']"
-    publicationUrlRegex: "/p/"
-    fields:
-      address: "p:has(.flaticon-placeholder)"
-      area: ".prop_details li"
-      price: ".price-list-tag"
-      propertyType: ".text-thm"
-      title: ".prop-title"
-      summary: ".description"
-    detailFields:
-      address: "p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, .property-detail li, .property-features li"
-      price: ".price, .price-list-tag, .operation-price"
-      title: "h1, .prop-title"
-      summary: ".description, .property-description"
-
   - name: "Suarez Propiedades"
     startUrls:
       - "https://www.suarezmardelplata.com/Venta"
