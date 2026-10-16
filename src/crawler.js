@@ -53,6 +53,7 @@ async function crawlSource(source, requestConfig, globalFilters) {
 
       const html = await fetchHtml(pageUrl, requestConfig);
       const $ = cheerio.load(html);
+      removeNonContentNodes($);
 
       for (const cardListing of extractListingsFromPage($, pageUrl, source)) {
         if (!detailUrls.has(cardListing.url)) detailUrls.set(cardListing.url, cardListing);
@@ -176,6 +177,7 @@ async function crawlDetail(url, source, requestConfig) {
   const html = await fetchHtml(url, requestConfig);
   const $ = cheerio.load(html);
   const jsonLdListing = extractJsonLdListing($);
+  removeNonContentNodes($);
   const title = pickText($, $.root(), source.detailFields.title);
   const summary = pickText($, $.root(), source.detailFields.summary);
   const rawText = normalizeText($.root().text());
@@ -192,6 +194,10 @@ async function crawlDetail(url, source, requestConfig) {
     summary,
     rawText
   };
+}
+
+function removeNonContentNodes($) {
+  $("script, style, noscript, iframe, svg, template").remove();
 }
 
 async function fetchHtml(url, requestConfig) {
