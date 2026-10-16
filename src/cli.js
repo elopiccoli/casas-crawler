@@ -27,6 +27,19 @@ do {
 
 async function runOnce(configPath, outputPath) {
   const config = yaml.load(await readFile(configPath, "utf8"));
+  const operation = process.env.CRAWLER_OPERATION?.trim();
+  const propertyType = process.env.CRAWLER_PROPERTY_TYPE?.trim();
+
+  if (operation && operation !== "Todos") {
+    config.filters ||= {};
+    config.filters.operation = operation;
+  }
+
+  if (propertyType && propertyType !== "Todos") {
+    config.filters ||= {};
+    config.filters.propertyTypes = [propertyType];
+  }
+
   const listings = await crawlSources(config, {
     logger: (message) => console.log(message)
   });
