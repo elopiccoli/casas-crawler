@@ -1,5 +1,7 @@
 # Casas crawler
 
+[🌐 Abrir el sitio web con los resultados](https://casas-crawler.web.app)
+
 Crawler configurable para monitorear publicaciones inmobiliarias y exportarlas a Excel con:
 
 - `inmobiliaria`
