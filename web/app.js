@@ -63,13 +63,15 @@ function bindFilters() {
 
 function hydrateDerivedFields(listings) {
   for (const item of listings) {
-    item.barrio = item.barrio || inferNeighborhood(item);
+    item.zona = item.zona || item.barrio || inferNeighborhood(item);
+    item.barrio = item.barrio || item.zona;
     item.operacion = item.operacion || inferOperation(item);
+    item.ambientes = item.ambientes ?? null;
   }
 }
 
 function populateNeighborhoods(listings) {
-  const detected = listings.map((item) => item.barrio).filter(Boolean);
+  const detected = listings.map((item) => item.zona || item.barrio).filter(Boolean);
   const neighborhoods = [...new Set([...configuredNeighborhoods, ...detected])].sort((a, b) => a.localeCompare(b, "es"));
   for (const neighborhood of neighborhoods) {
     const option = document.createElement("option");
@@ -98,10 +100,10 @@ function render() {
   const agency = elements.agency.value;
 
   state.filtered = state.listings.filter((item) => {
-    const text = normalize([item.inmobiliaria, item.direccion, item.barrio, item.titulo, item.resumen].join(" "));
+    const text = normalize([item.inmobiliaria, item.direccion, item.zona, item.barrio, item.titulo, item.resumen].join(" "));
     if (query && !text.includes(query)) return false;
     if (agency && item.inmobiliaria !== agency) return false;
-    if (neighborhood && item.barrio !== neighborhood) return false;
+    if (neighborhood && (item.zona || item.barrio) !== neighborhood) return false;
     if (operation && item.operacion !== operation) return false;
     if (propertyType && !matchesPropertyType(item, propertyType)) return false;
     if (maxPrice && Number(item.precio || 0) > maxPrice) return false;
@@ -125,9 +127,10 @@ function createListingElement(item) {
   meta.className = "meta";
   meta.append(
     pill(item.inmobiliaria),
-    pill(item.barrio || "Barrio s/d"),
+    pill(item.zona || item.barrio || "Barrio s/d"),
     pill(item.operacion || "Operación s/d"),
-    pill(item.metros ? `${formatNumber(item.metros)} m²` : "m² s/d"),
+    pill(item.ambientes ? `${formatNumber(item.ambientes)} ambientes` : "Ambientes s/d"),
+    pill(item.metros_cuadrados || item.metros ? `${formatNumber(item.metros_cuadrados || item.metros)} m²` : "m² s/d"),
     pill(item.tipo || "Casa")
   );
 
