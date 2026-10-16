@@ -19,11 +19,6 @@ on:
           - Todos
           - Casa
           - Departamento
-      neighborhoods:
-        description: "Barrios separados por coma, o Todos"
-        required: true
-        type: string
-        default: "Todos"
   schedule:
     - cron: "0 10 * * *"
 
@@ -51,7 +46,6 @@ jobs:
         env:
           CRAWLER_OPERATION: ${{ inputs.operation }}
           CRAWLER_PROPERTY_TYPE: ${{ inputs.property_type }}
-          CRAWLER_NEIGHBORHOODS: ${{ inputs.neighborhoods }}
         run: npm run crawl:web
 
       - name: Publicar en Firebase Hosting
