@@ -133,6 +133,10 @@ export function matchesFilters(listing, filters = {}) {
     return false;
   }
 
+  if (filters.operation && normalizeForSearch(listing.operation) !== normalizeForSearch(filters.operation)) {
+    return false;
+  }
+
   if (filters.propertyTypes?.length && !matchesAny(propertyText, filters.propertyTypes)) {
     return false;
   }
