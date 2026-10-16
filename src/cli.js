@@ -31,7 +31,10 @@ async function runOnce(configPath, outputPath) {
     logger: (message) => console.log(message)
   });
 
-  await writeListingsWorkbook(listings, outputPath, config.excel || {});
+  await writeListingsWorkbook(listings, outputPath, {
+    ...(config.excel || {}),
+    neighborhoods: config.filters?.neighborhoods || []
+  });
   if (args["json-output"]) {
     await writeListingsJson(listings, path.resolve(args["json-output"]), config);
   }
