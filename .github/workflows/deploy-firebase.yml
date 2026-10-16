@@ -2,6 +2,23 @@ name: Actualizar publicaciones y publicar web
 
 on:
   workflow_dispatch:
+    inputs:
+      operation:
+        description: "Filtrar publicaciones por operación"
+        required: true
+        type: choice
+        options:
+          - Todos
+          - Venta
+          - Alquiler
+      property_type:
+        description: "Filtrar publicaciones por tipo"
+        required: true
+        type: choice
+        options:
+          - Todos
+          - Casa
+          - Departamento
   schedule:
     - cron: "0 10 * * *"
 
@@ -26,6 +43,9 @@ jobs:
         run: npm ci
 
       - name: Generar publicaciones
+        env:
+          CRAWLER_OPERATION: ${{ inputs.operation }}
+          CRAWLER_PROPERTY_TYPE: ${{ inputs.property_type }}
         run: npm run crawl:web
 
       - name: Publicar en Firebase Hosting
