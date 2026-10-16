@@ -1,5 +1,15 @@
 import * as cheerio from "cheerio";
-import { absolutizeUrl, matchesFilters, normalizeText, parseArea, parsePrice, sleep, uniqueBy } from "./utils.js";
+import {
+  absolutizeUrl,
+  inferOperation,
+  matchesFilters,
+  normalizeText,
+  parseArea,
+  parsePrice,
+  parseRooms,
+  sleep,
+  uniqueBy
+} from "./utils.js";
 
 export async function crawlSources(config, options = {}) {
   const requestConfig = config.request || {};
@@ -19,7 +29,7 @@ export async function crawlSources(config, options = {}) {
     }
   }
 
-  return uniqueBy(listings, (listing) => listing.url);
+  return uniqueBy(listings, (listing) => `${listing.url}|${listing.operation}`);
 }
 
 async function crawlSource(source, requestConfig, globalFilters) {
@@ -89,36 +99,43 @@ async function crawlRoblesCatalog(source, requestConfig, globalFilters) {
     const items = Array.isArray(catalog?.data) ? catalog.data : [];
 
     for (const item of items) {
-      const operation = (item.operations || []).find((entry) => /venta/i.test(entry.type || ""))
-        || item.operations?.[0]
-        || {};
+      const operations = Array.isArray(item.operations) && item.operations.length
+        ? item.operations
+        : [{}];
       const url = absolutizeUrl(`/propiedades/${item.slug}`, source.siteUrl || startUrl);
-      const priceRaw = operation.price ? `${operation.currency || ""} ${Math.trunc(Number(operation.price))}` : "";
       const address = [
         item.address,
         item.location?.name,
         filters.city || source.city
       ].filter(Boolean).join(", ");
 
-      const listing = finalizeListing(source.name, url, {
-        address,
-        areaRaw: item.surface ? `${Number(item.surface)} m2` : "",
-        priceRaw,
-        propertyType: item.property_type?.name || "",
-        title: item.publication_title || "",
-        summary: item.description || "",
-        rawText: normalizeText(JSON.stringify({
+      for (const operationEntry of operations) {
+        const operationName = operationEntry.type || operationEntry.operation || operationEntry.name || "";
+        const priceRaw = operationEntry.price
+          ? `${operationEntry.currency || ""} ${Math.trunc(Number(operationEntry.price))}`
+          : "";
+        const listing = finalizeListing(source.name, url, {
+          operation: operationName,
           address,
-          item,
-          operation
-        }))
-      });
+          areaRaw: item.surface ? `${Number(item.surface)} m2` : "",
+          roomsRaw: item.rooms || item.ambiences || item.ambientes || "",
+          priceRaw,
+          propertyType: item.property_type?.name || "",
+          title: item.publication_title || "",
+          summary: item.description || "",
+          rawText: normalizeText(JSON.stringify({
+            address,
+            item,
+            operation: operationEntry
+          }))
+        });
 
-      if (matchesFilters(listing, filters)) listings.push(listing);
+        if (matchesFilters(listing, filters)) listings.push(listing);
+      }
     }
   }
 
-  return uniqueBy(listings, (listing) => listing.url);
+  return uniqueBy(listings, (listing) => `${listing.url}|${listing.operation}`);
 }
 
 function extractListingsFromPage($, pageUrl, source) {
@@ -134,16 +151,20 @@ function extractListingsFromPage($, pageUrl, source) {
     if (!url) continue;
     if (publicationRegex && !publicationRegex.test(url)) continue;
 
-    listings.push({
+    const listing = {
       url,
       address: pickText($, scope, source.fields?.address),
       areaRaw: pickText($, scope, source.fields?.area),
+      roomsRaw: pickText($, scope, source.fields?.rooms),
       priceRaw: pickText($, scope, source.fields?.price),
       propertyType: pickText($, scope, source.fields?.propertyType),
       title: pickText($, scope, source.fields?.title),
       summary: pickText($, scope, source.fields?.summary),
       rawText: normalizeText(scope.text())
-    });
+    };
+    listing.operation = pickText($, scope, source.fields?.operation)
+      || inferOperation({ ...listing, contextUrl: pageUrl });
+    listings.push(listing);
   }
 
   return uniqueBy(listings, (listing) => listing.url);
@@ -155,15 +176,21 @@ async function crawlDetail(url, source, requestConfig) {
   const html = await fetchHtml(url, requestConfig);
   const $ = cheerio.load(html);
   const jsonLdListing = extractJsonLdListing($);
+  const title = pickText($, $.root(), source.detailFields.title);
+  const summary = pickText($, $.root(), source.detailFields.summary);
+  const rawText = normalizeText($.root().text());
 
   return {
+    operation: pickText($, $.root(), source.detailFields.operation)
+      || inferOperation({ title, summary, rawText, url }),
     address: pickText($, $.root(), source.detailFields.address) || jsonLdListing.address,
     areaRaw: pickText($, $.root(), source.detailFields.area) || jsonLdListing.areaRaw,
+    roomsRaw: pickText($, $.root(), source.detailFields.rooms) || jsonLdListing.roomsRaw,
     priceRaw: pickText($, $.root(), source.detailFields.price) || jsonLdListing.priceRaw,
     propertyType: pickText($, $.root(), source.detailFields.propertyType),
-    title: pickText($, $.root(), source.detailFields.title),
-    summary: pickText($, $.root(), source.detailFields.summary),
-    rawText: normalizeText($.root().text())
+    title,
+    summary,
+    rawText
   };
 }
 
@@ -275,6 +302,7 @@ function extractJsonLdListing($) {
       return {
         address: normalizeText(address),
         areaRaw: normalizeText(node.floorSize?.value || node.floorSize || node.area || ""),
+        roomsRaw: normalizeText(node.numberOfRooms?.value || node.numberOfRooms || ""),
         priceRaw: normalizeText(offer.price || node.price || "")
       };
     }
@@ -305,7 +333,17 @@ function safeJsonParse(text) {
 function emptyToFallback(primary, fallback) {
   const result = {};
 
-  for (const key of ["address", "areaRaw", "priceRaw", "propertyType", "title", "summary", "rawText"]) {
+  for (const key of [
+    "operation",
+    "address",
+    "areaRaw",
+    "roomsRaw",
+    "priceRaw",
+    "propertyType",
+    "title",
+    "summary",
+    "rawText"
+  ]) {
     result[key] = primary?.[key] || fallback?.[key] || "";
   }
 
@@ -314,11 +352,21 @@ function emptyToFallback(primary, fallback) {
 
 function finalizeListing(sourceName, url, listing) {
   const price = parsePrice(listing.priceRaw);
+  const operation = inferOperation({ ...listing, url });
+  const roomsCount = parseRooms([
+    listing.roomsRaw,
+    listing.title,
+    listing.summary,
+    listing.rawText
+  ].join(" "));
 
   return {
     sourceName,
+    operation,
     address: listing.address || "",
+    neighborhood: "",
     areaM2: parseArea(listing.areaRaw),
+    roomsCount,
     priceAmount: price.amount,
     currency: price.currency,
     url,
@@ -327,6 +375,7 @@ function finalizeListing(sourceName, url, listing) {
     summary: listing.summary || "",
     searchText: normalizeText([
       sourceName,
+      operation,
       listing.address,
       listing.propertyType,
       listing.title,
@@ -348,4 +397,3 @@ function mergeFilters(globalFilters, sourceFilters) {
     }
   };
 }
-
