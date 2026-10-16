@@ -29,7 +29,6 @@ async function runOnce(configPath, outputPath) {
   const config = yaml.load(await readFile(configPath, "utf8"));
   const operation = process.env.CRAWLER_OPERATION?.trim();
   const propertyType = process.env.CRAWLER_PROPERTY_TYPE?.trim();
-  const neighborhoods = process.env.CRAWLER_NEIGHBORHOODS?.trim();
 
   config.filters ||= {};
 
@@ -45,22 +44,13 @@ async function runOnce(configPath, outputPath) {
     delete config.filters.propertyTypes;
   }
 
-  if (neighborhoods && neighborhoods !== "Todos") {
-    config.filters.neighborhoods = neighborhoods
-      .split(",")
-      .map((neighborhood) => neighborhood.trim())
-      .filter(Boolean);
-  } else {
-    delete config.filters.neighborhoods;
-  }
 
   const listings = await crawlSources(config, {
     logger: (message) => console.log(message)
   });
 
   await writeListingsWorkbook(listings, outputPath, {
-    ...(config.excel || {}),
-    neighborhoods: config.filters?.neighborhoods || []
+    ...(config.excel || {})
   });
   if (args["json-output"]) {
     await writeListingsJson(listings, path.resolve(args["json-output"]), config);
