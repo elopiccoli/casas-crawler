@@ -107,13 +107,6 @@ sources:
       title: "h1, .prop-title"
       summary: ".description, .property-description"
 
-  - name: "Robles Casas & Campos"
-    notes: "Catalogo JSON propio en /propiedades/catalogo."
-    format: "roblesCatalog"
-    siteUrl: "https://roblescasascampos.com/"
-    startUrls:
-      - "https://roblescasascampos.com/propiedades/catalogo"
-
   - name: "Velati Propiedades"
     notes: "Activada, pero el servidor responde 403 al crawler HTML. Si falla, se saltea y continua."
     startUrls:
