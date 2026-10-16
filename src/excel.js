@@ -1,6 +1,7 @@
 import ExcelJS from "exceljs";
 import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
+import { inferNeighborhood, inferOperation } from "./utils.js";
 
 export async function writeListingsWorkbook(listings, outputPath, options = {}) {
   const workbook = new ExcelJS.Workbook();
@@ -12,13 +13,14 @@ export async function writeListingsWorkbook(listings, outputPath, options = {}) 
   });
 
   sheet.columns = [
-    { header: "inmobiliaria", key: "sourceName", width: 28 },
+    { header: "operacion", key: "operation", width: 14 },
     { header: "direccion", key: "address", width: 44 },
-    { header: "metros", key: "areaM2", width: 12 },
-    { header: "precio", key: "priceAmount", width: 16 },
-    { header: "moneda", key: "currency", width: 10 },
+    { header: "zona", key: "neighborhood", width: 22 },
+    { header: "ambientes", key: "roomsCount", width: 12 },
+    { header: "metros cuadrados", key: "areaM2", width: 18 },
+    { header: "precio", key: "priceAmount", width: 18 },
     { header: "link", key: "url", width: 64 },
-    { header: "fecha_extraccion", key: "scrapedAt", width: 22 }
+    { header: "inmobiliaria", key: "sourceName", width: 28 }
   ];
 
   sheet.getRow(1).font = { bold: true, color: { argb: "FFFFFFFF" } };
@@ -29,20 +31,23 @@ export async function writeListingsWorkbook(listings, outputPath, options = {}) 
   };
 
   for (const listing of listings) {
-    sheet.addRow({
-      sourceName: listing.sourceName,
+    const row = sheet.addRow({
+      operation: listing.operation || inferOperation(listing),
       address: listing.address,
+      neighborhood: inferNeighborhood(listing, options.neighborhoods || []),
+      roomsCount: listing.roomsCount,
       areaM2: listing.areaM2,
       priceAmount: listing.priceAmount,
-      currency: listing.currency,
       url: listing.url,
-      scrapedAt: listing.scrapedAt
+      sourceName: listing.sourceName
     });
+
+    const currency = String(listing.currency || "").replace(/"/g, '""');
+    row.getCell("priceAmount").numFmt = currency ? `"${currency}" #,##0` : "#,##0";
   }
 
+  sheet.getColumn("roomsCount").numFmt = "0";
   sheet.getColumn("areaM2").numFmt = "#,##0.0";
-  sheet.getColumn("priceAmount").numFmt = "#,##0";
-  sheet.getColumn("scrapedAt").numFmt = "yyyy-mm-dd hh:mm";
 
   sheet.autoFilter = {
     from: { row: 1, column: 1 },
