@@ -11,18 +11,7 @@ filters:
     min:
     max:
     currency: "USD"
-  propertyTypes:
-    - "Casa"
-    - "Chalet"
-    - "Departamento"
   city: "Mar del Plata"
-  neighborhoods:
-    - "Stella Maris"
-    - "Loma de Stella Maris"
-    - "Los Troncos"
-    - "Guemes"
-    - "Playa Grande"
-    - "Divino Rostro"
 
 sources:
   - name: "Russillo Asesores Inmobiliarios"
