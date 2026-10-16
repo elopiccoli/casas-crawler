@@ -25,6 +25,54 @@ export function normalizeForSearch(value) {
     .toLowerCase();
 }
 
+export function inferOperation(listing = {}) {
+  const explicit = detectOperation(listing.operation || "");
+  if (explicit) return explicit;
+
+  const primary = detectOperation([
+    listing.title,
+    listing.url,
+    listing.contextUrl
+  ].join(" "));
+  if (primary) return primary;
+
+  return detectOperation([
+    listing.summary,
+    listing.rawText,
+    listing.searchText
+  ].join(" "));
+}
+
+function detectOperation(value) {
+  const text = normalizeForSearch(value);
+  const match = text.match(/\b(alquiler|alquilar|rent|rental|venta|vender|comprar|sale)\b/);
+  if (!match) return "";
+
+  return /^(alquiler|alquilar|rent|rental)$/.test(match[1]) ? "Alquiler" : "Venta";
+}
+
+export function inferNeighborhood(listing = {}, neighborhoods = []) {
+  const text = normalizeForSearch([
+    listing.address,
+    listing.title,
+    listing.summary,
+    listing.searchText,
+    listing.url
+  ].join(" "));
+
+  return neighborhoods.find((neighborhood) =>
+    text.includes(normalizeForSearch(neighborhood))
+  ) || "";
+}
+
+export function parseRooms(value) {
+  const text = normalizeForSearch(value);
+  if (/\bmonoambiente\b/.test(text)) return 1;
+
+  const match = text.match(/(?:^|[^a-z0-9])(\d{1,2})\s*amb(?:ientes?|s)?\.?(?=$|[^a-z])/);
+  return match ? Number(match[1]) : null;
+}
+
 export function parseArea(value) {
   const text = normalizeText(value).toLowerCase();
   const match = text.match(/(\d+(?:[.,]\d+)?)\s*(?:m2|m²|mts|metros)/i);
