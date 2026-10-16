@@ -6,13 +6,6 @@ request:
 excel:
   sheetName: "Publicaciones"
 
-filters:
-  price:
-    min:
-    max:
-    currency: "USD"
-  city: "Mar del Plata"
-
 sources:
   - name: "Russillo Asesores Inmobiliarios"
     startUrls:
