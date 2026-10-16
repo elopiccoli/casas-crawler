@@ -19,12 +19,7 @@ filters:
     min: 50000
     max: 250000
     currency: "USD"
-  propertyTypes:
-    - "Casa"
   city: "Mar del Plata"
-  neighborhoods:
-    - "Stella Maris"
-    - "Los Troncos"
 
 sources:
   - name: "Inmobiliaria de ejemplo"
