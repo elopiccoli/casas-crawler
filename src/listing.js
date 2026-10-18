@@ -16,7 +16,7 @@ export function finalizeListing(sourceName, url, fields) {
     areaKind: /\b(cubierta|construida)\b/i.test(fields.areaRaw) ? "cubierta" : /\bsemicubierta\b/i.test(fields.areaRaw) ? "semicubierta" : /\bdescubierta\b/i.test(fields.areaRaw) ? "descubierta" : /terreno/i.test(fields.areaRaw) ? "terreno" : /total/i.test(fields.areaRaw) ? "total" : "",
     priceAmount: price.amount > 0 ? price.amount : null,
     currency: price.currency,
-    propertyType: fields.propertyType ? propertyTypeFor(fields.propertyType) : propertyTypeFor(urlPath(url)) || propertyTypeFor(title),
+    propertyType: propertyTypeFor(fields.propertyType) || propertyTypeFor(urlPath(url)) || propertyTypeFor(title),
     operation: operationFor({ ...fields, title, url }),
     neighborhood: neighborhoodFor({ ...fields, address, title, url }),
     city: normalizeText(fields.city),
@@ -26,6 +26,9 @@ export function finalizeListing(sourceName, url, fields) {
   // Search/filter text must never include a site menu, footer, related cards,
   // contact details, or the descriptive prose's nearby neighborhood references.
   listing.searchText = normalizeText([address, title, listing.neighborhood, listing.city, urlPath(url)].join(" "));
+  if (listing.propertyType && !propertyTypeFor(fields.propertyType)) {
+    listing.evidence.propertyType = { selector: "property URL/title", value: listing.propertyType };
+  }
   for (const field of ["operation", "neighborhood", "propertyType"]) {
     if (listing[field] && !listing.evidence[field]) listing.evidence[field] = { selector: "property URL/title/address", value: listing[field] };
   }

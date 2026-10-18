@@ -13,6 +13,8 @@ filters:
     - Casa
     - Chalet
     - Departamento
+    - Terreno
+    - Lote
   city: Mar del Plata
   neighborhoods: []
 sources:
@@ -185,10 +187,12 @@ sources:
       - https://inmobiliarialatorre.com.ar/s/casa/venta?id_property_type=1&business_type%5B0%5D=for_sale
       - https://inmobiliarialatorre.com.ar/s/chalet/venta?id_property_type=10&business_type%5B0%5D=for_sale
       - https://inmobiliarialatorre.com.ar/s/departamento/venta?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://inmobiliarialatorre.com.ar/s/lote-terreno/venta?id_property_type=5&business_type%5B0%5D=for_sale
+      - https://inmobiliarialatorre.com.ar/s/terreno/venta?id_property_type=32&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
     detailFields:
@@ -203,10 +207,11 @@ sources:
       - https://www.dantepropiedades.com/departamento-en-alquiler.html
       - https://www.dantepropiedades.com/casa-chalet-en-venta.html
       - https://www.dantepropiedades.com/departamento-en-venta.html
+      - https://www.dantepropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -267,10 +272,11 @@ sources:
       - https://martinezarrechea.com/departamento-en-alquiler.html
       - https://martinezarrechea.com/casa-chalet-en-venta.html
       - https://martinezarrechea.com/departamento-en-venta.html
+      - https://martinezarrechea.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -332,10 +338,11 @@ sources:
       - https://gerardobarg.com.ar/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
       - https://gerardobarg.com.ar/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
       - https://gerardobarg.com.ar/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://gerardobarg.com.ar/s/lote-terreno/ventas?id_property_type=5&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
       summary: body
@@ -350,10 +357,11 @@ sources:
     startUrls:
       - https://www.bartolipropiedades.com/casa-chalet-en-venta.html
       - https://www.bartolipropiedades.com/departamento-en-venta.html
+      - https://www.bartolipropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -426,10 +434,11 @@ sources:
       - https://izainmobiliaria.inmo.co/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
       - https://izainmobiliaria.inmo.co/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
       - https://izainmobiliaria.inmo.co/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://izainmobiliaria.inmo.co/s/lote-terreno/ventas?id_property_type=5&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
       summary: body
@@ -473,10 +482,11 @@ sources:
       - https://www.marinoperez.com.ar/departamento-en-alquiler.html
       - https://www.marinoperez.com.ar/casa-chalet-en-venta.html
       - https://www.marinoperez.com.ar/departamento-en-venta.html
+      - https://www.marinoperez.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href*='propiedad-inmobiliaria.html']
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -496,10 +506,11 @@ sources:
       - https://www.palmapropiedades.com.ar/departamento-en-alquiler.html
       - https://www.palmapropiedades.com.ar/casa-chalet-en-venta.html
       - https://www.palmapropiedades.com.ar/departamento-en-venta.html
+      - https://www.palmapropiedades.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href*='propiedad-inmobiliaria.html']
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -519,10 +530,11 @@ sources:
       - https://www.delrossopropiedades.com.ar/departamento-en-alquiler.html
       - https://www.delrossopropiedades.com.ar/casa-chalet-en-venta.html
       - https://www.delrossopropiedades.com.ar/departamento-en-venta.html
+      - https://www.delrossopropiedades.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href*='propiedad-inmobiliaria.html']
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -578,10 +590,11 @@ sources:
       - https://www.acamporayasoc.com/departamento-en-alquiler.html
       - https://www.acamporayasoc.com/casa-chalet-en-venta.html
       - https://www.acamporayasoc.com/departamento-en-venta.html
+      - https://www.acamporayasoc.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href*='propiedad-inmobiliaria.html']
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -623,7 +636,7 @@ sources:
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: /propiedades/(?:venta|alquiler)/.*|/(?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: /propiedades/(?:venta|alquiler)/.*|/(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     detailFields:
       address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
       area: body
@@ -639,10 +652,11 @@ sources:
       - https://cabrerapropmdq.com/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
       - https://cabrerapropmdq.com/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
       - https://cabrerapropmdq.com/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://cabrerapropmdq.com/s/lote-terreno/ventas?id_property_type=5&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
       summary: body
@@ -819,7 +833,7 @@ sources:
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1041,10 +1055,11 @@ sources:
       - https://abdalapropiedades.com/departamento-en-alquiler.html
       - https://abdalapropiedades.com/casa-chalet-en-venta.html
       - https://abdalapropiedades.com/departamento-en-venta.html
+      - https://abdalapropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1067,10 +1082,15 @@ sources:
       - https://torresmardelplata.inmo.co/s/casa/alquileres?id_property_type=1&business_type%5B0%5D=for_rent
       - https://torresmardelplata.inmo.co/s/chalet/alquileres?id_property_type=10&business_type%5B0%5D=for_rent
       - https://torresmardelplata.inmo.co/s/departamento/alquileres?id_property_type=2&business_type%5B0%5D=for_rent
+      - https://torresmardelplata.inmo.co/s/lote-terreno/ventas?id_property_type=5&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/lote-comercial/ventas?id_property_type=6&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/terreno/ventas?id_property_type=32&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/lote-terreno/alquileres?id_property_type=5&business_type%5B0%5D=for_rent
+      - https://torresmardelplata.inmo.co/s/lote-comercial/alquileres?id_property_type=6&business_type%5B0%5D=for_rent
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
     detailFields:
@@ -1089,7 +1109,7 @@ sources:
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
     detailFields:
@@ -1133,10 +1153,11 @@ sources:
       - https://ademarocaranza.com/departamento-en-alquiler.html
       - https://ademarocaranza.com/casa-chalet-en-venta.html
       - https://ademarocaranza.com/departamento-en-venta.html
+      - https://ademarocaranza.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1183,10 +1204,12 @@ sources:
       - https://aguirreprop.com/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
       - https://aguirreprop.com/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
       - https://aguirreprop.com/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://aguirreprop.com/s/lote-terreno/ventas?id_property_type=5&business_type%5B0%5D=for_sale
+      - https://aguirreprop.com/s/terreno/ventas?id_property_type=32&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    publicationUrlRegex: (?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
     fields:
       title: h1, h2, h3, .title, .property-title
     detailFields:
@@ -1419,10 +1442,11 @@ sources:
       - https://bartolinipropiedades.com/departamento-en-alquiler.html
       - https://bartolinipropiedades.com/casa-chalet-en-venta.html
       - https://bartolinipropiedades.com/departamento-en-venta.html
+      - https://bartolinipropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1443,10 +1467,11 @@ sources:
       - https://moghames.com.ar/casa-chalet-en-alquiler.html
       - https://moghames.com.ar/casa-chalet-en-venta.html
       - https://moghames.com.ar/departamento-en-venta.html
+      - https://moghames.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1493,10 +1518,11 @@ sources:
       - https://gmcpropiedades.com/departamento-en-alquiler.html
       - https://gmcpropiedades.com/casa-chalet-en-venta.html
       - https://gmcpropiedades.com/departamento-en-venta.html
+      - https://gmcpropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1518,10 +1544,11 @@ sources:
       - https://laplatapropiedades.com/departamento-en-alquiler.html
       - https://laplatapropiedades.com/casa-chalet-en-venta.html
       - https://laplatapropiedades.com/departamento-en-venta.html
+      - https://laplatapropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1585,7 +1612,7 @@ sources:
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1732,7 +1759,7 @@ sources:
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1753,10 +1780,11 @@ sources:
       - https://myfpropiedades.com/departamento-en-alquiler.html
       - https://myfpropiedades.com/casa-chalet-en-venta.html
       - https://myfpropiedades.com/departamento-en-venta.html
+      - https://myfpropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1806,10 +1834,11 @@ sources:
       - https://inmobiliariacastillo.com.ar/departamento-en-alquiler.html
       - https://inmobiliariacastillo.com.ar/casa-chalet-en-venta.html
       - https://inmobiliariacastillo.com.ar/departamento-en-venta.html
+      - https://inmobiliariacastillo.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1829,10 +1858,11 @@ sources:
     startUrls:
       - https://quintieroprop.com.ar/casa-chalet-en-venta.html
       - https://quintieroprop.com.ar/departamento-en-venta.html
+      - https://quintieroprop.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1852,10 +1882,11 @@ sources:
     startUrls:
       - https://duquewilliams.com/casa-chalet-en-venta.html
       - https://duquewilliams.com/departamento-en-venta.html
+      - https://duquewilliams.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1876,10 +1907,11 @@ sources:
       - https://bocianpropiedades.com/departamento-en-alquiler.html
       - https://bocianpropiedades.com/casa-chalet-en-venta.html
       - https://bocianpropiedades.com/departamento-en-venta.html
+      - https://bocianpropiedades.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1919,10 +1951,11 @@ sources:
       - https://depaolipropiedades.com.ar/departamento-en-alquiler.html
       - https://depaolipropiedades.com.ar/casa-chalet-en-venta.html
       - https://depaolipropiedades.com.ar/departamento-en-venta.html
+      - https://depaolipropiedades.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1943,10 +1976,11 @@ sources:
       - https://salerno-propiedades.com.ar/departamento-en-alquiler.html
       - https://salerno-propiedades.com.ar/casa-chalet-en-venta.html
       - https://salerno-propiedades.com.ar/departamento-en-venta.html
+      - https://salerno-propiedades.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -1968,10 +2002,11 @@ sources:
       - https://pezzatipropiedades.inmobiliatica.com/departamento-en-alquiler.html
       - https://pezzatipropiedades.inmobiliatica.com/casa-chalet-en-venta.html
       - https://pezzatipropiedades.inmobiliatica.com/departamento-en-venta.html
+      - https://pezzatipropiedades.inmobiliatica.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -2138,10 +2173,11 @@ sources:
       - https://inmobiliariacrespo.com/departamento-en-alquiler.html
       - https://inmobiliariacrespo.com/casa-chalet-en-venta.html
       - https://inmobiliariacrespo.com/departamento-en-venta.html
+      - https://inmobiliariacrespo.com/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -2163,10 +2199,11 @@ sources:
       - https://inmobiliariafinca.com.ar/departamento-en-alquiler.html
       - https://inmobiliariafinca.com.ar/casa-chalet-en-venta.html
       - https://inmobiliariafinca.com.ar/departamento-en-venta.html
+      - https://inmobiliariafinca.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -2188,10 +2225,11 @@ sources:
       - https://inmobiliariamihocevich.com.ar/departamento-en-alquiler.html
       - https://inmobiliariamihocevich.com.ar/casa-chalet-en-venta.html
       - https://inmobiliariamihocevich.com.ar/departamento-en-venta.html
+      - https://inmobiliariamihocevich.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body
@@ -2212,10 +2250,11 @@ sources:
       - https://aliaspropiedades.com.ar/departamento-en-alquiler.html
       - https://aliaspropiedades.com.ar/casa-chalet-en-venta.html
       - https://aliaspropiedades.com.ar/departamento-en-venta.html
+      - https://aliaspropiedades.com.ar/terreno-en-venta.html
     pagination:
       maxPages: 1
     listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
       title: h1, h2, h3, .titulo, .title
       summary: body

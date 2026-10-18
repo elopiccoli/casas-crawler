@@ -1,6 +1,7 @@
 import { listingHeading, listingType } from "./listing-format.js";
 import { neighborhoodFor, operationFor } from "./property-fields.js";
 import { roomOptions, matchesRooms } from "./room-filter.js";
+import { neighborhoodOptions, matchesNeighborhoods, matchesParking, matchesPropertyType } from "./listing-filters.js";
 
 const state = {
   listings: [],
@@ -14,7 +15,11 @@ const elements = {
   empty: document.querySelector("#empty"),
   search: document.querySelector("#search"),
   maxPrice: document.querySelector("#maxPrice"),
-  neighborhood: document.querySelector("#neighborhood"),
+  neighborhoodDropdown: document.querySelector("#neighborhoodDropdown"),
+  neighborhoodSummary: document.querySelector("#neighborhoodSummary"),
+  neighborhoodOptions: document.querySelector("#neighborhoodOptions"),
+  clearNeighborhoods: document.querySelector("#clearNeighborhoods"),
+  parking: document.querySelector("#parking"),
   operation: document.querySelector("#operation"),
   propertyType: document.querySelector("#propertyType"),
   agency: document.querySelector("#agency"),
@@ -58,19 +63,33 @@ function bindFilters() {
     updateRoomsSummary();
     render();
   });
+  elements.neighborhoodOptions.addEventListener("change", () => {
+    updateNeighborhoodSummary();
+    render();
+  });
+  elements.clearNeighborhoods.addEventListener("click", () => {
+    for (const checkbox of elements.neighborhoodOptions.querySelectorAll("input")) checkbox.checked = false;
+    updateNeighborhoodSummary();
+    render();
+  });
   document.addEventListener("pointerdown", (event) => {
-    if (!elements.roomsDropdown.contains(event.target)) elements.roomsDropdown.open = false;
+    for (const dropdown of [elements.roomsDropdown, elements.neighborhoodDropdown]) {
+      if (!dropdown.contains(event.target)) dropdown.open = false;
+    }
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && elements.roomsDropdown.open) {
-      elements.roomsDropdown.open = false;
-      elements.roomsDropdown.querySelector("summary").focus();
+    if (event.key === "Escape") {
+      for (const dropdown of [elements.roomsDropdown, elements.neighborhoodDropdown]) {
+        if (!dropdown.open) continue;
+        dropdown.open = false;
+        dropdown.querySelector("summary").focus();
+      }
     }
   });
   for (const element of [
     elements.search,
     elements.maxPrice,
-    elements.neighborhood,
+    elements.parking,
     elements.operation,
     elements.propertyType,
     elements.agency
@@ -110,14 +129,26 @@ function hydrateDerivedFields(listings) {
 }
 
 function populateNeighborhoods(listings) {
-  const detected = listings.map((item) => item.barrio).filter(Boolean);
-  const neighborhoods = [...new Set(detected)].sort((a, b) => a.localeCompare(b, "es"));
-  for (const neighborhood of neighborhoods) {
-    const option = document.createElement("option");
-    option.value = neighborhood;
-    option.textContent = neighborhood;
-    elements.neighborhood.appendChild(option);
+  for (const name of [...neighborhoodOptions(listings), "unknown"]) {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = name;
+    input.name = "barrios";
+    label.append(input, name === "unknown" ? "Sin dato" : name);
+    elements.neighborhoodOptions.append(label);
   }
+}
+
+function selectedNeighborhoods() {
+  return [...elements.neighborhoodOptions.querySelectorAll("input:checked")].map(input => input.value);
+}
+
+function updateNeighborhoodSummary() {
+  const selected = selectedNeighborhoods();
+  const label = selected.length ? selected.map(value => value === "unknown" ? "Sin dato" : value).join(", ") : "Todos";
+  elements.neighborhoodSummary.textContent = label;
+  elements.neighborhoodSummary.title = label;
 }
 
 function populateAgencies(listings) {
@@ -133,7 +164,8 @@ function populateAgencies(listings) {
 function render() {
   const query = normalize(elements.search.value);
   const maxPrice = Number(elements.maxPrice.value || 0);
-  const neighborhood = elements.neighborhood.value;
+  const neighborhoods = selectedNeighborhoods();
+  const parking = elements.parking.value;
   const operation = elements.operation.value;
   const propertyType = elements.propertyType.value;
   const agency = elements.agency.value;
@@ -143,7 +175,8 @@ function render() {
     const text = normalize([item.inmobiliaria, item.direccion, item.barrio, item.titulo, item.resumen].join(" "));
     if (query && !text.includes(query)) return false;
     if (agency && item.inmobiliaria !== agency) return false;
-    if (neighborhood && item.barrio !== neighborhood) return false;
+    if (!matchesNeighborhoods(item, neighborhoods)) return false;
+    if (!matchesParking(item, parking)) return false;
     if (operation && item.operacion !== operation && !(item.operacion === "Venta / Alquiler" && ["Venta", "Alquiler"].includes(operation))) return false;
     if (propertyType && !matchesPropertyType(item, propertyType)) return false;
     if (!matchesRooms(item, rooms)) return false;
@@ -227,11 +260,4 @@ function normalize(value) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
-}
-
-function matchesPropertyType(item, propertyType) {
-  const text = normalize(item.tipo || [item.titulo, item.link].join(" "));
-  if (propertyType === "Casa") return text.includes("casa") || text.includes("chalet");
-  if (propertyType === "Departamento") return text.includes("departamento");
-  return true;
 }

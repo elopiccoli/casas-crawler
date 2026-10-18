@@ -25,6 +25,8 @@ on:
           - Todos
           - Casa
           - Departamento
+          - Terreno
+          - Lote
   schedule:
     - cron: "0 10 * * *"
 

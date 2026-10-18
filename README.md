@@ -40,6 +40,8 @@ El Excel se genera en `outputs/publicaciones.xlsx`.
 
 ## Dashboard web
 
+Los filtros de barrios y ambientes permiten marcar varias opciones en un dropdown. El filtro de cochera separa incluida, opcional, sin cochera y sin dato. Los tipos Terreno y Lote estan habilitados tanto en la extraccion como en el selector de la web.
+
 Para generar el Excel y el JSON que lee la web:
 
 ```powershell

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-18T12:51:24.271Z",
-  "count": 177,
+  "generatedAt": "2026-10-18T13:21:21.589Z",
+  "count": 220,
   "quality": {
-    "needingReview": 131,
+    "needingReview": 174,
     "byAgency": [
       {
         "name": "Russillo Asesores Inmobiliarios",
@@ -46,8 +46,8 @@
       },
       {
         "name": "Dante Propiedades",
-        "listings": 2,
-        "needingReview": 2
+        "listings": 43,
+        "needingReview": 43
       },
       {
         "name": "Sanz y Ordoqui Propiedades",
@@ -171,8 +171,8 @@
       },
       {
         "name": "Gisela D’Alessandro",
-        "listings": 1,
-        "needingReview": 1
+        "listings": 3,
+        "needingReview": 3
       },
       {
         "name": "Espatolero y Lorenzo",
@@ -501,6 +501,31 @@
       },
       {
         "name": "Alías Propiedades",
+        "listings": 0,
+        "needingReview": 0
+      },
+      {
+        "name": "Dardo Propiedades",
+        "listings": 0,
+        "needingReview": 0
+      },
+      {
+        "name": "Paulo Arroyo Propiedades",
+        "listings": 0,
+        "needingReview": 0
+      },
+      {
+        "name": "Sauro Propiedades",
+        "listings": 0,
+        "needingReview": 0
+      },
+      {
+        "name": "Homes - Land Propiedades",
+        "listings": 0,
+        "needingReview": 0
+      },
+      {
+        "name": "Mar del Plata (portal)",
         "listings": 0,
         "needingReview": 0
       }
@@ -10352,6 +10377,2260 @@
         "summary": {
           "selector": "meta[name='description']::attr(content)",
           "value": "Departamento en Alquiler en Mar del Plata, Mar del Plata, Buenos Aires. Precio $ 500.000. Mirá las fotos, la ubicación y los detalles, y consultá sin cargo a Coste y Freuler Inmobiliaria."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Av. Tejedor y Av. Jose Coelho de Meyrelles",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": null,
+      "moneda": "",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_473329_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:17:55.284Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "LOTE APTO DESARROLLO – C. TEJEDOR Y JOSE COELHO DE MEYRELLES Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📐 Superficie de lote: 583 m² 🏢 Superficie vendible estimada: 2.500 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 10 pisos * Aproximadamente entre 45 y 50 departamentos * 20 cocheras Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "precio: missing or uncertain",
+        "moneda: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Av. Tejedor y Av. Jose Coelho de Meyrelles"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "LOTE APTO DESARROLLO – C. TEJEDOR Y JOSE COELHO DE MEYRELLES Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📐 Superficie de lote: 583 m² 🏢 Superficie vendible estimada: 2.500 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 10 pisos * Aproximadamente entre 45 y 50 departamentos * 20 cocheras Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Esquiu y Zacagnini",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": null,
+      "moneda": "",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_473326_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:17:56.805Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "LOTE APTO DESARROLLO – ESQUIU e/ ZACAGNINI Y CURIE Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📐 Superficie de lote: 395 m² 🏢 Superficie vendible estimada: 1.376 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 8 pisos * Aproximadamente 24 departamentos * 22 cocheras Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "precio: missing or uncertain",
+        "moneda: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Esquiu y Zacagnini"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "LOTE APTO DESARROLLO – ESQUIU e/ ZACAGNINI Y CURIE Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📐 Superficie de lote: 395 m² 🏢 Superficie vendible estimada: 1.376 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 8 pisos * Aproximadamente 24 departamentos * 22 cocheras Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "felix u camet 3696",
+      "barrio": "Félix U",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 290000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_473317_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:17:58.503Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "LOTE APTO DESARROLLO – FÉLIX U. CAMET 3696 Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📍 Ubicación: Félix U. Camet 3696 – Mar del Plata 📐 Superficie de lote: 993,45 m² 🏢 Superficie vendible estimada: 3.100 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 8 pisos * Aproximadamente 50 departamentos * 48 cocheras 🏠 TIPOLOGÍAS * 2 ambientes: 53 m² aprox. * 3 ambientes: 82 m² aprox. Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta.",
+      "revision": [
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "felix u camet 3696"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 290.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - U$S 290.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "LOTE APTO DESARROLLO – FÉLIX U. CAMET 3696 Excelente oportunidad para desarrolladores e inversores, con gran potencial para un proyecto residencial. 📍 Ubicación: Félix U. Camet 3696 – Mar del Plata 📐 Superficie de lote: 993,45 m² 🏢 Superficie vendible estimada: 3.100 m² 📊 POTENCIAL DE DESARROLLO * Edificio de 8 pisos * Aproximadamente 50 departamentos * 48 cocheras 🏠 TIPOLOGÍAS * 2 ambientes: 53 m² aprox. * 3 ambientes: 82 m² aprox. Una propuesta especialmente interesante para quienes buscan un lote con importante potencial constructivo, ideal para el desarrollo de un proyecto de viviendas multifamiliar. 📲 Consultanos para conocer más detalles, documentación y condiciones de venta."
+        },
+        "neighborhood": {
+          "selector": ".descripcionDeFicha: explicitly labeled location",
+          "value": "Félix U"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "felix u camet 3696",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": null,
+      "moneda": "",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_473299_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:00.020Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "Lote Apto Desarrollo Felix U. Camet 3696 SUP: 1081,27 m2 3.100 m' VENDIBLES Potencial (APROX.) R3 Edificio de 8 pisos 50 departamentos 48 cocheras Tipologías: * 2 Ambientes de 53 m2 * 3 Ambientes de 82 m2",
+      "revision": [
+        "barrio: missing or uncertain",
+        "precio: missing or uncertain",
+        "moneda: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "felix u camet 3696"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote Apto Desarrollo Felix U. Camet 3696 SUP: 1081,27 m2 3.100 m' VENDIBLES Potencial (APROX.) R3 Edificio de 8 pisos 50 departamentos 48 cocheras Tipologías: * 2 Ambientes de 53 m2 * 3 Ambientes de 82 m2"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Felix U Camet 3092",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 230000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_472775_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:01.540Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "Lote Apto Desarrollo Felix U. Camet 3092 SUP: 372,98 m 1.290 m2 VENDIBLES Potencial (APROX.) Edificio de 8 pisos 24 departamentos 22 cocheras",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Felix U Camet 3092"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 230.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - U$S 230.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote Apto Desarrollo Felix U. Camet 3092 SUP: 372,98 m 1.290 m2 VENDIBLES Potencial (APROX.) Edificio de 8 pisos 24 departamentos 22 cocheras"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Navarra y Racedo",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 80000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-faro_471007_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:03.064Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Faro",
+      "resumen": "Oportunidad de inversión en Mar del Plata. Se encuentra disponible para la venta un terreno ubicado en el barrio Faro Norte una zona en constante desarrollo y con excelente proyección. Por su cercania a las playas del Faro. De los mejores Balnearios de la ciudad como son Honu y Marbella. Esta propiedad representa una opción ideal para quienes buscan proyectar un desarrollo inmobiliario a medida o construir una vivienda unifamiliar o complejo habitacional. en un entorno tranquilo. El inmueble se destaca por su amplitud y entorno. Se encuentra asfaltado y con todos los servicios. Su medida es de 10 x 30 mts de fondo. Indicador R6. Se pueden construir 300 m2 * FOS: 0,60 * FOT residencial: 1,00 * FOT otros usos: 0,50 * Plano límite: 7,00 m * Densidad: 0,035 hab/m² Posibilidades: lote de 300 m², eso se traduce aproximadamente en: * Superficie máxima en planta: 180 m² (FOS 0,60). * Superficie total construible: 300 m² para uso residencial (FOT 1,00), distribuidos normalmente en planta baja + 1 piso; el plano límite de 7 m no permite un edificio alto. ¿Qué se puede hacer en el terreno? Por la cercanía al mar y el perfil del barrio, las alternativas con mejor relación inversión/rentabilidad serían: 1. Dos dúplex premium de 140–150 m² cada uno, con cochera y patio. Es probablemente la opción más comercial en esa zona. 2. Tres unidades (una en planta baja y dos en planta alta) si el proyecto cumple con los retiros y la normativa. Es una buena opción para venta por PH. 3. Una vivienda de categoría de 220–250 m² con pileta, orientada al mercado de segunda residencia. Escucha Ofertas Se realiza por tracto abreviado",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Faro"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Navarra y Racedo"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 80.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Faro"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Faro, Mar del Plata - U$S 80.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Oportunidad de inversión en Mar del Plata. Se encuentra disponible para la venta un terreno ubicado en el barrio Faro Norte una zona en constante desarrollo y con excelente proyección. Por su cercania a las playas del Faro. De los mejores Balnearios de la ciudad como son Honu y Marbella. Esta propiedad representa una opción ideal para quienes buscan proyectar un desarrollo inmobiliario a medida o construir una vivienda unifamiliar o complejo habitacional. en un entorno tranquilo. El inmueble se destaca por su amplitud y entorno. Se encuentra asfaltado y con todos los servicios. Su medida es de 10 x 30 mts de fondo. Indicador R6. Se pueden construir 300 m2 * FOS: 0,60 * FOT residencial: 1,00 * FOT otros usos: 0,50 * Plano límite: 7,00 m * Densidad: 0,035 hab/m² Posibilidades: lote de 300 m², eso se traduce aproximadamente en: * Superficie máxima en planta: 180 m² (FOS 0,60). * Superficie total construible: 300 m² para uso residencial (FOT 1,00), distribuidos normalmente en planta baja + 1 piso; el plano límite de 7 m no permite un edificio alto. ¿Qué se puede hacer en el terreno? Por la cercanía al mar y el perfil del barrio, las alternativas con mejor relación inversión/rentabilidad serían: 1. Dos dúplex premium de 140–150 m² cada uno, con cochera y patio. Es probablemente la opción más comercial en esa zona. 2. Tres unidades (una en planta baja y dos en planta alta) si el proyecto cumple con los retiros y la normativa. Es una buena opción para venta por PH. 3. Una vivienda de categoría de 220–250 m² con pileta, orientada al mercado de segunda residencia. Escucha Ofertas Se realiza por tracto abreviado"
+        },
+        "parkingRaw": {
+          "selector": "property description: explicit parking",
+          "value": "Oportunidad de inversión en Mar del Plata. Se encuentra disponible para la venta un terreno ubicado en el barrio Faro Norte una zona en constante desarrollo y con excelente proyección. Por su cercania a las playas del Faro. De los mejores Balnearios de la ciudad como son Honu y Marbella. Esta propiedad representa una opción ideal para quienes buscan proyectar un desarrollo inmobiliario a medida o construir una vivienda unifamiliar o complejo habitacional. en un entorno tranquilo. El inmueble se destaca por su amplitud y entorno. Se encuentra asfaltado y con todos los servicios. Su medida es de 10 x 30 mts de fondo. Indicador R6. Se pueden construir 300 m2 * FOS: 0,60 * FOT residencial: 1,00 * FOT otros usos: 0,50 * Plano límite: 7,00 m * Densidad: 0,035 hab/m² Posibilidades: lote de 300 m², eso se traduce aproximadamente en: * Superficie máxima en planta: 180 m² (FOS 0,60). * Superficie total construible: 300 m² para uso residencial (FOT 1,00), distribuidos normalmente en planta baja + 1 piso; el plano límite de 7 m no permite un edificio alto. ¿Qué se puede hacer en el terreno? Por la cercanía al mar y el perfil del barrio, las alternativas con mejor relación inversión/rentabilidad serían: 1. Dos dúplex premium de 140–150 m² cada uno, con cochera y patio. Es probablemente la opción más comercial en esa zona. 2. Tres unidades (una en planta baja y dos en planta alta) si el proyecto cumple con los retiros y la normativa. Es una buena opción para venta por PH. 3. Una vivienda de categoría de 220–250 m² con pileta, orientada al mercado de segunda residencia. Escucha Ofertas Se realiza por tracto abreviado"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Dorrego 32",
+      "barrio": "Perla Norte",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 140000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-perla-norte_470693_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:04.597Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Perla Norte",
+      "resumen": "Excelente lote en Perla Norte – Ideal para desarrollo inmobiliario Oportunidad única de inversión en uno de los sectores con mayor proyección de Perla Norte, a pocas cuadras del mar y del frente costero de La Perla, una zona residencial consolidada, muy buscada tanto para vivienda permanente como para desarrollos de categoría. 📍 Ubicación: Barrio Perla Norte, Mar del Plata. 📐 Medidas del lote: * Frente: 10,83 m * Fondo: 32,48 m * Superficie aproximada: 351,80 m² Su excelente frente y profundidad permiten proyectar un edificio de departamentos, dúplex o un emprendimiento residencial de calidad (sujeto a la normativa urbanística vigente). Zonificacion R4 apto 3 plantas Características destacadas: * A pocos metros de la costa y de las playas de Perla Norte. * Entorno residencial con constante crecimiento y revalorización. * Cercanía a comercios, transporte, espacios verdes y principales accesos. * Ideal para inversores y desarrolladores que buscan un lote con gran potencial. Una excelente oportunidad para desarrollar un proyecto en una de las zonas más atractivas y demandadas del norte de Mar del Plata, donde la tranquilidad del barrio se combina con la cercanía al mar y todos los servicios",
+      "revision": [
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Dorrego 32"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 140.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Perla Norte, Mar del Plata - U$S 140.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Excelente lote en Perla Norte – Ideal para desarrollo inmobiliario Oportunidad única de inversión en uno de los sectores con mayor proyección de Perla Norte, a pocas cuadras del mar y del frente costero de La Perla, una zona residencial consolidada, muy buscada tanto para vivienda permanente como para desarrollos de categoría. 📍 Ubicación: Barrio Perla Norte, Mar del Plata. 📐 Medidas del lote: * Frente: 10,83 m * Fondo: 32,48 m * Superficie aproximada: 351,80 m² Su excelente frente y profundidad permiten proyectar un edificio de departamentos, dúplex o un emprendimiento residencial de calidad (sujeto a la normativa urbanística vigente). Zonificacion R4 apto 3 plantas Características destacadas: * A pocos metros de la costa y de las playas de Perla Norte. * Entorno residencial con constante crecimiento y revalorización. * Cercanía a comercios, transporte, espacios verdes y principales accesos. * Ideal para inversores y desarrolladores que buscan un lote con gran potencial. Una excelente oportunidad para desarrollar un proyecto en una de las zonas más atractivas y demandadas del norte de Mar del Plata, donde la tranquilidad del barrio se combina con la cercanía al mar y todos los servicios"
+        },
+        "neighborhood": {
+          "selector": ".descripcionDeFicha: explicitly labeled location",
+          "value": "Barrio Perla Norte"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Estrada y camet",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 530000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-constitucion_470691_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:06.130Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Constitución",
+      "resumen": "Excelente lote frente al mar sobre Av Felix U Camet a metros de calle Estrada, ubicación estratégica para desarrollo inmobiliario. El terreno cuenta con una superficie de 532 metros con frente de 14,87 metros y 35,78 metros de fondo. La ubicación es zonificación R3 y posee evaluación de factibilidad de construcción de 1800 m2 vendibles sobre 2400 metros totales",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Constitución"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Estrada y camet"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 530.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Constitución"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Constitución, Mar del Plata - U$S 530.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Excelente lote frente al mar sobre Av Felix U Camet a metros de calle Estrada, ubicación estratégica para desarrollo inmobiliario. El terreno cuenta con una superficie de 532 metros con frente de 14,87 metros y 35,78 metros de fondo. La ubicación es zonificación R3 y posee evaluación de factibilidad de construcción de 1800 m2 vendibles sobre 2400 metros totales"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Independencia 575",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 500000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_468167_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:09.187Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Lote sobre Avenida Independencia a 100 metros del mar Medida de 11 x 23 metros R1 apto 7 pisos",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Independencia 575"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 500.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 500.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote sobre Avenida Independencia a 100 metros del mar Medida de 11 x 23 metros R1 apto 7 pisos"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Chacabuco 4662",
+      "barrio": "",
+      "metros": 90,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 85000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-pompeya_466706_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:10.720Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Pompeya",
+      "resumen": "Lote para construir complejo de ph, o duplex o casa medidas 10.39 x 22.52 mts. Zona R4. Buen entorno y ubicacion actualmente en sucesion que sale en Agosto de 2026",
+      "revision": [
+        "barrio: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Chacabuco 4662"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 85.000"
+        },
+        "areaRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Superficie Cubierta') span",
+          "value": "90 m²"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Pompeya, Mar del Plata - U$S 85.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote para construir complejo de ph, o duplex o casa medidas 10.39 x 22.52 mts. Zona R4. Buen entorno y ubicacion actualmente en sucesion que sale en Agosto de 2026"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Libertad 3964",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 160000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-pompeya_466468_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:12.231Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Pompeya",
+      "resumen": "Terreno zonificacion R2 medidas: 8,66 x 34,64 mts apto 7 pisos",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Libertad 3964"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 160.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Pompeya, Mar del Plata - U$S 160.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno zonificacion R2 medidas: 8,66 x 34,64 mts apto 7 pisos"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Ayacucho 3155",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 320000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_461413_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:15.259Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno para construir a media cuadra del mar y plaza españa Zonificacion R1. Hasta 7 pisos ideal semipisos. lote de 10,39 x 26",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Ayacucho 3155"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 320.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 320.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno para construir a media cuadra del mar y plaza españa Zonificacion R1. Hasta 7 pisos ideal semipisos. lote de 10,39 x 26"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "developer park",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 65000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-developer-park_459671_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:16.776Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Developer Park",
+      "resumen": "Lote en venta en Developer Park ruta 2 lote 15 acepta dpto en mdp mayor valor hasta u$s 100.000 lote 53 vende proyecto de casa moderna 3 dorm u$s 290.000 con el terreno incluido",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Developer Park"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "developer park"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 65.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Developer Park"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Developer Park, Mar del Plata - U$S 65.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote en venta en Developer Park ruta 2 lote 15 acepta dpto en mdp mayor valor hasta u$s 100.000 lote 53 vende proyecto de casa moderna 3 dorm u$s 290.000 con el terreno incluido"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "rp 11 y houssay",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 120000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-parque-pena_456558_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:18.302Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Parque Peña",
+      "resumen": "Lote frente al mar sobre ruta 11 ideal para construir un galpon. zona de mucho transito comercial y logistico a 200 m2 hay semaforo para doblar e ingresar posee una calle lateral ideal para acceso de camiones toma valores y escucha oferta",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Parque Peña"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "rp 11 y houssay"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 120.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Parque Peña"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Parque Peña, Mar del Plata - U$S 120.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote frente al mar sobre ruta 11 ideal para construir un galpon. zona de mucho transito comercial y logistico a 200 m2 hay semaforo para doblar e ingresar posee una calle lateral ideal para acceso de camiones toma valores y escucha oferta"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Líniers 174",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 220000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-perla-norte_456484_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:19.812Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Perla Norte",
+      "resumen": "Terreno en venta de excelente medida. De 10.82 x 32.47 mts Zonificación R3. Apto 6 pisos. Excelente inversión para edificios modernos con vista al mar en contra Frente. Y todo el sol. Excelente zona comercial con muchos comercios. A una cuadra y media del mar. Posee una vivienda actualmente. Acepta Casa menor valor con parque - patio, todo en planta baja",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Líniers 174"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 220.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Perla Norte, Mar del Plata - U$S 220.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en venta de excelente medida. De 10.82 x 32.47 mts Zonificación R3. Apto 6 pisos. Excelente inversión para edificios modernos con vista al mar en contra Frente. Y todo el sol. Excelente zona comercial con muchos comercios. A una cuadra y media del mar. Posee una vivienda actualmente. Acepta Casa menor valor con parque - patio, todo en planta baja"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "ituzaingo y salta",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 250000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_455932_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:21.350Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno a 1 cuadra del mar para construir Edificio de 8 pisos + SUM Sale un edificio igual al de al lado Zonificacion R1 toma valores",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "ituzaingo y salta"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 250.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 250.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno a 1 cuadra del mar para construir Edificio de 8 pisos + SUM Sale un edificio igual al de al lado Zonificacion R1 toma valores"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "chacabuco 4450",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 120000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-pompeya_455794_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:22.850Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Pompeya",
+      "resumen": "El terreno mas grande de la manzana ideal para complejo de dptos, salen 8 unidades con cochera Zona R4",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "chacabuco 4450"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 120.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Pompeya"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Pompeya, Mar del Plata - U$S 120.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "El terreno mas grande de la manzana ideal para complejo de dptos, salen 8 unidades con cochera Zona R4"
+        },
+        "parkingRaw": {
+          "selector": "property description: explicit parking",
+          "value": "El terreno mas grande de la manzana ideal para complejo de dptos, salen 8 unidades con cochera Zona R4"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "calle 6 bis y diagonal norte",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 12000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-playa-serena_454165_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:24.357Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Playa Serena",
+      "resumen": "Lote de 487m2 Playa Serena Listo escritura OPORTUNIDAD a 50 m de asfalto Fácil acceso por diagonal norte a 700 m2 de la ruta interbalnearia n°11 Zona de mucho crecimiento. Servicios solo luz.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Playa Serena"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "calle 6 bis y diagonal norte"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 12.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Playa Serena"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Playa Serena, Mar del Plata - U$S 12.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote de 487m2 Playa Serena Listo escritura OPORTUNIDAD a 50 m de asfalto Fácil acceso por diagonal norte a 700 m2 de la ruta interbalnearia n°11 Zona de mucho crecimiento. Servicios solo luz."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Florencio sierra de los padres",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 50000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-sierra-de-los-padres_452065_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:25.862Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Sierra de los Padres",
+      "resumen": "Terreno en zona Alta escriturado todo al dia , permutoria x mayor o menor valor. Acepta vehiculos Florencia casi circuito san martin",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Sierra de los Padres"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Florencio sierra de los padres"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 50.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Sierra de los Padres"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Sierra de los Padres, Mar del Plata - U$S 50.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en zona Alta escriturado todo al dia , permutoria x mayor o menor valor. Acepta vehiculos Florencia casi circuito san martin"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "haras del mar barrio privado",
+      "barrio": "Privado Club Haras del Mar",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 23000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-santa-clara-del-mar_450474_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:27.378Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Santa Clara del Mar",
+      "resumen": "Se ofrece en venta el Lote 93, con expensas al día, en el exclusivo Barrio Privado Club Haras del Mar, a solo 10 km al norte de la ciudad de Mar del Plata. Características del Lote: * Superficie: 758,85 m2 * Ubicación: Barrio Privado Club Haras del Mar, Av. Atlántida S/N, Santa Clara del Mar. * Expensas al día. Características del Barrio: * Club house con sauna, jacuzzi, ducha finlandesa, sector de cocina y dormís. * Piscina al aire libre y pileta para niños * Seguridad privada las 24 hs. * Fibra óptica. * Radar de velocidad. * Alambrado olímpico. * Grandes espacios verdes y arboleda. * Área deportiva: cancha de tenis y cancha de futbol. La parcela ya posee posesión. Con su respectivo pilar de luz y en condiciones de iniciar a construir. El predio se compone de 229 lotes, existiendo más de 70 casas de vivienda permanente. El barrio se encuentra emplazado en un entorno muy tranquilo, rodeados de naturaleza, con fácil acceso desde ruta 2 y 11, con acceso hasta el barrio asfaltado. A tan solo 10 cuadras del mar, y a tan solo 15 cuadras de la entrada a Santa Clara del Mar. SE ACEPTAN PERMUTAS. ACEPTA VEHICULO",
+      "revision": [
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Santa Clara del Mar"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "haras del mar barrio privado"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 23.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Santa Clara del Mar"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Santa Clara del Mar, Mar del Plata - U$S 23.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Se ofrece en venta el Lote 93, con expensas al día, en el exclusivo Barrio Privado Club Haras del Mar, a solo 10 km al norte de la ciudad de Mar del Plata. Características del Lote: * Superficie: 758,85 m2 * Ubicación: Barrio Privado Club Haras del Mar, Av. Atlántida S/N, Santa Clara del Mar. * Expensas al día. Características del Barrio: * Club house con sauna, jacuzzi, ducha finlandesa, sector de cocina y dormís. * Piscina al aire libre y pileta para niños * Seguridad privada las 24 hs. * Fibra óptica. * Radar de velocidad. * Alambrado olímpico. * Grandes espacios verdes y arboleda. * Área deportiva: cancha de tenis y cancha de futbol. La parcela ya posee posesión. Con su respectivo pilar de luz y en condiciones de iniciar a construir. El predio se compone de 229 lotes, existiendo más de 70 casas de vivienda permanente. El barrio se encuentra emplazado en un entorno muy tranquilo, rodeados de naturaleza, con fácil acceso desde ruta 2 y 11, con acceso hasta el barrio asfaltado. A tan solo 10 cuadras del mar, y a tan solo 15 cuadras de la entrada a Santa Clara del Mar. SE ACEPTAN PERMUTAS. ACEPTA VEHICULO"
+        },
+        "neighborhood": {
+          "selector": ".descripcionDeFicha: explicitly labeled location",
+          "value": "Barrio Privado Club Haras del Mar"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "casonas del haras",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 75000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-casonas-del-haras_445876_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:28.909Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Casonas del Haras",
+      "resumen": "¿Te Imaginás tu casa en ese hermoso barrio ? Hacela realidad hoy. Tenemos el lote 4 en la mejor parte del barrio de Casonas del Haras. Mide 20 x 38. tamaño ideal para edificar algo lindo y moderno. No esperes más para empezar a construir. La es ubicación privilegiada, rodeada de naturaleza. Esta frente al acceso sur, ideal para ir rapido a la playa. Seguridad y amenities de gran categoría: Club House, cancha de tenis, padel, basquet y fútbol. Disponibilidad . Consultanos. Imagenes son del Club House y amenities PERMUTA Y TOMA VALORES",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Casonas del Haras"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "casonas del haras"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 75.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Casonas del Haras"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Casonas del Haras, Mar del Plata - U$S 75.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "¿Te Imaginás tu casa en ese hermoso barrio ? Hacela realidad hoy. Tenemos el lote 4 en la mejor parte del barrio de Casonas del Haras. Mide 20 x 38. tamaño ideal para edificar algo lindo y moderno. No esperes más para empezar a construir. La es ubicación privilegiada, rodeada de naturaleza. Esta frente al acceso sur, ideal para ir rapido a la playa. Seguridad y amenities de gran categoría: Club House, cancha de tenis, padel, basquet y fútbol. Disponibilidad . Consultanos. Imagenes son del Club House y amenities PERMUTA Y TOMA VALORES"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Juan Jose Paso y las heras",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": null,
+      "moneda": "",
+      "link": "https://www.dantepropiedades.com/terreno-venta-primera-junta_444856_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:30.435Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Primera Junta",
+      "resumen": "Amplio Lote en la Ex Villa de paso. Av.Juan Jose Paso esquina Las Heras De 17.32 x 30.31 Construcciones nuevas y modernas en su entorno. Excelente ubicación y tamaño Ideal Inversión",
+      "revision": [
+        "barrio: missing or uncertain",
+        "precio: missing or uncertain",
+        "moneda: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Primera Junta"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Juan Jose Paso y las heras"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Primera Junta"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Primera Junta, Mar del Plata - | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Amplio Lote en la Ex Villa de paso. Av.Juan Jose Paso esquina Las Heras De 17.32 x 30.31 Construcciones nuevas y modernas en su entorno. Excelente ubicación y tamaño Ideal Inversión"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Lamadrid y Vieytes",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 139000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-primera-junta_444855_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:31.938Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Primera Junta",
+      "resumen": "Amplio Lote en la Ex Villa de paso. por la calle Vieytes entre Lamadrid y Las Heras De 13 x 43.40 Construcciones nuevas y modernas en su entorno. Excelente ubicación y tamaño Ideal Inversión",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Primera Junta"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Lamadrid y Vieytes"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 139.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Primera Junta"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Primera Junta, Mar del Plata - U$S 139.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Amplio Lote en la Ex Villa de paso. por la calle Vieytes entre Lamadrid y Las Heras De 13 x 43.40 Construcciones nuevas y modernas en su entorno. Excelente ubicación y tamaño Ideal Inversión"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Antártida Argentina 3330",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 40000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-mar-del-plata_444854_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:33.465Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Mar del Plata",
+      "resumen": "*2 LOTES excelente ubicación de 22.5x27m cada uno en Mar del Plata, sobre Avenida Antártida Argentina 3330 de 1200 m2 totales. Entre avenida Mario Bravo y la calle Yahaty. Uno sobre avenida y el otro lindero al mismo, de iguales medidas. Con posibilidad de importante desarrollo, construcción de galpones y/o viviendas, posibilidad de unificar lotes. Con todos los servicios. Impuestos al día, listo para escriturar. Excelente conexión con Avenida Mario Bravo y Avenida Peralta Ramos. A metros del complejo habitacional Barrio SOIP. Escuchamos propuesta. Posibilidad de financiación con hipoteca. Valor por dos lotes USD 85.000 Valor lote sobre calle USD 40.000 Valor lote sobre avenida USD 50.000",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar del Plata"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Antártida Argentina 3330"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 40.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar del Plata"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Mar del Plata, Mar del Plata - U$S 40.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "*2 LOTES excelente ubicación de 22.5x27m cada uno en Mar del Plata, sobre Avenida Antártida Argentina 3330 de 1200 m2 totales. Entre avenida Mario Bravo y la calle Yahaty. Uno sobre avenida y el otro lindero al mismo, de iguales medidas. Con posibilidad de importante desarrollo, construcción de galpones y/o viviendas, posibilidad de unificar lotes. Con todos los servicios. Impuestos al día, listo para escriturar. Excelente conexión con Avenida Mario Bravo y Avenida Peralta Ramos. A metros del complejo habitacional Barrio SOIP. Escuchamos propuesta. Posibilidad de financiación con hipoteca. Valor por dos lotes USD 85.000 Valor lote sobre calle USD 40.000 Valor lote sobre avenida USD 50.000"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "developer aqua",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": null,
+      "moneda": "",
+      "link": "https://www.dantepropiedades.com/terreno-venta-mar-del-plata_444127_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:34.988Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Mar del Plata",
+      "resumen": "Developer aqua Lote 76 en la zona de la laguna",
+      "revision": [
+        "barrio: missing or uncertain",
+        "precio: missing or uncertain",
+        "moneda: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar del Plata"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "developer aqua"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar del Plata"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Mar del Plata, Mar del Plata - | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Developer aqua Lote 76 en la zona de la laguna"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Matheu 276",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 350000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-alem_443740_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:36.493Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Alem",
+      "resumen": "Terreno Irregular a metros de Alem excelente entorno Zona R4 con vivienda a demoler",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Alem"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Matheu 276"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 350.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Alem"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Alem, Mar del Plata - U$S 350.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno Irregular a metros de Alem excelente entorno Zona R4 con vivienda a demoler"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "mendoza 2669",
+      "barrio": "Stella Maris",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 260000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-stella-maris_440736_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:38.003Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Stella Maris",
+      "resumen": "Lote de frente 10.39 x 22.52. Ideal para construir 2 duplex o casa. La propiedad cuenta con un garage a demoler. Se toman permutas y se Puede financiar un 30 % a 12 meses",
+      "revision": [
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Stella Maris"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "mendoza 2669"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 260.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Stella Maris"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Stella Maris, Mar del Plata - U$S 260.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote de frente 10.39 x 22.52. Ideal para construir 2 duplex o casa. La propiedad cuenta con un garage a demoler. Se toman permutas y se Puede financiar un 30 % a 12 meses"
+        },
+        "neighborhood": {
+          "selector": "property URL/title/address",
+          "value": "Stella Maris"
+        },
+        "parkingRaw": {
+          "selector": "property description: explicit parking",
+          "value": "Lote de frente 10.39 x 22.52. Ideal para construir 2 duplex o casa. La propiedad cuenta con un garage a demoler. Se toman permutas y se Puede financiar un 30 % a 12 meses"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Virginia sierra de los padres",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 50000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-sierra-de-los-padres_436196_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:39.520Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Sierra de los Padres",
+      "resumen": "Lote de 901m2 en sierra de los padres con mejoras tiene planos aprobados de 112 mt2 pozo séptico base lista de aprox 55 MTS 2 pasa el gas por la puerta, vista a los campos, sol todo el día permutaría por depto. calle Eva y Virginia La información gráfica y escrita contenida en el presente aviso es meramente a título estimativo y no forma parte de ningún tipo de documentación contractual. Las medidas y superficies definitivas surgirán del título de propiedad del inmueble referido. Asimismo, los importes de impuestos, tasas, servicios y expensas aquí indicados están sujetos a verificación por parte del potencial comprador.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Sierra de los Padres"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Virginia sierra de los padres"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 50.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Sierra de los Padres"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Sierra de los Padres, Mar del Plata - U$S 50.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote de 901m2 en sierra de los padres con mejoras tiene planos aprobados de 112 mt2 pozo séptico base lista de aprox 55 MTS 2 pasa el gas por la puerta, vista a los campos, sol todo el día permutaría por depto. calle Eva y Virginia La información gráfica y escrita contenida en el presente aviso es meramente a título estimativo y no forma parte de ningún tipo de documentación contractual. Las medidas y superficies definitivas surgirán del título de propiedad del inmueble referido. Asimismo, los importes de impuestos, tasas, servicios y expensas aquí indicados están sujetos a verificación por parte del potencial comprador."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Croce y Soler",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 320000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-punta-mogotes_433177_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:41.034Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Punta Mogotes",
+      "resumen": "Lote Mogotes esquina Croce y Soler. EXCELENTES VISTAS AL MAR Superficie 740 m2 Zonificación R3 Apto 9 pisos Metros cubiertos vendibles: 2.500 m2 más cocheras Valor: U$S 320.000",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Punta Mogotes"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Croce y Soler"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 320.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Punta Mogotes"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Punta Mogotes, Mar del Plata - U$S 320.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote Mogotes esquina Croce y Soler. EXCELENTES VISTAS AL MAR Superficie 740 m2 Zonificación R3 Apto 9 pisos Metros cubiertos vendibles: 2.500 m2 más cocheras Valor: U$S 320.000"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "jujuy y 9 de Julio",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 135000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_431244_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:42.555Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno para edificar edificio. Excelente ubicación cerca del cetro y Plazas Posee una construcción a demoler. Se pueden construir planta baja y 3 pisos. R4 Ideal dptos u Oficinas. medida de 10x26 metros",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "jujuy y 9 de Julio"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 135.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 135.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno para edificar edificio. Excelente ubicación cerca del cetro y Plazas Posee una construcción a demoler. Se pueden construir planta baja y 3 pisos. R4 Ideal dptos u Oficinas. medida de 10x26 metros"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "ayacucho 3866",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 99000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_414033_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:44.065Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Casa a Demoler lote de 8.64 x 26 mts ideal inversión complejo de apartamentos distrito R4 Salen 7 dptos de 2 amb chicos y 4 cocheras",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "ayacucho 3866"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 99.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 99.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Casa a Demoler lote de 8.64 x 26 mts ideal inversión complejo de apartamentos distrito R4 Salen 7 dptos de 2 amb chicos y 4 cocheras"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Liniers 444",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 350000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-perla-norte_410678_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:45.594Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Perla Norte",
+      "resumen": "Lote amplio con casa a demoler. ideal construcción de edificio. Excelente ubicacion . Apto hasta 7 pisos. Gran medida Vista al mar. Zona residencial R3",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Liniers 444"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 350.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Perla Norte"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Perla Norte, Mar del Plata - U$S 350.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote amplio con casa a demoler. ideal construcción de edificio. Excelente ubicacion . Apto hasta 7 pisos. Gran medida Vista al mar. Zona residencial R3"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "c.18 y c.829 col chapadmalal",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 22000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-chapadmalal_410489_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:47.103Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Chapadmalal",
+      "resumen": "Lote en Chapadmalal. Con escritura A 600 metros del mar y capilla zona de gran expansion turistica a 30 min de Mar del plata Terreno plano ideal Inversion",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Chapadmalal"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "c.18 y c.829 col chapadmalal"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 22.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Chapadmalal"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Chapadmalal, Mar del Plata - U$S 22.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote en Chapadmalal. Con escritura A 600 metros del mar y capilla zona de gran expansion turistica a 30 min de Mar del plata Terreno plano ideal Inversion"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "santiago del estero 1300",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 97500,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_400256_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:48.802Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno baldío de 8,82 x 21,65 m. sin construcción. ideal inversión residencial o comercial. Zona R7 A metros de la playa y el centro toma valores",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "santiago del estero 1300"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 97.500"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 97.500 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno baldío de 8,82 x 21,65 m. sin construcción. ideal inversión residencial o comercial. Zona R7 A metros de la playa y el centro toma valores"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Catamarca y 9 de julio",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 170000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_394038_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:50.316Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno en venta. Edificio hasta 7 pisos de altura Casa a demoler Oportunidad de inversión COT: R1",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Catamarca y 9 de julio"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 170.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 170.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en venta. Edificio hasta 7 pisos de altura Casa a demoler Oportunidad de inversión COT: R1"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "newbery y 507",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 30000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-acantilados_382992_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:51.838Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Acantilados",
+      "resumen": "Terreno en venta a 100 metros de la Av. Jorge newbery y 200 metros de la Av. 515 que es la que va directo a las playas del sur, actualmente parte de la circunvalación que rodea la ciudad de fácil acceso a rutas. Se ingresa por la 507. El terreno es en esquina de una calle de pasto. Buen entorno. Consta de Luz , perforación de agua c/bomba de 3/4, alambrado c/tranquera, perforación de pozo ciego y Planos Aprobados de una cabaña en 2 plantas de 84 m2 que puede aprovecharse. Oportunidad",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Acantilados"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "newbery y 507"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 30.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Acantilados"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Acantilados, Mar del Plata - U$S 30.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en venta a 100 metros de la Av. Jorge newbery y 200 metros de la Av. 515 que es la que va directo a las playas del sur, actualmente parte de la circunvalación que rodea la ciudad de fácil acceso a rutas. Se ingresa por la 507. El terreno es en esquina de una calle de pasto. Buen entorno. Consta de Luz , perforación de agua c/bomba de 3/4, alambrado c/tranquera, perforación de pozo ciego y Planos Aprobados de una cabaña en 2 plantas de 84 m2 que puede aprovecharse. Oportunidad"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Ituzaingo 3858",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 85000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_382603_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:53.335Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno en venta en la perla Casa a demoler. . Zonificación c3. se puede construir 4 pisos. Ideal complejo de departamentos o duplex",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Ituzaingo 3858"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 85.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 85.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en venta en la perla Casa a demoler. . Zonificación c3. se puede construir 4 pisos. Ideal complejo de departamentos o duplex"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Jujuy 1126",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 135000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_381904_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:54.837Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno de 10,39 x 20,78 m. Apto semipisos 4 pisos R4",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Jujuy 1126"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 135.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 135.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno de 10,39 x 20,78 m. Apto semipisos 4 pisos R4"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "Necochea 3200",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 250000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-la-perla_372988_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:56.357Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en La Perla",
+      "resumen": "Terreno en Venta.Apto para edificio de 7 pisos. Semipisos o pisos . Excelente ubicacion a metros del mar.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Necochea 3200"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 250.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en La Perla"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en La Perla, Mar del Plata - U$S 250.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Terreno en Venta.Apto para edificio de 7 pisos. Semipisos o pisos . Excelente ubicacion a metros del mar."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "mar de cobo",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 27000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-mar-de-cobo_344864_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:57.878Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Mar de Cobo",
+      "resumen": "LOTEO MAR DE COBO poseemos 2 manzanas loteadas con terrenos con ESCRITURA DIRECTA Estan ubicados en la zona de parque lago y mar de cobo. a 200 metros de la laguna con servicio de luz MUY AMPLIOS lotes de diferentes medidas, ya hay varias casas construidas de calidad y modernas que haran un entorno muy hermoso. Medidas disponibles *15 x 29 = 435 m2 u$s 26.000 *15 x 44= 645 m2 u$s 29.000 Ideales para inversión. A 25 minutos de Mar del plata. A 400 metros del mar. OPORTUNIDAD",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar de Cobo"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "mar de cobo"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 27.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar de Cobo"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Mar de Cobo, Mar del Plata - U$S 27.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "LOTEO MAR DE COBO poseemos 2 manzanas loteadas con terrenos con ESCRITURA DIRECTA Estan ubicados en la zona de parque lago y mar de cobo. a 200 metros de la laguna con servicio de luz MUY AMPLIOS lotes de diferentes medidas, ya hay varias casas construidas de calidad y modernas que haran un entorno muy hermoso. Medidas disponibles *15 x 29 = 435 m2 u$s 26.000 *15 x 44= 645 m2 u$s 29.000 Ideales para inversión. A 25 minutos de Mar del plata. A 400 metros del mar. OPORTUNIDAD"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Dante Propiedades",
+      "direccion": "felipe de arana 5099",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 36000,
+      "moneda": "USD",
+      "link": "https://www.dantepropiedades.com/terreno-venta-zacagnini_256714_propiedad-inmobiliaria.html",
+      "fechaExtraccion": "2026-10-18T13:18:59.391Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Zacagnini",
+      "resumen": "Lote. Todos los servicios. Ante esquina de ingenieros y arana. Mide 10,40 x 22,50",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "title": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "felipe de arana 5099"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 36.000"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Zacagnini"
+        },
+        "city": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Zacagnini, Mar del Plata - U$S 36.000 | Dante Propiedades"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Lote. Todos los servicios. Ante esquina de ingenieros y arana. Mide 10,40 x 22,50"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Gisela D’Alessandro",
+      "direccion": "Alsina al 2500",
+      "barrio": "Mar Del Plata",
+      "metros": 238,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "cubierta",
+      "precio": 450000,
+      "moneda": "USD",
+      "link": "https://www.giseladalessandro.com.ar/p/7551378-Terreno-en-Venta-en-Mar-Del-Plata-Alsina-al-2500",
+      "fechaExtraccion": "2026-10-18T13:19:04.492Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Mar Del Plata - Alsina al 2500",
+      "resumen": "",
+      "revision": [
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Alsina al 2500"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Mar Del Plata - Alsina al 2500"
+        },
+        "city": {
+          "selector": ".prop-desc-tipo-ub",
+          "value": "Terreno en Venta en Mar Del Plata, General Pueyrredon"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Mar Del Plata - Alsina al 2500"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD450.000"
+        },
+        "areaRaw": {
+          "selector": "#lista_superficies li:contains('Cubierta:')",
+          "value": "Cubierta: 238 m²"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Mar Del Plata"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Gisela D’Alessandro",
+      "direccion": "Ruta 2 KM 396",
+      "barrio": "Developer Park",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 39000,
+      "moneda": "USD",
+      "link": "https://www.giseladalessandro.com.ar/p/8168905-Terreno-en-Venta-en-Developer-Park-Ruta-2-KM-396",
+      "fechaExtraccion": "2026-10-18T13:19:06.143Z",
+      "operacion": "Venta",
+      "tipo": "Terreno",
+      "titulo": "Terreno en Venta en Developer Park - Ruta 2 KM 396",
+      "resumen": "",
+      "revision": [
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Ruta 2 KM 396"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Terreno en Venta en Developer Park - Ruta 2 KM 396"
+        },
+        "city": {
+          "selector": ".prop-desc-tipo-ub",
+          "value": "Terreno en Venta en Developer Park, Mar Del Plata"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Terreno en Venta en Developer Park - Ruta 2 KM 396"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD39.000"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Developer Park"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
         }
       }
     }

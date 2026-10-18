@@ -67,15 +67,16 @@ export function neighborhoodFor(listing) {
 }
 
 export function propertyTypeFor(value) {
-  const text = normalizeField(value).replace(/^tipo(?: de inmueble)?:\s*/, "");
+  const text = normalizeField(value).replace(/^tipo(?: de (?:inmueble|propiedad))?\s*:?\s*/, "");
   const types = [
     ["Departamento", /\b(departamento|departamentos|apartamento|apartment|depto|dto)\b/],
     ["Chalet", /\bchalet\b/], ["Casa", /\b(casa|casas|house)\b/],
     ["PH", /\bph\b/], ["Dúplex", /\bduplex\b/],
-    ["Terreno", /\b(terreno|lote|terrenos)\b/], ["Local", /\blocal\b/],
+    ["Terreno", /\bterrenos?\b/], ["Lote", /\blotes?\b/], ["Local", /\blocal\b/],
     ["Oficina", /\boficina\b/], ["Galpón", /\bgalpon\b/]
   ];
   const matches = types.filter(([, pattern]) => pattern.test(text));
+  if (matches.length === 2 && matches.every(([name]) => ["Terreno", "Lote"].includes(name))) return "Lote";
   if (matches.length === 2 && matches.every(([name]) => ["Casa", "Chalet"].includes(name))) return "Chalet";
   return matches.length === 1 ? matches[0][0] : "";
 }
