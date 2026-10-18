@@ -1,60 +1,40 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
+import { neighborhoodFor, operationFor } from "../web/property-fields.js";
 
 export async function writeListingsJson(listings, outputPath, config = {}) {
-  const neighborhoods = config.filters?.neighborhoods || [];
   const payload = {
     generatedAt: new Date().toISOString(),
     count: listings.length,
+    quality: {
+      needingReview: listings.filter((listing) => listing.issues?.length).length,
+      byAgency: (config.sources || []).map((source) => ({
+        name: source.name,
+        listings: listings.filter((listing) => listing.sourceName === source.name).length,
+        needingReview: listings.filter((listing) => listing.sourceName === source.name && listing.issues?.length).length
+      }))
+    },
     listings: listings.map((listing) => ({
       inmobiliaria: listing.sourceName,
       direccion: listing.address,
-      barrio: inferNeighborhood(listing, neighborhoods),
+      barrio: neighborhoodFor(listing),
       metros: listing.areaM2,
+      ambientes: listing.rooms ?? null,
+      cochera: listing.parking || "No informado",
+      superficieTipo: listing.areaKind || "",
       precio: listing.priceAmount,
       moneda: listing.currency,
       link: listing.url,
       fechaExtraccion: listing.scrapedAt,
-      operacion: inferOperation(listing),
+      operacion: operationFor(listing),
       tipo: listing.propertyType,
       titulo: listing.title,
-      resumen: listing.summary
+      resumen: listing.summary,
+      revision: listing.issues || [],
+      evidencia: listing.evidence || {}
     }))
   };
 
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-}
-
-function inferNeighborhood(listing, neighborhoods) {
-  const text = normalizeForMatch([
-    listing.address,
-    listing.title,
-    listing.summary,
-    listing.searchText,
-    listing.url
-  ].join(" "));
-
-  return neighborhoods.find((neighborhood) => text.includes(normalizeForMatch(neighborhood))) || "";
-}
-
-function inferOperation(listing) {
-  const text = normalizeForMatch([
-    listing.operation,
-    listing.title,
-    listing.summary,
-    listing.searchText,
-    listing.url
-  ].join(" "));
-
-  if (text.includes("alquiler")) return "Alquiler";
-  if (text.includes("venta") || text.includes("comprar")) return "Venta";
-  return "";
-}
-
-function normalizeForMatch(value) {
-  return String(value || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
 }

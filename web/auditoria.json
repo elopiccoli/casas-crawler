@@ -1,0 +1,1236 @@
+{
+  "checkedAt": "2026-10-17T09:35:41.145Z",
+  "examined": 16,
+  "retained": 16,
+  "outsideConfiguredFilters": 7,
+  "recordsWithCorrections": 0,
+  "recordsNeedingReview": 8,
+  "sources": [
+    {
+      "name": "Russillo Asesores Inmobiliarios",
+      "enabled": true,
+      "examined": 8,
+      "matchingFilters": 7,
+      "needsReview": 7,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 7,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Suarez Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Ezequiel Jose Estudio Inmobiliario",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Velati Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 403,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "VA Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Ucci Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Coste Propiedades",
+      "enabled": true,
+      "examined": 1,
+      "matchingFilters": 1,
+      "needsReview": 0,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Latorre Negocios Inmobiliarios",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Dante Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Sanz y Ordoqui Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Valencia Consultores Inmobiliarios",
+      "enabled": true,
+      "examined": 1,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Martínez Arrechea Propiedades",
+      "enabled": true,
+      "examined": 2,
+      "matchingFilters": 0,
+      "needsReview": 1,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 1,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Berengeno, Fernando Abel",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Oteiza Propiedades",
+      "enabled": true,
+      "examined": 3,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Gerardo E. Barg Departamento Inmobiliario",
+      "enabled": true,
+      "examined": 1,
+      "matchingFilters": 1,
+      "needsReview": 0,
+      "status": "listing fields audited; see per-field evidence",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Bártoli Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Inmobiliaria Daniel Díaz",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "DAR Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "J. Urrizaga",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Iza Inmobiliaria",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Aguilera Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Marino Pérez Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Palma Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Del Rosso & Asociados",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Del Valle Estudio Inmobiliario",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Acampora y Asociados",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "M.A.S Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Properati",
+      "enabled": false,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "disabled",
+      "sampleHttpStatus": null,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Bellucci Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Cabrera Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Estudio Uno Propiedades",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    },
+    {
+      "name": "Giromini Soluciones Inmobiliarias",
+      "enabled": true,
+      "examined": 0,
+      "matchingFilters": 0,
+      "needsReview": 0,
+      "status": "unverified: no current listing sample",
+      "sampleHttpStatus": 200,
+      "missingFields": {
+        "address": 0,
+        "neighborhood": 0,
+        "operation": 0,
+        "priceAmount": 0,
+        "currency": 0,
+        "areaM2": 0,
+        "propertyType": 0
+      }
+    }
+  ],
+  "records": [
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/10476090-Casa-en-Venta-en-Los-Troncos-VENTA-|-CHALET-DE-5-AMBIENTES-CON-PIEDRA-MAR-DEL-PLATA-|-LOS-TRONCOS",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "VENTA | CHALET DE 5 AMBIENTES CON PIEDRA MAR DEL PLATA | LOS TRONCOS"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 483.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO10476090 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "En el tradicional barrio Los Troncos, a solo dos cuadras de Guemes, se encuentra este sólido chalet de 5 ambientes, que combina el estilo clásico de la arquitectura marplatense con espacios cómodos y funcionales. La propiedad cuenta con un amplio living comedor con hogar, que se destaca por su calidez y amplitud. La cocina, equipada con isla, se integra al quincho con parrilla, generando un gran espacio para disfrutar y recibir. En planta baja se encuentran además dos dormitorios, un baño completo, un lavadero y garage con portón eléctrico. En planta alta se encuentran otros dos dormitorios, un baño con antebaño y acceso a una terraza desde uno de ellos. La propiedad cuenta además con una guardilla de grandes dimensiones, ideal como espacio de guardado o para darle distintos usos según las necesidades. El acceso a la planta alta puede realizarse por dos sectores, aportando practicidad a la distribución. En el exterior, ofrece un patio ideal para disfrutar al aire libre y espacio para un vehículo. Calefacción por radiadores. Una casa con el carácter y la solidez de los tradicionales chalets de Los Troncos y una excelente ubicación.¡CONTACTANOS! Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Los Troncos"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "230 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/8685136-Casa-en-Venta-en-Stella-Maris-VENTA-|-CHALET-EN-STELLA-MARIS-|-EXCELENTE-ESTADO",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "VENTA | CHALET EN STELLA MARIS | EXCELENTE ESTADO"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 299.900"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO8685136 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "Castelli, entre General Rivas y General Paz. A 400 metros de Alem y a 500 metros de Güemes Chalet marplatense sobre Lote de 10 x 33245 metros cubiertos21 metros semi cubiertosPlanta baja:Jardín al frente Trotadora para un autoMuy amplio living comedor2 dormitorios 1 baño completo Garage cubiertoBaño de servicio con duchaCocina 3 x 3Lavadero cubiertoSalón de usos múltiples de grandes dimensiones JardínAl fondo del lote una habitación con bañoPlanta alta:Habitación mediana a la calle y placard La propiedad está original muy bien cuidadaSe entrega pintada Calefacion x calefactoresEscribania designada.CONSULTANOS Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Stella Maris"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "246 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/8415276-Casa-en-Venta-en-Playa-Grande-Urquiza-al-2800",
+      "eligible": true,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "Chalet Unico en Playa Grande , Mar del plata"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 1.900.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO8415276 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "Venta de chalet exclusivo en zona Playa Grande, Mar del Plata. Esta impresionante y única propiedad de 514 m2 construidos se alza sobre un extenso lote de 1874 m2. Con un estilo único, el chalet ofrece 5 dormitorios, de los cuales 3 son en suite, asegurando privacidad y confort.Los amenities incluyen gimnasio, sauna, jacuzzi, sala de masajes, solárium, gran pileta, quincho y parque, ideales para el entretenimiento y el relax. Ademas, los espacios interiores cuentan con Chimeneas, oficina, jardín de invierno, living comedor, zonas de servicio y más.Ubicado en una zona privilegiada, este chalet combina estilo, lujo y funcionalidad para ofrecer una experiencia de vida inigualable. Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Playa Grande"
+        },
+        "address": {
+          "selector": ".single_property_title p",
+          "value": "Urquiza al 2800"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "514 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/8684308-Casa-en-Venta-en-Arenas-del-Sur-Barrio-Privado-Arenas-del-Sur",
+      "eligible": false,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "Casa en Arenas del Sur"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 280.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO8684308 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "En el Barrio Privado Arenas del Sur, encontramos esta casa de 4 ambientes desarrollada toda en una sola planta sobre un lote con vistas a fondo común. Al ingresar, encontramos un living comedor con cocina integrada con barra desayunadora, con conexión directa al quincho, el cual cuenta con parrilla, y toilette. Por pasillo de distribución, la parte privada cuenta con dos domitorios con placar que comparten un baño completo, un dormitorio de usos múltiples y lavadero a parte con salida al exterior. Al finalizar el pasillo, encontramos un dormitorio en suite con antebaño y baño. En el exterior, piscina, amplio parque y parrilla. La propiedad cuenta con calefacción por radiadores, caldera dual y aberturas con DVH. Acepta por permuta por departamento en Playa Grande con vista al mar. ¡¡CONSULTANOS!! Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Arenas del Sur"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "134 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/8435496-Casa-en-Venta-en-Stella-Maris-VENTA-|-CHALET-DE-7-AMBIENTES-|-BARRIO-STELLA-MARIS",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "VENTA | CASA | 7 AMBIENTES | STELLA MARIS"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 550.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO8435496 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "Excelente propiedad ubicada en una de las mejores zonas de Stella Maris, desarrollada sobre lote en con 10 metros de frente, que totalizan 340 m² de terreno.La residencia cuenta con casi 400 m² cubiertos, destacándose por su sólida calidad constructiva, amplitud y muy buena distribución. Ideal para actualizar y modernizar, conservando una base de gran categoría. Planta Baja: Jardín al frente, garaje cubierto para dos vehículos y posibilidad de ingreso para varios autos. Hall de recepción, amplio living comedor, comedor principal independiente, sector de escritorio, toilette de recepción. Cocina comedor con comedor diario, sector de servicio y SUM / quincho, ideal para reuniones y vida social. Planta Alta: Acceso por escalera principal y de servicio. Dispone de 4 dormitorios principales, más 2 dormitorios de servicio integrados, 3 baños completos. Balcón saliente corrido con excelente vista, aportando luz y ventilación natural a los ambientes. Una residencia de categoría, en una ubicación privilegiada, con enorme potencial.No dudes en consultarme para visitarla 2236368866 Sofia Sovak Russillo Inmobiliaria. Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Stella Maris"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "350 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/8692859-Casa-en-Venta-en-Stella-Maris-VENTA-|-CHALET-DE-PIEDRA-MAR-DEL-PLATA-SOBRE-2-LOTES-|-BARRIO-STELLA-MARIS",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "Casa en Stella Maris"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 700.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO8692859 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "Ubicada en el prestigioso barrio de Stella Maris, este chalet de piedra Mar del Plata construido sobre dos lotes ofrece una experiencia de vida inigualable. Con una superficie total de 900 m2, de los cuales 400 m2 están cubiertos, esta propiedad de dos plantas se destaca por su orientación noreste, garantizando una excelente luminosidad en todos sus ambientes. Al ingresar, se es recibido por un amplio living comedor, ideal para el entretenimiento y reuniones familiares. La cocina, se complementa con un comedor diario. La propiedad cuenta con 4 dormitorios, incluyendo una suite principal con vestidor, y un total de tres baños completos y un toilette. El exterior es igualmente impresionante, con un extenso jardín que alberga una pileta descubierta climatizada, perfecta para disfrutar en los meses de verano. Un quincho con parrilla techada ofrece el escenario ideal para asados y encuentros sociales. Adicionalmente, la casa está equipada con una alarma, hidromasaje y caldera, garantizando confort y seguridad. ¡¡CONSULTANOS!! Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Stella Maris"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "400 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/5247611-Casa-en-Venta-en-Los-Troncos-VENTA-|-RESIDENCIA-DE-ESTILO--|-ZONA-GUEMES---MAR-DEL-PLATA-|",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "VENTA | RESIDENCIA DE ESTILO | ZONA GUEMES - MAR DEL PLATA |"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 1.999.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO5247611 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "IMPORTANTE RESIDENCIA SOBRE 2941m2100 METROS SOBRE PRIMERA JUNTA.BARRIO LOS TRONCOS/ GUEMES.691M2 CONSTRUIDOS.CONSULTANOS!! Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Los Troncos"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "691 m²"
+        }
+      }
+    },
+    {
+      "source": "Russillo Asesores Inmobiliarios",
+      "url": "https://www.russilloinmobiliaria.com/p/7128940-Casa-en-Venta-en-Stella-Maris-VENTA-|-CHALET-DE-ESTILO-|-LOS-TRONCOS",
+      "eligible": true,
+      "changes": {},
+      "issues": [
+        "direccion: missing or uncertain"
+      ],
+      "evidence": {
+        "title": {
+          "selector": ".single_property_title h2",
+          "value": "VENTA | PROPIEDAD DE EPOCA | LOS TRONCOS"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD 890.000"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".prop-ref-code",
+          "value": "RHO7128940 | Casa"
+        },
+        "summary": {
+          "selector": ".full-description",
+          "value": "Ofrecemos a la venta, exclusiva propiedad en Lomas de Stella Maris. Construida en 1890 sobre un lote de 750 mts2. La misma ha sido cuidadosamente actualizada para ofrecer comodidad y estilo. Cuenta con 392 mts2 cubiertos y 72.59 mts2 semi cubiertos.Posee un gran parque con piscina, pérgola con parrilla a leña, garaje semi cubierto con parrilla a gas y galería al frente. En su interior, cocina moderna y funcional, destacando una isla central y pisos de porcelanato. Espacioso living comedor con pisos de madera trabajada y acceso directo a la galería frontal, escritorio en el bajo escalera, toilette y un dormitorio.El primer piso tres dormitorios, dos de ellos orientados al frente y uno con balcón francés, mientras que el otro se encuentra en el lateral con su propio balcón francés. Todos los dormitorios están revestidos con pisos de pinotea. Además, dos baños, uno de ellos completo, y un vestidor que puede utilizarse como cuarta habitación quedando con su baño en suite.En el tercer piso posee una gran guardilla con techos a la vista donde hay armadas dos habitaciones..La calefacción en toda la propiedad se realiza a través de radiadores y cuenta con dos termotanques para el agua caliente. CONSULTANOS !! Encontrar el lugar ideal empieza con una pregunta. ¡CONSULTANOS, estamos para guiarte!"
+        },
+        "neighborhood": {
+          "selector": ".single_property_title p",
+          "value": "Stella Maris"
+        },
+        "areaRaw": {
+          "selector": "Cubierta: + value",
+          "value": "392 m²"
+        }
+      }
+    },
+    {
+      "source": "Coste Propiedades",
+      "url": "https://www.costepropiedades.com/propiedad/229844_casa-en-venta-en-lomas-de-stella-maris/",
+      "eligible": true,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": "#property-address-wrap .detail-address span",
+          "value": "Rawson 842"
+        },
+        "title": {
+          "selector": "h1",
+          "value": "Casa en venta en Lomas De Stella Maris"
+        },
+        "priceRaw": {
+          "selector": ".property-title-price-wrap .item-price",
+          "value": "USD 250.000"
+        },
+        "areaRaw": {
+          "selector": ".fw-property-amenities-data:contains('Sup. cubierta')",
+          "value": "Sup. cubierta 140.00 m²"
+        },
+        "neighborhood": {
+          "selector": "#property-address-wrap .detail-area",
+          "value": "Lomas De Stella Maris"
+        },
+        "operation": {
+          "selector": ".property-wrap .label-status",
+          "value": "En venta"
+        },
+        "propertyType": {
+          "selector": "h1",
+          "value": "Casa en venta en Lomas De Stella Maris"
+        },
+        "city": {
+          "selector": "#property-address-wrap .detail-city",
+          "value": "Mar del Plata"
+        },
+        "summary": {
+          "selector": "#property-description-wrap .block-content-wrap",
+          "value": "Oportunidad única en Lomas de Stella Maris, Mar del Plata. Esta propiedad en venta, con un precio de U$D250.000, se destaca por su excelente ubicación en uno de los barrios residenciales más cotizados de la ciudad. La casa se compone de dos unidades, perfectamente distribuidas en cada planta, lo que la convierte en una opción ideal para familias numerosas o para aquellos que buscan una inversión con potencial de renta. Con una superficie total de 140 m2, todos ellos cubiertos, esta propiedad ofrece un amplio espacio que incluye 5 dormitorios, 2 baños, dos cocinas funcionales, dos cómodos living-comedor y comedor diario. Además, cuenta con un encantador jardín y área verde, proporcionando un ambiente perfecto para disfrutar al aire libre. La antigüedad de la casa es de 40 años, lo que le otorga un carácter único y la posibilidad de realizar mejoras personalizadas. La propiedad está equipada con todas las comodidades necesarias, incluyendo agua corriente, gas natural, calefacción, y conexión para lavarropas. Además, cuenta con un entorno arbolado que realza su atractivo, y se encuentra en una zona con alumbrado público y desagüe cloacal. Este inmueble es apto para crédito, lo que facilita el acceso a un hogar en una ubicación privilegiada. No pierda la oportunidad de invertir en esta excepcional propiedad que combina espacio, comodidad y un entorno residencial de primer nivel. Contactanos por whatsapp:2236056903 ¡Llámenos para conocer más en detalle esta propiedad! Tel: 2236772019 223 618 9326 Email: costeinmobiliaria@gmail.com Carlos Coste Inmobiliaria Detalles ID CAR-229844 Dormitorios 5 Ambientes 7 Baños 2 Sup. cubierta 140.00 m² Sup. descubierta 0.00 m² Sup. semicubierta 0.00 m² Sup. total 383.00 m² Antigüedad 40 año/s Actualizado en agosto 26, 2026 a 5:44 pm"
+        }
+      }
+    },
+    {
+      "source": "Valencia Consultores Inmobiliarios",
+      "url": "https://www.valencia.com.ar/p/5490668-Departamento-en-Venta-en-Los-Troncos-Rodr%C3%ADguez-Pe%C3%B1a-y-Sarmiento",
+      "eligible": false,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Rodríguez Peña y Sarmiento"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Departamento en Venta en Los Troncos - Rodríguez Peña y Sarmiento"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD405.900"
+        },
+        "areaRaw": {
+          "selector": "#lista_superficies li:contains('Cubierta:')",
+          "value": "Cubierta: 115.7 m²"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Los Troncos"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "summary": {
+          "selector": "meta[name='description']::attr(content)",
+          "value": "Valencia Consultores Inmobiliarios - Departamento en Venta en Los Troncos - Rodríguez Peña y Sarmiento"
+        },
+        "propertyType": {
+          "selector": "property URL/title/address",
+          "value": "Departamento"
+        }
+      }
+    },
+    {
+      "source": "Martínez Arrechea Propiedades",
+      "url": "https://martinezarrechea.com/casa---chalet-venta-mar-del-plata_455840_propiedad-inmobiliaria.html",
+      "eligible": false,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Italia 197"
+        },
+        "title": {
+          "selector": "h1",
+          "value": "Casa - Chalet en Venta en Mar del Plata"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 179.000"
+        },
+        "areaRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Superficie Cubierta') span",
+          "value": "120 m²"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo:') span",
+          "value": "Chalet"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Importante Chalet en Esquina con Pileta – Villa Primera En el corazón del barrio residencial de Villa Primera, y sobre una privilegiada esquina, se emplaza este importante chalet de sólida construcción, distribuido en dos cómodas plantas. 🏡 Planta Baja: Acceso principal a un amplio living comedor con ventanales que ofrecen una agradable vista al patio y pileta. Toilette de recepción. Entrada secundaria con portón automático, que conecta con el patio y sector de cochera. Espacio exterior con pileta, parrilla y sector de guardado semicubierto. Cocina comedor de generosas dimensiones, ideal para reuniones familiares o sociales. 🛏 Planta Alta: Cuatro dormitorios, todos muy luminosos gracias a su estratégica orientación en esquina, lo que permite ventanales al exterior en cada ambiente. Baño completo de cómodo tamaño. Esta propiedad se destaca por su excelente luminosidad natural, ambientes bien ventilados, y un entorno tranquilo y residencial. Además, cuenta con cómodos accesos a distintos puntos de la ciudad, lo que la convierte en una opción ideal para vivienda permanente o uso recreativo. 📍Ubicación: Villa Primera, Mar del Plata. 📐Superficie cubierta: 2 plantas. 🔑 ¡Una oportunidad para vivir con comodidad y estilo! No deje de visitarla. Coordine su recorrido hoy mismo."
+        },
+        "neighborhood": {
+          "selector": ".descripcionDeFicha: explicitly labeled location",
+          "value": "Villa Primera"
+        }
+      }
+    },
+    {
+      "source": "Martínez Arrechea Propiedades",
+      "url": "https://martinezarrechea.com/casa---chalet-venta-mar-del-plata_452866_propiedad-inmobiliaria.html",
+      "eligible": false,
+      "changes": {},
+      "issues": [
+        "barrio: missing or uncertain"
+      ],
+      "evidence": {
+        "address": {
+          "selector": ".caracteristicasDeFicha li:contains('Dirección') span",
+          "value": "Padre dutto 63"
+        },
+        "title": {
+          "selector": "h1",
+          "value": "Casa - Chalet en Venta en Mar del Plata"
+        },
+        "priceRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Valor') span",
+          "value": "U$S 170.000"
+        },
+        "areaRaw": {
+          "selector": ".caracteristicasDeFicha li:contains('Superficie Cubierta') span",
+          "value": "233 m²"
+        },
+        "operation": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo de Operación') span",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".caracteristicasDeFicha li:contains('Tipo:') span",
+          "value": "Casa"
+        },
+        "summary": {
+          "selector": ".descripcionDeFicha",
+          "value": "Chalet reciclado a nuevo en venta – Puerto / Villa Lourdes Ubicado sobre calle Padre Dutto a metros de Av. Juan B. Justo, presentamos este sólido chalet de estilo clásico, totalmente reciclado a nuevo, desarrollado en dos plantas sobre lote propio de 234 m² (10,39 m de frente). Cuenta con ingreso independiente para personal de jardinería. 🔸 Planta baja: • Amplio living comedor con desnivel, ideal para ambientar zona de estar y comedor formal • Cocina moderna con gran espacio de guardado y ventilación natural • Lavadero • Toilette de recepción • Cochera cubierta muy amplia, apta para camioneta • Fondo con patio solárium y jardín, con excelente orientación 🔸 Planta alta: • Tres habitaciones con placares empotrados, dos de ellas con balcón al frente y vista abierta sobre calle Padre Dutto • Cuarta habitación muy amplia, ideal como playroom, escritorio o dormitorio adicional, con vista al patio • Baño completo con antebaño • Distribuidor con múltiples espacios de guardado y excelente iluminación natural Cámaras de seguridad y Alarma ✔ Toda la propiedad ha sido reciclada a nuevo ✔ Estructura sólida y ambientes amplios ✔ Calefacción por aire ✔ Carpintería en excelente estado ✔ Lista para ingresar a vivir 📍 Ubicación estratégica: A metros de arterias principales como Av. Juan B. Justo, a pocas cuadras de la costa, del Puerto y con rápido acceso a Playa Grande y al macrocentro. Entorno residencial, tranquilo y con múltiples servicios cercanos. Notas: -Las imágenes adjuntas son ilustrativas y no contractuales. -Las medidas, superficies,m2, y proporiciones detalladas son aproximadas y orientativas. Las medidas definitivas se verán expresadas en el título de la propiedad segun corresponda. -Los valores de los inmuebles pueden ser modificados sin previo aviso. -Los importes de impuestos, servicios, tasas y expensas, los cuales refieren a la ultima informacion recabada, están sujetos a ser verificados por el futuro comprador."
+        }
+      }
+    },
+    {
+      "source": "Oteiza Propiedades",
+      "url": "https://www.oteizapropiedades.com/p/7759070-Casa-en-Venta-en-Los-Troncos-Mendoza-al-3600",
+      "eligible": false,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Mendoza al 3600"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Casa en Venta-Alquiler en Los Troncos - Mendoza al 3600"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD950.000"
+        },
+        "areaRaw": {
+          "selector": "#lista_superficies li:contains('Cubierta:')",
+          "value": "Cubierta: 633 m²"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Los Troncos"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "summary": {
+          "selector": "meta[name='description']::attr(content)",
+          "value": "Oteiza Propiedades - Casa en Venta-Alquiler en Los Troncos - Mendoza al 3600"
+        },
+        "propertyType": {
+          "selector": "property URL/title/address",
+          "value": "Casa"
+        }
+      }
+    },
+    {
+      "source": "Oteiza Propiedades",
+      "url": "https://www.oteizapropiedades.com/p/7407914-Casa-en-Venta-en-Stella-Maris-Rawson-al-500",
+      "eligible": false,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Rawson al 500"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Casa en Venta en Stella Maris - Rawson al 500"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD269.000"
+        },
+        "areaRaw": {
+          "selector": "#lista_superficies li:contains('Cubierta:')",
+          "value": "Cubierta: 174 m²"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Stella Maris"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "summary": {
+          "selector": "meta[name='description']::attr(content)",
+          "value": "Oteiza Propiedades - Casa en Venta en Stella Maris - Rawson al 500"
+        },
+        "propertyType": {
+          "selector": "property URL/title/address",
+          "value": "Casa"
+        }
+      }
+    },
+    {
+      "source": "Oteiza Propiedades",
+      "url": "https://www.oteizapropiedades.com/p/8057018-Casa-en-Venta-en-Divino-Rostro-Arenales-al-3300",
+      "eligible": false,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "address": {
+          "selector": ".title-address",
+          "value": "Arenales al 3300"
+        },
+        "title": {
+          "selector": "meta[property='og:title']::attr(content)",
+          "value": "Casa en Venta en Divino Rostro - Arenales al 3300"
+        },
+        "priceRaw": {
+          "selector": "price within matching operation block",
+          "value": "USD280.000"
+        },
+        "areaRaw": {
+          "selector": "#lista_superficies li:contains('Cubierta:')",
+          "value": "Cubierta: 200 m²"
+        },
+        "neighborhood": {
+          "selector": ".ficha_detalle_item:has(b:contains('Ubicación'))",
+          "value": "Divino Rostro"
+        },
+        "operation": {
+          "selector": "operation block matching property URL",
+          "value": "Venta"
+        },
+        "summary": {
+          "selector": "meta[name='description']::attr(content)",
+          "value": "Oteiza Propiedades - Casa en Venta en Divino Rostro - Arenales al 3300"
+        },
+        "propertyType": {
+          "selector": "property URL/title/address",
+          "value": "Casa"
+        }
+      }
+    },
+    {
+      "source": "Gerardo E. Barg Departamento Inmobiliario",
+      "url": "https://gerardobarg.com.ar/chalet-venta-los-troncos-mar-del-plata/6039612",
+      "eligible": true,
+      "changes": {},
+      "issues": [],
+      "evidence": {
+        "title": {
+          "selector": "#Description h1",
+          "value": "Chalet 4 amb (Los Troncos)"
+        },
+        "priceRaw": {
+          "selector": "#Description .blq_precio span",
+          "value": "US$430,000"
+        },
+        "areaRaw": {
+          "selector": "#Description .list-info-2 li:contains('Área Construida')",
+          "value": "Área Construida: 290 m²"
+        },
+        "neighborhood": {
+          "selector": "#Description .list-info-2 li:contains('Zona:')",
+          "value": "Los Troncos"
+        },
+        "operation": {
+          "selector": "#Description .list-info-2 li:contains('Tipo de negocio')",
+          "value": "Tipo de negocio: Venta"
+        },
+        "propertyType": {
+          "selector": "#Description .list-info-2 li:contains('Tipo de inmueble')",
+          "value": "Tipo de inmueble: Chalet"
+        },
+        "city": {
+          "selector": "#Description .list-info-2 li:contains('Ciudad:')",
+          "value": "Mar del Plata"
+        },
+        "summary": {
+          "selector": "meta[name='description']::attr(content)",
+          "value": "Chalet de 4 amb con 3 ba&ntilde;os cuenta con: *Amplio living comedor con hogar, *Cocina comedor separada, *Lavadero separado, *3 dormitorios con placard, *3"
+        },
+        "address": {
+          "selector": "JSON-LD",
+          "value": "Alvear 3600"
+        }
+      }
+    }
+  ]
+}

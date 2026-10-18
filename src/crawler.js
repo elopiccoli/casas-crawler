@@ -1,5 +1,8 @@
 import * as cheerio from "cheerio";
-import { absolutizeUrl, matchesFilters, normalizeText, parseArea, parsePrice, sleep, uniqueBy } from "./utils.js";
+import { absolutizeUrl, matchesFilters, normalizeText, sleep, uniqueBy } from "./utils.js";
+import { extractPropertyFields, catalogFields } from "./property-extraction.js";
+import { finalizeListing } from "./listing.js";
+import { parseOperation, urlPath } from "../web/property-fields.js";
 
 export async function crawlSources(config, options = {}) {
   const requestConfig = config.request || {};
@@ -11,7 +14,7 @@ export async function crawlSources(config, options = {}) {
 
     logger?.(`Revisando ${source.name}...`);
     try {
-      const sourceListings = await crawlSource(source, requestConfig, config.filters || {});
+      const sourceListings = await crawlSource(source, requestConfig, config.filters || {}, logger);
       logger?.(`  ${source.name}: ${sourceListings.length} publicaciones`);
       listings.push(...sourceListings);
     } catch (error) {
@@ -19,10 +22,10 @@ export async function crawlSources(config, options = {}) {
     }
   }
 
-  return uniqueBy(listings, (listing) => listing.url);
+  return uniqueBy(listings, (listing) => `${listing.url}|${listing.operation}`);
 }
 
-async function crawlSource(source, requestConfig, globalFilters) {
+async function crawlSource(source, requestConfig, globalFilters, logger) {
   if (source.format === "roblesCatalog") {
     return crawlRoblesCatalog(source, requestConfig, globalFilters);
   }
@@ -32,6 +35,8 @@ async function crawlSource(source, requestConfig, globalFilters) {
   const listings = [];
 
   for (const startUrl of source.startUrls || []) {
+    const start = new URL(startUrl);
+    const requestedOperation = parseOperation(start.searchParams.get("operacion") || urlPath(startUrl));
     let pageUrl = startUrl;
     let pageCount = 0;
     const maxPages = source.pagination?.maxPages || 1;
@@ -41,12 +46,24 @@ async function crawlSource(source, requestConfig, globalFilters) {
       visitedPages.add(pageUrl);
       pageCount += 1;
 
-      const html = await fetchHtml(pageUrl, requestConfig);
+      let html;
+      try {
+        html = await fetchHtml(pageUrl, requestConfig, source.listingRequest);
+      } catch (error) {
+        logger?.(`  ${source.name}: listado ${pageUrl}: ${error.message}`);
+        break;
+      }
       const $ = cheerio.load(html);
 
+      let discovered = 0;
       for (const cardListing of extractListingsFromPage($, pageUrl, source)) {
-        if (!detailUrls.has(cardListing.url)) detailUrls.set(cardListing.url, cardListing);
+        const key = `${cardListing.url}|${requestedOperation}`;
+        if (!detailUrls.has(key)) {
+          detailUrls.set(key, { ...cardListing, requestedOperation });
+          discovered++;
+        }
       }
+      if (!discovered) break;
 
       const nextHref = source.pagination?.nextSelector
         ? $(source.pagination.nextSelector).first().attr("href")
@@ -54,14 +71,15 @@ async function crawlSource(source, requestConfig, globalFilters) {
       pageUrl = nextHref
         ? absolutizeUrl(nextHref, pageUrl)
         : buildQueryPageUrl(startUrl, source.pagination, nextPageNumber);
-      nextPageNumber += 1;
+      nextPageNumber += source.pagination?.step || 1;
 
       if (pageUrl) await sleep(requestConfig.delayMs || 1000);
     }
   }
 
-  for (const [url, cardListing] of detailUrls.entries()) {
-    const detailListing = await crawlDetail(url, source, requestConfig).catch((error) => ({
+  for (const cardListing of detailUrls.values()) {
+    const { url, requestedOperation } = cardListing;
+    const detailListing = await crawlDetail(url, source, requestConfig, requestedOperation).catch((error) => ({
       error: error.message
     }));
 
@@ -89,30 +107,8 @@ async function crawlRoblesCatalog(source, requestConfig, globalFilters) {
     const items = Array.isArray(catalog?.data) ? catalog.data : [];
 
     for (const item of items) {
-      const operation = (item.operations || []).find((entry) => /venta/i.test(entry.type || ""))
-        || item.operations?.[0]
-        || {};
       const url = absolutizeUrl(`/propiedades/${item.slug}`, source.siteUrl || startUrl);
-      const priceRaw = operation.price ? `${operation.currency || ""} ${Math.trunc(Number(operation.price))}` : "";
-      const address = [
-        item.address,
-        item.location?.name,
-        filters.city || source.city
-      ].filter(Boolean).join(", ");
-
-      const listing = finalizeListing(source.name, url, {
-        address,
-        areaRaw: item.surface ? `${Number(item.surface)} m2` : "",
-        priceRaw,
-        propertyType: item.property_type?.name || "",
-        title: item.publication_title || "",
-        summary: item.description || "",
-        rawText: normalizeText(JSON.stringify({
-          address,
-          item,
-          operation
-        }))
-      });
+      const listing = finalizeListing(source.name, url, catalogFields(item));
 
       if (matchesFilters(listing, filters)) listings.push(listing);
     }
@@ -125,54 +121,60 @@ function extractListingsFromPage($, pageUrl, source) {
   const listings = [];
   const publicationRegex = source.publicationUrlRegex ? new RegExp(source.publicationUrlRegex, "i") : null;
   const cards = source.listingSelector ? $(source.listingSelector).toArray() : $("a[href]").toArray();
+  const baseUrl = absolutizeUrl($("base[href]").first().attr("href"), pageUrl) || pageUrl;
 
   for (const card of cards) {
     const scope = $(card);
     const linkElement = source.linkSelector ? scope.find(source.linkSelector).first() : scope;
-    const url = absolutizeUrl(linkElement.attr("href"), pageUrl);
+    const url = absolutizeUrl(linkElement.attr("href"), baseUrl);
 
     if (!url) continue;
+    if (new URL(url).hostname.replace(/^www\./, "") !== new URL(baseUrl).hostname.replace(/^www\./, "")) continue;
     if (publicationRegex && !publicationRegex.test(url)) continue;
 
     listings.push({
       url,
-      address: pickText($, scope, source.fields?.address),
-      areaRaw: pickText($, scope, source.fields?.area),
-      priceRaw: pickText($, scope, source.fields?.price),
-      propertyType: pickText($, scope, source.fields?.propertyType),
-      title: pickText($, scope, source.fields?.title),
-      summary: pickText($, scope, source.fields?.summary),
-      rawText: normalizeText(scope.text())
+      ...extractPropertyFields(cheerio.load($.html(card)), { detailFields: source.fields || {} })
     });
   }
 
   return uniqueBy(listings, (listing) => listing.url);
 }
 
-async function crawlDetail(url, source, requestConfig) {
+async function crawlDetail(url, source, requestConfig, requestedOperation) {
   if (!source.detailFields) return {};
 
   const html = await fetchHtml(url, requestConfig);
-  const $ = cheerio.load(html);
-  const jsonLdListing = extractJsonLdListing($);
-
-  return {
-    address: pickText($, $.root(), source.detailFields.address) || jsonLdListing.address,
-    areaRaw: pickText($, $.root(), source.detailFields.area) || jsonLdListing.areaRaw,
-    priceRaw: pickText($, $.root(), source.detailFields.price) || jsonLdListing.priceRaw,
-    propertyType: pickText($, $.root(), source.detailFields.propertyType),
-    title: pickText($, $.root(), source.detailFields.title),
-    summary: pickText($, $.root(), source.detailFields.summary),
-    rawText: normalizeText($.root().text())
-  };
+  return extractDetailListing(html, source, url, requestedOperation);
 }
 
-async function fetchHtml(url, requestConfig) {
+export function extractDetailListing(html, source, url = "", requestedOperation = "") {
+  const $ = cheerio.load(html);
+  const jsonLdListing = extractJsonLdListing($, url);
+  $("script, style, noscript, template").remove();
+  // These are other properties, never fallback values for the current one.
+  $(".item-listing-wrap, .similar-properties, .related-properties, .prop-similar").remove();
+
+  const result = extractPropertyFields($, source, url, requestedOperation);
+  for (const field of ["address", "areaRaw", "priceRaw", "propertyType", "title", "roomsRaw"]) {
+    if (!result[field] && jsonLdListing[field] && !(field === "priceRaw" && (result.priceAmbiguous || result.priceWithheld))) {
+      result[field] = jsonLdListing[field];
+      result.evidence[field] = { selector: "JSON-LD", value: result[field] };
+    }
+  }
+  return result;
+}
+
+async function fetchHtml(url, requestConfig, listingRequest) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), requestConfig.timeoutMs || 20000);
 
   try {
     const response = await fetch(url, {
+      ...(listingRequest?.method === "POST" ? {
+        method: "POST",
+        body: new URLSearchParams({ ...listingRequest.form, ...Object.fromEntries(new URL(url).searchParams) })
+      } : {}),
       signal: controller.signal,
       headers: {
         "user-agent": requestConfig.userAgent || "Mozilla/5.0 (compatible; CasasCrawler/0.1)",
@@ -184,6 +186,12 @@ async function fetchHtml(url, requestConfig) {
       throw new Error(`HTTP ${response.status} al descargar ${url}`);
     }
 
+    if (listingRequest?.responseHtmlField) {
+      const payload = await response.json();
+      const html = payload[listingRequest.responseHtmlField];
+      if (typeof html !== "string") throw new Error("El listado JSON no contiene HTML");
+      return html;
+    }
     return await response.text();
   } finally {
     clearTimeout(timeout);
@@ -213,39 +221,6 @@ async function fetchJson(url, requestConfig) {
   }
 }
 
-function pickText($, scope, selector) {
-  if (!selector) return "";
-  return normalizeText(splitSelectors(selector).flatMap((part) => {
-    const attrMatch = part.match(/^(.*?)::attr\(([^)]+)\)$/);
-    if (attrMatch) {
-      const cssSelector = attrMatch[1].trim();
-      const attrName = attrMatch[2].trim();
-      return scope.find(cssSelector).toArray().map((element) => $(element).attr(attrName) || "");
-    }
-    return scope.find(part).toArray().map((element) => $(element).text());
-  }).join(" "));
-}
-
-function splitSelectors(selector) {
-  const selectors = [];
-  let current = "";
-  let depth = 0;
-
-  for (const char of selector) {
-    if (char === "(" || char === "[") depth += 1;
-    if (char === ")" || char === "]") depth -= 1;
-    if (char === "," && depth === 0) {
-      selectors.push(current.trim());
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-
-  if (current.trim()) selectors.push(current.trim());
-  return selectors;
-}
-
 function buildQueryPageUrl(startUrl, pagination, pageNumber) {
   if (!pagination?.pageParam) return "";
 
@@ -257,7 +232,7 @@ function buildQueryPageUrl(startUrl, pagination, pageNumber) {
   return url.toString();
 }
 
-function extractJsonLdListing($) {
+function extractJsonLdListing($, pageUrl = "") {
   for (const element of $("script[type='application/ld+json']").toArray()) {
     const text = $(element).contents().text();
     const parsed = safeJsonParse(text);
@@ -266,6 +241,10 @@ function extractJsonLdListing($) {
     for (const node of flattenJsonLd(nodes)) {
       const type = Array.isArray(node?.["@type"]) ? node["@type"].join(" ") : node?.["@type"];
       if (!/Offer|Product|Residence|Apartment|House|RealEstateListing/i.test(type || "")) continue;
+      if (pageUrl && node.url) {
+        const candidateUrl = absolutizeUrl(node.url, pageUrl).split("#")[0].replace(/\/$/, "");
+        if (candidateUrl !== pageUrl.split("#")[0].replace(/\/$/, "")) continue;
+      }
 
       const offer = node.offers || node.offer || {};
       const address = typeof node.address === "string"
@@ -273,9 +252,14 @@ function extractJsonLdListing($) {
         : [node.address?.streetAddress, node.address?.addressLocality].filter(Boolean).join(", ");
 
       return {
+        roomsRaw: node.numberOfRooms?.value ?? node.numberOfRooms ?? "",
         address: normalizeText(address),
-        areaRaw: normalizeText(node.floorSize?.value || node.floorSize || node.area || ""),
-        priceRaw: normalizeText(offer.price || node.price || "")
+        areaRaw: node.floorSize?.value
+          ? (!node.floorSize.unitCode || /^(MTK|M2|m²)$/i.test(node.floorSize.unitCode) ? `${node.floorSize.value} m2` : "")
+          : normalizeText(node.floorSize || node.area || ""),
+        priceRaw: normalizeText([offer.priceCurrency || node.priceCurrency, offer.price || node.price].filter(Boolean).join(" ")),
+        title: normalizeText(node.name),
+        propertyType: /Apartment/i.test(type) ? "Departamento" : /House/i.test(type) ? "Casa" : ""
       };
     }
   }
@@ -305,37 +289,13 @@ function safeJsonParse(text) {
 function emptyToFallback(primary, fallback) {
   const result = {};
 
-  for (const key of ["address", "areaRaw", "priceRaw", "propertyType", "title", "summary", "rawText"]) {
+  for (const key of ["address", "areaRaw", "roomsRaw", "parkingRaw", "priceRaw", "propertyType", "title", "summary", "rawText", "operation", "neighborhood", "city", "priceAmbiguous", "priceWithheld", "error"]) {
     result[key] = primary?.[key] || fallback?.[key] || "";
   }
+  result.evidence = { ...fallback?.evidence, ...primary?.evidence };
+  if (primary?.priceAmbiguous || primary?.priceWithheld) result.priceRaw = "";
 
   return result;
-}
-
-function finalizeListing(sourceName, url, listing) {
-  const price = parsePrice(listing.priceRaw);
-
-  return {
-    sourceName,
-    address: listing.address || "",
-    areaM2: parseArea(listing.areaRaw),
-    priceAmount: price.amount,
-    currency: price.currency,
-    url,
-    propertyType: listing.propertyType || "",
-    title: listing.title || "",
-    summary: listing.summary || "",
-    searchText: normalizeText([
-      sourceName,
-      listing.address,
-      listing.propertyType,
-      listing.title,
-      listing.summary,
-      listing.rawText,
-      url
-    ].join(" ")),
-    scrapedAt: new Date()
-  };
 }
 
 function mergeFilters(globalFilters, sourceFilters) {

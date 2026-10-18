@@ -13,6 +13,7 @@ export function absolutizeUrl(href, baseUrl) {
 
 export function normalizeText(value) {
   return String(value ?? "")
+    .replace(/&(?:nbsp|#160|#x0*a0);/gi, " ")
     .replace(/\s+/g, " ")
     .replace(/\u00a0/g, " ")
     .trim();
@@ -25,23 +26,41 @@ export function normalizeForSearch(value) {
     .toLowerCase();
 }
 
+export function parseRooms(value, labeledOnly = false) {
+  const text = normalizeText(value);
+  const match = text.match(/(?<![\d.,])\b(\d+)\s*(?:ambientes?\b|amb\b\.?)/i)
+    || text.match(/\bambientes?\s*:?\s*(\d+)(?![\d.,])/i);
+  const number = match ? Number(match[1]) : !labeledOnly && /^\d+$/.test(text) ? Number(text) : null;
+  return Number.isInteger(number) && number > 0 ? number : null;
+}
+
 export function parseArea(value) {
   const text = normalizeText(value).toLowerCase();
-  const match = text.match(/(\d+(?:[.,]\d+)?)\s*(?:m2|m²|mts|metros)/i);
+  const match = text.match(/(\d[\d.,]*)\s*(?:m2|m²|mts|metros)/i);
   if (!match) return null;
-  return Number(match[1].replace(",", "."));
+  const number = parsePriceNumber(match[1]);
+  return Number.isFinite(number) && number > 0 ? number : null;
 }
 
 export function parsePrice(value) {
   const text = normalizeText(value);
-  const currencyMatch = text.match(/(u\$s|usd|us\$|\$|ars)/i);
-  const numberMatch = text.match(/(\d[\d.,]*)/);
+  const currencyMatch = text.match(/(u\$s|u\$d|usd|us\$|\$|ars)/i);
+  const numberMatch = text.match(/(?:u\$s|u\$d|usd|us\$|\$|ars)\s*(\d[\d.,]*)/i)
+    || text.match(/^(\d[\d.,]*)$/);
 
   return {
     raw: text,
-    currency: currencyMatch ? currencyMatch[1].toUpperCase().replace("US$", "USD").replace("U$S", "USD") : "",
-    amount: numberMatch ? Number(numberMatch[1].replace(/\./g, "").replace(",", ".")) : null
+    currency: currencyMatch ? currencyMatch[1].toUpperCase().replace("US$", "USD").replace("U$S", "USD").replace("U$D", "USD") : "",
+    amount: numberMatch ? parsePriceNumber(numberMatch[1]) : null
   };
+}
+
+function parsePriceNumber(value) {
+  value = value.replace(/[.,]+$/, "");
+  if (/^\d{1,3}(?:[.,]\d{3})+$/.test(value)) return Number(value.replace(/[.,]/g, ""));
+  const decimal = Math.max(value.lastIndexOf("."), value.lastIndexOf(","));
+  if (decimal < 0) return Number(value);
+  return Number(value.slice(0, decimal).replace(/[.,]/g, "") + "." + value.slice(decimal + 1));
 }
 
 export function uniqueBy(items, keyFn) {
@@ -67,8 +86,7 @@ export function matchesFilters(listing, filters = {}) {
     listing.summary,
     listing.url
   ].join(" "));
-  const propertyText = normalizeForSearch([
-    listing.propertyType,
+  const propertyText = normalizeForSearch(listing.propertyType || [
     listing.title,
     getUrlPath(listing.url)
   ].join(" "));
@@ -93,7 +111,7 @@ export function matchesFilters(listing, filters = {}) {
     return false;
   }
 
-  if (filters.neighborhoods?.length && !matchesAny(text, filters.neighborhoods)) {
+  if (filters.neighborhoods?.length && !matchesAny(normalizeForSearch(listing.neighborhood || text), filters.neighborhoods)) {
     return false;
   }
 

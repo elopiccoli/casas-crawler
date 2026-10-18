@@ -1,16 +1,10 @@
+import { listingHeading, listingType } from "./listing-format.js";
+import { neighborhoodFor, operationFor } from "./property-fields.js";
+
 const state = {
   listings: [],
   filtered: []
 };
-
-const configuredNeighborhoods = [
-  "Stella Maris",
-  "Loma de Stella Maris",
-  "Los Troncos",
-  "Guemes",
-  "Playa Grande",
-  "Divino Rostro"
-];
 
 const elements = {
   status: document.querySelector("#status"),
@@ -63,14 +57,14 @@ function bindFilters() {
 
 function hydrateDerivedFields(listings) {
   for (const item of listings) {
-    item.barrio = item.barrio || inferNeighborhood(item);
-    item.operacion = item.operacion || inferOperation(item);
+    item.barrio = neighborhoodFor(item);
+    item.operacion = operationFor(item);
   }
 }
 
 function populateNeighborhoods(listings) {
   const detected = listings.map((item) => item.barrio).filter(Boolean);
-  const neighborhoods = [...new Set([...configuredNeighborhoods, ...detected])].sort((a, b) => a.localeCompare(b, "es"));
+  const neighborhoods = [...new Set(detected)].sort((a, b) => a.localeCompare(b, "es"));
   for (const neighborhood of neighborhoods) {
     const option = document.createElement("option");
     option.value = neighborhood;
@@ -102,7 +96,7 @@ function render() {
     if (query && !text.includes(query)) return false;
     if (agency && item.inmobiliaria !== agency) return false;
     if (neighborhood && item.barrio !== neighborhood) return false;
-    if (operation && item.operacion !== operation) return false;
+    if (operation && item.operacion !== operation && !(item.operacion === "Venta / Alquiler" && ["Venta", "Alquiler"].includes(operation))) return false;
     if (propertyType && !matchesPropertyType(item, propertyType)) return false;
     if (maxPrice && Number(item.precio || 0) > maxPrice) return false;
     return true;
@@ -119,7 +113,7 @@ function createListingElement(item) {
 
   const details = document.createElement("div");
   const title = document.createElement("h2");
-  title.textContent = item.direccion || item.titulo || "Sin dirección";
+  title.textContent = listingHeading(item);
 
   const meta = document.createElement("div");
   meta.className = "meta";
@@ -127,9 +121,16 @@ function createListingElement(item) {
     pill(item.inmobiliaria),
     pill(item.barrio || "Barrio s/d"),
     pill(item.operacion || "Operación s/d"),
-    pill(item.metros ? `${formatNumber(item.metros)} m²` : "m² s/d"),
-    pill(item.tipo || "Casa")
+    pill(item.metros ? `${formatNumber(item.metros)} m² ${item.superficieTipo || ""}`.trim() : "m² s/d"),
+    pill(listingType(item))
   );
+  if (item.ambientes) meta.append(pill(`${item.ambientes} amb.`));
+  if (item.cochera && item.cochera !== "No informado") meta.append(pill(`Cochera: ${item.cochera}`));
+  if (item.revision?.length) {
+    const review = pill("Datos incompletos");
+    review.className = "needs-review";
+    meta.append(review);
+  }
 
   details.append(title, meta);
 
@@ -179,20 +180,8 @@ function normalize(value) {
     .toLowerCase();
 }
 
-function inferNeighborhood(item) {
-  const text = normalize([item.direccion, item.titulo, item.resumen, item.link].join(" "));
-  return configuredNeighborhoods.find((neighborhood) => text.includes(normalize(neighborhood))) || "";
-}
-
-function inferOperation(item) {
-  const text = normalize([item.operacion, item.titulo, item.resumen, item.link].join(" "));
-  if (text.includes("alquiler")) return "Alquiler";
-  if (text.includes("venta") || text.includes("comprar")) return "Venta";
-  return "";
-}
-
 function matchesPropertyType(item, propertyType) {
-  const text = normalize([item.tipo, item.titulo, item.link].join(" "));
+  const text = normalize(item.tipo || [item.titulo, item.link].join(" "));
   if (propertyType === "Casa") return text.includes("casa") || text.includes("chalet");
   if (propertyType === "Departamento") return text.includes("departamento");
   return true;

@@ -22,9 +22,7 @@ filters:
   propertyTypes:
     - "Casa"
   city: "Mar del Plata"
-  neighborhoods:
-    - "Stella Maris"
-    - "Los Troncos"
+  neighborhoods: [] # Todos los barrios
 
 sources:
   - name: "Inmobiliaria de ejemplo"
@@ -47,9 +45,12 @@ sources:
       area: ".area, .metros, [data-testid='area']"
       price: ".price, .precio, [data-testid='price']"
       propertyType: ".property-type, .tipo"
+      rooms: ".ambientes, .rooms"
+      parking: ".cochera, .garage"
       title: "h2, .title, .titulo"
       summary: ".description, .descripcion"
     detailFields:
+      parking: ".cochera, .garage"
       address: "h1, .address, .direccion"
       area: ".area, .metros, [data-testid='area']"
       price: ".price, .precio, [data-testid='price']"

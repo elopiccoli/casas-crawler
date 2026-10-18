@@ -5,6 +5,8 @@ Crawler configurable para monitorear publicaciones inmobiliarias y exportarlas a
 - `inmobiliaria`
 - `direccion`
 - `metros`
+- `ambientes`
+- `cochera`: `Sí`, `No`, `Opcional` o `No informado`. Incluye garage/garaje. No se interpreta la falta de informacion como ausencia de cochera. Se prioriza la ficha tecnica; tambien se reconocen afirmaciones explicitas en el titulo o la descripcion del inmueble. Se puede configurar el selector `parking` en `fields` y `detailFields`.
 - `precio`
 - `moneda`
 - `link`
@@ -61,6 +63,7 @@ El workflow `.github/workflows/deploy-firebase.yml` permite actualizar la web de
 
 - manualmente desde la pestaña **Actions** con **Run workflow**
 - automaticamente todos los dias a las 10:00 UTC
+- al subir cambios de `web/` a `master`, publica los datos guardados sin ejecutar nuevamente el crawler.
 
 Para que funcione, el repositorio de GitHub necesita el secret `FIREBASE_TOKEN` configurado. Una vez guardado ese secret, GitHub corre:
 
@@ -71,6 +74,10 @@ npx firebase-tools deploy --only hosting --project casas-crawler
 ```
 
 ## Filtro por precio
+
+La configuracion actual consulta ventas y alquileres permanentes, incluyendo departamentos, y no limita la moneda: `filters.price.currency: null` conserva tanto pesos como dolares. Cada publicacion conserva su moneda original; los precios no se convierten. Las fuentes pueden tener diferente oferta y algunas no exponen sus listados al crawler HTML. Cuando una ficha informa venta y alquiler, se conserva una fila por operacion con su precio correspondiente.
+
+La columna `ambientes` contiene la cantidad total de ambientes publicada, sin confundirla con dormitorios. Se extrae de los campos de la ficha, del catalogo, de JSON-LD (`numberOfRooms`) o del titulo cuando indica explicitamente ambientes. Si no se informa, queda vacia en Excel y como `null` en JSON. Se puede configurar el selector `rooms` en `fields` y `detailFields` de cada fuente.
 
 El filtro se configura en `config.yml`. Puede ser global:
 
@@ -105,16 +112,10 @@ filters:
   propertyTypes:
     - "Casa"
   city: "Mar del Plata"
-  neighborhoods:
-    - "Stella Maris"
-    - "Loma de Stella Maris"
-    - "Los Troncos"
-    - "Guemes"
-    - "Playa Grande"
-    - "Divino Rostro"
+  neighborhoods: [] # Todos los barrios
 ```
 
-El filtro ignora mayusculas, minusculas y tildes.
+Con `neighborhoods: []` se incluyen todos los barrios, incluso publicaciones sin barrio informado. Para limitar la busqueda, se puede indicar una lista de barrios. El filtro ignora mayusculas, minusculas y tildes.
 
 ## Ejecucion manual o diaria
 
@@ -134,6 +135,8 @@ Tambien se puede programar con el Programador de tareas de Windows ejecutando `n
 
 ## Configuracion por inmobiliaria
 
+Las fuentes nuevas quedan registradas con `website` (la URL original solicitada) y `startUrls` (los listados que consulta el crawler). Se evitan duplicados entre dominios con y sin `www`. `preferConfiguredFields: true` permite priorizar los selectores especificos de una fuente ante encabezados genericos como "Detalle". Las fuentes que requieren un adaptador cliente se identifican en `notes`; estar configurada no garantiza que una inmobiliaria entregue publicaciones en HTML.
+
 Cada fuente del `config.yml` tiene:
 
 - `name`: nombre de la inmobiliaria.
@@ -144,6 +147,24 @@ Cada fuente del `config.yml` tiene:
 - `publicationUrlRegex`: filtro opcional para evitar links irrelevantes.
 - `fields`: selectores dentro de la tarjeta.
 - `detailFields`: selectores dentro de la publicacion individual.
+- Los selectores separados por comas se prueban en orden; se usa el primer texto no vacio, sin concatenar duplicados ni propiedades similares. Direccion, titulo y tipo rechazan textos demasiado largos y el elemento `body`.
+- Direccion, precio, superficie, barrio, operacion y tipo se extraen de elementos especificos de la propiedad. No se usa `body` ni la descripcion como respaldo para campos estructurados. Los adaptadores reconocen las variantes Tokko, Houzez, Wasi y el catalogo Robles.
+
+## Validacion de campos
+
+`operacion` se normaliza como Venta, Alquiler, Alquiler temporario o Venta / Alquiler. Si hay precios de venta y alquiler, se elige el bloque que corresponde a la operacion del enlace. Si no se puede determinar, el precio queda vacio y se marca para revision.
+
+`barrio` prioriza la ubicacion explicita del inmueble. Los nombres mencionados como lugares cercanos en la descripcion no se usan. `tipo` contiene una categoria y `metros` un numero, con `superficieTipo` para distinguir cubierta, total o terreno. No se reemplaza una direccion desconocida por el titulo.
+
+El JSON incluye `revision` para campos faltantes o inciertos y `evidencia` con el elemento o dato estructurado usado. La web muestra **Datos incompletos** cuando hay campos pendientes. Eso permite revisar incertidumbres; no implica que cada publicacion haya sido comprobada manualmente.
+
+Para descargar nuevamente las publicaciones actuales, auditarlas y actualizar el JSON:
+
+```powershell
+npm run audit:fields -- --refresh --update
+```
+
+Sin `--update`, solo se genera `outputs/field-audit.json`. Sin `--refresh`, se reutilizan las paginas guardadas en `outputs/pages`. El proceso conserva una copia del JSON anterior en `outputs/publicaciones-before-field-audit.json` antes de actualizarlo. `web/auditoria.json` registra las correcciones, evidencia y fuentes sin ejemplos disponibles; estas ultimas quedan como no verificadas. La auditoria conserva las publicaciones existentes y señala cuales no cumplen los filtros actuales, sin descartarlas.
 - `filters.price.min`: precio minimo opcional.
 - `filters.price.max`: precio maximo opcional.
 - `filters.price.currency`: moneda opcional, por ejemplo `USD` o `$`.

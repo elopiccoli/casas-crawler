@@ -1,673 +1,2233 @@
 request:
   delayMs: 1200
   timeoutMs: 20000
-  userAgent: "Mozilla/5.0 (compatible; CasasCrawler/0.1; +https://example.local)"
-
+  userAgent: Mozilla/5.0 (compatible; CasasCrawler/0.1; +https://example.local)
 excel:
-  sheetName: "Publicaciones"
-
+  sheetName: Publicaciones
 filters:
   price:
-    min:
-    max:
-    currency: "USD"
+    min: null
+    max: null
+    currency: null
   propertyTypes:
-    - "Casa"
-    - "Chalet"
-    - "Departamento"
-  city: "Mar del Plata"
-  neighborhoods:
-    - "Stella Maris"
-    - "Loma de Stella Maris"
-    - "Los Troncos"
-    - "Guemes"
-    - "Playa Grande"
-    - "Divino Rostro"
-
+    - Casa
+    - Chalet
+    - Departamento
+  city: Mar del Plata
+  neighborhoods: []
 sources:
-  - name: "Russillo Asesores Inmobiliarios"
+  - name: Russillo Asesores Inmobiliarios
     startUrls:
-      - "https://www.russilloinmobiliaria.com/Venta"
+      - https://www.russilloinmobiliaria.com/Alquiler
+      - https://www.russilloinmobiliaria.com/Venta
     pagination:
       maxPages: 5
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a.item.card-prop-short-wide[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a.item.card-prop-short-wide[href^='/p/']
+    publicationUrlRegex: /p/
     fields:
-      address: "p:has(.flaticon-placeholder)"
-      area: ".prop_details li"
-      price: ".price-list-tag"
-      propertyType: ".text-thm"
-      title: ".prop-title"
-      summary: ".description"
+      address: p:has(.flaticon-placeholder)
+      area: .prop_details li
+      price: .price-list-tag
+      propertyType: .text-thm
+      title: .prop-title
+      summary: .description
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
     detailFields:
-      address: "p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, .property-detail li, .property-features li"
-      price: ".price, .price-list-tag, .operation-price"
-      title: "h1, .prop-title"
-      summary: ".description, .property-description"
-
-  - name: "Pernice Propiedades"
+      address: p:has(.flaticon-placeholder), h1
+      area: .prop_details li, .property-detail li, .property-features li
+      price: .price, .price-list-tag, .operation-price
+      title: h1, .prop-title
+      summary: .description, .property-description
+  - name: Suarez Propiedades
     startUrls:
-      - "https://www.pernicepropiedades.com/Venta"
+      - https://www.suarezmardelplata.com/Alquiler
+      - https://www.suarezmardelplata.com/Venta
     pagination:
       maxPages: 5
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a.item.card-prop-short-wide[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a.item.card-prop-short-wide[href^='/p/']
+    publicationUrlRegex: /p/
     fields:
-      address: "p:has(.flaticon-placeholder)"
-      area: ".prop_details li"
-      price: ".price-list-tag"
-      propertyType: ".text-thm"
-      title: ".prop-title"
-      summary: ".description"
+      address: p:has(.flaticon-placeholder)
+      area: .prop_details li
+      price: .price-list-tag
+      propertyType: .text-thm
+      title: .prop-title
+      summary: .description
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
     detailFields:
-      address: "p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, .property-detail li, .property-features li"
-      price: ".price, .price-list-tag, .operation-price"
-      title: "h1, .prop-title"
-      summary: ".description, .property-description"
-
-  - name: "Suarez Propiedades"
+      address: p:has(.flaticon-placeholder), h1
+      area: .prop_details li, .property-detail li, .property-features li
+      price: .price, .price-list-tag, .operation-price
+      title: h1, .prop-title
+      summary: .description, .property-description
+  - name: Ezequiel Jose Estudio Inmobiliario
     startUrls:
-      - "https://www.suarezmardelplata.com/Venta"
+      - https://www.ezequieljosepropiedades.com/Alquiler
+      - https://www.ezequieljosepropiedades.com/Venta
     pagination:
       maxPages: 5
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a.item.card-prop-short-wide[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a.item.card-prop-short-wide[href^='/p/']
+    publicationUrlRegex: /p/
     fields:
-      address: "p:has(.flaticon-placeholder)"
-      area: ".prop_details li"
-      price: ".price-list-tag"
-      propertyType: ".text-thm"
-      title: ".prop-title"
-      summary: ".description"
+      address: p:has(.flaticon-placeholder)
+      area: .prop_details li
+      price: .price-list-tag
+      propertyType: .text-thm
+      title: .prop-title
+      summary: .description
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
     detailFields:
-      address: "p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, .property-detail li, .property-features li"
-      price: ".price, .price-list-tag, .operation-price"
-      title: "h1, .prop-title"
-      summary: ".description, .property-description"
-
-  - name: "Ezequiel Jose Estudio Inmobiliario"
+      address: p:has(.flaticon-placeholder), h1
+      area: .prop_details li, .property-detail li, .property-features li
+      price: .price, .price-list-tag, .operation-price
+      title: h1, .prop-title
+      summary: .description, .property-description
+  - name: Velati Propiedades
+    notes: Activada, pero el servidor responde 403 al crawler HTML. Si falla, se saltea y continua.
     startUrls:
-      - "https://www.ezequieljosepropiedades.com/Venta"
+      - https://velati.com.ar/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (propiedad|propiedades|venta|casa|chalet)
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: VA Propiedades
+    notes: WordPress/Houzez.
+    startUrls:
+      - https://vapropiedades.com.ar/alquilar/
+      - https://vapropiedades.com.ar/comprar/
     pagination:
       maxPages: 5
-      pageParam: "p"
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://vapropiedades.com.ar
+  - name: Ucci Propiedades
+    notes: Activada con ruta publica /venta. El listado real se carga por API cliente y puede devolver cero en HTML.
+    startUrls:
+      - https://www.uccipropiedades.com/venta/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (propiedad|propiedades|venta|casa|chalet)
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Coste Propiedades
+    notes: WordPress/Houzez.
+    startUrls:
+      - https://www.costepropiedades.com/estado/en-alquiler/
+      - https://www.costepropiedades.com/propiedades/
+    pagination:
+      maxPages: 1
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/propiedad/']
+    publicationUrlRegex: /propiedad/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address.item-address
+      area: .fw-property-amenities-data:contains('Sup. cubierta'), .fw-property-amenities-data:contains('Sup. total')
+      price: .property-title-price-wrap .item-price, .item-price
+      propertyType: .property-type, h1
+      title: h1, meta[property='og:title']::attr(content)
+      summary: '#property-description-wrap .block-content-wrap, meta[name=''description'']::attr(content)'
+  - name: Latorre Negocios Inmobiliarios
+    startUrls:
+      - https://inmobiliarialatorre.com.ar/s/casa/alquiler?id_property_type=1&business_type%5B0%5D=for_rent
+      - https://inmobiliarialatorre.com.ar/s/chalet/alquiler?id_property_type=10&business_type%5B0%5D=for_rent
+      - https://inmobiliarialatorre.com.ar/s/departamento/alquiler?id_property_type=2&business_type%5B0%5D=for_rent
+      - https://inmobiliarialatorre.com.ar/s/casa/venta?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://inmobiliarialatorre.com.ar/s/chalet/venta?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://inmobiliarialatorre.com.ar/s/departamento/venta?id_property_type=2&business_type%5B0%5D=for_sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    fields:
+      title: h1, h2, h3, .title, .property-title
+    detailFields:
+      address: .areaDetalle .ubicacion
+      area: .areaDetalle .list-info-1a li:contains('Área Construida'), .areaDetalle .list-info-1a li:contains('Área Privada'), .areaDetalle .list-info-1a li:contains('Área Terreno')
+      price: .areaDetalle .precio .pr
+      propertyType: .areaDetalle .list-info-1a li:contains('Tipo de inmueble')
+      title: .areaDetalle h1, meta[property='og:title']::attr(content)
+      summary: .areaDetalle article, meta[name='description']::attr(content)
+  - name: Dante Propiedades
+    startUrls:
+      - https://www.dantepropiedades.com/departamento-en-alquiler.html
+      - https://www.dantepropiedades.com/casa-chalet-en-venta.html
+      - https://www.dantepropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+  - name: Sanz y Ordoqui Propiedades
+    startUrls:
+      - https://www.sanzyordoqui.com.ar/propiedades/?operacion=Alquiler
+      - https://www.sanzyordoqui.com.ar/propiedades/?operacion=Venta
+    pagination:
+      maxPages: 11
+      pageParam: pag
       firstPage: 2
-      params:
-        o: "2,2"
-    listingSelector: "a.item.card-prop-short-wide[href^='/p/']"
-    publicationUrlRegex: "/p/"
+    listingSelector: a[href^="/propiedad/"]
+    publicationUrlRegex: /propiedad/
     fields:
-      address: "p:has(.flaticon-placeholder)"
-      area: ".prop_details li"
-      price: ".price-list-tag"
-      propertyType: ".text-thm"
-      title: ".prop-title"
-      summary: ".description"
+      title: h1, h2, h3
+      summary: body
     detailFields:
-      address: "p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, .property-detail li, .property-features li"
-      price: ".price, .price-list-tag, .operation-price"
-      title: "h1, .prop-title"
-      summary: ".description, .property-description"
-
-  - name: "Robles Casas & Campos"
-    notes: "Catalogo JSON propio en /propiedades/catalogo."
-    format: "roblesCatalog"
-    siteUrl: "https://roblescasascampos.com/"
+      title: main > div:first-child h2
+      price: main > div:first-child .text-right > div
+      propertyType: dl div:has(dt:contains("Tipo")) dd
+      rooms: dl div:has(dt:contains("Ambientes")) dd
+      area: dl div:has(dt:contains("Sup. cubierta"))
+      city: main > div:first-child p span
+      summary: main section:has(h3:contains("Descripción"))
+    website: https://www.sanzyordoqui.com.ar
+  - name: Valencia Consultores Inmobiliarios
     startUrls:
-      - "https://roblescasascampos.com/propiedades/catalogo"
-
-  - name: "Velati Propiedades"
-    notes: "Activada, pero el servidor responde 403 al crawler HTML. Si falla, se saltea y continua."
-    startUrls:
-      - "https://velati.com.ar/"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(propiedad|propiedades|venta|casa|chalet)"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "VA Propiedades"
-    notes: "WordPress/Houzez."
-    startUrls:
-      - "https://vapropiedades.com.ar/comprar/"
-    pagination:
-      maxPages: 5
-      nextSelector: "a.next.page-numbers, .pagination a.next"
-    listingSelector: ".item-listing-wrap"
-    linkSelector: ".item-title a[href], a[href*='/property/']"
-    publicationUrlRegex: "/property/"
-    fields:
-      address: "address, .item-address"
-      area: ".item-amenities, .item-wrap"
-      price: ".item-price, .price"
-      propertyType: ".h-type, .item-amenities, .item-wrap"
-      title: ".item-title, h2, h3"
-      summary: ".item-wrap"
-    detailFields:
-      address: "address, .item-address, meta[name='description']::attr(content), h1"
-      area: ".property-overview-data, .detail-wrap, body"
-      price: ".item-price, .price, .property-price, meta[name='description']::attr(content)"
-      propertyType: ".property-type, .detail-wrap, meta[name='description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Ucci Propiedades"
-    notes: "Activada con ruta publica /venta. El listado real se carga por API cliente y puede devolver cero en HTML."
-    startUrls:
-      - "https://www.uccipropiedades.com/venta/"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(propiedad|propiedades|venta|casa|chalet)"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Coste Propiedades"
-    notes: "WordPress/Houzez."
-    startUrls:
-      - "https://www.costepropiedades.com/propiedades/"
-    pagination:
-      maxPages: 1
-    listingSelector: ".item-listing-wrap"
-    linkSelector: ".item-title a[href], a[href*='/propiedad/']"
-    publicationUrlRegex: "/propiedad/"
-    fields:
-      address: "address, .item-address"
-      area: ".item-amenities, .item-wrap"
-      price: ".item-price, .price"
-      propertyType: ".h-type, .item-amenities, .item-wrap"
-      title: ".item-title, h2, h3"
-      summary: ".item-wrap"
-    detailFields:
-      address: "address, .item-address, meta[name='description']::attr(content), h1"
-      area: ".property-overview-data, .detail-wrap, body"
-      price: ".item-price, .price, .property-price, meta[name='description']::attr(content)"
-      propertyType: ".property-type, .detail-wrap, meta[name='description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Latorre Negocios Inmobiliarios"
-    startUrls:
-      - "https://inmobiliarialatorre.com.ar/s/casa/venta?id_property_type=1&business_type%5B0%5D=for_sale"
-      - "https://inmobiliarialatorre.com.ar/s/chalet/venta?id_property_type=10&business_type%5B0%5D=for_sale"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa|chalet)-venta"
-    fields:
-      title: "h1, h2, h3, .title, .property-title"
-      summary: "body"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Dante Propiedades"
-    startUrls:
-      - "https://www.dantepropiedades.com/casa-chalet-en-venta.html"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
-    fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Sanz y Ordoqui Propiedades"
-    startUrls:
-      - "https://www.sanzyordoqui.com.ar/propiedades/?operacion=Venta"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "/propiedad/.*(casa|chalet)"
-    fields:
-      title: "h1, h2, h3"
-      summary: "body"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='keywords']::attr(content), meta[name='description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Valencia Consultores Inmobiliarios"
-    startUrls:
-      - "https://www.valencia.com.ar/Venta"
+      - https://www.valencia.com.ar/Alquiler
+      - https://www.valencia.com.ar/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  - name: "Martínez Arrechea Propiedades"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+    fields:
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+  - name: Martínez Arrechea Propiedades
     startUrls:
-      - "https://martinezarrechea.com/casa-chalet-en-venta.html"
+      - https://martinezarrechea.com/departamento-en-alquiler.html
+      - https://martinezarrechea.com/casa-chalet-en-venta.html
+      - https://martinezarrechea.com/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Berengeno, Fernando Abel"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+  - name: Berengeno, Fernando Abel
     startUrls:
-      - "https://www.berengeno.com.ar/Venta"
+      - https://www.berengeno.com.ar/Alquiler
+      - https://www.berengeno.com.ar/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  - name: "Oteiza Propiedades"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+    fields:
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+  - name: Oteiza Propiedades
     startUrls:
-      - "https://www.oteizapropiedades.com/Venta"
+      - https://www.oteizapropiedades.com/Alquiler
+      - https://www.oteizapropiedades.com/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  - name: "Gerardo E. Barg Departamento Inmobiliario"
-    startUrls:
-      - "https://gerardobarg.com.ar/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale"
-      - "https://gerardobarg.com.ar/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa|chalet)-venta"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
     fields:
-      title: "h1, h2, h3, .title, .property-title"
-      summary: "body"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Bártoli Propiedades"
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+  - name: Gerardo E. Barg Departamento Inmobiliario
     startUrls:
-      - "https://www.bartolipropiedades.com/casa-chalet-en-venta.html"
+      - https://gerardobarg.com.ar/s/departamento/alquileres?id_property_type=2&business_type%5B0%5D=for_rent
+      - https://gerardobarg.com.ar/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://gerardobarg.com.ar/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://gerardobarg.com.ar/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .title, .property-title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Inmobiliaria Daniel Díaz"
-    notes: "WordPress/RealHomes."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Bártoli Propiedades
     startUrls:
-      - "https://danieldiazpropiedades.com.ar/"
+      - https://www.bartolipropiedades.com/casa-chalet-en-venta.html
+      - https://www.bartolipropiedades.com/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: ".rh_gallery__item, a[href*='/propiedad/']"
-    linkSelector: "a[href*='/propiedad/']"
-    publicationUrlRegex: "/propiedad/"
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
-      address: ".rh_prop_card__address, address"
-      area: ".rh_prop_card__meta, .rh_gallery__item"
-      price: ".rh_prop_card__priceLabel, .price"
-      propertyType: ".rh_prop_card__type, .rh_gallery__item"
-      title: "h3, h2, .rh_prop_card__title"
-      summary: ".rh_gallery__item"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: ".rh_property__features_wrap, body"
-      price: ".rh_property__price, .price, meta[name='description']::attr(content), body"
-      propertyType: ".rh_property__type, meta[name='description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "DAR Propiedades"
-    notes: "Activada con home publica. La app Next carga propiedades del lado cliente y puede devolver cero en HTML."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+  - name: Inmobiliaria Daniel Díaz
+    notes: WordPress/RealHomes.
     startUrls:
-      - "https://www.darpropiedades.com.ar/"
+      - https://danieldiazpropiedades.com.ar/
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(propiedad|propiedades|venta|casa|chalet)"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "J. Urrizaga"
-    notes: "Activada con home publica. La app React no expone fichas en HTML estatico y puede devolver cero."
-    startUrls:
-      - "https://www.urrizaga.com.ar/"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(propiedad|propiedades|venta|casa|chalet)"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Iza Inmobiliaria"
-    startUrls:
-      - "https://izainmobiliaria.inmo.co/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale"
-      - "https://izainmobiliaria.inmo.co/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa|chalet)-venta"
+    listingSelector: .rh_gallery__item, a[href*='/propiedad/']
+    linkSelector: a[href*='/propiedad/']
+    publicationUrlRegex: /propiedad/
     fields:
-      title: "h1, h2, h3, .title, .property-title"
-      summary: "body"
+      address: .rh_prop_card__address, address
+      area: .rh_prop_card__meta, .rh_gallery__item
+      price: .rh_prop_card__priceLabel, .price
+      propertyType: .rh_prop_card__type, .rh_gallery__item
+      title: h3, h2, .rh_prop_card__title
+      summary: .rh_gallery__item
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Aguilera Propiedades"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .rh_property__features_wrap, body
+      price: .rh_property__price, .price, meta[name='description']::attr(content), body
+      propertyType: .rh_property__type, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: DAR Propiedades
+    notes: Activada con home publica. La app Next carga propiedades del lado cliente y puede devolver cero en HTML.
     startUrls:
-      - "https://www.aguilerapropiedades.com.ar/Venta"
+      - https://www.darpropiedades.com.ar/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (propiedad|propiedades|venta|casa|chalet)
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    websites:
+      - https://darpropiedades.com.ar
+  - name: J. Urrizaga
+    notes: Activada con home publica. La app React no expone fichas en HTML estatico y puede devolver cero.
+    startUrls:
+      - https://www.urrizaga.com.ar/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (propiedad|propiedades|venta|casa|chalet)
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Iza Inmobiliaria
+    startUrls:
+      - https://izainmobiliaria.inmo.co/s/departamento/alquileres?id_property_type=2&business_type%5B0%5D=for_rent
+      - https://izainmobiliaria.inmo.co/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://izainmobiliaria.inmo.co/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://izainmobiliaria.inmo.co/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    fields:
+      title: h1, h2, h3, .title, .property-title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    websites:
+      - https://iza.com.ar
+  - name: Aguilera Propiedades
+    startUrls:
+      - https://www.aguilerapropiedades.com.ar/Alquiler
+      - https://www.aguilerapropiedades.com.ar/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  - name: "Marino Pérez Propiedades"
-    notes: "Inmobiliatica."
-    startUrls:
-      - "https://www.marinoperez.com.ar/casa-chalet-en-venta.html"
-    pagination:
-      maxPages: 1
-    listingSelector: "a[href*='propiedad-inmobiliaria.html']"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
-    detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Palma Propiedades"
-    notes: "Inmobiliatica."
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    websites:
+      - https://aguilerapropiedades.com.ar
+  - name: Marino Pérez Propiedades
+    notes: Inmobiliatica.
     startUrls:
-      - "https://www.palmapropiedades.com.ar/casa-chalet-en-venta.html"
+      - https://www.marinoperez.com.ar/casa-chalet-en-alquiler.html
+      - https://www.marinoperez.com.ar/departamento-en-alquiler.html
+      - https://www.marinoperez.com.ar/casa-chalet-en-venta.html
+      - https://www.marinoperez.com.ar/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: "a[href*='propiedad-inmobiliaria.html']"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+    listingSelector: a[href*='propiedad-inmobiliaria.html']
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Del Rosso & Asociados"
-    notes: "Inmobiliatica."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    website: https://www.marinoperez.com.ar
+  - name: Palma Propiedades
+    notes: Inmobiliatica.
     startUrls:
-      - "https://www.delrossopropiedades.com.ar/casa-chalet-en-venta.html"
+      - https://www.palmapropiedades.com.ar/casa-chalet-en-alquiler.html
+      - https://www.palmapropiedades.com.ar/departamento-en-alquiler.html
+      - https://www.palmapropiedades.com.ar/casa-chalet-en-venta.html
+      - https://www.palmapropiedades.com.ar/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: "a[href*='propiedad-inmobiliaria.html']"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+    listingSelector: a[href*='propiedad-inmobiliaria.html']
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Del Valle Estudio Inmobiliario"
-    notes: "Sitio propio con rutas por categoria."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    websites:
+      - https://palmapropiedades.com.ar
+  - name: Del Rosso & Asociados
+    notes: Inmobiliatica.
     startUrls:
-      - "https://www.estudiodelvalle.com.ar/departamentos/venta/chalet-casa-duplex/"
+      - https://www.delrossopropiedades.com.ar/departamento-en-alquiler.html
+      - https://www.delrossopropiedades.com.ar/casa-chalet-en-venta.html
+      - https://www.delrossopropiedades.com.ar/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "/departamentos?/venta/.*(chalet|casa|duplex)"
+    listingSelector: a[href*='propiedad-inmobiliaria.html']
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Acampora y Asociados"
-    notes: "Inmobiliatica."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    website: https://delrossopropiedades.com.ar
+  - name: Del Valle Estudio Inmobiliario
+    notes: 'Catalogo publico POST: HTML dentro de JSON, paginacion por offset de 6; ventas y alquileres sin filtros de barrio ni moneda.'
     startUrls:
-      - "https://www.acamporayasoc.com/casa-chalet-en-venta.html"
+      - https://www.estudiodelvalle.com.ar/ajax-propiedades-2024.php?operacion=Alquiler&busca_operacion=a&desde=0
+      - https://www.estudiodelvalle.com.ar/ajax-propiedades-2024.php?operacion=Venta&busca_operacion=v&desde=0
     pagination:
-      maxPages: 1
-    listingSelector: "a[href*='propiedad-inmobiliaria.html']"
-    publicationUrlRegex: "(casa---chalet|chalet)-venta.*propiedad-inmobiliaria\\.html"
+      maxPages: 20
+      pageParam: desde
+      firstPage: 6
+      step: 6
+    listingSelector: a[href]
+    publicationUrlRegex: /departamentos?/(?:venta|alquiler)/[^/]+/\d+-
     fields:
-      title: "h1, h2, h3, .titulo, .title"
-      summary: "body"
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "M.A.S Propiedades"
-    notes: "WordPress/WPL. Activada con listado publico /properties."
+      title: .intprop h5
+      rooms: .intprop > .subtitulo
+      price: .intprop .precio
+      area: .intprop .superficie li:contains("Sup Total")
+      operation: .intprop h2 p
+      city: .intprop h5
+      neighborhood: .intprop .zona
+      summary: .intprop .cuadroMobile p
+    listingRequest:
+      method: POST
+      responseHtmlField: html
+      form:
+        hasta: 6
+        destacadas: 0
+        busca_ambientes: 0
+        busca_zona: 0
+        busca_moneda: 9
+        busca_minimo: 0
+        busca_maximo: 0
+        orden: menor
+  - name: Acampora y Asociados
+    notes: Inmobiliatica.
     startUrls:
-      - "https://maspropiedadesmdp.com/properties"
+      - https://www.acamporayasoc.com/casa-chalet-en-alquiler.html
+      - https://www.acamporayasoc.com/departamento-en-alquiler.html
+      - https://www.acamporayasoc.com/casa-chalet-en-venta.html
+      - https://www.acamporayasoc.com/departamento-en-venta.html
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(properties|property|propiedad|venta|casa|chalet)"
+    listingSelector: a[href*='propiedad-inmobiliaria.html']
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Properati"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    websites:
+      - https://acamporayasoc.com
+  - name: M.A.S Propiedades
+    notes: WordPress/WPL. Activada con listado publico /properties.
+    startUrls:
+      - https://maspropiedadesmdp.com/properties
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (properties|property|propiedad|venta|casa|chalet)
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Properati
     enabled: false
-    notes: "Responde HTTP 401 al crawler HTML. Mantener desactivado salvo que se agregue adaptador especifico."
+    notes: Responde HTTP 401 al crawler HTML. Mantener desactivado salvo que se agregue adaptador especifico.
     startUrls:
-      - "https://www.properati.com.ar/s/mar-del-plata/venta"
-
-  - name: "Bellucci Propiedades"
-    notes: "Sitio propio con rutas /propiedades/venta."
+      - https://www.properati.com.ar/s/mar-del-plata/venta
+  - name: Bellucci Propiedades
+    notes: Sitio propio con rutas /propiedades/venta.
     startUrls:
-      - "https://www.belluccipropiedades.com/propiedades/venta/0/0/"
+      - https://www.belluccipropiedades.com/propiedades/alquiler/0/0/
+      - https://www.belluccipropiedades.com/propiedades/venta/0/0/
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "/propiedades/venta/.*|/(casa|chalet)-venta"
+    listingSelector: a[href]
+    publicationUrlRegex: /propiedades/(?:venta|alquiler)/.*|/(?:casa|chalet|departamento)-(?:venta|alquiler)
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Cabrera Propiedades"
-    notes: "Wasi."
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Cabrera Propiedades
+    notes: Wasi.
     startUrls:
-      - "https://cabrerapropmdq.com/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale"
-      - "https://cabrerapropmdq.com/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale"
+      - https://cabrerapropmdq.com/s/casa/alquileres?id_property_type=1&business_type%5B0%5D=for_rent
+      - https://cabrerapropmdq.com/s/departamento/alquileres?id_property_type=2&business_type%5B0%5D=for_rent
+      - https://cabrerapropmdq.com/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://cabrerapropmdq.com/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://cabrerapropmdq.com/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
     pagination:
       maxPages: 1
-    listingSelector: "a[href]"
-    publicationUrlRegex: "(casa|chalet)-venta"
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
     fields:
-      title: "h1, h2, h3, .title, .property-title"
-      summary: "body"
+      title: h1, h2, h3, .title, .property-title
+      summary: body
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body"
-      area: "body"
-      price: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), body"
-
-  - name: "Estudio Uno Propiedades"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: body
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+  - name: Estudio Uno Propiedades
     startUrls:
-      - "https://www.estudiounopropiedades.com/Venta"
+      - https://www.estudiounopropiedades.com/Alquiler
+      - https://www.estudiounopropiedades.com/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  - name: "Giromini Soluciones Inmobiliarias"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+    fields:
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    website: https://www.estudiounopropiedades.com
+  - name: Giromini Soluciones Inmobiliarias
     startUrls:
-      - "https://www.girominipropiedades.com.ar/Venta"
+      - https://www.girominipropiedades.com.ar/Alquiler
+      - https://www.girominipropiedades.com.ar/Venta
     pagination:
       maxPages: 3
-      pageParam: "p"
+      pageParam: p
       firstPage: 2
       params:
-        o: "2,2"
-    listingSelector: "a[href^='/p/']"
-    publicationUrlRegex: "/p/"
+        o: 2,2
+    listingSelector: a[href^='/p/']
+    publicationUrlRegex: /p/
     detailFields:
-      address: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1"
-      area: ".prop_details li, body"
-      price: ".price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-      propertyType: "meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1"
-      title: "meta[property='og:title']::attr(content), h1, title"
-      summary: "meta[name='description']::attr(content), meta[property='og:description']::attr(content)"
-
-  # ZonaProp queda fuera del crawler por ahora: responde con Cloudflare y demora mucho.
-  # - name: "ZonaProp"
-  #   enabled: false
-  #   notes: "ZonaProp bloquea consultas directas con Cloudflare. No activar en este crawler HTML simple sin un adaptador con navegador/cookies."
-  #   startUrls:
-  #     - "https://www.zonaprop.com.ar/casas-venta-mar-del-plata.html"
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .prop_details li, body
+      price: .price, .price-list-tag, .operation-price, meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content)
+    fields:
+      city: .prop-desc-tipo-ub, .single_property_title p
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+  - name: Inmobiliaria Berasueta
+    notes: Ventas y alquiler permanente por 24 meses mediante los buscadores publicos POST.
+    startUrls:
+      - https://www.inmobiliariaberasueta.com/24meses/filtro.php?page=1
+      - https://www.inmobiliariaberasueta.com/ventas/filtro.php?page=1
+    listingRequest:
+      method: POST
+      form:
+        p_desde: ''
+        p_hasta: ''
+        ambientes: 0
+        orientacion: 0
+        tipo_prop: 0
+        mar: 0
+        banios: 0
+        cochera: 0
+        cocina: 0
+        balcon: 0
+        reciclado: 0
+        pantalla: 1440
+        muebles: 0
+        orden: relevancia
+    pagination:
+      maxPages: 5
+      pageParam: page
+      firstPage: 2
+    listingSelector: a[href*="/propiedad/"]
+    publicationUrlRegex: /(?:ventas|24meses)/propiedad/\d+/
+    fields:
+      title: .destacado_ambientes
+      price: .destacado_situacion
+      area: .mini-chip:contains("Sup. Total")
+      rooms: .destacado_ambientes
+    detailFields:
+      title: .hero-text h1
+      price: .precio-flotante
+      area: .adic-chip:contains("Sup.")
+      summary: .descripcion-txt
+  - name: Gisela D’Alessandro
+    startUrls:
+      - https://www.giseladalessandro.com.ar/Alquiler
+      - https://www.giseladalessandro.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+  - name: Espatolero y Lorenzo
+    startUrls:
+      - https://espatolerolorenzo.tuinmobiliaria.com.ar/Alquiler
+      - https://espatolerolorenzo.tuinmobiliaria.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+  - name: Gustavo Teruel
+    notes: WordPress/Houzez.
+    startUrls:
+      - https://gustavoteruel.com/propiedades/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+      city: .item-address
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: '#property-detail-wrap li:contains(''Tipo''), #property-detail-wrap li:contains(''Property Type'')'
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://gustavoteruel.com
+    enabled: true
+  - name: Coste y Freuler
+    startUrls:
+      - https://www.costeyfreuler.com/departamento-en-alquiler.html
+      - https://www.costeyfreuler.com/casa-chalet-en-venta.html
+      - https://www.costeyfreuler.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://www.costeyfreuler.com
+    enabled: true
+  - startUrls:
+      - https://www.matiassosa.com.ar/comprar-alquilar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: .property_header h1, h1
+      price: .property_header_col h2
+      address: .property_header_location
+      city: h1
+      propertyType: h1
+    publicationUrlRegex: /propiedad/\d+
+    name: Matías Sosa Broker Inmobiliario
+    website: https://www.matiassosa.com.ar
+    enabled: true
+  - startUrls:
+      - https://www.gonnet.com.ar/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: h1
+    publicationUrlRegex: /(?:propiedad|propiedades|ficha)/[^/?#]+
+    notes: Sitio accesible; la pagina principal no expone enlaces de fichas en HTML. Extraccion pendiente de adaptador para su buscador cliente.
+    name: Gonnet Propiedades
+    website: https://www.gonnet.com.ar
+    enabled: true
+  - startUrls:
+      - https://www.nizzipropiedades.com/propiedades?operacion=1
+      - https://www.nizzipropiedades.com/propiedades?operacion=2
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: h2.text-2xl:first
+      price: h1
+      operation: h1
+      propertyType: h2.text-2xl:first
+      city: span.text-gray-300
+      summary: .prose
+    publicationUrlRegex: '-ficha-[a-z]+\d+'
+    name: Nizzi Propiedades
+    website: https://www.nizzipropiedades.com
+    enabled: true
+  - name: Arbini Propiedades
+    startUrls:
+      - https://www.arbinipropiedades.com.ar/Alquiler
+      - https://www.arbinipropiedades.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.arbinipropiedades.com.ar
+    enabled: true
+  - startUrls:
+      - https://redondo.com.ar/site/properties/rental
+      - https://redondo.com.ar/site/properties/sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: .about-property h2:first
+      price: .price-column .price
+      city: .about-property .location, .location:first
+      propertyType: .about-property h2:first
+      summary: .property-description
+    publicationUrlRegex: /site/properties/\d+/
+    name: Redondo Inmobiliaria
+    website: https://redondo.com.ar
+    enabled: true
+  - startUrls:
+      - https://selectopropiedades.com/buscar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: h1
+      price: p.h1
+      city: title
+      propertyType: h1
+    publicationUrlRegex: /p/\d+/
+    name: Selecto Propiedades
+    website: https://selectopropiedades.com
+    enabled: true
+  - name: Introcaso Propiedades
+    startUrls:
+      - https://www.introcasopropiedades.com.ar/Alquiler
+      - https://www.introcasopropiedades.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.introcasopropiedades.com.ar
+    enabled: true
+  - startUrls:
+      - https://zicarelli.com.ar/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    detailFields:
+      title: .detail__title
+      price: .detail__price
+      address: .detail__address
+      city: .detail__address
+      area: .detail__main dl div:has(dt:contains('Superficie cubierta'))
+      propertyType: .detail__title
+      summary: .detail__description
+    publicationUrlRegex: /ad/[^/?#]+
+    name: Zicarelli Real Estate
+    website: https://zicarelli.com.ar
+    enabled: true
+  - name: Napolitano Inmobiliaria
+    startUrls:
+      - https://www.napolitanoinmobiliaria.com.ar/Alquiler
+      - https://www.napolitanoinmobiliaria.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.napolitanoinmobiliaria.com.ar
+    enabled: true
+  - name: Cecilia Martini Inmobiliaria
+    startUrls:
+      - https://www.ceciliamartini.com/Alquiler
+      - https://www.ceciliamartini.com/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.ceciliamartini.com
+    enabled: true
+  - name: Abdala Propiedades
+    startUrls:
+      - https://abdalapropiedades.com/casa-chalet-en-alquiler.html
+      - https://abdalapropiedades.com/departamento-en-alquiler.html
+      - https://abdalapropiedades.com/casa-chalet-en-venta.html
+      - https://abdalapropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://abdalapropiedades.com
+    enabled: true
+  - name: Torres Inmobiliaria
+    startUrls:
+      - https://torresmardelplata.inmo.co/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+      - https://torresmardelplata.inmo.co/s/casa/alquileres?id_property_type=1&business_type%5B0%5D=for_rent
+      - https://torresmardelplata.inmo.co/s/chalet/alquileres?id_property_type=10&business_type%5B0%5D=for_rent
+      - https://torresmardelplata.inmo.co/s/departamento/alquileres?id_property_type=2&business_type%5B0%5D=for_rent
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    fields:
+      title: h1, h2, h3, .title, .property-title
+    detailFields:
+      address: .areaDetalle .ubicacion
+      area: .areaDetalle .list-info-1a li:contains('Área Construida'), .areaDetalle .list-info-1a li:contains('Área Privada'), .areaDetalle .list-info-1a li:contains('Área Terreno')
+      price: .areaDetalle .precio .pr
+      propertyType: .areaDetalle .list-info-1a li:contains('Tipo de inmueble')
+      title: .areaDetalle h1, meta[property='og:title']::attr(content)
+      summary: .areaDetalle article, meta[name='description']::attr(content)
+    notes: El dominio solicitado redirige al catalogo oficial en torresmardelplata.inmo.co.
+    website: https://torresmardelplata.com
+    enabled: true
+  - name: Abel Carranza Propiedades
+    startUrls:
+      - https://carranzapropiedades.com.ar/s/casa/venta?id_property_type=1&business_type%5B0%5D=for_sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    fields:
+      title: h1, h2, h3, .title, .property-title
+    detailFields:
+      address: .areaDetalle .ubicacion
+      area: .areaDetalle .list-info-1a li:contains('Área Construida'), .areaDetalle .list-info-1a li:contains('Área Privada'), .areaDetalle .list-info-1a li:contains('Área Terreno')
+      price: .areaDetalle .precio .pr
+      propertyType: .areaDetalle .list-info-1a li:contains('Tipo de inmueble')
+      title: .areaDetalle h1, meta[property='og:title']::attr(content)
+      summary: .areaDetalle article, meta[name='description']::attr(content)
+    website: https://carranzapropiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Wasi; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Aboglio Propiedades
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://inmobiliariaaboglio.com/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://inmobiliariaaboglio.com
+    enabled: true
+  - name: Ademar Ocaranza
+    startUrls:
+      - https://ademarocaranza.com/departamento-en-alquiler.html
+      - https://ademarocaranza.com/casa-chalet-en-venta.html
+      - https://ademarocaranza.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://ademarocaranza.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://cadibartoloehijos.com.ar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: C. A. Di Bártolo e Hijos
+    website: https://cadibartoloehijos.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://juliansantillan.com
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Administración Julián Santillán
+    website: https://juliansantillan.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Aguirre Propiedades
+    startUrls:
+      - https://aguirreprop.com/s/casa/ventas?id_property_type=1&business_type%5B0%5D=for_sale
+      - https://aguirreprop.com/s/chalet/ventas?id_property_type=10&business_type%5B0%5D=for_sale
+      - https://aguirreprop.com/s/departamento/ventas?id_property_type=2&business_type%5B0%5D=for_sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa|chalet|departamento)-(?:venta|alquiler)
+    fields:
+      title: h1, h2, h3, .title, .property-title
+    detailFields:
+      address: .areaDetalle .ubicacion
+      area: .areaDetalle .list-info-1a li:contains('Área Construida'), .areaDetalle .list-info-1a li:contains('Área Privada'), .areaDetalle .list-info-1a li:contains('Área Terreno')
+      price: .areaDetalle .precio .pr
+      propertyType: .areaDetalle .list-info-1a li:contains('Tipo de inmueble')
+      title: .areaDetalle h1, meta[property='og:title']::attr(content)
+      summary: .areaDetalle article, meta[name='description']::attr(content)
+    website: https://aguirreprop.com
+    enabled: true
+    notes: Catalogo identificado como Wasi; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Aiello Propiedades
+    startUrls:
+      - https://www.aiellopropiedades.com.ar/Alquiler
+      - https://www.aiellopropiedades.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://aiellopropiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Alejandro Aiello
+    startUrls:
+      - https://www.alejandroaiello.com/Alquiler
+      - https://www.alejandroaiello.com/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://alejandroaiello.com
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://alanpropiedades.com.ar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Alan Propiedades
+    website: https://alanpropiedades.com.ar
+    enabled: false
+    notes: 'URL registrada. Consulta fallida: ERR_TLS_CERT_ALTNAME_INVALID. Extraccion pendiente de verificacion/adaptacion.'
+  - startUrls:
+      - https://albapropiedades.com
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Alba Propiedades
+    website: https://albapropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Alberto B. Rossi Propiedades
+    startUrls:
+      - https://www.rossipropiedadesmdp.com.ar/Alquiler
+      - https://www.rossipropiedadesmdp.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://rossipropiedadesmdp.com.ar
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://turlaninmobiliaria.com.ar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Alberto Turlán
+    website: https://turlaninmobiliaria.com.ar
+    enabled: false
+    notes: 'URL registrada. Consulta fallida: ENOTFOUND. Extraccion pendiente de verificacion/adaptacion.'
+  - startUrls:
+      - https://zambonipropiedades.com/propiedades
+      - https://zambonipropiedades.com/propiedades?barrios=La%20Perla%2CConstituci%C3%B3n%2CParque%20Luro%2CLa%20Armon%C3%ADa%2CCaisamar%2CEstrada%2CLos%20Pinares%2CVilla%20Primera%2CPunta%20Iglesia&zona=La%20costa%20norte
+      - https://zambonipropiedades.com/propiedades?barrio=La%20Perla
+      - https://zambonipropiedades.com/propiedades?barrio=Constituci%C3%B3n
+      - https://zambonipropiedades.com/propiedades?barrio=Parque%20Luro
+      - https://zambonipropiedades.com/propiedades?barrio=La%20Armon%C3%ADa
+      - https://zambonipropiedades.com/propiedades?barrio=Caisamar
+      - https://zambonipropiedades.com/propiedades?barrios=Centro%2CPlaza%20Mitre%2CSan%20Juan%2CSan%20Jos%C3%A9%2CPlaza%20Col%C3%B3n%2CTerminal%20Nueva%2CMacrocentro%2CMicrocentro%2CLa%20Cercan%C3%ADa%2CBernardino%20Rivadavia&zona=El%20Centro
+      - https://zambonipropiedades.com/propiedades?barrio=Centro
+      - https://zambonipropiedades.com/propiedades?barrio=Plaza%20Mitre
+      - https://zambonipropiedades.com/propiedades?barrio=San%20Juan
+      - https://zambonipropiedades.com/propiedades?barrio=San%20Jos%C3%A9
+      - https://zambonipropiedades.com/propiedades?barrio=Plaza%20Col%C3%B3n
+      - https://zambonipropiedades.com/propiedades?barrios=Chauvin%2CG%C3%BCemes%2CPlaya%20Grande%2CLos%20Troncos%2CTerminal%20Vieja%2CVarese%2CSan%20Carlos%2CDivino%20Rostro%2CPlaya%20Chica&zona=G%C3%BCemes%2C%20Los%20Troncos%20y%20Playa%20Grande
+      - https://zambonipropiedades.com/propiedades?barrio=Chauvin
+      - https://zambonipropiedades.com/propiedades?barrio=G%C3%BCemes
+      - https://zambonipropiedades.com/propiedades?barrio=Playa%20Grande
+      - https://zambonipropiedades.com/propiedades?barrio=Los%20Troncos
+      - https://zambonipropiedades.com/propiedades?barrio=Terminal%20Vieja
+      - https://zambonipropiedades.com/propiedades?barrios=Colinas%20de%20Peralta%20Ramos%2CLas%20Avenidas%2CPunta%20Mogotes%2CEl%20Jard%C3%ADn%20de%20Stella%20Maris%2CJuramento&zona=Hacia%20el%20sur
+      - https://zambonipropiedades.com/propiedades?barrio=Colinas%20de%20Peralta%20Ramos
+      - https://zambonipropiedades.com/propiedades?barrio=Las%20Avenidas
+      - https://zambonipropiedades.com/propiedades?barrio=Punta%20Mogotes
+      - https://zambonipropiedades.com/propiedades?barrio=El%20Jard%C3%ADn%20de%20Stella%20Maris
+      - https://zambonipropiedades.com/propiedades?barrio=Juramento
+      - https://zambonipropiedades.com/propiedades?barrio=Barrancas%20de%20San%20Benito%20Country%20Club
+      - https://zambonipropiedades.com/propiedades?barrio=Rumenc%C3%B3%20Joven
+      - https://zambonipropiedades.com/propiedades?barrio=Los%20Acantilados
+      - https://zambonipropiedades.com/propiedades?barrio=Casonas%20del%20Haras
+      - https://zambonipropiedades.com/propiedades?barrio=Rumenc%C3%B3
+      - https://zambonipropiedades.com/propiedades?barrio=Estrada
+      - https://zambonipropiedades.com/propiedades?barrio=Los%20Pinares
+      - https://zambonipropiedades.com/propiedades?barrio=Villa%20Primera
+      - https://zambonipropiedades.com/propiedades?barrio=Punta%20Iglesia
+      - https://zambonipropiedades.com/propiedades?barrio=Terminal%20Nueva
+      - https://zambonipropiedades.com/propiedades?barrio=Macrocentro
+      - https://zambonipropiedades.com/propiedades?barrio=Microcentro
+      - https://zambonipropiedades.com/propiedades?barrio=La%20Cercan%C3%ADa
+      - https://zambonipropiedades.com/propiedades?barrio=Bernardino%20Rivadavia
+      - https://zambonipropiedades.com/propiedades?barrio=Varese
+      - https://zambonipropiedades.com/propiedades?barrio=San%20Carlos
+      - https://zambonipropiedades.com/propiedades?barrio=Divino%20Rostro
+      - https://zambonipropiedades.com/propiedades?barrio=Playa%20Chica
+      - https://zambonipropiedades.com/propiedades?barrio=Barrio%20Chapadmalal
+      - https://zambonipropiedades.com/propiedades?barrio=Arenas%20del%20Sur
+      - https://zambonipropiedades.com/propiedades?barrio=Tierra%20y%20Mar
+      - https://zambonipropiedades.com/propiedades?barrio=Arenas%20Chico
+      - https://zambonipropiedades.com/propiedades?col=privados
+      - https://zambonipropiedades.com/propiedades?col=mar
+      - https://zambonipropiedades.com/propiedades?col=premium
+      - https://zambonipropiedades.com/propiedades?col=comercial
+      - https://zambonipropiedades.com/propiedades?op=Venta
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Zamboni Propiedades
+    website: https://zambonipropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://desantispropiedades.com.ar/venta
+      - https://desantispropiedades.com.ar/alquiler
+      - https://desantispropiedades.com.ar/propiedades
+      - https://desantispropiedades.com.ar/alquiler#administracion
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: De Santis Propiedades
+    website: https://desantispropiedades.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://www.walterburga.com/venta/
+      - https://www.walterburga.com/alquiler/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Burga Propiedades
+    website: https://walterburga.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Bartolini Propiedades
+    startUrls:
+      - https://bartolinipropiedades.com/casa-chalet-en-alquiler.html
+      - https://bartolinipropiedades.com/departamento-en-alquiler.html
+      - https://bartolinipropiedades.com/casa-chalet-en-venta.html
+      - https://bartolinipropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://bartolinipropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Marta Moghames
+    startUrls:
+      - https://moghames.com.ar/casa-chalet-en-alquiler.html
+      - https://moghames.com.ar/casa-chalet-en-venta.html
+      - https://moghames.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://moghames.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://lapergolapropiedades.com/propiedades/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: La Pérgola Propiedades
+    website: https://lapergolapropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://orestegonnet.com.ar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Oreste Gonnet Inmobiliaria
+    website: https://orestegonnet.com.ar
+    enabled: false
+    notes: URL registrada. Redirige a https://www.mardelplata.com/inmobiliarias/; no se atribuyen al agente los avisos del directorio de destino. Extraccion pendiente de verificacion/adaptacion.
+  - name: GMC Propiedades
+    startUrls:
+      - https://gmcpropiedades.com/departamento-en-alquiler.html
+      - https://gmcpropiedades.com/casa-chalet-en-venta.html
+      - https://gmcpropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://gmcpropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: La Plata Propiedades
+    startUrls:
+      - https://laplatapropiedades.com/casa-chalet-en-alquiler.html
+      - https://laplatapropiedades.com/departamento-en-alquiler.html
+      - https://laplatapropiedades.com/casa-chalet-en-venta.html
+      - https://laplatapropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://laplatapropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://mardelplatapropiedades.net
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Mar del Plata Propiedades
+    website: https://mardelplatapropiedades.net
+    enabled: false
+    notes: 'URL registrada. Consulta fallida: ENOTFOUND. Extraccion pendiente de verificacion/adaptacion.'
+  - startUrls:
+      - https://breccianegocios.com.ar
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Breccia Inmuebles y Negocios
+    website: https://breccianegocios.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://zcastillopropiedades.com
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Zulma Castillo Propiedades
+    website: https://zcastillopropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Scutella Propiedades
+    startUrls:
+      - https://scutellapropiedades.com.ar/casa-chalet-en-alquiler.html
+      - https://scutellapropiedades.com.ar/departamento-en-alquiler.html
+      - https://scutellapropiedades.com.ar/casa-chalet-en-venta.html
+      - https://scutellapropiedades.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://scutellapropiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://www.santiapropiedades.com.ar/propiedades?op=venta
+      - https://www.santiapropiedades.com.ar/propiedades?op=alquiler
+      - https://www.santiapropiedades.com.ar/propiedades
+      - https://www.santiapropiedades.com.ar/ventas
+      - https://www.santiapropiedades.com.ar/alquileres
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Santia Propiedades
+    website: https://santiapropiedades.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Galán Broker Inmobiliario
+    startUrls:
+      - https://www.galanbroker.com/Alquiler
+      - https://www.galanbroker.com/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://galanbroker.com
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Allende Propiedades
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://allendepropiedades.com.ar/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://allendepropiedades.com.ar
+    enabled: true
+  - name: Canicoba Propiedades
+    startUrls:
+      - https://www.canicoba.com.ar/Alquiler
+      - https://www.canicoba.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://canicoba.com.ar
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Berto Propiedades
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://www.bertopropiedades.com.ar/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://bertopropiedades.com.ar
+    enabled: true
+  - name: Urbana Propiedades
+    startUrls:
+      - https://urbanapropiedades.com/departamento-en-alquiler.html
+      - https://urbanapropiedades.com/casa-chalet-en-venta.html
+      - https://urbanapropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://urbanapropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: M y F Propiedades
+    startUrls:
+      - https://myfpropiedades.com/departamento-en-alquiler.html
+      - https://myfpropiedades.com/casa-chalet-en-venta.html
+      - https://myfpropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://myfpropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://www.vigo.com.ar/propiedades
+      - https://www.vigo.com.ar/propiedades?operacion=venta
+      - https://www.vigo.com.ar/propiedades?operacion=alquiler
+      - https://www.vigo.com.ar/propiedades?operacion=temporario
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Vigo Consultores Inmobiliarios
+    website: https://vigo.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - startUrls:
+      - https://nescapropiedades.com
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Nesca Propiedades
+    website: https://nescapropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Inmobiliaria Castillo
+    startUrls:
+      - https://inmobiliariacastillo.com.ar/departamento-en-alquiler.html
+      - https://inmobiliariacastillo.com.ar/casa-chalet-en-venta.html
+      - https://inmobiliariacastillo.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://inmobiliariacastillo.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Quintiero Propiedades
+    startUrls:
+      - https://quintieroprop.com.ar/casa-chalet-en-venta.html
+      - https://quintieroprop.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://quintieroprop.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Duque Williams Propiedades
+    startUrls:
+      - https://duquewilliams.com/casa-chalet-en-venta.html
+      - https://duquewilliams.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://duquewilliams.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Bocian Propiedades
+    startUrls:
+      - https://bocianpropiedades.com/departamento-en-alquiler.html
+      - https://bocianpropiedades.com/casa-chalet-en-venta.html
+      - https://bocianpropiedades.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://bocianpropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://spanopropiedades.com.ar/propiedades?transactionType=1
+      - https://spanopropiedades.com.ar/propiedades?transactionType=1&zona=150&city[]=26624
+      - https://spanopropiedades.com.ar/propiedades?transactionType=2
+      - https://spanopropiedades.com.ar/propiedades?transactionType=2&zona=150&city[]=26624
+      - https://spanopropiedades.com.ar/propiedades?transactionType=3
+      - https://spanopropiedades.com.ar/propiedades?transactionType=3&zona=150&city[]=26624
+      - https://spanopropiedades.com.ar/propiedades?zona=150&city[]=26624
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Spano Propiedades
+    website: https://spanopropiedades.com.ar
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: DePaoli Propiedades
+    startUrls:
+      - https://depaolipropiedades.com.ar/departamento-en-alquiler.html
+      - https://depaolipropiedades.com.ar/casa-chalet-en-venta.html
+      - https://depaolipropiedades.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://depaolipropiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Salerno Propiedades
+    startUrls:
+      - https://salerno-propiedades.com.ar/departamento-en-alquiler.html
+      - https://salerno-propiedades.com.ar/casa-chalet-en-venta.html
+      - https://salerno-propiedades.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://salerno-propiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Pezzati Propiedades
+    startUrls:
+      - https://pezzatipropiedades.inmobiliatica.com/casa-chalet-en-alquiler.html
+      - https://pezzatipropiedades.inmobiliatica.com/departamento-en-alquiler.html
+      - https://pezzatipropiedades.inmobiliatica.com/casa-chalet-en-venta.html
+      - https://pezzatipropiedades.inmobiliatica.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://pezzatipropiedades.inmobiliatica.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - startUrls:
+      - https://potentepropiedades.com
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+    detailFields:
+      title: h1
+      city: meta[property='og:title']::attr(content)
+    name: Potente Propiedades
+    website: https://potentepropiedades.com
+    enabled: false
+    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+  - name: Messina Propiedades
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://messinapropiedadesmdp.com.ar/venta/
+      - https://messinapropiedadesmdp.com.ar/alquiler/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://messinapropiedadesmdp.com.ar
+    enabled: true
+  - name: RP Bienes Raíces
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://rpbienesraices.com/propiedades/
+      - https://rpbienesraices.com/venta/
+      - https://rpbienesraices.com/alquiler/
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://rpbienesraices.com
+    enabled: true
+  - name: Alejandra Dal Molin
+    startUrls:
+      - https://www.alejandradalmolin.com.ar/Alquiler
+      - https://www.alejandradalmolin.com.ar/Venta
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://alejandradalmolin.com.ar
+    enabled: true
+    notes: Catalogo identificado como Tokko; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Patricio Propiedades
+    notes: Catalogo identificado como Houzez; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    startUrls:
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=campo&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=casa&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=casa-quinta&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=chalet&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=cochera&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=departamento&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=deposito&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=duplex&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=fondo-de-comercio&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=galpon&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=hotel&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=local-comercial&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=oficina&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=ph&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=terreno&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=lote&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=finca&status=en-venta
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=casa&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=casa-quinta&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=departamento&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=duplex&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=oficina&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=galpon&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=fondo-de-comercio&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=cochera&status=en-alquiler
+      - https://www.patriciopropiedades.com.ar/propiedades/?type=chalet&status=en-alquiler
+    pagination:
+      maxPages: 5
+      nextSelector: a.next.page-numbers, .pagination a.next
+    listingSelector: .item-listing-wrap
+    linkSelector: .item-title a[href], a[href*='/property/']
+    publicationUrlRegex: /property/
+    fields:
+      address: address, .item-address
+      area: .item-amenities, .item-wrap
+      price: .item-price, .price
+      propertyType: .h-type, .item-amenities, .item-wrap
+      title: .item-title, h2, h3
+      summary: .item-wrap
+    detailFields:
+      address: address, .item-address, meta[name='description']::attr(content), h1
+      area: .property-overview-data, .detail-wrap, body
+      price: .item-price, .price, .property-price, meta[name='description']::attr(content)
+      propertyType: .property-type, .detail-wrap, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+    website: https://patriciopropiedades.com.ar
+    enabled: true
+  - name: Crespo Inmobiliaria
+    startUrls:
+      - https://inmobiliariacrespo.com/departamento-en-alquiler.html
+      - https://inmobiliariacrespo.com/casa-chalet-en-venta.html
+      - https://inmobiliariacrespo.com/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://inmobiliariacrespo.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Finca Inmobiliaria
+    startUrls:
+      - https://inmobiliariafinca.com.ar/casa-chalet-en-alquiler.html
+      - https://inmobiliariafinca.com.ar/departamento-en-alquiler.html
+      - https://inmobiliariafinca.com.ar/casa-chalet-en-venta.html
+      - https://inmobiliariafinca.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://inmobiliariafinca.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Inmobiliaria Mihocevich
+    startUrls:
+      - https://inmobiliariamihocevich.com.ar/casa-chalet-en-alquiler.html
+      - https://inmobiliariamihocevich.com.ar/departamento-en-alquiler.html
+      - https://inmobiliariamihocevich.com.ar/casa-chalet-en-venta.html
+      - https://inmobiliariamihocevich.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://inmobiliariamihocevich.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Alías Propiedades
+    startUrls:
+      - https://aliaspropiedades.com.ar/departamento-en-alquiler.html
+      - https://aliaspropiedades.com.ar/casa-chalet-en-venta.html
+      - https://aliaspropiedades.com.ar/departamento-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://aliaspropiedades.com.ar
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.

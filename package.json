@@ -11,7 +11,8 @@
     "crawl:example": "node src/cli.js --config config.example.yml --output outputs/publicaciones.xlsx",
     "build:web": "npm run crawl:web",
     "check": "node --check src/cli.js && node --check src/crawler.js && node --check src/excel.js && node --check src/json.js && node --check src/utils.js",
-    "test": "node --test"
+    "test": "node --test",
+    "audit:fields": "node scripts/audit_fields.mjs"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
