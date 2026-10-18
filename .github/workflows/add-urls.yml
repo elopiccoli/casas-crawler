@@ -76,4 +76,5 @@ jobs:
           path: |
             outputs/publicaciones.xlsx
             outputs/incremental-summary.json
+            outputs/incremental-report.md
           if-no-files-found: ignore

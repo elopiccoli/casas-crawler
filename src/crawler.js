@@ -81,11 +81,14 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
     }
   }
 
+  logger?.(`  ${source.name}: ${detailUrls.size} fichas por revisar`);
+  let checked = 0;
   for (const cardListing of detailUrls.values()) {
     const { url, requestedOperation } = cardListing;
-    const detailListing = await crawlDetail(url, source, requestConfig, requestedOperation).catch((error) => ({
-      error: error.message
-    }));
+    const detailListing = await crawlDetail(url, source, requestConfig, requestedOperation).catch((error) => {
+      logger?.(`  ${source.name}: ficha ${url}: ${error.message}`);
+      return { error: error.message };
+    });
 
     const listing = finalizeListing(source.name, url, {
       ...cardListing,
@@ -97,6 +100,8 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
     }
 
     await sleep(requestConfig.delayMs || 1000);
+    checked += 1;
+    if (checked % 25 === 0) logger?.(`  ${source.name}: ${checked}/${detailUrls.size} fichas revisadas`);
   }
 
   return listings;

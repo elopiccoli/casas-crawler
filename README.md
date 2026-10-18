@@ -48,6 +48,8 @@ La accion consulta solo esas fuentes, combina sus publicaciones con las que esta
 
 Si una inmobiliaria nueva necesita selectores especificos o no devuelve fichas, la accion lo informa en el registro. Si no obtiene ninguna publicacion valida, se detiene sin cambiar los resultados actuales.
 
+Un HTTP 403 significa que el sitio rechazo la solicitud. El resumen de la accion identifica esas fuentes y conserva los resultados. Si desde tu computadora el sitio responde, podes usar el comando local indicado abajo; luego guardar `config.extra.yml` y `web/publicaciones.json` en GitHub para publicar esas incorporaciones. El despliegue combina esas adiciones con los datos actuales de la web.
+
 Las fichas individuales indicadas expresamente se incorporan sin aplicar los filtros generales de ciudad, precio o tipo; los sitios y listados si usan esos filtros.
 
 Desde la terminal:

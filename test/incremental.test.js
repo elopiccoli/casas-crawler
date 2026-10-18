@@ -8,7 +8,7 @@ import { createServer } from "node:http";
 import { spawn } from "node:child_process";
 import yaml from "js-yaml";
 import ExcelJS from "exceljs";
-import { parseUrls, planSources, mergeListings, registerSources } from "../src/incremental.js";
+import { parseUrls, planSources, mergeListings, registerSources, mergeSnapshots, incrementalReport } from "../src/incremental.js";
 import { loadConfig } from "../src/config.js";
 import { crawlSources } from "../src/crawler.js";
 
@@ -57,6 +57,24 @@ test("new URLs persist for full refreshes and remain deduplicated", async () => 
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
+test("publishing local additions preserves live results and the newest version of duplicates", () => {
+  const item = (id, date, price) => ({ link: `https://agency.example/p/${id}`, inmobiliaria: "A", operacion: "Venta", fechaExtraccion: date, precio: price });
+  const saved = { listings: [item(1, "2026-10-19", 100), item(2, "2026-10-19", 200)] };
+  const live = { listings: [item(1, "2026-10-18", 90), item(3, "2026-10-19", 300)] };
+  const merged = mergeSnapshots(saved, live);
+  assert.equal(merged.length, 3);
+  assert.equal(merged.find(row=>row.url.endsWith("/1")).priceAmount, 100);
+});
+
+test("403 diagnostics explain the rejection and preservation of existing results", () => {
+  const report = incrementalReport([{ name: "Bartolini" }], [], ["  Bartolini: listado https://example.com: HTTP 403 al descargar https://example.com"]);
+  assert.equal(report.blocked, true);
+  assert.equal(report.errors.length, 1);
+  assert.match(report.text, /HTTP 403/);
+  assert.match(report.text, /No se guardaron cambios/);
+  assert.match(report.text, /npm run crawl:add/);
+});
+
 function runScript(cwd, env) {
   return new Promise((resolve, reject) => {
     const child = spawn(process.execPath, [fileURLToPath(new URL("../scripts/add_urls.mjs", import.meta.url))], {
@@ -74,6 +92,7 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
   const requests = [];
   const server = createServer((req, res) => {
     requests.push(req.url);
+    if (req.url === "/blocked") res.statusCode = 403;
     res.setHeader("Content-Type", "text/html");
     res.end(req.url === "/p/1" ? '<h1>Departamento en Alquiler en Centro</h1><span class="property-type">Departamento</span><span class="item-address">Colon 123</span>' : "<h1>Sin resultados</h1>");
   });
@@ -110,6 +129,11 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
     assert.match(failed.output, /No se extrajeron publicaciones/);
     assert.equal(await readFile(path.join(dir, "web/publicaciones.json"), "utf8"), before);
     assert.equal(await readFile(path.join(dir, "config.extra.yml"), "utf8"), extraBefore);
+    const blocked = await runScript(dir, { CRAWLER_URLS: `${origin}/blocked`, CRAWLER_URL_KIND: "Publicaciones" });
+    assert.notEqual(blocked.code, 0);
+    assert.match(blocked.output, /HTTP 403: el sitio rechazó/);
+    assert.doesNotMatch(blocked.output, /at file:\/\//);
+    assert.equal(await readFile(path.join(dir, "web/publicaciones.json"), "utf8"), before);
   } finally {
     await new Promise(resolve => server.close(resolve));
     await rm(dir, { recursive: true, force: true });

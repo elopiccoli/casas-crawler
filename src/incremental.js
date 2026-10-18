@@ -76,6 +76,27 @@ export function mergeListings(previous, added) {
   return [...merged.values()];
 }
 
+export function mergeSnapshots(saved, published) {
+  // A UI deployment may carry local additions while the live site has newer
+  // complete runs. Keep both, choosing the newest extraction for each property.
+  const ordered = [...importListings(saved), ...importListings(published)]
+    .sort((a, b) => (Date.parse(a.scrapedAt) || 0) - (Date.parse(b.scrapedAt) || 0));
+  return mergeListings([], ordered);
+}
+
+export function incrementalReport(sources, results, messages) {
+  const errors = messages.filter(message => /HTTP \d{3}|error \(/.test(message));
+  const blocked = errors.some(message => /HTTP 403\b/.test(message));
+  const text = ["## Carga de URLs", "",
+    ...sources.map(source => `- ${source.name}: ${results.filter(item => item.sourceName === source.name).length} publicaciones extraídas.`),
+    "", ...errors.map(message => `- ${message.replace(/[\r\n]/g, " ")}`),
+    ...(blocked ? ["", "El sitio rechazó el acceso con HTTP 403. Puede estar restringiendo el acceso desde GitHub Actions. No se modifica ninguna publicación por ese rechazo.",
+      "Si el sitio es accesible desde tu computadora, podés ejecutar localmente `npm run crawl:add -- URL`."] : []),
+    ...(!results.length ? ["", "No se guardaron cambios ni se reemplazaron los resultados existentes."] : [])
+  ].join("\n") + "\n";
+  return { errors, blocked, text };
+}
+
 export function registerSources(extra, selected) {
   const sources = structuredClone(extra.sources || []);
   for (const source of selected) {
