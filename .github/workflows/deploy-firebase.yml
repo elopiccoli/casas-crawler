@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - "web/**"
+      - "firebase.json"
       - ".github/workflows/deploy-firebase.yml"
   workflow_dispatch:
     inputs:
