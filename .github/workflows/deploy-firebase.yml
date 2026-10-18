@@ -33,6 +33,11 @@ on:
 permissions:
   contents: read
 
+# Serialize full refreshes and incremental additions to avoid overwriting a newer deployment.
+concurrency:
+  group: publicaciones-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -40,6 +45,8 @@ jobs:
     steps:
       - name: Descargar repo
         uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Preparar Node
         uses: actions/setup-node@v4
@@ -59,6 +66,10 @@ jobs:
           CRAWLER_OPERATION: ${{ inputs.operation }}
           CRAWLER_PROPERTY_TYPE: ${{ inputs.property_type }}
         run: npm run crawl:web
+
+      - name: Conservar los resultados publicados al actualizar la interfaz
+        if: github.event_name == 'push'
+        run: node scripts/sync_published.mjs
 
       - name: Publicar en Firebase Hosting
         env:

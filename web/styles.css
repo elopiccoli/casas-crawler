@@ -243,7 +243,10 @@ select {
 @media (max-width: 720px) {
   .topbar {
     align-items: flex-start;
+    flex-wrap: wrap;
   }
+
+  .header-actions { flex-wrap: wrap; }
 
   .filters {
     grid-template-columns: 1fr;

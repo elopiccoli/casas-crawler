@@ -40,6 +40,22 @@ El Excel se genera en `outputs/publicaciones.xlsx`.
 
 ## Dashboard web
 
+### Agregar URLs sin recorrer las anteriores
+
+En la web, **Agregar URLs** abre la accion de GitHub correspondiente. Con tu sesion de GitHub iniciada, elegi **Run workflow**, pega una o varias URLs separadas por espacios o comas y selecciona **Inmobiliarias** (sitio o listado) o **Publicaciones** (fichas individuales).
+
+La accion consulta solo esas fuentes, combina sus publicaciones con las que estan publicadas y conserva las anteriores. Una misma URL y operacion se actualiza sin duplicarse. Las nuevas fuentes con resultados se guardan en `config.extra.yml` para las actualizaciones completas futuras. El Excel combinado se descarga desde el artifact **publicaciones-incrementales** de esa ejecucion.
+
+Si una inmobiliaria nueva necesita selectores especificos o no devuelve fichas, la accion lo informa en el registro. Si no obtiene ninguna publicacion valida, se detiene sin cambiar los resultados actuales.
+
+Desde la terminal:
+
+```powershell
+npm run crawl:add -- https://www.inmobiliaria.com
+```
+
+Para fichas individuales, usa `$env:CRAWLER_URL_KIND = "Publicaciones"` antes del comando. Las URLs tambien se pueden pasar en la variable `CRAWLER_URLS`.
+
 Los filtros de barrios y ambientes permiten marcar varias opciones en un dropdown. El filtro de cochera separa incluida, opcional, sin cochera y sin dato. Los tipos Terreno y Lote estan habilitados tanto en la extraccion como en el selector de la web.
 
 Para generar el Excel y el JSON que lee la web:

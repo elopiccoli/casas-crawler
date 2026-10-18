@@ -1,0 +1,79 @@
+name: Agregar URLs sin recorrer las anteriores
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URLs a agregar, separadas por espacios o comas"
+        required: true
+        type: string
+      kind:
+        description: "Las URLs corresponden a"
+        required: true
+        default: Inmobiliarias
+        type: choice
+        options:
+          - Inmobiliarias
+          - Publicaciones
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicaciones-production
+  cancel-in-progress: false
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar la version actual del repo
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Verificar crawler
+        run: npm test && npm run check
+      - name: Consultar solo las URLs ingresadas y combinar resultados
+        env:
+          CRAWLER_URLS: ${{ inputs.urls }}
+          CRAWLER_URL_KIND: ${{ inputs.kind }}
+          CRAWLER_BASELINE_URL: https://casas-crawler.web.app/publicaciones.json
+        run: npm run crawl:add
+      - name: Guardar las nuevas fuentes y resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config.extra.yml web/publicaciones.json
+          git commit -m "Agregar URLs y combinar publicaciones [skip ci]"
+          git pull --rebase origin master
+          git push origin HEAD:master
+      - name: Publicar en Firebase Hosting
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          set -euo pipefail
+          credentials_file="${RUNNER_TEMP}/firebase-service-account.json"
+          trap 'rm -f "$credentials_file"' EXIT
+          if [[ -z "${FIREBASE_SERVICE_ACCOUNT:-}" ]]; then
+            echo "Missing GitHub Actions secret: FIREBASE_SERVICE_ACCOUNT" >&2
+            exit 1
+          fi
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$credentials_file"
+          chmod 600 "$credentials_file"
+          unset FIREBASE_SERVICE_ACCOUNT
+          export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
+          npx firebase-tools deploy --only hosting --project casas-crawler --non-interactive
+      - name: Descargar Excel y resumen de esta corrida
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publicaciones-incrementales
+          path: |
+            outputs/publicaciones.xlsx
+            outputs/incremental-summary.json
+          if-no-files-found: ignore

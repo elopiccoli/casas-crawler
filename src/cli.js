@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import { readFile } from "node:fs/promises";
 import path from "node:path";
-import yaml from "js-yaml";
+import { loadConfig } from "./config.js";
 import { crawlSources } from "./crawler.js";
 import { writeListingsWorkbook } from "./excel.js";
 import { writeListingsJson } from "./json.js";
@@ -26,7 +25,7 @@ do {
 } while (true);
 
 async function runOnce(configPath, outputPath) {
-  const config = yaml.load(await readFile(configPath, "utf8"));
+  const config = await loadConfig(configPath);
   const operation = process.env.CRAWLER_OPERATION?.trim();
   const propertyType = process.env.CRAWLER_PROPERTY_TYPE?.trim();
 

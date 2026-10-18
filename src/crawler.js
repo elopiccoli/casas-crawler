@@ -33,6 +33,10 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
   const visitedPages = new Set();
   const detailUrls = new Map();
   const listings = [];
+  for (const url of source.detailUrls || []) {
+    const requestedOperation = parseOperation(urlPath(url));
+    detailUrls.set(`${url}|${requestedOperation}`, { url, requestedOperation });
+  }
 
   for (const startUrl of source.startUrls || []) {
     const start = new URL(startUrl);

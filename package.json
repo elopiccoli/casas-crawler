@@ -7,6 +7,7 @@
   "scripts": {
     "crawl": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx",
     "crawl:web": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx --json-output web/publicaciones.json",
+    "crawl:add": "node scripts/add_urls.mjs",
     "crawl:daily": "node src/cli.js --config config.yml --output outputs/publicaciones.xlsx --daily",
     "crawl:example": "node src/cli.js --config config.example.yml --output outputs/publicaciones.xlsx",
     "build:web": "npm run crawl:web",
