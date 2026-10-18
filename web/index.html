@@ -62,6 +62,16 @@
             <option value="">Todas</option>
           </select>
         </label>
+        <div class="rooms-filter">
+          <span id="roomsLabel" class="filter-label">Ambientes</span>
+          <details id="roomsDropdown" class="rooms-dropdown">
+            <summary aria-labelledby="roomsLabel roomsSummary"><span id="roomsSummary">Todos</span></summary>
+            <div class="rooms-menu">
+              <button id="clearRooms" type="button">Mostrar todos</button>
+              <div id="roomsOptions" role="group" aria-labelledby="roomsLabel"></div>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section class="summary" aria-live="polite">

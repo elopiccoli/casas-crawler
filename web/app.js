@@ -1,5 +1,6 @@
 import { listingHeading, listingType } from "./listing-format.js";
 import { neighborhoodFor, operationFor } from "./property-fields.js";
+import { roomOptions, matchesRooms } from "./room-filter.js";
 
 const state = {
   listings: [],
@@ -16,7 +17,11 @@ const elements = {
   neighborhood: document.querySelector("#neighborhood"),
   operation: document.querySelector("#operation"),
   propertyType: document.querySelector("#propertyType"),
-  agency: document.querySelector("#agency")
+  agency: document.querySelector("#agency"),
+  roomsDropdown: document.querySelector("#roomsDropdown"),
+  roomsSummary: document.querySelector("#roomsSummary"),
+  roomsOptions: document.querySelector("#roomsOptions"),
+  clearRooms: document.querySelector("#clearRooms")
 };
 
 init();
@@ -31,6 +36,7 @@ async function init() {
     hydrateDerivedFields(state.listings);
     populateNeighborhoods(state.listings);
     populateAgencies(state.listings);
+    populateRooms(state.listings);
     bindFilters();
     render();
 
@@ -43,6 +49,24 @@ async function init() {
 }
 
 function bindFilters() {
+  elements.roomsOptions.addEventListener("change", () => {
+    updateRoomsSummary();
+    render();
+  });
+  elements.clearRooms.addEventListener("click", () => {
+    for (const checkbox of elements.roomsOptions.querySelectorAll("input")) checkbox.checked = false;
+    updateRoomsSummary();
+    render();
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (!elements.roomsDropdown.contains(event.target)) elements.roomsDropdown.open = false;
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && elements.roomsDropdown.open) {
+      elements.roomsDropdown.open = false;
+      elements.roomsDropdown.querySelector("summary").focus();
+    }
+  });
   for (const element of [
     elements.search,
     elements.maxPrice,
@@ -53,6 +77,29 @@ function bindFilters() {
   ]) {
     element.addEventListener("input", render);
   }
+}
+
+function selectedRooms() {
+  return [...elements.roomsOptions.querySelectorAll("input:checked")].map(input => input.value);
+}
+
+function populateRooms(listings) {
+  for (const value of roomOptions(listings)) {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = value;
+    input.name = "ambientes";
+    label.append(input, value === "unknown" ? "Sin dato" : `${value} ${value === "1" ? "ambiente" : "ambientes"}`);
+    elements.roomsOptions.append(label);
+  }
+}
+
+function updateRoomsSummary() {
+  const selected = selectedRooms();
+  const label = selected.length ? selected.map(value => value === "unknown" ? "Sin dato" : `${value} amb.`).join(", ") : "Todos";
+  elements.roomsSummary.textContent = label;
+  elements.roomsSummary.title = label;
 }
 
 function hydrateDerivedFields(listings) {
@@ -90,6 +137,7 @@ function render() {
   const operation = elements.operation.value;
   const propertyType = elements.propertyType.value;
   const agency = elements.agency.value;
+  const rooms = selectedRooms();
 
   state.filtered = state.listings.filter((item) => {
     const text = normalize([item.inmobiliaria, item.direccion, item.barrio, item.titulo, item.resumen].join(" "));
@@ -98,6 +146,7 @@ function render() {
     if (neighborhood && item.barrio !== neighborhood) return false;
     if (operation && item.operacion !== operation && !(item.operacion === "Venta / Alquiler" && ["Venta", "Alquiler"].includes(operation))) return false;
     if (propertyType && !matchesPropertyType(item, propertyType)) return false;
+    if (!matchesRooms(item, rooms)) return false;
     if (maxPrice && Number(item.precio || 0) > maxPrice) return false;
     return true;
   });
