@@ -1,2 +1,27 @@
-# Fuentes agregadas desde la accion incremental de GitHub.
-sources: []
+sources:
+  - name: Napolitano Inmobiliaria
+    startUrls: []
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.napolitanoinmobiliaria.com.ar
+    enabled: true
+    detailUrls:
+      - https://www.napolitanoinmobiliaria.com.ar/p/8030417-Departamento-en-Alquiler-en-Centro-Impecable-2-ambientes-vista-plena-al-mar-zona-CENTRO
