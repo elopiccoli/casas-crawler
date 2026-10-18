@@ -48,6 +48,8 @@ La accion consulta solo esas fuentes, combina sus publicaciones con las que esta
 
 Si una inmobiliaria nueva necesita selectores especificos o no devuelve fichas, la accion lo informa en el registro. Si no obtiene ninguna publicacion valida, se detiene sin cambiar los resultados actuales.
 
+Las fichas individuales indicadas expresamente se incorporan sin aplicar los filtros generales de ciudad, precio o tipo; los sitios y listados si usan esos filtros.
+
 Desde la terminal:
 
 ```powershell

@@ -10,6 +10,7 @@ import yaml from "js-yaml";
 import ExcelJS from "exceljs";
 import { parseUrls, planSources, mergeListings, registerSources } from "../src/incremental.js";
 import { loadConfig } from "../src/config.js";
+import { crawlSources } from "../src/crawler.js";
 
 test("URL selection isolates requested agencies and direct properties", () => {
   const config = { sources: [
@@ -74,14 +75,14 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
   const server = createServer((req, res) => {
     requests.push(req.url);
     res.setHeader("Content-Type", "text/html");
-    res.end(req.url === "/p/1" ? '<h1>Departamento en Alquiler en Mar del Plata</h1><span class="property-type">Departamento</span><span class="item-address">Colon 123</span>' : "<h1>Sin resultados</h1>");
+    res.end(req.url === "/p/1" ? '<h1>Departamento en Alquiler en Centro</h1><span class="property-type">Departamento</span><span class="item-address">Colon 123</span>' : "<h1>Sin resultados</h1>");
   });
   await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
   const dir = await mkdtemp(path.join(tmpdir(), "casas-add-"));
   try {
     await mkdir(path.join(dir, "web"));
-    const config = { request: { delayMs: 1 }, sources: [
+    const config = { request: { delayMs: 1 }, filters: { city: "Mar del Plata" }, sources: [
       { name: "Unselected", startUrls: ["https://never-request.example/"] },
       { name: "Selected", startUrls: [`${origin}/catalog`], detailFields: {} }
     ] };
@@ -98,6 +99,10 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
     const workbook = new ExcelJS.Workbook();
     await workbook.xlsx.readFile(path.join(dir, "outputs/publicaciones.xlsx"));
     assert.equal(workbook.worksheets[0].rowCount, 3);
+    const fullConfig = await loadConfig(path.join(dir, "config.yml"));
+    fullConfig.sources = fullConfig.sources.filter(source => source.name === "Selected");
+    const refreshed = await crawlSources(fullConfig);
+    assert.equal(refreshed.length, 1, "future full refreshes must retain explicitly added property URLs without a city field");
     const before = await readFile(path.join(dir, "web/publicaciones.json"), "utf8");
     const extraBefore = await readFile(path.join(dir, "config.extra.yml"), "utf8");
     const failed = await runScript(dir, { CRAWLER_URLS: `${origin}/empty`, CRAWLER_URL_KIND: "Publicaciones" });

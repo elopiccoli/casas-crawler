@@ -8,7 +8,8 @@ import { parseUrls, planSources, importListings, mergeListings, registerSources 
 
 const config = await loadConfig("config.yml");
 const urls = parseUrls(process.env.CRAWLER_URLS || process.argv.slice(2).join("\n"));
-const sources = planSources(config, urls, process.env.CRAWLER_URL_KIND || "Inmobiliarias");
+const kind = process.env.CRAWLER_URL_KIND || "Inmobiliarias";
+const sources = planSources(config, urls, kind);
 // In Actions, start with the currently published results, including prior manual runs.
 // A failed download must stop the run instead of silently overwriting newer data.
 const baseline = process.env.CRAWLER_BASELINE_URL

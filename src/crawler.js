@@ -92,7 +92,7 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
       ...emptyToFallback(detailListing, cardListing)
     });
 
-    if (matchesFilters(listing, mergeFilters(globalFilters, source.filters || {}))) {
+    if ((source.detailUrls || []).includes(url) || matchesFilters(listing, mergeFilters(globalFilters, source.filters || {}))) {
       listings.push(listing);
     }
 
