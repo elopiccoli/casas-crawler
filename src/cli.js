@@ -27,11 +27,31 @@ do {
 
 async function runOnce(configPath, outputPath) {
   const config = yaml.load(await readFile(configPath, "utf8"));
+  const operation = process.env.CRAWLER_OPERATION?.trim();
+  const propertyType = process.env.CRAWLER_PROPERTY_TYPE?.trim();
+
+  config.filters ||= {};
+
+  if (operation && operation !== "Todos") {
+    config.filters.operation = operation;
+  } else if (operation === "Todos") {
+    delete config.filters.operation;
+  }
+
+  if (propertyType && propertyType !== "Todos") {
+    config.filters.propertyTypes = [propertyType];
+  } else if (propertyType === "Todos") {
+    delete config.filters.propertyTypes;
+  }
+
+
   const listings = await crawlSources(config, {
     logger: (message) => console.log(message)
   });
 
-  await writeListingsWorkbook(listings, outputPath, config.excel || {});
+  await writeListingsWorkbook(listings, outputPath, {
+    ...(config.excel || {})
+  });
   if (args["json-output"]) {
     await writeListingsJson(listings, path.resolve(args["json-output"]), config);
   }

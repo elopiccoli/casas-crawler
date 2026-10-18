@@ -45,17 +45,37 @@ p {
   font-size: 14px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.run-workflow,
 .refresh {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 40px;
   padding: 0 14px;
-  color: #ffffff;
-  background: var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
+}
+
+.run-workflow {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.run-workflow:hover {
+  background: var(--accent-dark);
+}
+
+.refresh {
+  color: var(--accent);
+  background: var(--panel);
 }
 
 main {

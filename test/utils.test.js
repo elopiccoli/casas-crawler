@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseArea, parsePrice } from "../src/utils.js";
+import { parseArea, parsePrice, matchesFilters, parseRooms } from "../src/utils.js";
+
+test("workflow operation filters preserve combined sale/rental listings", () => {
+  assert.equal(matchesFilters({ operation: "Alquiler" }, { operation: "Alquiler" }), true);
+  assert.equal(matchesFilters({ operation: "Venta" }, { operation: "Alquiler" }), false);
+  assert.equal(matchesFilters({ operation: "Venta / Alquiler" }, { operation: "Alquiler" }), true);
+  assert.equal(matchesFilters({ operation: "Venta" }, { operation: "Todos" }), true);
+  assert.equal(parseRooms("Departamento monoambiente"), 1);
+});
 
 test("parseArea extracts square meters from common Spanish labels", () => {
   assert.equal(parseArea("45 m² cubiertos"), 45);

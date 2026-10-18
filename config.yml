@@ -2231,3 +2231,92 @@ sources:
     website: https://aliaspropiedades.com.ar
     enabled: true
     notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+  - name: Dardo Propiedades
+    notes: Listados publicos de 2clics. Se consultan ventas y alquileres.
+    startUrls:
+      - https://www.dardopropiedades.com/estado/en-venta/
+      - https://www.dardopropiedades.com/estado/en-alquiler/
+    pagination:
+      maxPages: 1
+    listingSelector: a[href*='/propiedad/']
+    publicationUrlRegex: /propiedad/[0-9]+_
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), p:has(.flaticon-placeholder), h1
+      area: .property-detail li, .prop_details li, .detail-list li, body
+      price: .price, .property-price, [itemprop='price']::attr(content), meta[property='product:price:amount']::attr(content)
+      propertyType: .property-type, meta[name='description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+  - name: Paulo Arroyo Propiedades
+    notes: Inmobiliatica. Listados de venta y alquiler.
+    startUrls:
+      - https://www.pauloarroyopropiedades.com/propiedad-en-venta.html
+      - https://www.pauloarroyopropiedades.com/propiedad-en-alquiler.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href*='_propiedad-inmobiliaria.html']
+    publicationUrlRegex: _propiedad-inmobiliaria\.html$
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: .property-address, .address, address, [itemprop='streetAddress']::attr(content), meta[property='og:description']::attr(content), h1
+      area: .prop_details li, .property-detail li, body
+      price: .price, .price-list-tag, .operation-price, [itemprop='price']::attr(content), meta[name='description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+  - name: Sauro Propiedades
+    notes: Inmobiliatica. Listados de venta y alquiler.
+    startUrls:
+      - https://www.sauropropiedades.com/propiedad-en-venta.html
+      - https://www.sauropropiedades.com/propiedad-en-alquiler.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href*='_propiedad-inmobiliaria.html']
+    publicationUrlRegex: _propiedad-inmobiliaria\.html$
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      area: .prop_details li, .property-detail li, body
+      price: .price, .price-list-tag, .operation-price, [itemprop='price']::attr(content), meta[name='description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+  - name: Homes - Land Propiedades
+    notes: Inmobiliatica. Listados de venta y alquiler.
+    startUrls:
+      - https://www.homes-land.com.ar/propiedad-en-venta.html
+      - https://www.homes-land.com.ar/propiedad-en-alquiler.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href*='_propiedad-inmobiliaria.html']
+    publicationUrlRegex: _propiedad-inmobiliaria\.html$
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      area: .prop_details li, .property-detail li, body
+      price: .price, .price-list-tag, .operation-price, [itemprop='price']::attr(content), meta[name='description']::attr(content), body
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+  - name: Mar del Plata (portal)
+    notes: Portal agregador. Puede mostrar avisos publicados por distintas inmobiliarias.
+    startUrls:
+      - https://mardelplata.com.ar/propiedades/
+    pagination:
+      maxPages: 3
+      nextSelector: a[rel='next'], a.next, .pagination a.next
+    listingSelector: a[href*='-en-venta-en-'], a[href*='-en-alquiler-en-']
+    publicationUrlRegex: '-en-(venta|alquiler)-en-'
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      area: .property-details, .product_meta, .entry-content, .woocommerce-product-details__short-description, [itemprop='floorSize']::attr(content)
+      price: .price, .woocommerce-Price-amount, [itemprop='price']::attr(content), meta[property='product:price:amount']::attr(content)
+      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description

@@ -1,5 +1,7 @@
 # Casas crawler
 
+[🌐 Abrir el sitio web con los resultados](https://casas-crawler.web.app)
+
 Crawler configurable para monitorear publicaciones inmobiliarias y exportarlas a Excel con:
 
 - `inmobiliaria`
@@ -65,7 +67,7 @@ El workflow `.github/workflows/deploy-firebase.yml` permite actualizar la web de
 - automaticamente todos los dias a las 10:00 UTC
 - al subir cambios de `web/` a `master`, publica los datos guardados sin ejecutar nuevamente el crawler.
 
-Para que funcione, el repositorio de GitHub necesita el secret `FIREBASE_TOKEN` configurado. Una vez guardado ese secret, GitHub corre:
+Para que funcione, el repositorio de GitHub necesita el secret `FIREBASE_SERVICE_ACCOUNT` con el JSON de la cuenta de servicio autorizada a publicar en Firebase Hosting. El workflow usa un archivo temporal de credenciales y lo elimina al terminar. GitHub corre:
 
 ```powershell
 npm ci

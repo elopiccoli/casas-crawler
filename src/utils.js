@@ -28,6 +28,7 @@ export function normalizeForSearch(value) {
 
 export function parseRooms(value, labeledOnly = false) {
   const text = normalizeText(value);
+  if (/\bmonoambiente\b/i.test(text)) return 1;
   const match = text.match(/(?<![\d.,])\b(\d+)\s*(?:ambientes?\b|amb\b\.?)/i)
     || text.match(/\bambientes?\s*:?\s*(\d+)(?![\d.,])/i);
   const number = match ? Number(match[1]) : !labeledOnly && /^\d+$/.test(text) ? Number(text) : null;
@@ -90,6 +91,12 @@ export function matchesFilters(listing, filters = {}) {
     listing.title,
     getUrlPath(listing.url)
   ].join(" "));
+
+  if (filters.operation) {
+    const requested = normalizeForSearch(filters.operation);
+    const operation = normalizeForSearch(listing.operation);
+    if (requested !== "todos" && operation !== requested && !(operation === "venta / alquiler" && ["venta", "alquiler"].includes(requested))) return false;
+  }
 
   if (priceFilter.currency && listing.currency && listing.currency !== normalizeCurrency(priceFilter.currency)) {
     return false;

@@ -12,7 +12,16 @@
         <h1>Casas Mar del Plata</h1>
         <p id="status">Cargando publicaciones...</p>
       </div>
-      <a class="refresh" href="./publicaciones.json" target="_blank" rel="noreferrer">JSON</a>
+      <nav class="header-actions" aria-label="Acciones">
+        <a
+          class="run-workflow"
+          href="https://github.com/elopiccoli/casas-crawler/actions/workflows/deploy-firebase.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Abrir GitHub Actions para iniciar una actualización"
+        >Actualizar</a>
+        <a class="refresh" href="./publicaciones.json" target="_blank" rel="noopener noreferrer">JSON</a>
+      </nav>
     </header>
 
     <main>
