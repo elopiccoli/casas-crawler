@@ -25,3 +25,30 @@ sources:
     enabled: true
     detailUrls:
       - https://www.napolitanoinmobiliaria.com.ar/p/8030417-Departamento-en-Alquiler-en-Centro-Impecable-2-ambientes-vista-plena-al-mar-zona-CENTRO
+  - name: Bartolini Propiedades
+    startUrls:
+      - https://bartolinipropiedades.com/casa-chalet-en-alquiler.html
+      - https://bartolinipropiedades.com/departamento-en-alquiler.html
+      - https://bartolinipropiedades.com/casa-chalet-en-venta.html
+      - https://bartolinipropiedades.com/departamento-en-venta.html
+      - https://bartolinipropiedades.com/terreno-en-venta.html
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    fields:
+      title: h1, h2, h3, .titulo, .title
+      summary: body
+    detailFields:
+      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
+      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
+      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
+      title: meta[property='og:title']::attr(content), h1, title
+      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      city: meta[property='og:title']::attr(content)
+    preferConfiguredFields: true
+    website: https://bartolinipropiedades.com
+    enabled: true
+    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    detailUrls: []
