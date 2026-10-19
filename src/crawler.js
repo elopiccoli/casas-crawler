@@ -3,6 +3,7 @@ import { absolutizeUrl, matchesFilters, normalizeText, sleep, uniqueBy } from ".
 import { extractPropertyFields, catalogFields } from "./property-extraction.js";
 import { finalizeListing } from "./listing.js";
 import { parseOperation, urlPath } from "../web/property-fields.js";
+import { mardelCatalogFields, mardelPropertyUrl } from "./mardel-catalog.js";
 
 export async function crawlSources(config, options = {}) {
   const requestConfig = config.request || {};
@@ -26,6 +27,7 @@ export async function crawlSources(config, options = {}) {
 }
 
 async function crawlSource(source, requestConfig, globalFilters, logger) {
+  if (source.format === "mardelCatalog") return crawlMardelCatalog(source, requestConfig, globalFilters, logger);
   if (source.format === "roblesCatalog") {
     return crawlRoblesCatalog(source, requestConfig, globalFilters);
   }
@@ -104,6 +106,32 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
     if (checked % 25 === 0) logger?.(`  ${source.name}: ${checked}/${detailUrls.size} fichas revisadas`);
   }
 
+  return listings;
+}
+
+async function crawlMardelCatalog(source, requestConfig, globalFilters, logger) {
+  const listings = [], seen = new Set();
+  const filters = mergeFilters(globalFilters, source.filters || {});
+  const pageSize = 50;
+  for (let page = 1; page <= (source.pagination?.maxPages || 80); page++) {
+    const url = new URL(source.catalogUrl);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("items_x_page", String(pageSize));
+    let payload;
+    try { payload = await fetchJson(url.href, requestConfig); }
+    catch (error) { logger?.(`  ${source.name}: listado ${url.href}: ${error.message}`); break; }
+    if (!payload.success || !Array.isArray(payload.inmuebles)) throw new Error("El catálogo público no devolvió inmuebles válidos");
+    let added = 0;
+    for (const item of payload.inmuebles) {
+      if (!item.id || seen.has(item.id)) continue;
+      seen.add(item.id); added++;
+      const listing = finalizeListing(source.name, mardelPropertyUrl(source, item), mardelCatalogFields(item));
+      if (matchesFilters(listing, filters)) listings.push(listing);
+    }
+    logger?.(`  ${source.name}: página ${page}, ${seen.size}/${payload.total} fichas revisadas`);
+    if (!added || payload.inmuebles.length < pageSize || seen.size >= Number(payload.total)) break;
+    await sleep(requestConfig.delayMs || 1000);
+  }
   return listings;
 }
 

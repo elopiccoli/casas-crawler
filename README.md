@@ -159,6 +159,8 @@ Tambien se puede programar con el Programador de tareas de Windows ejecutando `n
 
 ## Configuracion por inmobiliaria
 
+Las fuentes con `format: mardelCatalog` consultan el catálogo público de Mar del Inmueble y sus webs de inmobiliarias, con paginación. `catalogUrl` identifica el catálogo; la ficha del reporte enlaza al sitio solicitado. Se extraen ambientes, cochera, superficie, moneda y precio desde campos estructurados; se respeta `no_publicar_precio`. El portal general se identifica como **Mardel Inmueble** en el filtro de fuentes.
+
 Las fuentes nuevas quedan registradas con `website` (la URL original solicitada) y `startUrls` (los listados que consulta el crawler). Se evitan duplicados entre dominios con y sin `www`. `preferConfiguredFields: true` permite priorizar los selectores especificos de una fuente ante encabezados genericos como "Detalle". Las fuentes que requieren un adaptador cliente se identifican en `notes`; estar configurada no garantiza que una inmobiliaria entregue publicaciones en HTML.
 
 Cada fuente del `config.yml` tiene:

@@ -878,8 +878,7 @@ sources:
     website: https://www.gonnet.com.ar
     enabled: true
   - startUrls:
-      - https://www.nizzipropiedades.com/propiedades?operacion=1
-      - https://www.nizzipropiedades.com/propiedades?operacion=2
+      - https://www.nizzipropiedades.com/
     pagination:
       maxPages: 1
     listingSelector: a[href]
@@ -888,13 +887,18 @@ sources:
       title: h2.text-2xl:first
       price: h1
       operation: h1
-      propertyType: h2.text-2xl:first
-      city: span.text-gray-300
+      propertyType: .mb-6.mt-6 > p:first-child
+      address: .mb-6.mt-6 > p.text-sm
+      city: .mb-6.mt-6 > p.text-sm
+      rooms: .flex.flex-col:has(> span:contains('Ambientes')) > span.font-semibold
+      area: .flex.flex-col:has(> span:contains('Superficie Cubierta')) > span.font-semibold
+      parking: .feature-badge:contains('Cochera') span
       summary: .prose
     publicationUrlRegex: '-ficha-[a-z]+\d+'
     name: Nizzi Propiedades
     website: https://www.nizzipropiedades.com
     enabled: true
+    notes: Extracción verificada desde las fichas enlazadas en inicio. El listado general requiere JavaScript; cobertura inicial parcial.
   - name: Arbini Propiedades
     startUrls:
       - https://www.arbinipropiedades.com.ar/Alquiler
@@ -2359,3 +2363,145 @@ sources:
       propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
       title: meta[property='og:title']::attr(content), h1, title
       summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+  - name: Mardel Inmueble
+    website: https://mardelinmueble.com/
+    enabled: true
+    startUrls:
+      - https://mardelinmueble.com/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    portal: true
+    catalogUrl: https://api.mardelinmueble.com/v3/mardelinmueble/inmuebles/
+    notes: Portal de varias inmobiliarias; se extrae el catálogo público estructurado con paginación.
+  - name: Lascano Propiedades
+    website: https://lascanopropiedades.com.ar/
+    enabled: true
+    startUrls:
+      - https://lascanopropiedades.com.ar/propiedades.php?tipo_propiedad=-&tipo_operacion=Alquiler&it_localidad=-&it_comodidades=0
+      - https://lascanopropiedades.com.ar/propiedades.php?tipo_propiedad=-&tipo_operacion=Venta&it_localidad=-&it_comodidades=0
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    detailFields:
+      title: h2.text-left:contains('Departamento'), h2.text-left:contains('Casa'), h2.text-left
+      address: h2.text-left:first
+      city: h2.text-left:first
+      operation: h2.color-red
+      price: h2.text-right:contains('Precio')
+      rooms: .largo:contains('ambientes')
+      area: .largo:contains('Superficie Cubierta')
+      parking: .row:has(> i.icon-f-cochera) > .largo
+      propertyType: h2.text-left:contains('Departamento'), h2.text-left:contains('Casa')
+    publicationUrlRegex: /detalle-item\.php\?item_id=\d+
+    preferConfiguredFields: true
+    notes: Listados y fichas verificados. Publica también propiedades fuera de Mar del Plata; se conserva el filtro de ciudad.
+  - name: Girard Propiedades
+    website: https://www.girardpropiedades.com.ar/
+    enabled: true
+    startUrls:
+      - https://www.girardpropiedades.com.ar/venta
+      - https://www.girardpropiedades.com.ar/alquiler
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    detailFields:
+      title: .tgpd-title
+      address: .tgpd-title
+      price: .tgpd-price
+      operation: .tgpd-tags .tgpd-tag-venta, .tgpd-tags .tgpd-tag-alquiler
+      propertyType: .tgpd-tags .tgpd-tag-outline
+      neighborhood: .tgpd-loc
+      rooms: .tgpd-extra-row:contains('ambientes') p
+      area: .tgpd-extra-row:contains('cubiertos') p
+      parking: .tgpd-extra-row:contains('cochera') p
+      summary: .tgpd-description, .tgpd-description-text, .tgpd-desc
+    publicationUrlRegex: /propiedades/[a-z0-9]+(?:$|[?#])
+    preferConfiguredFields: true
+    filters:
+      city: null
+    notes: Fichas verificadas. La ubicación estructurada indica barrio, sin ciudad separada; no se infiere ciudad desde el pie de página.
+  - name: Rey Propiedades
+    website: https://reypropiedades.ar/
+    enabled: true
+    startUrls:
+      - https://reypropiedades.ar/listing?purpose=rent
+      - https://reypropiedades.ar/listing?purpose=sale
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    detailFields:
+      title: .detail__title
+      address: .detail__address
+      city: .detail__address
+      price: .detail__price
+      operation: .detail__badges .tag--op
+      propertyType: .detail__badges .tag--type
+      rooms: .detail__main .feats li:contains('Ambientes') strong
+      parking: .detail__main .feats li:contains('Cochera') strong
+      area: .detail__main .kv:contains('cubierta')
+      summary: .detail__text
+    publicationUrlRegex: /ad/[^/?]+
+    preferConfiguredFields: true
+  - name: Loreley Propiedades
+    website: https://loreleypropiedades.com/
+    enabled: true
+    startUrls:
+      - https://loreleypropiedades.com/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    catalogUrl: https://api.mardelinmueble.com/v3/inmobiliarias/14/inmuebles?id_inmobiliaria=14
+    notes: Catálogo público identificado mediante el dominio de la inmobiliaria en la plataforma Mar del Inmueble.
+  - name: Moreno Gómez Propiedades
+    website: https://moreno-gomez.com/
+    enabled: true
+    startUrls:
+      - https://moreno-gomez.com/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    catalogUrl: https://api.mardelinmueble.com/v3/inmobiliarias/25/inmuebles?id_inmobiliaria=25
+    notes: Catálogo público identificado mediante el dominio de la inmobiliaria en la plataforma Mar del Inmueble.
+  - name: Beain Propiedades
+    website: https://beainpropiedades.com.ar/
+    enabled: true
+    startUrls:
+      - https://beainpropiedades.com.ar/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    catalogUrl: https://api.mardelinmueble.com/v3/inmobiliarias/13/inmuebles?id_inmobiliaria=13
+    notes: Catálogo público identificado mediante el dominio de la inmobiliaria en la plataforma Mar del Inmueble.
+  - name: Flores Harismendi
+    website: https://floresharismendi.com/
+    enabled: true
+    startUrls:
+      - https://floresharismendi.com/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    catalogUrl: https://api.mardelinmueble.com/v3/inmobiliarias/61/inmuebles?id_inmobiliaria=61
+    notes: Catálogo público identificado mediante el dominio de la inmobiliaria en la plataforma Mar del Inmueble.
+  - name: Patricia Moreno
+    website: https://patriciamoreno.ar/
+    enabled: true
+    startUrls:
+      - https://patriciamoreno.ar/
+    pagination:
+      maxPages: 80
+    listingSelector: a[href]
+    detailFields: {}
+    format: mardelCatalog
+    catalogUrl: https://api.mardelinmueble.com/v3/inmobiliarias/32/inmuebles?id_inmobiliaria=32
+    notes: Catálogo público identificado mediante el dominio de la inmobiliaria en la plataforma Mar del Inmueble.
