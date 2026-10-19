@@ -77,3 +77,29 @@ sources:
     enabled: true
     notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
     detailUrls: []
+  - name: Kisic Propiedades
+    website: https://kisicpropiedades.com/
+    enabled: true
+    startUrls:
+      - https://kisicpropiedades.com/listing?purpose=rent
+      - https://kisicpropiedades.com/listing?purpose=sale
+      - https://kisicpropiedades.com/listing?purpose=temporary_rental
+    pagination:
+      maxPages: 4
+      pageParam: page
+      firstPage: 2
+    listingSelector: a[href]
+    detailFields:
+      title: .detail__title
+      address: .detail__address
+      city: .detail__address
+      price: .detail__price
+      operation: .detail__badges .tag--op
+      propertyType: .detail__badges .tag--type
+      rooms: .detail__main .feats li:contains('Ambientes') strong
+      parking: .detail__main .feats li:contains('Cochera') strong
+      area: .detail__main .kv:contains('cubierta')
+      summary: .detail__text
+    publicationUrlRegex: /ad/[^/?]+
+    preferConfiguredFields: true
+    notes: 'Catálogo Pixel Inmobiliario verificado: ventas, alquileres y temporarios; extracción de ambientes y cochera desde la ficha principal.'

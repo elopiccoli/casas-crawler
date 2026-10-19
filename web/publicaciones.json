@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-19T00:20:26.971Z",
-  "count": 5019,
+  "generatedAt": "2026-10-19T13:40:19.856Z",
+  "count": 5043,
   "quality": {
-    "needingReview": 2232,
+    "needingReview": 2256,
     "byAgency": [
       {
         "name": "Russillo Asesores Inmobiliarios",
@@ -573,6 +573,11 @@
         "name": "Patricia Moreno",
         "listings": 43,
         "needingReview": 12
+      },
+      {
+        "name": "Kisic Propiedades",
+        "listings": 24,
+        "needingReview": 24
       }
     ]
   },
@@ -288822,6 +288827,1359 @@
         "summary": {
           "selector": ".tgpd-description",
           "value": "Departamento de 3 ambientes ubicado en el centro de Mar del PlataCuenta con dos balcones, uno de ellos aterrazado, ideal para disfrutar del aire libre. El living es amplio y luminoso, con salida directa al balcón, proporcionando un espacio cómodo y acogedor. Dispone de dos dormitorios al contrafrente con amplios placares empotrados y dos baños completos.La cocina está separada del living, equipada con anafe a gas y horno eléctrico, y ofrece un gran ventanal. Incluye espacio para lavarropas y calefacción por radiadores con caldera dual.Las aberturas son de doble vidrio hermético (DVH), asegurando eficiencia térmica y acústica.Totalmente reciclado, se vende con todo el mobiliario y decoración incluidos.VALOR: u$s 139.900\"Ahora desde nuestro sitio, de manera fácil y agil, podes reservar o agendar una visita on line\"Seguimos innovando para ofrecerte el mejor servicio inmobiliario.* Girard propiedades agradece a todos nuestros clientes por pertenecer a nuestra comunidad, la cual crece gracias a VOS.Nuestra misión: qué la compra o el alquiler de una propiedad sea una agradable experiencia.Nuestro objetivo: que todo el proceso de gestión sea satisfactorio y que seas parte de nuestra comunidad.Nota: Las fotografías son propiedad de GIRARD PROPIEDADES por lo que no pueden ser utilizadas sin autorización expresa (Ley 11.723). El valor del inmueble indicado en el presente puede ser modificado sin previo aviso.Todas las medidas enunciadas son meramente orientativas, las medidas exactas serán las que se expresen en el respectivo título de propiedad de cada inmueble.Todas las fotos, imágenes y vídeos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Bolívar & Diagonal Pueyrredón, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 1450000,
+      "moneda": "$",
+      "link": "https://kisicpropiedades.com/ad/alquiler-24-meses-semipiso-3-ambientes",
+      "fechaExtraccion": "2026-10-19T13:38:46.777Z",
+      "operacion": "Alquiler",
+      "tipo": "Departamento",
+      "titulo": "ALQUILER 24 MESES - SEMIPISO 3 AMBIENTES",
+      "resumen": "ALQUILER 24 MESES - Diagonal Pueyrredon y Bolivar Semipiso de 3 ambientes con cochera cubierta *Ambientes luminosos y amplios. *Living comedor con balcón saliente *Cocina integrada con isla * Dormitorio en suite con buen placard * Segundo dormitorio con placard * Baño con ducha - Aberturas DVH - Calefacción por losa radiante - Cocina eléctrica Edificio con gimnasio, sauna y jacuzzi Quincho completamente equipado IMPECABLE Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 1.450.000.- mensuales. Paga expensas (tiene incluido gas y osse). Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Bolívar & Diagonal Pueyrredón, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "ALQUILER 24 MESES - SEMIPISO 3 AMBIENTES"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "$ 1.450.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Alquiler"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Bolívar & Diagonal Pueyrredón, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "ALQUILER 24 MESES - Diagonal Pueyrredon y Bolivar Semipiso de 3 ambientes con cochera cubierta *Ambientes luminosos y amplios. *Living comedor con balcón saliente *Cocina integrada con isla * Dormitorio en suite con buen placard * Segundo dormitorio con placard * Baño con ducha - Aberturas DVH - Calefacción por losa radiante - Cocina eléctrica Edificio con gimnasio, sauna y jacuzzi Quincho completamente equipado IMPECABLE Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 1.450.000.- mensuales. Paga expensas (tiene incluido gas y osse). Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Chacabuco 4922, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 2,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 650000,
+      "moneda": "$",
+      "link": "https://kisicpropiedades.com/ad/alquiler-2-amb-villa-primera",
+      "fechaExtraccion": "2026-10-19T13:38:50.204Z",
+      "operacion": "Alquiler",
+      "tipo": "Departamento",
+      "titulo": "ALQUILER 2 AMB. - VILLA PRIMERA",
+      "resumen": "ALQUILER 24 MESES Departamento de 2 ambientes Primer piso por escalera Super luminoso. Ventilación en todos los ambientes - Living comedor - Cocina integrada - Baño con ducha - Dormitorio con placard. -TODO ELECTRICO- Se alquila con algunos muebles MUY BUEN ESTADO Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 650.000.- mensuales. Se actualiza cada 3 meses por el IPC Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "2"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Chacabuco 4922, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "ALQUILER 2 AMB. - VILLA PRIMERA"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "$ 650.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Alquiler"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Chacabuco 4922, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "ALQUILER 24 MESES Departamento de 2 ambientes Primer piso por escalera Super luminoso. Ventilación en todos los ambientes - Living comedor - Cocina integrada - Baño con ducha - Dormitorio con placard. -TODO ELECTRICO- Se alquila con algunos muebles MUY BUEN ESTADO Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 650.000.- mensuales. Se actualiza cada 3 meses por el IPC Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Av. Colón 1735, B7600FXK Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 2,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 680000,
+      "moneda": "$",
+      "link": "https://kisicpropiedades.com/ad/alquiler-24-meses-2-ambientes-a-la-calle",
+      "fechaExtraccion": "2026-10-19T13:38:51.914Z",
+      "operacion": "Alquiler",
+      "tipo": "Departamento",
+      "titulo": "ALQUILER 24 MESES- 2 AMBIENTES A LA CALLE",
+      "resumen": "ALQUILER 24 MESES - 2 AMBIENTESA LA CALLE $680.000.- MAS EXPENSAS Excelente ubicación - Av. Colon 1735- PISO 4TO con balcon saliente Departamento de 2 ambientes - Living comedor amplio con balcon y vista a la Avenida Colon - Cocina separada - Baño completo -1 amplio dormitorio con placares, a la calle - Super luminoso. SE ALQUILA AMOBLADO MJY BUEN ESTADO Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 680.000.- mensuales. Paga expensas y OSSE. Se actualiza cada 3 meses por el IPC Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "2"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Av. Colón 1735, B7600FXK Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "ALQUILER 24 MESES- 2 AMBIENTES A LA CALLE"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "$ 680.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Alquiler"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Av. Colón 1735, B7600FXK Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "ALQUILER 24 MESES - 2 AMBIENTESA LA CALLE $680.000.- MAS EXPENSAS Excelente ubicación - Av. Colon 1735- PISO 4TO con balcon saliente Departamento de 2 ambientes - Living comedor amplio con balcon y vista a la Avenida Colon - Cocina separada - Baño completo -1 amplio dormitorio con placares, a la calle - Super luminoso. SE ALQUILA AMOBLADO MJY BUEN ESTADO Requisitos * Justificación de ingresos * Garantía propietaria * No se aceptan mascotas * 1 mes de deposito en garantía * 1 mes adelanto * 1 mes de honorarios El valor es de $ 680.000.- mensuales. Paga expensas y OSSE. Se actualiza cada 3 meses por el IPC Si lo queres ir a ver, te dejo mi contacto. 2235025175 Guillermina KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Primera Junta & Entre Ríos, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 5,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 210000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/casa-en-venta-barrio-chauvin-1",
+      "fechaExtraccion": "2026-10-19T13:38:53.813Z",
+      "operacion": "Venta",
+      "tipo": "Casa",
+      "titulo": "CASA EN VENTA - BARRIO CHAUVIN",
+      "resumen": "BARRIO CHAUVIN HERMOSA CASA EN VENTA, desarrollada en dos plantas. Primera Junta y Entre Rios - PH en esquina, - 230 mts cubiertos En planta baja encontrarás: - Amplio living con ventanales a la calle y acogedor hogar - Comedor en desnivel - Cocina comedor cómoda y salida al patio - Baño de cortesía - Garage para un auto En planta alta: - Tres amplios dormitorios con placard. Pisos de madera. - Baño completo y baño con ducha - Dependencia con baño con ducha * Aberturas de madera, rejas en toda la casa. Excelente estado general. * Calefactores en todos los ambientes * ¡Ambientes súper luminosos! Su valor es de U$S 210.000. Si te interesa ir a conocerla, no dudes en contactarnos al 2235025175 @kisicpropiedades KISIC PROPIEDADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "5"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Entre Ríos, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CASA EN VENTA - BARRIO CHAUVIN"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 210.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Casa"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Entre Ríos, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "BARRIO CHAUVIN HERMOSA CASA EN VENTA, desarrollada en dos plantas. Primera Junta y Entre Rios - PH en esquina, - 230 mts cubiertos En planta baja encontrarás: - Amplio living con ventanales a la calle y acogedor hogar - Comedor en desnivel - Cocina comedor cómoda y salida al patio - Baño de cortesía - Garage para un auto En planta alta: - Tres amplios dormitorios con placard. Pisos de madera. - Baño completo y baño con ducha - Dependencia con baño con ducha * Aberturas de madera, rejas en toda la casa. Excelente estado general. * Calefactores en todos los ambientes * ¡Ambientes súper luminosos! Su valor es de U$S 210.000. Si te interesa ir a conocerla, no dudes en contactarnos al 2235025175 @kisicpropiedades KISIC PROPIEDADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Don Bosco 3081, B7602AEE Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 73000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/casa-3-ambientes-don-bosco",
+      "fechaExtraccion": "2026-10-19T13:38:55.558Z",
+      "operacion": "Venta",
+      "tipo": "Chalet",
+      "titulo": "CASA 3 AMBIENTES - DON BOSCO",
+      "resumen": "VENTA CASA A RECICLAR - DON BOSCO 3081 Excelente oportunidad de inversión. Living comedor a la calle, aberturas de madera. Cocina separada con salida al patio Dos dormitorios amplios, uno al frente y el otro con vista al patio Baño completo. Entrada para 2 autos Patio perimetral que brinda luminosidad a todos los ambientes Rejas en todas las ventanas. Estado original Lote propio de 10 x 13.50 Su valor es de u$s 73.000.- Buen entorno, a pocas cuadras de la Av. Jara. Excelente ubicación. Zona de casas bajas Si te interesa lo vamos a ver, te dejo mi contacto 223 5025175 @kisicpropiedades KISIC PROPIEDADES - REG 4085 Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Don Bosco 3081, B7602AEE Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CASA 3 AMBIENTES - DON BOSCO"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 73.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Chalet"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Don Bosco 3081, B7602AEE Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "VENTA CASA A RECICLAR - DON BOSCO 3081 Excelente oportunidad de inversión. Living comedor a la calle, aberturas de madera. Cocina separada con salida al patio Dos dormitorios amplios, uno al frente y el otro con vista al patio Baño completo. Entrada para 2 autos Patio perimetral que brinda luminosidad a todos los ambientes Rejas en todas las ventanas. Estado original Lote propio de 10 x 13.50 Su valor es de u$s 73.000.- Buen entorno, a pocas cuadras de la Av. Jara. Excelente ubicación. Zona de casas bajas Si te interesa lo vamos a ver, te dejo mi contacto 223 5025175 @kisicpropiedades KISIC PROPIEDADES - REG 4085 Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Jujuy 2366, B7600DCV Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 95000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/3-ambientes-con-dependencia-en-venta",
+      "fechaExtraccion": "2026-10-19T13:38:57.734Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "3 AMBIENTES CON DEPENDENCIA EN VENTA",
+      "resumen": "SEMIPISO DE 3 AMBIENTES CON DEPENDENCIA – A LA CALLE Jujuy 2300 – 2° piso por escalera 3 ambientes con dependencia de servicio, a la calle, ubicado a pocos metros de las avenidas Independencia y Colón, en una zona con amplia variedad de comercios, servicios y excelente conectividad. La propiedad se destaca por sus ambientes amplios, luminosos y muy bien conservados, manteniendo su estado original. -Living comedor con balcón saliente. -Cocina comedor independiente. -Lavadero separado. -Dos dormitorios con pisos de madera y placares empotrados. -Baño completo con ventilación natural. -Dependencia de servicio con dormitorio y toilette. -Muy buen espacio de guardado. Además, cuenta con carpinterías de madera, calefacción por radiadores y puerta de acceso blindada. Superficie cubierta: 87 m² aprox. Una propiedad de muy buena distribución, espacios generosos, excelente luminosidad y buen espacio de guardado, en una ubicación estratégica del Macrocentro, cercana a importantes avenidas y rodeada de comercios y servicios. Bajas expensas Valor: U$S 95.000. No te podes perder la oportunidad de conocerlo, llámame y lo vamos a conocer 223 5025175 Guillermina Kisic - reg 4085 KISIC PROPIEDADES @kisicpropiedades Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Jujuy 2366, B7600DCV Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "3 AMBIENTES CON DEPENDENCIA EN VENTA"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 95.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Jujuy 2366, B7600DCV Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "SEMIPISO DE 3 AMBIENTES CON DEPENDENCIA – A LA CALLE Jujuy 2300 – 2° piso por escalera 3 ambientes con dependencia de servicio, a la calle, ubicado a pocos metros de las avenidas Independencia y Colón, en una zona con amplia variedad de comercios, servicios y excelente conectividad. La propiedad se destaca por sus ambientes amplios, luminosos y muy bien conservados, manteniendo su estado original. -Living comedor con balcón saliente. -Cocina comedor independiente. -Lavadero separado. -Dos dormitorios con pisos de madera y placares empotrados. -Baño completo con ventilación natural. -Dependencia de servicio con dormitorio y toilette. -Muy buen espacio de guardado. Además, cuenta con carpinterías de madera, calefacción por radiadores y puerta de acceso blindada. Superficie cubierta: 87 m² aprox. Una propiedad de muy buena distribución, espacios generosos, excelente luminosidad y buen espacio de guardado, en una ubicación estratégica del Macrocentro, cercana a importantes avenidas y rodeada de comercios y servicios. Bajas expensas Valor: U$S 95.000. No te podes perder la oportunidad de conocerlo, llámame y lo vamos a conocer 223 5025175 Guillermina Kisic - reg 4085 KISIC PROPIEDADES @kisicpropiedades Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Barón de, Marchi 1500, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 5,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 169000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/casa-en-venta-la-florida-apto-credito",
+      "fechaExtraccion": "2026-10-19T13:38:59.770Z",
+      "operacion": "Venta",
+      "tipo": "Casa",
+      "titulo": "CASA EN VENTA - LA FLORIDA - APTO CREDITO",
+      "resumen": "CASA EN BARRIO LA FLORIDA En La Florida, donde la tranquilidad y el verde forman parte de la vida cotidiana, encontramos esta casa pensada para disfrutar en familia, a pocos minutos de la ciudad. Sus espacios amplios y luminosos se integran de manera natural, con un living comedor con vistas al parque y una cocina moderna integrada, creando un ambiente cómodo y funcional. La casa cuenta con 4 dormitorios: uno en planta baja y tres en planta alta, uno de ellos en suite, además de 3 baños . Garage para dos autos en paralelo y trotadora para dos mas. Terraza El gran parque es uno de sus protagonistas: un espacio ideal para disfrutar al aire libre, compartir en familia y conectar con la naturaleza. ( Tiene todo listo para hacer la piscina) -Lote de 10,40 x 34 m aprox. -Sup cubierta 197 m² construidos *Aberturas con doble vidriado *Calefacción por radiadores *Alarma y cámaras de seguridad *Todos los servicios Faltan algunas terminaciones en los baños y dormitorio PLANOS ACTUALIZADOS - APTO CREDITO KISIC PROPIEDADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "2"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "5"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Barón de, Marchi 1500, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CASA EN VENTA - LA FLORIDA - APTO CREDITO"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 169.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Casa"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Barón de, Marchi 1500, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "CASA EN BARRIO LA FLORIDA En La Florida, donde la tranquilidad y el verde forman parte de la vida cotidiana, encontramos esta casa pensada para disfrutar en familia, a pocos minutos de la ciudad. Sus espacios amplios y luminosos se integran de manera natural, con un living comedor con vistas al parque y una cocina moderna integrada, creando un ambiente cómodo y funcional. La casa cuenta con 4 dormitorios: uno en planta baja y tres en planta alta, uno de ellos en suite, además de 3 baños . Garage para dos autos en paralelo y trotadora para dos mas. Terraza El gran parque es uno de sus protagonistas: un espacio ideal para disfrutar al aire libre, compartir en familia y conectar con la naturaleza. ( Tiene todo listo para hacer la piscina) -Lote de 10,40 x 34 m aprox. -Sup cubierta 197 m² construidos *Aberturas con doble vidriado *Calefacción por radiadores *Alarma y cámaras de seguridad *Todos los servicios Faltan algunas terminaciones en los baños y dormitorio PLANOS ACTUALIZADOS - APTO CREDITO KISIC PROPIEDADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Miguel Sagastizabal 5100, B7605FQB Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 4,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 160000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/chalet-en-venta-constitucion",
+      "fechaExtraccion": "2026-10-19T13:39:02.080Z",
+      "operacion": "Venta",
+      "tipo": "Chalet",
+      "titulo": "CHALET EN VENTA - CONSTITUCION",
+      "resumen": "Chalet en lote propio de 10 mts de frente por 27 mts de fondo. Living comedor con hogar, toilette de recepción. Cocina comedor y lavadero en planta baja En planta alta 3 dormitorios, uno de ellos en suite con vestidor. Baño completo Garage para dos autos Dos dormitorios amplios en el sótano con ventana. Parque trasero. La propiedad esta para reciclar en su totalidad. Tiene el techo nuevo al igual que la instalación de calefacción por radiadores. Excelente oportunidad para vivir en uno de los mejores barrios de la cuidad. No dejes de consultarme para ir a conocerla al 2235025175 @kisicpropiedades KISIC PROPIEADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "2"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "4"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Miguel Sagastizabal 5100, B7605FQB Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CHALET EN VENTA - CONSTITUCION"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 160.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Chalet"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Miguel Sagastizabal 5100, B7605FQB Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "Chalet en lote propio de 10 mts de frente por 27 mts de fondo. Living comedor con hogar, toilette de recepción. Cocina comedor y lavadero en planta baja En planta alta 3 dormitorios, uno de ellos en suite con vestidor. Baño completo Garage para dos autos Dos dormitorios amplios en el sótano con ventana. Parque trasero. La propiedad esta para reciclar en su totalidad. Tiene el techo nuevo al igual que la instalación de calefacción por radiadores. Excelente oportunidad para vivir en uno de los mejores barrios de la cuidad. No dejes de consultarme para ir a conocerla al 2235025175 @kisicpropiedades KISIC PROPIEADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Castelli 670, B7602HKP Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "Stella Maris",
+      "metros": null,
+      "ambientes": 4,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 299900,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/chalet-en-venta-barrio-stella-maris",
+      "fechaExtraccion": "2026-10-19T13:39:03.987Z",
+      "operacion": "Venta",
+      "tipo": "Chalet",
+      "titulo": "CHALET EN VENTA BARRIO STELLA MARIS",
+      "resumen": "CHALET ESTILO MARPLATENSE Castelli 670, entre General Rivas y General Paz. A 400 metros de Alem y a 500 metros de Güemes Sobre Lote de 10 x 33 mts - 245 metros cubierto -21 metros semi cubiertos Desarrollado en dos plantas Planta baja: *Muy amplio living comedor * 2 dormitorios * 1 baño completo * Baño de servicio con ducha * Cocina 3 x 3 * Lavadero cubierto *Salón de usos múltiples de grandes dimensiones Al fondo del lote una habitación con baño Planta alta: Habitación mediana a la calle y placard Jardín delantero y trasero Garage cubierto y trotadora para un auto Calefactores ene todos los ambientes La propiedad está original muy bien cuidada Su valor es de U$S 299.900 Puede tomar menor valor Si te interesa, te dejo mi contacto y la vamos a conocer",
+      "revision": [
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "4"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Castelli 670, B7602HKP Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CHALET EN VENTA BARRIO STELLA MARIS"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 299.900"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Chalet"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Castelli 670, B7602HKP Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "CHALET ESTILO MARPLATENSE Castelli 670, entre General Rivas y General Paz. A 400 metros de Alem y a 500 metros de Güemes Sobre Lote de 10 x 33 mts - 245 metros cubierto -21 metros semi cubiertos Desarrollado en dos plantas Planta baja: *Muy amplio living comedor * 2 dormitorios * 1 baño completo * Baño de servicio con ducha * Cocina 3 x 3 * Lavadero cubierto *Salón de usos múltiples de grandes dimensiones Al fondo del lote una habitación con baño Planta alta: Habitación mediana a la calle y placard Jardín delantero y trasero Garage cubierto y trotadora para un auto Calefactores ene todos los ambientes La propiedad está original muy bien cuidada Su valor es de U$S 299.900 Puede tomar menor valor Si te interesa, te dejo mi contacto y la vamos a conocer"
+        },
+        "neighborhood": {
+          "selector": "property URL/title/address",
+          "value": "Stella Maris"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Falucho 2100, B7600FQP Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 1,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 55900,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/dpto-1-amb-al-frente-falucho-2100",
+      "fechaExtraccion": "2026-10-19T13:39:13.529Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DPTO 1 AMB AL FRENTE - FALUCHO 2100",
+      "resumen": "DEPARTAMENTO DE 1 AMBIENTE con balcón saliente Totalmente reciclado y refaccionado para lograr su mejor versión FALUCHO 2169. 1° A Un ambiente a la calle con balcón saliente - Pisos de porcelanato - Carpintería a medida - Persianas de PvC - Obra de gas en el edificio - Departamento con cañerías de agua y gas en cocina y baño a nuevo - Cortinas a medida Completamente amoblado: mesa de madera con 2 sillas, rack con TV Smart 32 pulgadas nuevo, sommier de 2 plazas, mesas de luz con sus veladores, placa calefactor Cocina equipada con lavarropas a estrenar, heladera con freezer nueva, microondas nuevo, pava eléctrica marca Atma nueva, tostadora nueva marca Atma, cocina semi industrial nueva. BODEGA CON VINOS, vajilla, cubiertos tipo hotel, utensilios de cocina, cafetera estilo italiana Hudson, cacerola Hudson, sartén Hudson, cuchilla Hudson. Vajilla completa para dos personas, sabanas y toallas a estrenar Superficie 22 mts. VALOR: U$S 55.900 Expensas $ 80.000 aprox. Escribania designada: Agustina Fresno. Calle San Martin 2675. Piso 8°",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".detail__address",
+          "value": "Falucho 2100, B7600FQP Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DPTO 1 AMB AL FRENTE - FALUCHO 2100"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 55.900"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Falucho 2100, B7600FQP Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "DEPARTAMENTO DE 1 AMBIENTE con balcón saliente Totalmente reciclado y refaccionado para lograr su mejor versión FALUCHO 2169. 1° A Un ambiente a la calle con balcón saliente - Pisos de porcelanato - Carpintería a medida - Persianas de PvC - Obra de gas en el edificio - Departamento con cañerías de agua y gas en cocina y baño a nuevo - Cortinas a medida Completamente amoblado: mesa de madera con 2 sillas, rack con TV Smart 32 pulgadas nuevo, sommier de 2 plazas, mesas de luz con sus veladores, placa calefactor Cocina equipada con lavarropas a estrenar, heladera con freezer nueva, microondas nuevo, pava eléctrica marca Atma nueva, tostadora nueva marca Atma, cocina semi industrial nueva. BODEGA CON VINOS, vajilla, cubiertos tipo hotel, utensilios de cocina, cafetera estilo italiana Hudson, cacerola Hudson, sartén Hudson, cuchilla Hudson. Vajilla completa para dos personas, sabanas y toallas a estrenar Superficie 22 mts. VALOR: U$S 55.900 Expensas $ 80.000 aprox. Escribania designada: Agustina Fresno. Calle San Martin 2675. Piso 8°"
+        },
+        "roomsRaw": {
+          "selector": "property title: explicit ambientes",
+          "value": "DPTO 1 AMB AL FRENTE - FALUCHO 2100"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Laprida 3800, B7602FLX Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 83000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/departamento-3-ambientes-san-jose",
+      "fechaExtraccion": "2026-10-19T13:39:17.179Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPARTAMENTO 3 AMBIENTES - SAN JOSE",
+      "resumen": "Semipiso de 3 ambientes a la calle. Laprida y Dorrego, 2 piso por escalera. -Living comedor con balcón saliente, -Cocina separada -Lavadero separado con balcón cerrado. -Baño completo con ventilación natural -Dos dormitorios con pisos de madera y placares empotrados -Altillo, con acceso por escalera desde la cocina. Ventanal con dvh. Calefactores en todos los ambientes. Estado impecable. Sup aprox de 60 mts. Espacio de cochera Este departamento se destaca no solo por su excelente luminosidad en todos los ambientes y su impecable estado de conservación, sino también por el entorno que lo rodea. Ubicado en un barrio de casas bajas, con algunos edificios y una amplia oferta de comercios y servicios, ofrece un equilibrio ideal entre tranquilidad y comodidad. Además, su cercanía a la Av. Paso brinda un rápido acceso a diversos puntos de la ciudad y a múltiples opciones comerciales. Su valor es de u$s 83.000.- No te podes perder la oportunidad de conocerlo, llámame y lo vamos a conocer 223 5025175 Guillermina Kisic - reg 4085 KISIC PROPIEDADES @kisicpropiedades Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Laprida 3800, B7602FLX Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPARTAMENTO 3 AMBIENTES - SAN JOSE"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 83.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Laprida 3800, B7602FLX Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "Semipiso de 3 ambientes a la calle. Laprida y Dorrego, 2 piso por escalera. -Living comedor con balcón saliente, -Cocina separada -Lavadero separado con balcón cerrado. -Baño completo con ventilación natural -Dos dormitorios con pisos de madera y placares empotrados -Altillo, con acceso por escalera desde la cocina. Ventanal con dvh. Calefactores en todos los ambientes. Estado impecable. Sup aprox de 60 mts. Espacio de cochera Este departamento se destaca no solo por su excelente luminosidad en todos los ambientes y su impecable estado de conservación, sino también por el entorno que lo rodea. Ubicado en un barrio de casas bajas, con algunos edificios y una amplia oferta de comercios y servicios, ofrece un equilibrio ideal entre tranquilidad y comodidad. Además, su cercanía a la Av. Paso brinda un rápido acceso a diversos puntos de la ciudad y a múltiples opciones comerciales. Su valor es de u$s 83.000.- No te podes perder la oportunidad de conocerlo, llámame y lo vamos a conocer 223 5025175 Guillermina Kisic - reg 4085 KISIC PROPIEDADES @kisicpropiedades Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Sta. Fe 2300, B7600DZV Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 139900,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/dpto-3-ambientes-a-la-calle-santa-fe-2300",
+      "fechaExtraccion": "2026-10-19T13:39:19.126Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DPTO 3 AMBIENTES A LA CALLE - SANTA FE 2300",
+      "resumen": "DEPARTAMENTO DE 3 AMBIENTES - RECICLADO Ubicado en calle Santa Fe al 2300, a tan solo 150 metros de la Avenida Colón. Una zona ideal en Mar del Plata que combina conectividad, comercios y cercanía a todo. -Luminosidad total: Living comedor al frente con salida a un hermoso balcón a la calle. -Diseño integrado: Cocina moderna integrada con excelente ventilación natural. -Dormitorios funcionales: Dos cómodas habitaciones equipadas con generosos placares empotrados. -Confort térmico: Calefacción central por radiadores y caldera dual instalada. -Listo para mudarte: Totalmente reciclado a nuevo, equipado con muebles y decoración moderna. * Ideal tanto para vivienda permanente, escapadas de fin de semana o como inversión de alta rentabilidad temporaria. Sup. cub 55 mts Valor u$s139.900 Expensas $220.000",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Sta. Fe 2300, B7600DZV Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DPTO 3 AMBIENTES A LA CALLE - SANTA FE 2300"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 139.900"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Sta. Fe 2300, B7600DZV Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "DEPARTAMENTO DE 3 AMBIENTES - RECICLADO Ubicado en calle Santa Fe al 2300, a tan solo 150 metros de la Avenida Colón. Una zona ideal en Mar del Plata que combina conectividad, comercios y cercanía a todo. -Luminosidad total: Living comedor al frente con salida a un hermoso balcón a la calle. -Diseño integrado: Cocina moderna integrada con excelente ventilación natural. -Dormitorios funcionales: Dos cómodas habitaciones equipadas con generosos placares empotrados. -Confort térmico: Calefacción central por radiadores y caldera dual instalada. -Listo para mudarte: Totalmente reciclado a nuevo, equipado con muebles y decoración moderna. * Ideal tanto para vivienda permanente, escapadas de fin de semana o como inversión de alta rentabilidad temporaria. Sup. cub 55 mts Valor u$s139.900 Expensas $220.000"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Corrientes 1900, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 1,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 58900,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/depto-1-ambiente-centro-1",
+      "fechaExtraccion": "2026-10-19T13:39:20.932Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPTO 1 AMBIENTE - CENTRO",
+      "resumen": "DEPARTAMENTO DE 1 AMBIENTE A LA CALLE - Corrientes 1910 7B Ambiente desplazado con balcón saliente a la calle Piso alto, muy luminoso Cocina separada Baño con ducha Calefactor tiro balanceado Esc Se entrega totalmente amoblado y decorado Sup, Cubierta 25 mts2 Su valor: 58.900 Expensas $ 100.000.- Escribanía Designada",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".detail__address",
+          "value": "Corrientes 1900, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPTO 1 AMBIENTE - CENTRO"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 58.900"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Corrientes 1900, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "DEPARTAMENTO DE 1 AMBIENTE A LA CALLE - Corrientes 1910 7B Ambiente desplazado con balcón saliente a la calle Piso alto, muy luminoso Cocina separada Baño con ducha Calefactor tiro balanceado Esc Se entrega totalmente amoblado y decorado Sup, Cubierta 25 mts2 Su valor: 58.900 Expensas $ 100.000.- Escribanía Designada"
+        },
+        "roomsRaw": {
+          "selector": "property title: explicit ambientes",
+          "value": "DEPTO 1 AMBIENTE - CENTRO"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 103000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/dpto-3-ambientes-san-jose-a-estrenar",
+      "fechaExtraccion": "2026-10-19T13:39:22.685Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DPTO 3 AMBIENTES - SAN JOSE - A ESTRENAR",
+      "resumen": "PRIMERA JUNTA ESQUINA JUJUY Complejo de departamentos a estrenar - SIN EXPENSAS Departamento de 3 ambientes, a la calle. Super luminoso. !er piso por escalera Living comedor amplio con cocina integrada. Patio al contrafrente Baño completo Dos dormitorios con buenos placares a medida Calefacción por radiadores en todos los ambientes. Caldera Dual Aberturas de DVH Cortinas roller a medida Alarma Porcelanatos de primera calidad Excelente grifería Superficie cubierta de 62 mts + balcón Su valor es de u$s 103.000.- Escribanía Designada Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DPTO 3 AMBIENTES - SAN JOSE - A ESTRENAR"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 103.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "PRIMERA JUNTA ESQUINA JUJUY Complejo de departamentos a estrenar - SIN EXPENSAS Departamento de 3 ambientes, a la calle. Super luminoso. !er piso por escalera Living comedor amplio con cocina integrada. Patio al contrafrente Baño completo Dos dormitorios con buenos placares a medida Calefacción por radiadores en todos los ambientes. Caldera Dual Aberturas de DVH Cortinas roller a medida Alarma Porcelanatos de primera calidad Excelente grifería Superficie cubierta de 62 mts + balcón Su valor es de u$s 103.000.- Escribanía Designada Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 103000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/depto-de-3-ambientes",
+      "fechaExtraccion": "2026-10-19T13:39:24.412Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPTO DE 3 AMBIENTES",
+      "resumen": "PRIMERA JUNTA ESQUINA JUJUY Complejo de departamentos a estrenar - SIN EXPENSAS Departamento de 3 ambientes, a la calle. Super luminoso. !er piso por escalera Living comedor amplio con cocina integrada. Patio al contrafrente Baño completo Dos dormitorios con buenos placares a medida Calefacción por radiadores en todos los ambientes. Caldera Dual Aberturas de DVH Cortinas roller a medida Alarma Porcelanatos de primera calidad Excelente grifería Superficie cubierta de 62 mts + balcón Su valor es de u$s 103.000.- Escribanía Designada Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPTO DE 3 AMBIENTES"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 103.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": "property URL/title",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Primera Junta & Jujuy, B7600 Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "PRIMERA JUNTA ESQUINA JUJUY Complejo de departamentos a estrenar - SIN EXPENSAS Departamento de 3 ambientes, a la calle. Super luminoso. !er piso por escalera Living comedor amplio con cocina integrada. Patio al contrafrente Baño completo Dos dormitorios con buenos placares a medida Calefacción por radiadores en todos los ambientes. Caldera Dual Aberturas de DVH Cortinas roller a medida Alarma Porcelanatos de primera calidad Excelente grifería Superficie cubierta de 62 mts + balcón Su valor es de u$s 103.000.- Escribanía Designada Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Av. Patricio Peralta Ramos 3300, B7600JVT Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 75000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/departamento-en-venta-zona-varese",
+      "fechaExtraccion": "2026-10-19T13:39:26.191Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPARTAMENTO EN VENTA - ZONA VARESE",
+      "resumen": "EN VENTA- DEPARTAMENTO CON VISTA AL MAR DESDE EL BALCON UBICACION PRIVILEGIADA - FRENTE A PLAYA VARESE LUMINOSO DEPARTAMENTO DE 1 AMBIENTE DIVIDO. - Living comedor con balcón saliente y vista lateral al mar - Dormitorio con placard - Cocina comoda, con lavadero - Baño con ducha El departamento se encuentra completamente reciclado. Ambientes amplios, luminosos y soleados por la tarde. Edificio Bahía Superficie cubierta de 38 mts No dejes de consultarme para mas información y organizar una visita. Te dejo mi contacto 2235025175 Su valor es de u$s 75.000.- No dejes de consultarme para mas información y organizar una visita. Te dejo mi contacto 2235025175 - Guillermina Kisic KISIC PROPIEDADES - REG 4085 Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones.",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".detail__address",
+          "value": "Av. Patricio Peralta Ramos 3300, B7600JVT Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPARTAMENTO EN VENTA - ZONA VARESE"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 75.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Av. Patricio Peralta Ramos 3300, B7600JVT Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "EN VENTA- DEPARTAMENTO CON VISTA AL MAR DESDE EL BALCON UBICACION PRIVILEGIADA - FRENTE A PLAYA VARESE LUMINOSO DEPARTAMENTO DE 1 AMBIENTE DIVIDO. - Living comedor con balcón saliente y vista lateral al mar - Dormitorio con placard - Cocina comoda, con lavadero - Baño con ducha El departamento se encuentra completamente reciclado. Ambientes amplios, luminosos y soleados por la tarde. Edificio Bahía Superficie cubierta de 38 mts No dejes de consultarme para mas información y organizar una visita. Te dejo mi contacto 2235025175 Su valor es de u$s 75.000.- No dejes de consultarme para mas información y organizar una visita. Te dejo mi contacto 2235025175 - Guillermina Kisic KISIC PROPIEDADES - REG 4085 Las imágenes publicadas son ilustrativas y no contractuales. - Las medidas, superficies, metros cuadrados y proporciones consignadas son aproximadas y se brindan a título orientativo. Las medidas definitivas surgirán del título de propiedad y/o planos correspondientes. - Los valores de los inmuebles publicados podrán ser modificados sin previo aviso. - Los importes de impuestos, servicios, tasas y expensas informados corresponden a la última información recabada y se encuentran sujetos a verificación y confirmación por parte del futuro comprador. - El valor de las expensas, en caso de corresponder, podrá sufrir variaciones."
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 35000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/lote-en-venta-quebradas-peralta-ramos",
+      "fechaExtraccion": "2026-10-19T13:39:30.394Z",
+      "operacion": "Venta",
+      "tipo": "Lote",
+      "titulo": "LOTE EN VENTA - QUEBRADAS PERALTA RAMOS",
+      "resumen": "Catalina Pagano y M.t.Alvear Espectacular lote de 3908 mts de superficie. Lote de 64.53 x 60.57 mts Dos frentes, por Catalina Pagano 64.53 mts y por M.T. Alvear 60, 57 mts Barrio Quebrada Peralta Ramos ( Atrás del Barrio Privado Rumenco) Ideal emprendimiento! Zona de continuo crecimiento! Su valor es de u$s 35000.- se escuchan propuestas Para mas información, no dejes de consultarme al 223 5025175 KISIC PROPIEDADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".detail__address",
+          "value": "Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "LOTE EN VENTA - QUEBRADAS PERALTA RAMOS"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 35.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Lote"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "Catalina Pagano y M.t.Alvear Espectacular lote de 3908 mts de superficie. Lote de 64.53 x 60.57 mts Dos frentes, por Catalina Pagano 64.53 mts y por M.T. Alvear 60, 57 mts Barrio Quebrada Peralta Ramos ( Atrás del Barrio Privado Rumenco) Ideal emprendimiento! Zona de continuo crecimiento! Su valor es de u$s 35000.- se escuchan propuestas Para mas información, no dejes de consultarme al 223 5025175 KISIC PROPIEDADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Florencio Sánchez 1500, B7608CDF Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 5,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 120000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/casa-en-venta-florencio-sanchez-1500",
+      "fechaExtraccion": "2026-10-19T13:39:32.125Z",
+      "operacion": "Venta",
+      "tipo": "Casa",
+      "titulo": "CASA EN VENTA - FLORENCIO SANCHEZ 1500",
+      "resumen": "Hermosa casa desarrollada en dos plantas. Lote de 10 x 23 mts En la planta baja nos encontramos con un amplio living con ventanal a la calle. Cocina comedor, con muebles a medida y salida al parque con parrilla. Garage para un auto. Dos dormitorios de buen tamaño, ventanas y placard. Baño completo. En la planta alta, dos dormitorios enormes, mas un espacio extra. Techos de madera y pisos flotantes. Excelente estado, toda la casa tiene aberturas de madera y rejas. Calefactares en todos los ambientes Se destaca por la luminosidad en todos sus ambientes Su valor es de u$s 120.000.- Imperdible!",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "5"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Florencio Sánchez 1500, B7608CDF Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CASA EN VENTA - FLORENCIO SANCHEZ 1500"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 120.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Casa"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Florencio Sánchez 1500, B7608CDF Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "Hermosa casa desarrollada en dos plantas. Lote de 10 x 23 mts En la planta baja nos encontramos con un amplio living con ventanal a la calle. Cocina comedor, con muebles a medida y salida al parque con parrilla. Garage para un auto. Dos dormitorios de buen tamaño, ventanas y placard. Baño completo. En la planta alta, dos dormitorios enormes, mas un espacio extra. Techos de madera y pisos flotantes. Excelente estado, toda la casa tiene aberturas de madera y rejas. Calefactares en todos los ambientes Se destaca por la luminosidad en todos sus ambientes Su valor es de u$s 120.000.- Imperdible!"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Av. Pedro Luro 2300, B7600GTO Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 2,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 95000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/departamento-de-2-ambientes-en-venta-2",
+      "fechaExtraccion": "2026-10-19T13:39:37.449Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPARTAMENTO DE 2 AMBIENTES EN VENTA",
+      "resumen": "EN VENTA! Zona Centro - Av. Luro al 2300 - Piso alto. Departamento de 2 ambientes a la calle. Balcon saliente desde el living comedor y vista parcial al mar Dormitorio al contrafrente con luz. Placard. Baño completo. Cocina con muebles de madera y ventilación natural. Baulera. Excelente ubicación, cercano al centro, playas y universidad. Buen edificio - seguridad 24 hs Expensas razonables El valor es de u$s 95.000.- Si te interesa ir a conocerlo, te dejo mi contacto 2235025175 /223 4367798 KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "2"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Av. Pedro Luro 2300, B7600GTO Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPARTAMENTO DE 2 AMBIENTES EN VENTA"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 95.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Av. Pedro Luro 2300, B7600GTO Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "EN VENTA! Zona Centro - Av. Luro al 2300 - Piso alto. Departamento de 2 ambientes a la calle. Balcon saliente desde el living comedor y vista parcial al mar Dormitorio al contrafrente con luz. Placard. Baño completo. Cocina con muebles de madera y ventilación natural. Baulera. Excelente ubicación, cercano al centro, playas y universidad. Buen edificio - seguridad 24 hs Expensas razonables El valor es de u$s 95.000.- Si te interesa ir a conocerlo, te dejo mi contacto 2235025175 /223 4367798 KISIC PROPIEADES - REG 4085 @KISICPROPIEDADES"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Bolívar 3500, B7600GDY Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 2,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 150000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/departamento-de-3-ambientes-a-la-calle-3",
+      "fechaExtraccion": "2026-10-19T13:39:39.270Z",
+      "operacion": "Venta",
+      "tipo": "Departamento",
+      "titulo": "DEPARTAMENTO DE 3 AMBIENTES A LA CALLE",
+      "resumen": "SEMIPISO DE 3 AMBIENTES A LA CALLE * Excelente departamento, moderno * Muy luminoso * Aberturas de DVH * Calefacción por losa radiante * Superficie de 93 mts - Living comedor con balcón saliente, - Cocina semi integrada a living, con buen espacio de guardado - 2 dormitorios con placares, 1 de ellos es en suite - Baño de recepción con ducha - Baulera Edificio nuevo, con quincho de uso comun. Si lo queres ir a conocer, no dudes en contactarnos 2235025175 /223 4367798 @kisicpropiedades",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "2"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Bolívar 3500, B7600GDY Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "DEPARTAMENTO DE 3 AMBIENTES A LA CALLE"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 150.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Bolívar 3500, B7600GDY Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "SEMIPISO DE 3 AMBIENTES A LA CALLE * Excelente departamento, moderno * Muy luminoso * Aberturas de DVH * Calefacción por losa radiante * Superficie de 93 mts - Living comedor con balcón saliente, - Cocina semi integrada a living, con buen espacio de guardado - 2 dormitorios con placares, 1 de ellos es en suite - Baño de recepción con ducha - Baulera Edificio nuevo, con quincho de uso comun. Si lo queres ir a conocer, no dudes en contactarnos 2235025175 /223 4367798 @kisicpropiedades"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Florisbelo Acosta 5033, B7606GFO Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 176900,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/casa-reciclada-en-venta-f-acosta-al-5000",
+      "fechaExtraccion": "2026-10-19T13:39:46.884Z",
+      "operacion": "Venta",
+      "tipo": "Casa",
+      "titulo": "CASA RECICLADA EN VENTA - F. ACOSTA AL 5000",
+      "resumen": "EN VENTA! Florisbelo Acosta 5033 Casa de tres ambientes Reciclada con muy buen gusto. -Amplio comedor con cocina semi integrada y barra desayunador. -Espacioso living. -Baño completo - Dos dormitorios. Calefactor en todos sus ambientes. Pisos de porcelanato. Jardincito al frente y patio trasero. Quincho parcialmente reciclado., con baño Garage para un auto. En planta alta y con entrada independiente, dependencia con baño en estado original . Se evalúan diferentes propuestas Su valor es de U$D176.900 Lote de 223m. Construidos: 140 aprox Para mas información, te dejo mi contacto 2235025175 @kisicpropiedades WWW.KISICPROPIEDADES.COM KISIC PROPIEDADES - REG 4085",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Florisbelo Acosta 5033, B7606GFO Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CASA RECICLADA EN VENTA - F. ACOSTA AL 5000"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 176.900"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Casa"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Florisbelo Acosta 5033, B7606GFO Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "EN VENTA! Florisbelo Acosta 5033 Casa de tres ambientes Reciclada con muy buen gusto. -Amplio comedor con cocina semi integrada y barra desayunador. -Espacioso living. -Baño completo - Dos dormitorios. Calefactor en todos sus ambientes. Pisos de porcelanato. Jardincito al frente y patio trasero. Quincho parcialmente reciclado., con baño Garage para un auto. En planta alta y con entrada independiente, dependencia con baño en estado original . Se evalúan diferentes propuestas Su valor es de U$D176.900 Lote de 223m. Construidos: 140 aprox Para mas información, te dejo mi contacto 2235025175 @kisicpropiedades WWW.KISICPROPIEDADES.COM KISIC PROPIEDADES - REG 4085"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Castro Barros 2900, B7603DED Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": null,
+      "cochera": "No informado",
+      "superficieTipo": "",
+      "precio": 57000,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/lote-en-venta-castro-barros-al-2900",
+      "fechaExtraccion": "2026-10-19T13:39:48.711Z",
+      "operacion": "Venta",
+      "tipo": "Lote",
+      "titulo": "LOTE EN VENTA - CASTRO BARROS AL 2900",
+      "resumen": "LOTE EN VENTA PUNTA MOGOTES - CASTRO BARROS AL 2900 Excelente ubicación, vereda de sol. Lote de 10.39 x 27.22 mts Superficie de 282 mts Su valor es de u$s 57.000- No dudes en consultarnos! 223 4368897 2235 025175 @KISICPROPIEDADES",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain",
+        "ambientes: missing or uncertain"
+      ],
+      "evidencia": {
+        "address": {
+          "selector": ".detail__address",
+          "value": "Castro Barros 2900, B7603DED Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "LOTE EN VENTA - CASTRO BARROS AL 2900"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 57.000"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Venta"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Lote"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Castro Barros 2900, B7603DED Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "LOTE EN VENTA PUNTA MOGOTES - CASTRO BARROS AL 2900 Excelente ubicación, vereda de sol. Lote de 10.39 x 27.22 mts Superficie de 282 mts Su valor es de u$s 57.000- No dudes en consultarnos! 223 4368897 2235 025175 @KISICPROPIEDADES"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Av. Félix U. Camet 1137, B7600JYA Mar del Plata, Provincia de Buenos Aires, Argentina, General Pueyrredón, Buenos Aires, Argentina",
+      "barrio": "",
+      "metros": null,
+      "ambientes": 3,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 1,
+      "moneda": "$",
+      "link": "https://kisicpropiedades.com/ad/alquiler-temporada-zona-norte",
+      "fechaExtraccion": "2026-10-19T13:39:53.261Z",
+      "operacion": "Alquiler temporario",
+      "tipo": "Departamento",
+      "titulo": "ALQUILER TEMPORADA - ZONA NORTE",
+      "resumen": "ALQUILER TEMPORADA - Espectacular departamento de 3 ambientes. - Completamente equipado para 5 personas. - Living comedor con balcón saliente y vista plena al mar. - 1 dormitorio en suite y sommier matrimonial - 1 dormitorio con dos camas separadas ( 1 de ellas marinera) - 1 baño con ducha - Cocina con heladera con freezer, microondas, cafetera, tostadora - Cochera en el edificio Wifi y Flow No incluye ropa de blanco Si queres mas información, te dejo mi WhatsApp 2@23 5025175 Guillermina KISIC KISIC PROPIEDADES - REG 4085 @kisicpropiedades",
+      "revision": [
+        "barrio: missing or uncertain",
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "1"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "3"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Av. Félix U. Camet 1137, B7600JYA Mar del Plata, Provincia de Buenos Aires, Argentina, General Pueyrredón, Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "ALQUILER TEMPORADA - ZONA NORTE"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "$ 1"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Alquiler Temporal"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Departamento"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Av. Félix U. Camet 1137, B7600JYA Mar del Plata, Provincia de Buenos Aires, Argentina, General Pueyrredón, Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "ALQUILER TEMPORADA - Espectacular departamento de 3 ambientes. - Completamente equipado para 5 personas. - Living comedor con balcón saliente y vista plena al mar. - 1 dormitorio en suite y sommier matrimonial - 1 dormitorio con dos camas separadas ( 1 de ellas marinera) - 1 baño con ducha - Cocina con heladera con freezer, microondas, cafetera, tostadora - Cochera en el edificio Wifi y Flow No incluye ropa de blanco Si queres mas información, te dejo mi WhatsApp 2@23 5025175 Guillermina KISIC KISIC PROPIEDADES - REG 4085 @kisicpropiedades"
+        }
+      }
+    },
+    {
+      "inmobiliaria": "Kisic Propiedades",
+      "direccion": "Carlos Pellegrini 3100, B7602DSF Mar del Plata, Provincia de Buenos Aires, Argentina",
+      "barrio": "Playa Grande",
+      "metros": null,
+      "ambientes": 5,
+      "cochera": "Sí",
+      "superficieTipo": "",
+      "precio": 1,
+      "moneda": "USD",
+      "link": "https://kisicpropiedades.com/ad/chalet-playa-grande-alquiler-temporal",
+      "fechaExtraccion": "2026-10-19T13:39:58.731Z",
+      "operacion": "Alquiler temporario",
+      "tipo": "Chalet",
+      "titulo": "CHALET PLAYA GRANDE - ALQUILER TEMPORAL",
+      "resumen": "CHALET EN ALQUILER POR TEMPORADA EXCELENTE UBICACION - PLYA GRANDE Desarrollado en dos plantas En planta baja Amplio living con ventanales a la calle Living comedor con salida al parque Cocina comedor Lavadero Dormitorio con baño privado Parque con parrilla Dependencia con baño Garage para dos autos En planta alta, dos dormitorios y baño completo Ambientes amplios y luminosos Equipado para 8 personas máximo. Solo familias Disponible segunda quincena de enero y febrero Consutanos al 223 5025175 o 223 4364498 @kisicpropiedades",
+      "revision": [
+        "metros: missing or uncertain"
+      ],
+      "evidencia": {
+        "parkingRaw": {
+          "selector": ".detail__main .feats li:contains('Cochera') strong",
+          "value": "2"
+        },
+        "roomsRaw": {
+          "selector": ".detail__main .feats li:contains('Ambientes') strong",
+          "value": "5"
+        },
+        "address": {
+          "selector": ".detail__address",
+          "value": "Carlos Pellegrini 3100, B7602DSF Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "title": {
+          "selector": ".detail__title",
+          "value": "CHALET PLAYA GRANDE - ALQUILER TEMPORAL"
+        },
+        "priceRaw": {
+          "selector": ".detail__price",
+          "value": "USD 1"
+        },
+        "operation": {
+          "selector": ".detail__badges .tag--op",
+          "value": "Alquiler Temporal"
+        },
+        "propertyType": {
+          "selector": ".detail__badges .tag--type",
+          "value": "Chalet"
+        },
+        "city": {
+          "selector": ".detail__address",
+          "value": "Carlos Pellegrini 3100, B7602DSF Mar del Plata, Provincia de Buenos Aires, Argentina"
+        },
+        "summary": {
+          "selector": ".detail__text",
+          "value": "CHALET EN ALQUILER POR TEMPORADA EXCELENTE UBICACION - PLYA GRANDE Desarrollado en dos plantas En planta baja Amplio living con ventanales a la calle Living comedor con salida al parque Cocina comedor Lavadero Dormitorio con baño privado Parque con parrilla Dependencia con baño Garage para dos autos En planta alta, dos dormitorios y baño completo Ambientes amplios y luminosos Equipado para 8 personas máximo. Solo familias Disponible segunda quincena de enero y febrero Consutanos al 223 5025175 o 223 4364498 @kisicpropiedades"
+        },
+        "neighborhood": {
+          "selector": "property URL/title/address",
+          "value": "Playa Grande"
         }
       }
     }
