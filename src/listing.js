@@ -13,7 +13,7 @@ export function finalizeListing(sourceName, url, fields) {
     rooms: parseRooms(fields.roomsRaw) ?? parseRooms(title, true),
     parking: parkingFor(fields),
     areaM2: parseArea(fields.areaRaw),
-    areaKind: /\b(cubierta|construida)\b/i.test(fields.areaRaw) ? "cubierta" : /\bsemicubierta\b/i.test(fields.areaRaw) ? "semicubierta" : /\bdescubierta\b/i.test(fields.areaRaw) ? "descubierta" : /terreno/i.test(fields.areaRaw) ? "terreno" : /total/i.test(fields.areaRaw) ? "total" : "",
+    areaKind: /\b(cubiert[oa]s?|construid[oa]s?)\b/i.test(fields.areaRaw) ? "cubierta" : /\bsemicubierta\b/i.test(fields.areaRaw) ? "semicubierta" : /\bdescubierta\b/i.test(fields.areaRaw) ? "descubierta" : /terreno/i.test(fields.areaRaw) ? "terreno" : /total/i.test(fields.areaRaw) ? "total" : "",
     priceAmount: price.amount > 0 ? price.amount : null,
     currency: price.currency,
     propertyType: propertyTypeFor(fields.propertyType) || propertyTypeFor(urlPath(url)) || propertyTypeFor(title),

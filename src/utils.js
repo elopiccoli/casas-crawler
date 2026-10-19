@@ -37,7 +37,8 @@ export function parseRooms(value, labeledOnly = false) {
 
 export function parseArea(value) {
   const text = normalizeText(value).toLowerCase();
-  const match = text.match(/(\d[\d.,]*)\s*(?:m2|m²|mts|metros)/i);
+  const match = text.match(/(\d[\d.,]*)\s*(?:m2|m²|mts|metros)/i)
+    || text.match(/(?:m2|m²)\s*(?:cubiert[oa]s?|totales?|descubiert[oa]s?|terreno)\s*:?\s*(\d[\d.,]*)/i);
   if (!match) return null;
   const number = parsePriceNumber(match[1]);
   return Number.isFinite(number) && number > 0 ? number : null;

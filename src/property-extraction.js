@@ -3,7 +3,7 @@ import { parkingStatus } from "./parking.js";
 import { parseOperation, urlPath } from "../web/property-fields.js";
 
 const money = /(?:u\$s|u\$d|usd|us\$|\$|ars)\s*\d/i;
-const area = /\d[\d.,]*\s*(?:m²|m2|metros)/i;
+const area = /\d[\d.,]*\s*(?:m²|m2|metros)|(?:m²|m2)\s*(?:cubiert[oa]s?|totales?|descubiert[oa]s?|terreno)\s*:?\s*\d/i;
 
 // Only dedicated property elements may supply structured fields. Metadata
 // descriptions and body text are prose, even when they contain valid numbers.

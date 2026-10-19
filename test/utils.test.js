@@ -15,6 +15,8 @@ test("parseArea extracts square meters from common Spanish labels", () => {
   assert.equal(parseArea("120,5 metros totales"), 120.5);
   assert.equal(parseArea("Cubierta: 115.7 m²"), 115.7);
   assert.equal(parseArea("Total: 1.200,50 m²"), 1200.5);
+  assert.equal(parseArea("M² Cubiertos 80"), 80);
+  assert.equal(parseArea("M² Totales: 85"), 85);
   assert.equal(parseArea("sin dato"), null);
 });
 
