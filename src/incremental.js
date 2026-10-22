@@ -84,6 +84,15 @@ export function mergeSnapshots(saved, published) {
   return mergeListings([], ordered);
 }
 
+export function normalizeAgencyNames(listings, sources) {
+  const names = new Map();
+  for (const source of sources) for (const url of sourceUrls(source)) names.set(host(url), source.name);
+  return listings.map(item => {
+    const domain = String(item.sourceName || "").toLowerCase().replace(/^www\./, "");
+    return names.has(domain) ? { ...item, sourceName: names.get(domain) } : item;
+  });
+}
+
 export function incrementalReport(sources, results, messages) {
   const errors = messages.filter(message => /HTTP \d{3}|error \(/.test(message));
   const blocked = errors.some(message => /HTTP 403\b/.test(message));

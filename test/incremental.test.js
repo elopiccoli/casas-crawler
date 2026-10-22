@@ -8,7 +8,7 @@ import { createServer } from "node:http";
 import { spawn } from "node:child_process";
 import yaml from "js-yaml";
 import ExcelJS from "exceljs";
-import { parseUrls, planSources, mergeListings, registerSources, mergeSnapshots, incrementalReport } from "../src/incremental.js";
+import { parseUrls, planSources, mergeListings, registerSources, mergeSnapshots, incrementalReport, normalizeAgencyNames } from "../src/incremental.js";
 import { loadConfig } from "../src/config.js";
 import { crawlSources } from "../src/crawler.js";
 
@@ -73,6 +73,15 @@ test("403 diagnostics explain the rejection and preservation of existing results
   assert.match(report.text, /HTTP 403/);
   assert.match(report.text, /No se guardaron cambios/);
   assert.match(report.text, /npm run crawl:add/);
+});
+
+test("configured agency names replace old domain-only labels without renaming other agencies", () => {
+  const listings = [{ sourceName: "alempropiedades.com", priceAmount: 100 }, { sourceName: "www.alempropiedades.com" }, { sourceName: "Broker Asociado" }];
+  const sources = [{ name: "Alem Propiedades", website: "https://alempropiedades.com/" }];
+  const normalized = normalizeAgencyNames(listings, sources);
+  assert.deepEqual(normalized.map(item=>item.sourceName), ["Alem Propiedades", "Alem Propiedades", "Broker Asociado"]);
+  assert.equal(normalized[0].priceAmount, 100);
+  assert.equal(listings[0].sourceName, "alempropiedades.com");
 });
 
 function runScript(cwd, env) {
