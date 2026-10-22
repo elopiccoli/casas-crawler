@@ -67,7 +67,7 @@ jobs:
           chmod 600 "$credentials_file"
           unset FIREBASE_SERVICE_ACCOUNT
           export GOOGLE_APPLICATION_CREDENTIALS="$credentials_file"
-          npx firebase-tools deploy --only hosting --project casas-crawler --non-interactive
+          npx firebase-tools@15.33.0 deploy --only hosting --project casas-crawler --non-interactive
       - name: Descargar Excel y resumen de esta corrida
         if: always()
         uses: actions/upload-artifact@v4
