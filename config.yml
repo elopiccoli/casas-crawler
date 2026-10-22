@@ -1346,70 +1346,33 @@ sources:
     website: https://turlaninmobiliaria.com.ar
     enabled: false
     notes: 'URL registrada. Consulta fallida: ENOTFOUND. Extraccion pendiente de verificacion/adaptacion.'
-  - startUrls:
-      - https://zambonipropiedades.com/propiedades
-      - https://zambonipropiedades.com/propiedades?barrios=La%20Perla%2CConstituci%C3%B3n%2CParque%20Luro%2CLa%20Armon%C3%ADa%2CCaisamar%2CEstrada%2CLos%20Pinares%2CVilla%20Primera%2CPunta%20Iglesia&zona=La%20costa%20norte
-      - https://zambonipropiedades.com/propiedades?barrio=La%20Perla
-      - https://zambonipropiedades.com/propiedades?barrio=Constituci%C3%B3n
-      - https://zambonipropiedades.com/propiedades?barrio=Parque%20Luro
-      - https://zambonipropiedades.com/propiedades?barrio=La%20Armon%C3%ADa
-      - https://zambonipropiedades.com/propiedades?barrio=Caisamar
-      - https://zambonipropiedades.com/propiedades?barrios=Centro%2CPlaza%20Mitre%2CSan%20Juan%2CSan%20Jos%C3%A9%2CPlaza%20Col%C3%B3n%2CTerminal%20Nueva%2CMacrocentro%2CMicrocentro%2CLa%20Cercan%C3%ADa%2CBernardino%20Rivadavia&zona=El%20Centro
-      - https://zambonipropiedades.com/propiedades?barrio=Centro
-      - https://zambonipropiedades.com/propiedades?barrio=Plaza%20Mitre
-      - https://zambonipropiedades.com/propiedades?barrio=San%20Juan
-      - https://zambonipropiedades.com/propiedades?barrio=San%20Jos%C3%A9
-      - https://zambonipropiedades.com/propiedades?barrio=Plaza%20Col%C3%B3n
-      - https://zambonipropiedades.com/propiedades?barrios=Chauvin%2CG%C3%BCemes%2CPlaya%20Grande%2CLos%20Troncos%2CTerminal%20Vieja%2CVarese%2CSan%20Carlos%2CDivino%20Rostro%2CPlaya%20Chica&zona=G%C3%BCemes%2C%20Los%20Troncos%20y%20Playa%20Grande
-      - https://zambonipropiedades.com/propiedades?barrio=Chauvin
-      - https://zambonipropiedades.com/propiedades?barrio=G%C3%BCemes
-      - https://zambonipropiedades.com/propiedades?barrio=Playa%20Grande
-      - https://zambonipropiedades.com/propiedades?barrio=Los%20Troncos
-      - https://zambonipropiedades.com/propiedades?barrio=Terminal%20Vieja
-      - https://zambonipropiedades.com/propiedades?barrios=Colinas%20de%20Peralta%20Ramos%2CLas%20Avenidas%2CPunta%20Mogotes%2CEl%20Jard%C3%ADn%20de%20Stella%20Maris%2CJuramento&zona=Hacia%20el%20sur
-      - https://zambonipropiedades.com/propiedades?barrio=Colinas%20de%20Peralta%20Ramos
-      - https://zambonipropiedades.com/propiedades?barrio=Las%20Avenidas
-      - https://zambonipropiedades.com/propiedades?barrio=Punta%20Mogotes
-      - https://zambonipropiedades.com/propiedades?barrio=El%20Jard%C3%ADn%20de%20Stella%20Maris
-      - https://zambonipropiedades.com/propiedades?barrio=Juramento
-      - https://zambonipropiedades.com/propiedades?barrio=Barrancas%20de%20San%20Benito%20Country%20Club
-      - https://zambonipropiedades.com/propiedades?barrio=Rumenc%C3%B3%20Joven
-      - https://zambonipropiedades.com/propiedades?barrio=Los%20Acantilados
-      - https://zambonipropiedades.com/propiedades?barrio=Casonas%20del%20Haras
-      - https://zambonipropiedades.com/propiedades?barrio=Rumenc%C3%B3
-      - https://zambonipropiedades.com/propiedades?barrio=Estrada
-      - https://zambonipropiedades.com/propiedades?barrio=Los%20Pinares
-      - https://zambonipropiedades.com/propiedades?barrio=Villa%20Primera
-      - https://zambonipropiedades.com/propiedades?barrio=Punta%20Iglesia
-      - https://zambonipropiedades.com/propiedades?barrio=Terminal%20Nueva
-      - https://zambonipropiedades.com/propiedades?barrio=Macrocentro
-      - https://zambonipropiedades.com/propiedades?barrio=Microcentro
-      - https://zambonipropiedades.com/propiedades?barrio=La%20Cercan%C3%ADa
-      - https://zambonipropiedades.com/propiedades?barrio=Bernardino%20Rivadavia
-      - https://zambonipropiedades.com/propiedades?barrio=Varese
-      - https://zambonipropiedades.com/propiedades?barrio=San%20Carlos
-      - https://zambonipropiedades.com/propiedades?barrio=Divino%20Rostro
-      - https://zambonipropiedades.com/propiedades?barrio=Playa%20Chica
-      - https://zambonipropiedades.com/propiedades?barrio=Barrio%20Chapadmalal
-      - https://zambonipropiedades.com/propiedades?barrio=Arenas%20del%20Sur
-      - https://zambonipropiedades.com/propiedades?barrio=Tierra%20y%20Mar
-      - https://zambonipropiedades.com/propiedades?barrio=Arenas%20Chico
-      - https://zambonipropiedades.com/propiedades?col=privados
-      - https://zambonipropiedades.com/propiedades?col=mar
-      - https://zambonipropiedades.com/propiedades?col=premium
-      - https://zambonipropiedades.com/propiedades?col=comercial
-      - https://zambonipropiedades.com/propiedades?op=Venta
+  - name: Zamboni Propiedades
+    startUrls:
+      - https://www.zambonipropiedades.com.ar/Alquiler
+      - https://www.zambonipropiedades.com.ar/Venta
     pagination:
-      maxPages: 1
-    listingSelector: a[href]
-    publicationUrlRegex: /(?:p/\d|propiedad(?:es)?/|property/|inmueble/|ad/)
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
     detailFields:
-      title: h1
-      city: meta[property='og:title']::attr(content)
-    name: Zamboni Propiedades
-    website: https://zambonipropiedades.com
-    enabled: false
-    notes: URL registrada. HTTP 200; no se identifico un adaptador de catalogo compatible. Extraccion pendiente de verificacion/adaptacion.
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+    website: https://www.zambonipropiedades.com.ar/
+    enabled: true
+    notes: Dominio correcto .com.ar verificado; catálogo Tokko de ventas y alquileres. Reemplaza la entrada antigua deshabilitada de zambonipropiedades.com.
   - startUrls:
       - https://desantispropiedades.com.ar/venta
       - https://desantispropiedades.com.ar/alquiler

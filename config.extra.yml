@@ -156,16 +156,39 @@ sources:
     website: https://www.xn--muiopropiedades-0qb.com.ar/
     enabled: true
     notes: Sitio Tokko verificado. Publica en San Bernardo del Tuyú; se conserva el filtro global de ciudad Mar del Plata.
-  - name: alempropiedades.com
-    website: https://alempropiedades.com
-    listingSelector: a[href]
-    publicationUrlRegex: /p/\d+|/propiedad(?:es)?/[^/?]+|propiedad-inmobiliaria\.html|(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
-    fields:
-      title: h2, h3, .property-title
-    detailFields: {}
-    pagination:
-      maxPages: 1
-    notes: Fuente agregada por URL; usa extractores generales. Puede requerir selectores específicos.
+  - name: Alem Propiedades
+    website: https://alempropiedades.com/
+    enabled: true
     startUrls:
-      - https://alempropiedades.com/
-    detailUrls: []
+      - https://alempropiedades.com/search?business_type%5B0%5D=for_rent&order_by=created_at&order=desc&page=1&for_sale=0&for_rent=1&for_temporary_rent=0&for_transfer=0&lax_business_type=1
+      - https://alempropiedades.com/search?business_type%5B0%5D=for_sale&order_by=created_at&order=desc&page=1&for_sale=1&for_rent=0&for_temporary_rent=0&for_transfer=0&lax_business_type=1
+    pagination:
+      maxPages: 3
+      pageParam: page
+      firstPage: 2
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:casa|chalet|departamento|lote-terreno|terreno|ph|local|oficina|galpon-industrial)-(?:venta|alquiler)[^?]*/\d+(?:$|[?#])
+    skipJsonLdRooms: true
+    detailFields:
+      title: h1.title
+      city: .list-info-2 li:contains(Ciudad)
+      neighborhood: .list-info-2 li:contains(Zona)
+      propertyType: .list-info-2 li:contains(Tipo de inmueble)
+      operation: .list-info-2 li:contains(Tipo de negocio)
+      price: .blq_precio
+      rooms: .list-info-2 li:contains(Ambientes), h1.title
+      area: .list-info-2 li:contains(Área Construida)
+      parking: .list-info-2 li:contains(Cochera), .list-info-2 li:contains(Garaje)
+      summary: '.areaDetalle article, #Description article, .description'
+    notes: Sitio Alem / Pernice Edgardo solicitado expresamente. Extracción Wasi verificada; no se usan dormitorios de JSON-LD como ambientes.
+  - name: Saforcada Propiedades
+    website: https://www.saforcada.com/
+    enabled: true
+    startUrls:
+      - https://www.saforcada.com/
+    format: adincoCatalog
+    realEstateId: 16830
+    propertySlug: saforcada
+    pagination:
+      maxPages: 10
+    notes: Catálogo público Adinco y datos SSR verificados. Ciudad, ambientes y cochera provienen de cada ficha; el primer ingreso se valida con una muestra parcial.

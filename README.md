@@ -94,7 +94,7 @@ Para que funcione, el repositorio de GitHub necesita el secret `FIREBASE_SERVICE
 ```powershell
 npm ci
 npm run crawl:web
-npx firebase-tools deploy --only hosting --project casas-crawler
+npx firebase-tools@15.33.0 deploy --only hosting --project casas-crawler
 ```
 
 ## Filtro por precio
@@ -158,6 +158,8 @@ npm run crawl:daily
 Tambien se puede programar con el Programador de tareas de Windows ejecutando `npm run crawl` una vez por dia. Esa opcion suele ser mas robusta que dejar una terminal abierta.
 
 ## Configuracion por inmobiliaria
+
+`adincoCatalog` consulta el catálogo público de Saforcada y verifica cada inmueble con los datos estructurados de su ficha. Respeta precios y direcciones ocultos; toma ambientes, cochera y ciudad de campos propios del inmueble. La cantidad de páginas se controla con `pagination.maxPages`.
 
 Las fuentes con `format: mardelCatalog` consultan el catálogo público de Mar del Inmueble y sus webs de inmobiliarias, con paginación. `catalogUrl` identifica el catálogo; la ficha del reporte enlaza al sitio solicitado. Se extraen ambientes, cochera, superficie, moneda y precio desde campos estructurados; se respeta `no_publicar_precio`. El portal general se identifica como **Mardel Inmueble** en el filtro de fuentes.
 

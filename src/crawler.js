@@ -4,6 +4,7 @@ import { extractPropertyFields, catalogFields } from "./property-extraction.js";
 import { finalizeListing } from "./listing.js";
 import { parseOperation, urlPath } from "../web/property-fields.js";
 import { mardelCatalogFields, mardelPropertyUrl } from "./mardel-catalog.js";
+import { crawlAdinco } from "./adinco.js";
 
 export async function crawlSources(config, options = {}) {
   const requestConfig = config.request || {};
@@ -27,6 +28,7 @@ export async function crawlSources(config, options = {}) {
 }
 
 async function crawlSource(source, requestConfig, globalFilters, logger) {
+  if (source.format === "adincoCatalog") return crawlAdinco(source, requestConfig, globalFilters, logger);
   if (source.format === "mardelCatalog") return crawlMardelCatalog(source, requestConfig, globalFilters, logger);
   if (source.format === "roblesCatalog") {
     return crawlRoblesCatalog(source, requestConfig, globalFilters);
@@ -194,6 +196,7 @@ export function extractDetailListing(html, source, url = "", requestedOperation 
 
   const result = extractPropertyFields($, source, url, requestedOperation);
   for (const field of ["address", "areaRaw", "priceRaw", "propertyType", "title", "roomsRaw"]) {
+    if (field === "roomsRaw" && source.skipJsonLdRooms) continue;
     if (!result[field] && jsonLdListing[field] && !(field === "priceRaw" && (result.priceAmbiguous || result.priceWithheld))) {
       result[field] = jsonLdListing[field];
       result.evidence[field] = { selector: "JSON-LD", value: result[field] };
