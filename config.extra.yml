@@ -156,3 +156,16 @@ sources:
     website: https://www.xn--muiopropiedades-0qb.com.ar/
     enabled: true
     notes: Sitio Tokko verificado. Publica en San Bernardo del Tuyú; se conserva el filtro global de ciudad Mar del Plata.
+  - name: alempropiedades.com
+    website: https://alempropiedades.com
+    listingSelector: a[href]
+    publicationUrlRegex: /p/\d+|/propiedad(?:es)?/[^/?]+|propiedad-inmobiliaria\.html|(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
+    fields:
+      title: h2, h3, .property-title
+    detailFields: {}
+    pagination:
+      maxPages: 1
+    notes: Fuente agregada por URL; usa extractores generales. Puede requerir selectores específicos.
+    startUrls:
+      - https://alempropiedades.com/
+    detailUrls: []
