@@ -192,3 +192,83 @@ sources:
     pagination:
       maxPages: 10
     notes: Catálogo público Adinco y datos SSR verificados. Ciudad, ambientes y cochera provienen de cada ficha; el primer ingreso se valida con una muestra parcial.
+  - name: Eduardo Villarreal Propiedades
+    website: https://eduardovillarreal.com.ar/
+    enabled: true
+    pagination:
+      maxPages: 3
+      pageParam: page
+      firstPage: 2
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://eduardovillarreal.com.ar/search?business_type%5B0%5D=for_sale&order_by=max_price&order=desc&page=1&for_sale=1&for_rent=0&for_temporary_rent=0&for_transfer=0&lax_business_type=1
+    skipJsonLdRooms: true
+    publicationUrlRegex: /(?:casa|chalet|departamento|lote-terreno|terreno|ph|local|oficina|galpon-industrial)-(?:venta|alquiler)[^?]*/\d+(?:$|[?#])
+    detailFields:
+      title: h1.title
+      address: .title-address
+      city: .list-info-1a li:contains(Ciudad), .list-info-2 li:contains(Ciudad)
+      neighborhood: .list-info-1a li:contains(Zona), .list-info-2 li:contains(Zona)
+      propertyType: .list-info-1a li:contains(Tipo de inmueble), .list-info-2 li:contains(Tipo de inmueble)
+      operation: .list-info-1a li:contains(Tipo de negocio), .list-info-2 li:contains(Tipo de negocio)
+      price: .precio .pr, .blq_precio, .list-info-1a li:contains(Valor)
+      area: .list-info-1a li:contains(Área Construida), .list-info-2 li:contains(Área Construida)
+      rooms: .list-info-1a li:contains(Ambientes), .list-info-2 li:contains(Ambientes), h1.title
+      parking: .list-info-1a li:contains(Garaje), .list-info-2 li:contains(Cochera)
+      summary: '.areaDetalle article, #Description article'
+    notes: Sitio Wasi verificado; catálogo de venta. Se preserva la cantidad de ambientes indicada por la ficha o el título.
+  - name: Fulquet Propiedades
+    website: https://www.fulquetpropiedades.com.ar/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.fulquetpropiedades.com.ar/casa-chalet-en-venta.html
+      - https://www.fulquetpropiedades.com.ar/departamento-en-venta.html
+      - https://www.fulquetpropiedades.com.ar/terreno-en-venta.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Catálogo Inmobiliática verificado; listados de venta de casas, departamentos y terrenos. Campos de la ficha principal.
+    skipJsonLdRooms: true
+  - name: Groppo Propiedades
+    website: https://www.inmobiliariagroppo.com.ar/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler.html
+      - https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-por-temporada.html
+      - https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-por-dia.html
+      - https://www.inmobiliariagroppo.com.ar/casa-chalet-en-venta.html
+      - https://www.inmobiliariagroppo.com.ar/departamento-en-venta.html
+      - https://www.inmobiliariagroppo.com.ar/terreno-en-venta.html
+      - https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-para-estudiantes.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Catálogo Inmobiliática verificado; listados de venta y alquiler descubiertos en el sitio. Campos de la ficha principal.
+    skipJsonLdRooms: true

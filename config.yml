@@ -500,30 +500,32 @@ sources:
       city: meta[property='og:title']::attr(content)
     website: https://www.marinoperez.com.ar
   - name: Palma Propiedades
-    notes: Inmobiliatica.
+    website: https://www.palmapropiedades.com.ar/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
     startUrls:
       - https://www.palmapropiedades.com.ar/casa-chalet-en-alquiler.html
       - https://www.palmapropiedades.com.ar/departamento-en-alquiler.html
       - https://www.palmapropiedades.com.ar/casa-chalet-en-venta.html
       - https://www.palmapropiedades.com.ar/departamento-en-venta.html
       - https://www.palmapropiedades.com.ar/terreno-en-venta.html
-    pagination:
-      maxPages: 1
-    listingSelector: a[href*='propiedad-inmobiliaria.html']
     publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
-    fields:
-      title: h1, h2, h3, .titulo, .title
-      summary: body
     detailFields:
-      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
-      area: body
-      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
-      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
-      title: meta[property='og:title']::attr(content), h1, title
-      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
       city: meta[property='og:title']::attr(content)
-    websites:
-      - https://palmapropiedades.com.ar
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Catálogo Inmobiliática verificado; listados de venta y alquiler descubiertos en el sitio. Campos de la ficha principal.
+    skipJsonLdRooms: true
   - name: Del Rosso & Asociados
     notes: Inmobiliatica.
     startUrls:
@@ -1964,31 +1966,34 @@ sources:
     enabled: true
     notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
   - name: Pezzati Propiedades
-    startUrls:
-      - https://pezzatipropiedades.inmobiliatica.com/casa-chalet-en-alquiler.html
-      - https://pezzatipropiedades.inmobiliatica.com/departamento-en-alquiler.html
-      - https://pezzatipropiedades.inmobiliatica.com/casa-chalet-en-venta.html
-      - https://pezzatipropiedades.inmobiliatica.com/departamento-en-venta.html
-      - https://pezzatipropiedades.inmobiliatica.com/terreno-en-venta.html
-    pagination:
-      maxPages: 1
-    listingSelector: a[href]
-    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
-    fields:
-      title: h1, h2, h3, .titulo, .title
-      summary: body
-    detailFields:
-      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1, body
-      area: .caracteristicasDeFicha li:has(strong:contains('Superficie Cubierta')) span, .caracteristicasDeFicha li:has(strong:contains('Superficie Total')) span
-      price: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
-      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1
-      title: meta[property='og:title']::attr(content), h1, title
-      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), body
-      city: meta[property='og:title']::attr(content)
-    preferConfiguredFields: true
-    website: https://pezzatipropiedades.inmobiliatica.com
+    website: https://www.pezzatipropiedades.com.ar/
     enabled: true
-    notes: Catalogo identificado como Mardelplata; URLs descubiertas en el sitio publico, ventas y alquileres donde estan disponibles. Campos por verificar en la proxima extraccion.
+    pagination:
+      maxPages: 5
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.pezzatipropiedades.com.ar/Alquiler
+      - https://www.pezzatipropiedades.com.ar/Venta
+    publicationUrlRegex: /p/
+    fields:
+      address: .prop-desc-dir
+      city: .prop-desc-tipo-ub, .single_property_title p
+      propertyType: .prop-desc-tipo-ub
+      rooms: .prop-data2:has(img[src*="/ambientes."]) > div
+    detailFields:
+      address: .title-address
+      price: .operations-box .operation-val
+      area: '#lista_superficies li:contains("Cubierta:")'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: .ficha_detalle_item:has(b:contains("Ambientes"))
+      summary: '#descripcion, .property-description, .description'
+      city: .slider-thumb::attr(alt)
+    notes: Dominio actual de Pezzati verificado con catálogo Tokko; reemplaza el anterior sitio en Inmobiliática.
   - startUrls:
       - https://potentepropiedades.com
     pagination:
@@ -2273,24 +2278,31 @@ sources:
       title: meta[property='og:title']::attr(content), h1, title
       summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
   - name: Sauro Propiedades
-    notes: Inmobiliatica. Listados de venta y alquiler.
-    startUrls:
-      - https://www.sauropropiedades.com/propiedad-en-venta.html
-      - https://www.sauropropiedades.com/propiedad-en-alquiler.html
+    website: https://www.sauropropiedades.com/
+    enabled: true
     pagination:
       maxPages: 1
-    listingSelector: a[href*='_propiedad-inmobiliaria.html']
-    publicationUrlRegex: _propiedad-inmobiliaria\.html$
-    fields:
-      title: h1, h2, h3, .titulo, .title
-      summary: body
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.sauropropiedades.com/departamento-en-alquiler.html
+      - https://www.sauropropiedades.com/casa-chalet-en-venta.html
+      - https://www.sauropropiedades.com/departamento-en-venta.html
+      - https://www.sauropropiedades.com/terreno-en-venta.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
     detailFields:
-      address: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
-      area: .prop_details li, .property-detail li, body
-      price: .price, .price-list-tag, .operation-price, [itemprop='price']::attr(content), meta[name='description']::attr(content), body
-      propertyType: meta[name='description']::attr(content), meta[property='og:description']::attr(content), h1
-      title: meta[property='og:title']::attr(content), h1, title
-      summary: meta[name='description']::attr(content), meta[property='og:description']::attr(content), .entry-content, .woocommerce-product-details__short-description, .property-description, .description
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Catálogo Inmobiliática verificado; listados de venta y alquiler descubiertos en el sitio. Campos de la ficha principal.
+    skipJsonLdRooms: true
   - name: Homes - Land Propiedades
     notes: Inmobiliatica. Listados de venta y alquiler.
     startUrls:
