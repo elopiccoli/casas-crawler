@@ -5,6 +5,8 @@ import { finalizeListing } from "./listing.js";
 import { parseOperation, urlPath } from "../web/property-fields.js";
 import { mardelCatalogFields, mardelPropertyUrl } from "./mardel-catalog.js";
 import { crawlAdinco } from "./adinco.js";
+import { jsonValue, publicJsonFields, publicJsonUrl } from "./public-json.js";
+import { crawlPotente } from "./potente.js";
 
 export async function crawlSources(config, options = {}) {
   const requestConfig = config.request || {};
@@ -16,7 +18,7 @@ export async function crawlSources(config, options = {}) {
 
     logger?.(`Revisando ${source.name}...`);
     try {
-      const sourceListings = await crawlSource(source, requestConfig, config.filters || {}, logger);
+      const sourceListings = await crawlSource(source, {...requestConfig,...source.request}, config.filters || {}, logger);
       logger?.(`  ${source.name}: ${sourceListings.length} publicaciones`);
       listings.push(...sourceListings);
     } catch (error) {
@@ -28,6 +30,20 @@ export async function crawlSources(config, options = {}) {
 }
 
 async function crawlSource(source, requestConfig, globalFilters, logger) {
+  if (source.format === "potenteCatalog") return crawlPotente(source,requestConfig,globalFilters);
+  if (source.format === "publicJsonCatalog") {
+    const payload = await fetchJson(source.catalogUrl, requestConfig);
+    const items = source.itemsPath ? jsonValue(payload, source.itemsPath) : payload;
+    if (!Array.isArray(items)) throw new Error("El catálogo público no devolvió una lista de propiedades");
+    return items.flatMap(item => {
+      const url=publicJsonUrl(item,source);
+      if(!url) return [];
+      const fields=publicJsonFields(item,source);
+      if(!fields.title || !fields.propertyType) return [];
+      const listing=finalizeListing(source.name,url,fields);
+      return matchesFilters(listing,mergeFilters(globalFilters,source.filters || {})) ? [listing] : [];
+    });
+  }
   if (source.format === "adincoCatalog") return crawlAdinco(source, requestConfig, globalFilters, logger);
   if (source.format === "mardelCatalog") return crawlMardelCatalog(source, requestConfig, globalFilters, logger);
   if (source.format === "roblesCatalog") {
@@ -93,6 +109,10 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
       logger?.(`  ${source.name}: ficha ${url}: ${error.message}`);
       return { error: error.message };
     });
+    if (/HTTP 429\b/.test(detailListing.error || '')) {
+      logger?.(`  ${source.name}: límite temporal de consultas; se detiene esta fuente y se conservan ${listings.length} publicaciones obtenidas.`);
+      break;
+    }
 
     const listing = finalizeListing(source.name, url, {
       ...cardListing,
@@ -156,7 +176,7 @@ async function crawlRoblesCatalog(source, requestConfig, globalFilters) {
   return uniqueBy(listings, (listing) => listing.url);
 }
 
-function extractListingsFromPage($, pageUrl, source) {
+export function extractListingsFromPage($, pageUrl, source) {
   const listings = [];
   const publicationRegex = source.publicationUrlRegex ? new RegExp(source.publicationUrlRegex, "i") : null;
   const cards = source.listingSelector ? $(source.listingSelector).toArray() : $("a[href]").toArray();
@@ -164,7 +184,7 @@ function extractListingsFromPage($, pageUrl, source) {
 
   for (const card of cards) {
     const scope = $(card);
-    const linkElement = source.linkSelector ? scope.find(source.linkSelector).first() : scope;
+    const linkElement = source.linkSelector ? (scope.is(source.linkSelector) ? scope : scope.find(source.linkSelector).first()) : scope;
     const url = absolutizeUrl(linkElement.attr("href"), baseUrl);
 
     if (!url) continue;
@@ -190,12 +210,25 @@ async function crawlDetail(url, source, requestConfig, requestedOperation) {
 export function extractDetailListing(html, source, url = "", requestedOperation = "") {
   const $ = cheerio.load(html);
   const jsonLdListing = extractJsonLdListing($, url);
+  // Some catalog templates retain the property's location breadcrumb in an
+  // HTML comment beside its own heading, rather than in a visible element.
+  let commentedLocation;
+  if (source.locationCommentSelector) {
+    for (const comment of $(source.locationCommentSelector).contents().toArray().filter(node=>node.type==='comment')) {
+      const parts=normalizeText(cheerio.load(comment.data).text()).split('|').map(value=>value.trim());
+      if(parts.length===3 && parts.every(Boolean)) { commentedLocation=parts;break; }
+    }
+  }
   $("script, style, noscript, template").remove();
   // These are other properties, never fallback values for the current one.
   $(".item-listing-wrap, .similar-properties, .related-properties, .prop-similar").remove();
 
   const result = extractPropertyFields($, source, url, requestedOperation);
-  for (const field of ["address", "areaRaw", "priceRaw", "propertyType", "title", "roomsRaw"]) {
+  if(commentedLocation){
+    result.city=commentedLocation[1];result.neighborhood=commentedLocation[2];
+    for(const field of ['city','neighborhood'])result.evidence[field]={selector:`property location comment: ${source.locationCommentSelector}`,value:result[field]};
+  }
+  for (const field of ["address", "city", "areaRaw", "priceRaw", "propertyType", "title", "roomsRaw"]) {
     if (field === "roomsRaw" && source.skipJsonLdRooms) continue;
     if (!result[field] && jsonLdListing[field] && !(field === "priceRaw" && (result.priceAmbiguous || result.priceWithheld))) {
       result[field] = jsonLdListing[field];
@@ -269,6 +302,10 @@ function buildQueryPageUrl(startUrl, pagination, pageNumber) {
     url.searchParams.set(key, value);
   }
   url.searchParams.set(pagination.pageParam, String(pageNumber));
+  if (pagination.offsetParam && Number(pagination.pageSize) > 0) {
+    const initialPage = (pagination.firstPage || 2) - 1;
+    url.searchParams.set(pagination.offsetParam, String((pageNumber - initialPage) * Number(pagination.pageSize)));
+  }
   return url.toString();
 }
 
@@ -294,6 +331,7 @@ function extractJsonLdListing($, pageUrl = "") {
       return {
         roomsRaw: node.numberOfRooms?.value ?? node.numberOfRooms ?? "",
         address: normalizeText(address),
+        city: normalizeText(node.address?.addressLocality),
         areaRaw: node.floorSize?.value
           ? (!node.floorSize.unitCode || /^(MTK|M2|m²)$/i.test(node.floorSize.unitCode) ? `${node.floorSize.value} m2` : "")
           : normalizeText(node.floorSize || node.area || ""),

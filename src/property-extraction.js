@@ -39,7 +39,7 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
       const elements = $(attr ? attr[1] : selector).toArray();
       const values = elements.map((element) => {
         const node = $(element).clone();
-        if (field === "parkingRaw") node.find("b,strong,dt,br").after(" ");
+        if (["parkingRaw", "areaRaw"].includes(field)) node.find("b,strong,dt,br").after(" ");
         if (["neighborhood", "city"].includes(field)) node.find("b,strong").remove();
         return normalizeText(attr ? $(element).attr(attr[2]) : node.text());
       }).filter(Boolean);
@@ -52,6 +52,15 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
       } else result[field] = valid[0];
       result.evidence[field] = { selector, value: result[field] };
       break;
+    }
+  }
+  if (source.locationSeparator && result.city) {
+    const parts = result.city.split(source.locationSeparator).map(value => value.trim()).filter(Boolean);
+    if (parts.length === 2) {
+      result.neighborhood = parts[0];
+      result.city = parts[1];
+      result.evidence.neighborhood = {...result.evidence.city, value:parts[0]};
+      result.evidence.city = {...result.evidence.city, value:parts[1]};
     }
   }
   if (!result.parkingRaw) {

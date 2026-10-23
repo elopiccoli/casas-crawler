@@ -209,4 +209,16 @@ ZonaProp queda agregado en `config.yml` como fuente deshabilitada (`enabled: fal
 
 ## Notas
 
+Para comprobar el acceso, el descubrimiento de fichas y una muestra de extracción por inmobiliaria, incluyendo las fuentes desactivadas:
+
+```powershell
+node scripts/audit_sources.mjs --exclude=reports/auditoria-exclusiones-2026-10-23.json --refresh
+```
+
+La lista de exclusiones contiene las 51 fuentes indicadas como operativas por el usuario. El informe se guarda en `outputs/source-audit/report.json`, junto con páginas y resultados por fuente. Sin `--refresh`, se reutilizan las páginas guardadas; `--only=Suarez` permite revisar una fuente. Se examinan tres fichas por operación y se amplía la muestra hasta doce cuando no aparece ninguna que cumpla los filtros. Una muestra válida no garantiza que todas las publicaciones o páginas del sitio sean extraíbles. Esta auditoría no reemplaza los resultados publicados.
+
+El informe de la revisión del 23 de octubre está en [reports/auditoria-fuentes-2026-10-23.md](reports/auditoria-fuentes-2026-10-23.md). Los catálogos de Zulma Castillo y Potente se consultan mediante los datos públicos que utiliza cada sitio. Las fuentes pueden ajustar su ritmo con `source.request.delayMs`; ante un HTTP 429 en una ficha se detiene esa fuente y se conservan las publicaciones obtenidas.
+
+Los listados AJAX que necesitan página y desplazamiento pueden configurar `pagination.offsetParam` y `pagination.pageSize` junto con `pageParam` y `firstPage`.
+
 Los sitios inmobiliarios no tienen todos el mismo HTML. Para cada link real conviene ajustar los selectores una vez y luego dejar corriendo el monitoreo. El crawler evita duplicados por link y deja vacio cualquier campo que no pueda extraer con confianza.

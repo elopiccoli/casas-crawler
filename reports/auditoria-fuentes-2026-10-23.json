@@ -1,0 +1,6170 @@
+{
+  "checkedAt": "2026-10-23T13:57:16.523Z",
+  "examined": 71,
+  "excluded": [
+    "Russillo Asesores Inmobiliarios",
+    "Coste Propiedades",
+    "Latorre Negocios Inmobiliarios",
+    "Valencia Consultores Inmobiliarios",
+    "Berengeno, Fernando Abel",
+    "Oteiza Propiedades",
+    "Gerardo E. Barg Departamento Inmobiliario",
+    "Iza Inmobiliaria",
+    "Aguilera Propiedades",
+    "Del Valle Estudio Inmobiliario",
+    "M.A.S Propiedades",
+    "Cabrera Propiedades",
+    "Estudio Uno Propiedades",
+    "Giromini Soluciones Inmobiliarias",
+    "Inmobiliaria Berasueta",
+    "Gisela D’Alessandro",
+    "Espatolero y Lorenzo",
+    "Gustavo Teruel",
+    "Matías Sosa Broker Inmobiliario",
+    "Arbini Propiedades",
+    "Redondo Inmobiliaria",
+    "Selecto Propiedades",
+    "Introcaso Propiedades",
+    "Napolitano Inmobiliaria",
+    "Cecilia Martini Inmobiliaria",
+    "Torres Inmobiliaria",
+    "Abel Carranza Propiedades",
+    "Aguirre Propiedades",
+    "Aiello Propiedades",
+    "Alejandro Aiello",
+    "Alberto B. Rossi Propiedades",
+    "Galán Broker Inmobiliario",
+    "Canicoba Propiedades",
+    "Urbana Propiedades",
+    "M y F Propiedades",
+    "Pezzati Propiedades",
+    "RP Bienes Raíces",
+    "Alejandra Dal Molin",
+    "Dardo Propiedades",
+    "Mar del Plata (portal)",
+    "Bartolini Propiedades",
+    "Duque Williams Propiedades",
+    "Mardel Inmueble",
+    "Rey Propiedades",
+    "Loreley Propiedades",
+    "Moreno Gómez Propiedades",
+    "Beain Propiedades",
+    "Flores Harismendi",
+    "Patricia Moreno",
+    "Nizzi Propiedades",
+    "Girard Propiedades"
+  ],
+  "verified": 51,
+  "needingAttention": 20,
+  "refresh": {
+    "sources": 43,
+    "added": 2311,
+    "total": 7943
+  },
+  "sources": [
+    {
+      "name": "Suarez Propiedades",
+      "url": "https://www.suarezmardelplata.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 3,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.suarezmardelplata.com/",
+        "status": 200,
+        "finalUrl": "https://www.suarezmardelplata.com/",
+        "title": "Suarez Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.suarezmardelplata.com/Alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.suarezmardelplata.com/Venta",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 73,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.suarezmardelplata.com/p/12426151-Departamento-en-Alquiler-en-Guemes",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.suarezmardelplata.com/p/12366050-Oficina-en-Alquiler-en-Centro",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.suarezmardelplata.com/p/12366254-Local-en-Alquiler-en-Guemes",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ezequiel Jose Estudio Inmobiliario",
+      "url": "https://www.ezequieljosepropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 4,
+      "sampleMatching": 4,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://www.ezequieljosepropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.ezequieljosepropiedades.com/",
+        "title": "EZEQUIEL JOSE ESTUDIO INMOBILIARIO",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.ezequieljosepropiedades.com/Alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.ezequieljosepropiedades.com/Venta",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 5,
+          "examined": 5
+        },
+        "operation": {
+          "present": 5,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 5,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 4,
+          "examined": 5
+        }
+      },
+      "refreshed": 63,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.ezequieljosepropiedades.com/p/11466377-Departamento-en-Alquiler-en-San-Jos%C3%A9-Hip%C3%B3lito-Yrigoyen--al-4400",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.ezequieljosepropiedades.com/p/8458166-Departamento-en-Alquiler-en-Centro-Boulevard-Maritimo-Patricio-Peralta-Ramos--al-1900",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.ezequieljosepropiedades.com/p/9585225-Campo-en-Venta-en-Ruta-226-ruta-226-km8",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Velati Propiedades",
+      "url": "https://velati.com.ar",
+      "enabled": true,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://velati.com.ar/",
+        "status": 200,
+        "finalUrl": "https://velati.com.ar/",
+        "title": "Velati Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://velati.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "Aplicación JavaScript: no publica enlaces de fichas en el HTML inicial; necesita adaptador de su catálogo.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "VA Propiedades",
+      "url": "https://vapropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 4,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://vapropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://vapropiedades.com.ar/",
+        "title": "Home - VA PropiedadesWhatsApp",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://vapropiedades.com.ar/alquilar/",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://vapropiedades.com.ar/comprar/",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 6
+        }
+      },
+      "refreshed": 9,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://vapropiedades.com.ar/property/casa-contemporanea-con-2-dormitorios-jardin-y-piscina-los-troncos/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://vapropiedades.com.ar/property/local-comercial-a-la-calle-sobre-av-champagnat/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://vapropiedades.com.ar/property/chalet-en-esquina-para-uso-comercial-zona-guemes/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ucci Propiedades",
+      "url": "https://www.uccipropiedades.com",
+      "enabled": true,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://www.uccipropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.uccipropiedades.com/",
+        "title": "ATILIO UCCI E HIJOS PROPIEDADES",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.uccipropiedades.com/venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "Aplicación Gatsby/Mediahaus: el HTML inicial no contiene las fichas; requiere adaptador del catálogo público.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Dante Propiedades",
+      "url": "https://www.dantepropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 5,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://www.dantepropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.dantepropiedades.com/",
+        "title": "Dante Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.dantepropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.dantepropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 36,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.dantepropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 159,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.dantepropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 43,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 5,
+          "examined": 5
+        },
+        "operation": {
+          "present": 5,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 5,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 5
+        }
+      },
+      "refreshed": 238,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.dantepropiedades.com/departamento-alquiler-la-perla_474621_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.dantepropiedades.com/departamento-alquiler-la-perla_304754_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.dantepropiedades.com/casa---chalet-venta-la-perla_473225_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Sanz y Ordoqui Propiedades",
+      "url": "https://www.sanzyordoqui.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.sanzyordoqui.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.sanzyordoqui.com.ar/",
+        "title": "Inmobiliaria en Mar del Plata | Sanz y Ordoqui Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.sanzyordoqui.com.ar/propiedades/?operacion=Alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.sanzyordoqui.com.ar/propiedades/?operacion=Venta",
+          "status": 200,
+          "error": "",
+          "discovered": 10,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 4,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 1,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 92,
+      "notes": "La búsqueda completa devolvió 404 al intentar una segunda página de alquileres; se conservaron los 92 avisos válidos obtenidos.",
+      "warnings": [
+        "  Sanz y Ordoqui Propiedades: listado https://www.sanzyordoqui.com.ar/propiedades/?operacion=Alquiler&pag=2: HTTP 404 al descargar https://www.sanzyordoqui.com.ar/propiedades/?operacion=Alquiler&pag=2"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.sanzyordoqui.com.ar/propiedad/departamento-un-ambiente-dividido-a-la-calle-en-planta-baja--12037735",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "precio: multiple prices require an operation-specific selector"
+          ]
+        },
+        {
+          "url": "https://www.sanzyordoqui.com.ar/propiedad/departamento-en-alquiler--12026155",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "precio: multiple prices require an operation-specific selector"
+          ]
+        },
+        {
+          "url": "https://www.sanzyordoqui.com.ar/propiedad/alquiler-24-meses-tres-ambientes-al-contrafrente-sin-muebles-san-luis-2065--11928089",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "precio: multiple prices require an operation-specific selector"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Martínez Arrechea Propiedades",
+      "url": "https://martinezarrechea.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://martinezarrechea.com/",
+        "status": 200,
+        "finalUrl": "https://martinezarrechea.com/",
+        "title": "Martinez Arrechea Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://martinezarrechea.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://martinezarrechea.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://martinezarrechea.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 58,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://martinezarrechea.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 67,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://martinezarrechea.com/departamento-alquiler-centro_473701_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://martinezarrechea.com/departamento-alquiler-la-perla_472469_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://martinezarrechea.com/departamento-alquiler-plaza-colon_472095_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Bártoli Propiedades",
+      "url": "https://www.bartolipropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 2,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://www.bartolipropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.bartolipropiedades.com/",
+        "title": "Bartoli Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.bartolipropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.bartolipropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 14,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.bartolipropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 22,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.bartolipropiedades.com/casa---chalet-venta-mar-del-plata_451826_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.bartolipropiedades.com/casa---chalet-venta-mar-del-plata_446609_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        },
+        {
+          "url": "https://www.bartolipropiedades.com/casa---chalet-venta-mar-del-plata_446608_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Inmobiliaria Daniel Díaz",
+      "url": "https://danieldiazpropiedades.com.ar",
+      "enabled": true,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 3,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://danieldiazpropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://danieldiazpropiedades.com.ar/",
+        "title": "Daniel Diaz Propiedades – Daniel Diaz Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://danieldiazpropiedades.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 12
+        },
+        "operation": {
+          "present": 8,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "Las fichas muestreadas corresponden a CABA y otras localidades. No se forzó su inclusión en Mar del Plata.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://danieldiazpropiedades.com.ar/propiedad/departamento-%c2%b7-52m%c2%b2-%c2%b7-3-ambientes/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://danieldiazpropiedades.com.ar/propiedad/departamento-%c2%b7-22m%c2%b2-%c2%b7-1-ambiente/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://danieldiazpropiedades.com.ar/propiedad/departamento-en-venta-en-retiro/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DAR Propiedades",
+      "url": "https://www.darpropiedades.com.ar",
+      "enabled": true,
+      "verified": false,
+      "status": "fallo de extracción de ficha",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://www.darpropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.darpropiedades.com.ar/",
+        "title": "DAR Propiedades - Inmobiliaria Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.darpropiedades.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 5
+        },
+        "operation": {
+          "present": 0,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 5
+        }
+      },
+      "refreshed": null,
+      "notes": "Aplicación Next: tiene un catálogo público cargado por el cliente, pero el crawler HTML no lee sus tarjetas como fichas individuales. Adaptador pendiente.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.darpropiedades.com.ar/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.darpropiedades.com.ar/#propiedades",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.darpropiedades.com.ar/#servicios",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "J. Urrizaga",
+      "url": "https://www.urrizaga.com.ar",
+      "enabled": true,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://www.urrizaga.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.urrizaga.com.ar/",
+        "title": "Urrizaga Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.urrizaga.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "La portada no expone fichas y los servicios públicos /dal/unidades.asp?Tipo=A y Tipo=V respondieron HTTP 500.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Marino Pérez Propiedades",
+      "url": "https://www.marinoperez.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.marinoperez.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.marinoperez.com.ar/",
+        "title": "Marino Pérez Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.marinoperez.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 113,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 14,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 37,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 6
+        }
+      },
+      "refreshed": 167,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.marinoperez.com.ar/casa---chalet-alquiler-alto-camet_474010_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/casa---chalet-alquiler-alto-camet_473000_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.marinoperez.com.ar/casa---chalet-alquiler-las-dalias_474728_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Palma Propiedades",
+      "url": "https://www.palmapropiedades.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.palmapropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.palmapropiedades.com.ar/",
+        "title": "Palma Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.palmapropiedades.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 27,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 65,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 13,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.palmapropiedades.com.ar/casa---chalet-alquiler-pompeya_474531_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/casa---chalet-alquiler-los-troncos_473728_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.palmapropiedades.com.ar/departamento-alquiler-centro_471680_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Del Rosso & Asociados",
+      "url": "https://delrossopropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://delrossopropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://delrossopropiedades.com.ar/",
+        "title": "Del Rosso & Asociados - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.delrossopropiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.delrossopropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 27,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.delrossopropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 145,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.delrossopropiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 33,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 205,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.delrossopropiedades.com.ar/departamento-alquiler-centro_474538_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.delrossopropiedades.com.ar/departamento-alquiler-guemes_474475_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.delrossopropiedades.com.ar/departamento-alquiler-centro_471089_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Acampora y Asociados",
+      "url": "https://www.acamporayasoc.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 5,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.acamporayasoc.com/",
+        "status": 200,
+        "finalUrl": "https://www.acamporayasoc.com/",
+        "title": "Acampora y Asociados - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.acamporayasoc.com/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.acamporayasoc.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.acamporayasoc.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.acamporayasoc.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 80,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.acamporayasoc.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 21,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 108,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.acamporayasoc.com/casa---chalet-alquiler-plaza-mitre_474122_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.acamporayasoc.com/departamento-alquiler-plaza-colon_473092_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.acamporayasoc.com/departamento-alquiler-plaza-colon_466366_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Properati",
+      "url": "https://www.properati.com.ar",
+      "enabled": false,
+      "verified": false,
+      "status": "fallo de extracción de ficha",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://www.properati.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.properati.com.ar/",
+        "title": "Tu próxima casa, hoy | PROPERATI",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.properati.com.ar/s/mar-del-plata/venta",
+          "status": 200,
+          "error": "",
+          "discovered": 76,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 12
+        },
+        "operation": {
+          "present": 6,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "Portal registrado previamente como desactivado. Los enlaces generales no son fichas individuales y no hay adaptador validado.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.properati.com.ar/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.properati.com.ar/s/venta",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.properati.com.ar/s/alquiler",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bellucci Propiedades",
+      "url": "https://www.belluccipropiedades.com",
+      "enabled": true,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 9,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://www.belluccipropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.belluccipropiedades.com/",
+        "title": "| Bellucci Propiedades | Venta y Alquiler de Propiedades - Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.belluccipropiedades.com/",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": ""
+        },
+        {
+          "url": "https://www.belluccipropiedades.com/propiedades/alquiler/0/0/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.belluccipropiedades.com/propiedades/venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 12
+        },
+        "operation": {
+          "present": 12,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 9,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 7,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 7,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "Rutas de fichas y campos principales corregidos. Las fichas muestreadas no expresan la ciudad en un dato propio verificable; no se usa el texto de marca del sitio como ubicación.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.belluccipropiedades.com/propiedades/venta/1-terreno/0-/7578390/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.belluccipropiedades.com/propiedades/venta/1-terreno/0-/7722109/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.belluccipropiedades.com/propiedades/venta/3-casa/4-4-ambientes-o-mas/7868702/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coste y Freuler",
+      "url": "https://www.costeyfreuler.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.costeyfreuler.com",
+        "status": 200,
+        "finalUrl": "https://www.costeyfreuler.com/",
+        "title": "Coste y Freuler Inmobiliaria - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.costeyfreuler.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.costeyfreuler.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.costeyfreuler.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 16,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 28,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.costeyfreuler.com/departamento-alquiler-centro_474930_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.costeyfreuler.com/departamento-alquiler-centro_473501_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.costeyfreuler.com/departamento-alquiler-centro_472476_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gonnet Propiedades",
+      "url": "https://www.gonnet.com.ar",
+      "enabled": true,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://www.gonnet.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.gonnet.com.ar/",
+        "title": "Gonnet Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.gonnet.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "Aplicación Next: HTML sin fichas. Su consulta pública /api/proxy?path=/propiedades/venta responde, pero requiere un adaptador y validar la ubicación individual.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Zicarelli Real Estate",
+      "url": "https://zicarelli.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://zicarelli.com.ar",
+        "status": 200,
+        "finalUrl": "https://zicarelli.com.ar/",
+        "title": "Zicarelli Real Estate - Mar Del Plata - Inmobiliaria",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://zicarelli.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 0,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 4,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://zicarelli.com.ar/ad/departamento-2-ambientes-194",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://zicarelli.com.ar/ad/departamentos-de-2-y-3-ambientes-en-zona-paseo-aldrey-developer-xv-symphony",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://zicarelli.com.ar/ad/casa-5-ambientes-con-cochera-y-patio-parque-luro",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Abdala Propiedades",
+      "url": "https://abdalapropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://abdalapropiedades.com",
+        "status": 200,
+        "finalUrl": "https://abdalapropiedades.com/",
+        "title": "Abdala Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://abdalapropiedades.com/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://abdalapropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://abdalapropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 35,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://abdalapropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 68,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://abdalapropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 28,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 128,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://abdalapropiedades.com/casa---chalet-alquiler-rumenco_472964_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://abdalapropiedades.com/casa---chalet-alquiler-los-troncos_471071_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://abdalapropiedades.com/departamento-alquiler-centro_451446_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aboglio Propiedades",
+      "url": "https://inmobiliariaaboglio.com",
+      "enabled": true,
+      "verified": false,
+      "status": "fallo de extracción de ficha",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 2,
+      "home": {
+        "url": "https://inmobiliariaaboglio.com",
+        "status": 200,
+        "finalUrl": "https://inmobiliariaaboglio.com/",
+        "title": "Inmobiliaria Aboglio",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://inmobiliariaaboglio.com/",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 2,
+          "examined": 2
+        },
+        "operation": {
+          "present": 0,
+          "examined": 2
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 2
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 2
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 2
+        }
+      },
+      "refreshed": null,
+      "notes": "Se descubren dos fichas, pero la estructura no tiene los campos necesarios reconocidos. Adaptador de InmoGes pendiente.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://inmobiliariaaboglio.com/property/383",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://inmobiliariaaboglio.com/property/264",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ademar Ocaranza",
+      "url": "https://ademarocaranza.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 4,
+      "sampleMatching": 4,
+      "samplesExamined": 4,
+      "home": {
+        "url": "https://ademarocaranza.com",
+        "status": 200,
+        "finalUrl": "https://ademarocaranza.com/",
+        "title": "Ademar Ocaranza Inmobiliaria - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://ademarocaranza.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://ademarocaranza.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://ademarocaranza.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://ademarocaranza.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 4,
+          "examined": 4
+        },
+        "operation": {
+          "present": 4,
+          "examined": 4
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 4
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 4
+        },
+        "rooms": {
+          "present": 4,
+          "examined": 4
+        }
+      },
+      "refreshed": 14,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://ademarocaranza.com/departamento-alquiler-la-perla_472575_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://ademarocaranza.com/casa---chalet-venta-san-juan_463312_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://ademarocaranza.com/casa---chalet-venta-constitucion_453453_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "C. A. Di Bártolo e Hijos",
+      "url": "https://www.cadibartoloehijos.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://www.cadibartoloehijos.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.cadibartoloehijos.com.ar/",
+        "title": "C. A. Di Bártolo e Hijos — Administradores de Consorcios en Propiedad Horizontal",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.cadibartoloehijos.com.ar/inmobiliaria",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 4,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.cadibartoloehijos.com.ar/inmobiliaria/venta-2-ambientes-en-alsina-y-av-colon-apto-profesional",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.cadibartoloehijos.com.ar/inmobiliaria/alquiler-2-ambientes-amoblado-santa-fe-y-belgrano",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.cadibartoloehijos.com.ar/inmobiliaria/alquiler-24-m-monoambiente-con-balcon-y-vista-al-mar",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Administración Julián Santillán",
+      "url": "https://juliansantillan.com",
+      "enabled": false,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 18,
+      "sampleMatching": 0,
+      "samplesExamined": 18,
+      "home": {
+        "url": "https://juliansantillan.com",
+        "status": 200,
+        "finalUrl": "https://juliansantillan.com/",
+        "title": "Administración de Propiedades Julian Santillan - Inmobiliaria en Mar del Plata- Alquiler y Venta de Propiedades en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://juliansantillan.com/2_1_departamentos-en-alquiler-mar-del-plata.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://juliansantillan.com/1_2_chalets-casas-en-venta-mar-del-plata.html",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://juliansantillan.com/1_1_departamentos-en-venta-mar-del-plata.html",
+          "status": 200,
+          "error": "",
+          "discovered": 26,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://juliansantillan.com/1_5_lotes-en-venta-mar-del-plata.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 18
+        },
+        "operation": {
+          "present": 18,
+          "examined": 18
+        },
+        "priceAmount": {
+          "present": 18,
+          "examined": 18
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 18
+        },
+        "rooms": {
+          "present": 15,
+          "examined": 18
+        }
+      },
+      "refreshed": null,
+      "notes": "Rutas corregidas: 42 enlaces de fichas descubiertos. Sin un campo de ciudad verificable en la muestra; no se usa la ubicación de la oficina.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://juliansantillan.com/827_departamentos-en-alquiler-1-ambientes-playa-grande.html",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://juliansantillan.com/985_departamentos-en-alquiler-1-ambientes-paseo-aldrey.html",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://juliansantillan.com/991_departamentos-en-alquiler-2-ambientes-paseo-aldrey.html",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alan Propiedades",
+      "url": "https://www.alanpropiedades.com.ar/",
+      "enabled": false,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://www.alanpropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.alanpropiedades.com.ar/",
+        "title": "",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.alanpropiedades.com.ar/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "El dominio sin www tiene un certificado inválido. La variante oficial con www responde HTTP 200, pero carga la aplicación por JavaScript y no expone fichas en HTML.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Alba Propiedades",
+      "url": "https://albapropiedades.com",
+      "enabled": false,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://albapropiedades.com",
+        "status": 200,
+        "finalUrl": "https://albapropiedades.com/",
+        "title": "Cargando..",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://albapropiedades.com",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "Aplicación Angular que carga el catálogo por API. Requiere identificar y adaptar su catálogo público.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Alberto Turlán",
+      "url": "https://www.turlanprop.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 2,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://www.turlanprop.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.turlanprop.com.ar/",
+        "checkedAt": "2026-10-23T13:50:40.426Z",
+        "title": "Turlan Propiedades Inmobiliaria & Administración",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.turlanprop.com.ar/ajax-propiedades.php?busca_operacion=1",
+          "status": 200,
+          "checkedAt": "2026-10-23T13:50:40.926Z",
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        },
+        {
+          "url": "https://www.turlanprop.com.ar/ajax-propiedades.php?busca_operacion=2",
+          "status": 200,
+          "checkedAt": "2026-10-23T13:50:41.891Z",
+          "error": "",
+          "discovered": 9,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 1,
+          "examined": 3
+        }
+      },
+      "refreshed": 3,
+      "notes": "Se verificaron fichas y el dominio actual. Se conservaron 3 avisos antes del límite temporal HTTP 429; el catálogo quedó parcial. Se configuró una pausa de 5 segundos y se corrigió el envío de página/desplazamiento.",
+      "warnings": [
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/7-local/0-/7059778/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/7-local/0-/7059778/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/7-local/1-1-ambiente/5266909/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/7-local/1-1-ambiente/5266909/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/3-casa/5-/7453266/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/3-casa/5-/7453266/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/3-casa/6-/6577862/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/3-casa/6-/6577862/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/3-casa/6-/7362401/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/3-casa/6-/7362401/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/3-casa/5-/6629836/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/3-casa/5-/6629836/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/13-ph/3-3-ambientes/8596879/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/13-ph/3-3-ambientes/8596879/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/venta/13-ph/3-3-ambientes/8596975/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/venta/13-ph/3-3-ambientes/8596975/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/7-local/0-/10488766/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/7-local/0-/10488766/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/3-casa/4-4-ambientes-o-mas/5476048/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/3-casa/4-4-ambientes-o-mas/5476048/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/5311976/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/5311976/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/7-local/1-1-ambiente/8650384/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/7-local/1-1-ambiente/8650384/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/8361938/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/8361938/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/12435351/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/2-2-ambientes/12435351/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/7-local/1-1-ambiente/8665634/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/7-local/1-1-ambiente/8665634/",
+        "  Alberto Turlán: ficha https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/1-1-ambiente/7100583/: HTTP 429 al descargar https://www.turlanprop.com.ar/propiedades/alquiler/2-departamento/1-1-ambiente/7100583/"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.turlanprop.com.ar/propiedades/venta/3-casa/6-/5502667/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.turlanprop.com.ar/propiedades/venta/1-terreno/0-/7131075/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.turlanprop.com.ar/propiedades/venta/1-terreno/0-/6823048/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zamboni Propiedades",
+      "url": "https://www.zambonipropiedades.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 5,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.zambonipropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.zambonipropiedades.com.ar/",
+        "title": "Negocios Inmobiliarios Zamboni",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.zambonipropiedades.com.ar/Alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.zambonipropiedades.com.ar/Venta",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.zambonipropiedades.com.ar/p/8638760-Departamento-en-Alquiler-en-Mar-Del-Plata-Aristobulo-al-2400",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.zambonipropiedades.com.ar/p/12363736-Departamento-en-Alquiler-en-San-Jos%C3%A9-Rawson-al-3400",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.zambonipropiedades.com.ar/p/9564447-Departamento-en-Alquiler-en-Guemes-Alsina-al-3000",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "De Santis Propiedades",
+      "url": "https://desantispropiedades.com.ar",
+      "enabled": false,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 21,
+      "sampleMatching": 0,
+      "samplesExamined": 31,
+      "home": {
+        "url": "https://desantispropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://desantispropiedades.com.ar/",
+        "title": "De Santis Propiedades | Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://desantispropiedades.com.ar/venta",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://desantispropiedades.com.ar/alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://desantispropiedades.com.ar/propiedades",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        },
+        {
+          "url": "https://desantispropiedades.com.ar/alquiler#administracion",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 31
+        },
+        "operation": {
+          "present": 4,
+          "examined": 31
+        },
+        "priceAmount": {
+          "present": 31,
+          "examined": 31
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 31
+        },
+        "rooms": {
+          "present": 8,
+          "examined": 31
+        }
+      },
+      "refreshed": null,
+      "notes": "Fichas accesibles, pero faltan campos y una ciudad propia verificable con el adaptador actual. Se mantiene desactivada hasta validar la extracción.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://desantispropiedades.com.ar/propiedad/4716732",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://desantispropiedades.com.ar/propiedad/4716733",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://desantispropiedades.com.ar/propiedad/4716734",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burga Propiedades",
+      "url": "https://walterburga.com",
+      "enabled": false,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 5,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://walterburga.com",
+        "status": 200,
+        "finalUrl": "https://www.walterburga.com/",
+        "title": "Burga Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.walterburga.com/venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 194,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.walterburga.com/alquiler/",
+          "status": 429,
+          "error": "HTTP 429",
+          "discovered": 0,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 12
+        },
+        "operation": {
+          "present": 12,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 11,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "Rutas de fichas identificadas y campos parcialmente extraídos. Falta ciudad verificable; uno de los listados de alquiler devolvió HTTP 429. Se mantiene desactivada.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.walterburga.com/venta/1-departamento/25-2_ambientes/1985-2_ambientes_contrafrente/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.walterburga.com/venta/83-local/0-__/1984-local_comercial_en_excelente_ubicacion_/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.walterburga.com/venta/1-departamento/25-2_ambientes/1983-2_ambientes_a_la_calle/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marta Moghames",
+      "url": "https://moghames.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 4,
+      "sampleMatching": 3,
+      "samplesExamined": 4,
+      "home": {
+        "url": "https://moghames.com.ar",
+        "status": 200,
+        "finalUrl": "https://moghames.com.ar/",
+        "title": "Marta Moghames Estudio Inmobiliario - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://moghames.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://moghames.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 25,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://moghames.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 19,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://moghames.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 4,
+          "examined": 4
+        },
+        "operation": {
+          "present": 4,
+          "examined": 4
+        },
+        "priceAmount": {
+          "present": 4,
+          "examined": 4
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 4
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 4
+        }
+      },
+      "refreshed": 38,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://moghames.com.ar/casa---chalet-alquiler-el-progreso_474091_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://moghames.com.ar/casa---chalet-venta-villa-primera_470160_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://moghames.com.ar/casa---chalet-venta-mar-del-plata_466203_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "La Pérgola Propiedades",
+      "url": "https://lapergolapropiedades.com",
+      "enabled": false,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 6,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://lapergolapropiedades.com",
+        "status": 200,
+        "finalUrl": "https://lapergolapropiedades.com/",
+        "title": "La Pérgola Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://lapergolapropiedades.com/propiedades/",
+          "status": 200,
+          "error": "",
+          "discovered": 31,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 12
+        },
+        "operation": {
+          "present": 0,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "El dominio consultado corresponde a una inmobiliaria en Puerto de la Cruz, Tenerife. Se mantiene desactivada para no importar avisos ajenos a Mar del Plata.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://lapergolapropiedades.com/propiedades/#content",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://lapergolapropiedades.com/propiedades/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://lapergolapropiedades.com/propiedades/#",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oreste Gonnet Inmobiliaria",
+      "url": "https://orestegonnet.com.ar",
+      "enabled": false,
+      "verified": false,
+      "status": "fallo de extracción de ficha",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 1,
+      "home": {
+        "url": "https://orestegonnet.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.mardelplata.com/inmobiliarias/",
+        "title": "Inmobiliarias – Mardelplata.com | Turismo, Hoteles y Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://orestegonnet.com.ar",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 1
+        },
+        "operation": {
+          "present": 0,
+          "examined": 1
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 1
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 1
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 1
+        }
+      },
+      "refreshed": null,
+      "notes": "El dominio redirige al directorio general de inmobiliarias de Mardelplata.com. Sus avisos no se atribuyen a Oreste Gonnet.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.mardelplata.com/propiedades/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GMC Propiedades",
+      "url": "https://gmcpropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://gmcpropiedades.com",
+        "status": 200,
+        "finalUrl": "https://gmcpropiedades.com/",
+        "title": "GMC Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://gmcpropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://gmcpropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 18,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://gmcpropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 28,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://gmcpropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 55,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://gmcpropiedades.com/departamento-alquiler-centro_474571_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://gmcpropiedades.com/departamento-alquiler-constitucion_474569_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://gmcpropiedades.com/departamento-alquiler-mar-del-plata_464089_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "La Plata Propiedades",
+      "url": "https://laplatapropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://laplatapropiedades.com",
+        "status": 200,
+        "finalUrl": "https://laplatapropiedades.com/",
+        "title": "La Plata Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://laplatapropiedades.com/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://laplatapropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://laplatapropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://laplatapropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 75,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://laplatapropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 6
+        }
+      },
+      "refreshed": 86,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://laplatapropiedades.com/casa---chalet-alquiler-fortunato-de-la-plaza_471166_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://laplatapropiedades.com/departamento-alquiler-centro_471172_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://laplatapropiedades.com/departamento-alquiler-centro_467453_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Mar del Plata Propiedades",
+      "url": "https://mardelplatapropiedades.net",
+      "enabled": false,
+      "verified": false,
+      "status": "sitio/listados inaccesibles",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://mardelplatapropiedades.net",
+        "status": null,
+        "title": "",
+        "error": "fetch failed (ENOTFOUND)"
+      },
+      "lists": [
+        {
+          "url": "https://mardelplatapropiedades.net",
+          "status": null,
+          "error": "fetch failed (ENOTFOUND)",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "El dominio mardelplatapropiedades.net no resuelve en DNS (ENOTFOUND).",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Breccia Inmuebles y Negocios",
+      "url": "https://breccianegocios.com.ar",
+      "enabled": false,
+      "verified": false,
+      "status": "sin fichas descubiertas",
+      "sampleValid": 0,
+      "sampleMatching": 0,
+      "samplesExamined": 0,
+      "home": {
+        "url": "https://breccianegocios.com.ar",
+        "status": 200,
+        "finalUrl": "https://breccianegocios.com.ar/",
+        "title": "Breccia Inmuebles y Negocios | Administración de Consorcios e Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://breccianegocios.com.ar",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 0
+        },
+        "operation": {
+          "present": 0,
+          "examined": 0
+        },
+        "priceAmount": {
+          "present": 0,
+          "examined": 0
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 0
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 0
+        }
+      },
+      "refreshed": null,
+      "notes": "La web carga propiedades con JavaScript y almacenamiento local; no hay fichas individuales extraíbles con el adaptador actual.",
+      "warnings": [],
+      "evidence": []
+    },
+    {
+      "name": "Zulma Castillo Propiedades",
+      "url": "https://zcastillopropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://zcastillopropiedades.com",
+        "status": 200,
+        "finalUrl": "https://zcastillopropiedades.com/",
+        "title": "Inmobiliaria en Mar del Plata | Zulma Castillo Propiedades — Venta y Alquiler",
+        "error": ""
+      },
+      "lists": [],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 3,
+      "notes": "El catálogo retuvo 3 avisos con ubicación explícita compatible. No se asigna Mar del Plata a fichas que solo indican un barrio.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://zcastillopropiedades.com/propiedad/37"
+        },
+        {
+          "url": "https://zcastillopropiedades.com/propiedad/36"
+        }
+      ]
+    },
+    {
+      "name": "Scutella Propiedades",
+      "url": "https://scutellapropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://scutellapropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://scutellapropiedades.com.ar/",
+        "title": "Scutella Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://scutellapropiedades.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://scutellapropiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://scutellapropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://scutellapropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 4,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 7,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://scutellapropiedades.com.ar/casa---chalet-alquiler-stella-maris_468924_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://scutellapropiedades.com.ar/departamento-alquiler-centro_471235_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://scutellapropiedades.com.ar/departamento-alquiler-mar-del-plata_459732_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Santia Propiedades",
+      "url": "https://santiapropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 2,
+      "sampleMatching": 2,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://santiapropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.santiapropiedades.com.ar/",
+        "title": "Santia Propiedades – Compra, venta y alquiler en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades?op=venta",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades?op=alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": ""
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/ventas",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": ""
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/alquileres",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 2,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 2,
+          "examined": 3
+        }
+      },
+      "refreshed": 2,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades/2ad1c0b7-eec9-4b92-a31b-6a156c94aef5",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades/c1e9fbf8-4cdb-4ce4-9dec-4fcf1d09bdba",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.santiapropiedades.com.ar/propiedades/8859cf17-9dfe-4619-90b0-050298976257",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "tipo: missing or uncertain",
+            "precio: multiple prices require an operation-specific selector"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Allende Propiedades",
+      "url": "https://allendepropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 3,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://allendepropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://allendepropiedades.com.ar/",
+        "title": "Inmobiliaria Mar del Plata | Venta y Alquiler de casas y departamentos",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://allendepropiedades.com.ar/condici%C3%B3n/venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://allendepropiedades.com.ar/condici%C3%B3n/alquiler/",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 4,
+          "examined": 6
+        }
+      },
+      "refreshed": 6,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://allendepropiedades.com.ar/propiedades/campo-ganadero-de-927-hectareas-prov-san-luis/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://allendepropiedades.com.ar/propiedades/lotes-en-venta-barrio-privado-casonas-del-haras/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://allendepropiedades.com.ar/propiedades/local-comercial-venta-san-jose-mar-del-plata/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Berto Propiedades",
+      "url": "https://bertopropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 4,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://bertopropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.bertopropiedades.com.ar/",
+        "title": "Tu inmobiliaria en Mar del Plata – Berto Propiedades Reg.3859",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.bertopropiedades.com.ar/estado/en-venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.bertopropiedades.com.ar/estado/en-alquiler/",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 6
+        }
+      },
+      "refreshed": 7,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.bertopropiedades.com.ar/propiedad/227280_depto-3-amb-en-venta-zona-plaza-mitre/",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.bertopropiedades.com.ar/propiedad/215764_ph-5-ambientes-en-venta-almagro/",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        },
+        {
+          "url": "https://www.bertopropiedades.com.ar/propiedad/196737_local-comercial-en-venta-en-chauvin/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vigo Consultores Inmobiliarios",
+      "url": "https://vigo.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 9,
+      "sampleMatching": 7,
+      "samplesExamined": 9,
+      "home": {
+        "url": "https://vigo.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.vigo.com.ar/",
+        "title": "Inmobiliaria en Mar del Plata | Vigo Consultores Inmobiliarios",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.vigo.com.ar/propiedades",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        },
+        {
+          "url": "https://www.vigo.com.ar/propiedades?operacion=venta",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.vigo.com.ar/propiedades?operacion=alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.vigo.com.ar/propiedades?operacion=temporario",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 9,
+          "examined": 9
+        },
+        "operation": {
+          "present": 9,
+          "examined": 9
+        },
+        "priceAmount": {
+          "present": 9,
+          "examined": 9
+        },
+        "areaM2": {
+          "present": 7,
+          "examined": 9
+        },
+        "rooms": {
+          "present": 9,
+          "examined": 9
+        }
+      },
+      "refreshed": 13,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.vigo.com.ar/propiedades/casa-1-ambientes-bosque-peralta-ramos",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.vigo.com.ar/propiedades/ph-3-ambientes-don-bosco",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.vigo.com.ar/propiedades/chalet-5-ambientes-rumenco",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Nesca Propiedades",
+      "url": "https://nescapropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 2,
+      "sampleMatching": 1,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://nescapropiedades.com",
+        "status": 200,
+        "finalUrl": "https://nescapropiedades.com/",
+        "title": "Inmobiliaria en Mar del Plata 🏡 Venta y Tasaciones | Nesca",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://nescapropiedades.com",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 2,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 2,
+          "examined": 3
+        }
+      },
+      "refreshed": 2,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://nescapropiedades.com/propiedad/ph-3-ambientes-en-alquiler-en-parque-luro/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://nescapropiedades.com/propiedad/ph-en-alquiler-para-oficina-en-la-perla-mar-del-plata/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://nescapropiedades.com/propiedad/departamento-de-3-ambientes-con-dependencia-y-balcon-terraza-en-mar-del-plata/",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "operacion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Inmobiliaria Castillo",
+      "url": "https://inmobiliariacastillo.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 4,
+      "sampleMatching": 4,
+      "samplesExamined": 4,
+      "home": {
+        "url": "https://inmobiliariacastillo.com.ar",
+        "status": 200,
+        "finalUrl": "https://inmobiliariacastillo.com.ar/",
+        "title": "Inmobiliaria Castillo - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://inmobiliariacastillo.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariacastillo.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 19,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariacastillo.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 49,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariacastillo.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 16,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 4,
+          "examined": 4
+        },
+        "operation": {
+          "present": 4,
+          "examined": 4
+        },
+        "priceAmount": {
+          "present": 4,
+          "examined": 4
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 4
+        },
+        "rooms": {
+          "present": 4,
+          "examined": 4
+        }
+      },
+      "refreshed": 81,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://inmobiliariacastillo.com.ar/departamento-alquiler-pompeya_473929_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariacastillo.com.ar/casa---chalet-venta-san-benito_474564_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariacastillo.com.ar/casa---chalet-venta-sur_474562_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Quintiero Propiedades",
+      "url": "https://quintieroprop.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://quintieroprop.com.ar",
+        "status": 200,
+        "finalUrl": "https://quintieroprop.com.ar/",
+        "title": "Quintiero Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://quintieroprop.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 20,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://quintieroprop.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://quintieroprop.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 30,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://quintieroprop.com.ar/casa---chalet-venta-colinas-de-peralta-ramos_474804_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://quintieroprop.com.ar/casa---chalet-venta-faro_472410_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://quintieroprop.com.ar/casa---chalet-venta-faro_470061_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Bocian Propiedades",
+      "url": "https://bocianpropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://bocianpropiedades.com",
+        "status": 200,
+        "finalUrl": "https://bocianpropiedades.com/",
+        "title": "Bocian Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://bocianpropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://bocianpropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://bocianpropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://bocianpropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 31,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://bocianpropiedades.com/departamento-alquiler-plaza-mitre_474036_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://bocianpropiedades.com/departamento-alquiler-guemes_474034_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://bocianpropiedades.com/departamento-alquiler-mar-del-plata_473626_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spano Propiedades",
+      "url": "https://spanopropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 1,
+      "sampleMatching": 1,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://spanopropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://spanopropiedades.com.ar/",
+        "title": "Propiedades en Mar del Plata | Spano Propiedades - Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=1",
+          "status": 200,
+          "error": "",
+          "discovered": 18,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=1&zona=150&city[]=26624",
+          "status": 200,
+          "error": "",
+          "discovered": 18,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=2",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=2&zona=150&city[]=26624",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=3",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?transactionType=3&zona=150&city[]=26624",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": ""
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedades?zona=150&city[]=26624",
+          "status": 200,
+          "error": "",
+          "discovered": 18,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 18,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://spanopropiedades.com.ar/propiedad/4930463",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedad/4923484",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "direccion: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://spanopropiedades.com.ar/propiedad/6758977",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DePaoli Propiedades",
+      "url": "https://depaolipropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://depaolipropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://depaolipropiedades.com.ar/",
+        "title": "DePaoli Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://depaolipropiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://depaolipropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 13,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://depaolipropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 39,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://depaolipropiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 13,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 64,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://depaolipropiedades.com.ar/casa---chalet-venta-peralta-ramos-oeste_474803_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://depaolipropiedades.com.ar/casa---chalet-venta-sierra-de-los-padres_472667_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://depaolipropiedades.com.ar/casa---chalet-venta-chauvin_471648_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Salerno Propiedades",
+      "url": "https://salerno-propiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 5,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://salerno-propiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://salerno-propiedades.com.ar/",
+        "title": "Salerno Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://salerno-propiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://salerno-propiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://salerno-propiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 11,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://salerno-propiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 5,
+          "examined": 5
+        },
+        "operation": {
+          "present": 5,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 4,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 5
+        }
+      },
+      "refreshed": 21,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://salerno-propiedades.com.ar/departamento-alquiler-paseo-aldrey_452886_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://salerno-propiedades.com.ar/departamento-alquiler-san-carlos_438649_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://salerno-propiedades.com.ar/casa---chalet-venta-plaza-mitre_467760_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Potente Propiedades",
+      "url": "https://potentepropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 75,
+      "sampleMatching": 75,
+      "samplesExamined": 75,
+      "home": {
+        "url": "https://potentepropiedades.com",
+        "status": 200,
+        "finalUrl": "https://potentepropiedades.com/",
+        "title": "Potente Propiedades · Inmobiliaria en Mar del Plata | Venta y alquiler",
+        "error": ""
+      },
+      "lists": [],
+      "fieldCoverage": {
+        "address": {
+          "present": 75,
+          "examined": 75
+        },
+        "operation": {
+          "present": 75,
+          "examined": 75
+        },
+        "priceAmount": {
+          "present": 73,
+          "examined": 75
+        },
+        "areaM2": {
+          "present": 75,
+          "examined": 75
+        },
+        "rooms": {
+          "present": 56,
+          "examined": 75
+        }
+      },
+      "refreshed": 75,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://potentepropiedades.com/propiedad/POT-153220"
+        },
+        {
+          "url": "https://potentepropiedades.com/propiedad/POT-153223"
+        }
+      ]
+    },
+    {
+      "name": "Messina Propiedades",
+      "url": "https://messinapropiedadesmdp.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 7,
+      "sampleMatching": 1,
+      "samplesExamined": 11,
+      "home": {
+        "url": "https://messinapropiedadesmdp.com.ar",
+        "status": 200,
+        "finalUrl": "https://messinapropiedadesmdp.com.ar/",
+        "title": "Inicio Messina Propiedades - Messina Propiedades INMOBLIARIA",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://messinapropiedadesmdp.com.ar/venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 11,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://messinapropiedadesmdp.com.ar/alquiler/",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 1,
+          "examined": 11
+        },
+        "operation": {
+          "present": 11,
+          "examined": 11
+        },
+        "priceAmount": {
+          "present": 11,
+          "examined": 11
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 11
+        },
+        "rooms": {
+          "present": 7,
+          "examined": 11
+        }
+      },
+      "refreshed": 3,
+      "notes": "Se retuvieron 3 avisos. Las fichas sin ciudad verificable quedan fuera del filtro; precio y ambientes ahora usan campos propios de Estatik.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://messinapropiedadesmdp.com.ar/property/departamento-de-2-amb-contrafrente-espacio-de-cochera/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://messinapropiedadesmdp.com.ar/property/sierra-de-los-padres-casa-de-4-amb-con-escritorio-depto-de-2-amb/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://messinapropiedadesmdp.com.ar/property/lote-gloria-de-la-pelegrina-en-venta-3-416m2-ruta-226-km-20-5/",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Patricio Propiedades",
+      "url": "https://patriciopropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://patriciopropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://www.patriciopropiedades.com.ar/",
+        "title": "Tu inmobiliaria en Mar del Plata – Patricio Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.patriciopropiedades.com.ar/estado/en-venta/",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.patriciopropiedades.com.ar/estado/en-alquiler/",
+          "status": 200,
+          "error": "",
+          "discovered": 0,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": 5,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.patriciopropiedades.com.ar/propiedad/232071_departamento-en-venta-en-terminal-vieja/",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.patriciopropiedades.com.ar/propiedad/231563_departamento-en-venta-en-plaza-colon/",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.patriciopropiedades.com.ar/propiedad/231479_departamento-en-venta-en-nueva-pompeya/",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Crespo Inmobiliaria",
+      "url": "https://inmobiliariacrespo.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 5,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://inmobiliariacrespo.com",
+        "status": 200,
+        "finalUrl": "https://inmobiliariacrespo.com/",
+        "title": "Crespo Inmobiliaria - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://inmobiliariacrespo.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariacrespo.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 11,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariacrespo.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 106,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariacrespo.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 127,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://inmobiliariacrespo.com/departamento-alquiler-plaza-mitre_474766_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://inmobiliariacrespo.com/departamento-alquiler-centro_474472_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://inmobiliariacrespo.com/departamento-alquiler-plaza-mitre_473316_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Finca Inmobiliaria",
+      "url": "https://inmobiliariafinca.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 6,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://inmobiliariafinca.com.ar",
+        "status": 200,
+        "finalUrl": "https://inmobiliariafinca.com.ar/",
+        "title": "Finca Inmobiliaria - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://inmobiliariafinca.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 29,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 15,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 58,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://inmobiliariafinca.com.ar/casa---chalet-alquiler-mar-del-plata_434611_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/casa---chalet-alquiler-punta-mogotes_469304_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariafinca.com.ar/departamento-alquiler-termas-del-huinco_474834_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Inmobiliaria Mihocevich",
+      "url": "https://inmobiliariamihocevich.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 8,
+      "sampleMatching": 1,
+      "samplesExamined": 8,
+      "home": {
+        "url": "https://inmobiliariamihocevich.com.ar",
+        "status": 200,
+        "finalUrl": "https://inmobiliariamihocevich.com.ar/",
+        "title": "inmobiliaria Mihocevich - Inmobiliaria en Santa Clara del Mar",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/casa-chalet-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 10,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 7,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 8,
+          "examined": 8
+        },
+        "operation": {
+          "present": 8,
+          "examined": 8
+        },
+        "priceAmount": {
+          "present": 7,
+          "examined": 8
+        },
+        "areaM2": {
+          "present": 7,
+          "examined": 8
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 8
+        }
+      },
+      "refreshed": 14,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/casa---chalet-alquiler-santa-elena_469478_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/casa---chalet-alquiler-quilmes_459005_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        },
+        {
+          "url": "https://inmobiliariamihocevich.com.ar/departamento-alquiler-playa-dorada_459010_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Alías Propiedades",
+      "url": "https://aliaspropiedades.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 5,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://aliaspropiedades.com.ar",
+        "status": 200,
+        "finalUrl": "https://aliaspropiedades.com.ar/",
+        "title": "Alías Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://aliaspropiedades.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://aliaspropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 11,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://aliaspropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 26,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://aliaspropiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 11,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 5,
+          "examined": 5
+        },
+        "operation": {
+          "present": 5,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 5,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 4,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 5
+        }
+      },
+      "refreshed": 48,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://aliaspropiedades.com.ar/departamento-alquiler-macrocentro_474433_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://aliaspropiedades.com.ar/departamento-alquiler-microcentro_473727_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://aliaspropiedades.com.ar/casa---chalet-venta-las-avenidas_473337_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Paulo Arroyo Propiedades",
+      "url": "https://www.pauloarroyopropiedades.com",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 8,
+      "sampleMatching": 3,
+      "samplesExamined": 9,
+      "home": {
+        "url": "https://www.pauloarroyopropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.pauloarroyopropiedades.com/",
+        "title": "Paulo Arroyo Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.pauloarroyopropiedades.com/propiedad-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 50,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.pauloarroyopropiedades.com/propiedad-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 9,
+          "examined": 9
+        },
+        "operation": {
+          "present": 9,
+          "examined": 9
+        },
+        "priceAmount": {
+          "present": 9,
+          "examined": 9
+        },
+        "areaM2": {
+          "present": 9,
+          "examined": 9
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 9
+        }
+      },
+      "refreshed": 36,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.pauloarroyopropiedades.com/terreno-venta-chapadmalal_460800_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.pauloarroyopropiedades.com/local-venta-microcentro_420653_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": []
+        },
+        {
+          "url": "https://www.pauloarroyopropiedades.com/cochera-venta-la-perla_459236_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "ambientes: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sauro Propiedades",
+      "url": "https://www.sauropropiedades.com/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 5,
+      "sampleMatching": 5,
+      "samplesExamined": 5,
+      "home": {
+        "url": "https://www.sauropropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.sauropropiedades.com/",
+        "title": "Sauro Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.sauropropiedades.com/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.sauropropiedades.com/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 13,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.sauropropiedades.com/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 17,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.sauropropiedades.com/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 13,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 5,
+          "examined": 5
+        },
+        "operation": {
+          "present": 5,
+          "examined": 5
+        },
+        "priceAmount": {
+          "present": 5,
+          "examined": 5
+        },
+        "areaM2": {
+          "present": 5,
+          "examined": 5
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 5
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.sauropropiedades.com/departamento-alquiler-guemes_473967_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.sauropropiedades.com/departamento-alquiler-playa-grande_471766_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.sauropropiedades.com/casa---chalet-venta-guemes_470678_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Homes - Land Propiedades",
+      "url": "https://www.homes-land.com.ar",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 6,
+      "sampleMatching": 5,
+      "samplesExamined": 6,
+      "home": {
+        "url": "https://www.homes-land.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.homes-land.com.ar/",
+        "title": "Homes - Land Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.homes-land.com.ar/propiedad-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 181,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.homes-land.com.ar/propiedad-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 6,
+          "examined": 6
+        },
+        "operation": {
+          "present": 6,
+          "examined": 6
+        },
+        "priceAmount": {
+          "present": 6,
+          "examined": 6
+        },
+        "areaM2": {
+          "present": 6,
+          "examined": 6
+        },
+        "rooms": {
+          "present": 6,
+          "examined": 6
+        }
+      },
+      "refreshed": 158,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.homes-land.com.ar/departamento-venta-centro_474925_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.homes-land.com.ar/departamento-venta-centro_474892_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.homes-land.com.ar/departamento-venta-plaza-colon_474875_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Lascano Propiedades",
+      "url": "https://lascanopropiedades.com.ar/",
+      "enabled": true,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 6,
+      "sampleMatching": 0,
+      "samplesExamined": 12,
+      "home": {
+        "url": "https://lascanopropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://lascanopropiedades.com.ar/",
+        "title": "Lascano Propiedades - Propiedades en Venta y Alquiler",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://lascanopropiedades.com.ar/propiedades.php?tipo_propiedad=-&tipo_operacion=Alquiler&it_localidad=-&it_comodidades=0",
+          "status": 200,
+          "error": "",
+          "discovered": 16,
+          "operation": ""
+        },
+        {
+          "url": "https://lascanopropiedades.com.ar/propiedades.php?tipo_propiedad=-&tipo_operacion=Venta&it_localidad=-&it_comodidades=0",
+          "status": 200,
+          "error": "",
+          "discovered": 16,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 0,
+          "examined": 12
+        },
+        "operation": {
+          "present": 12,
+          "examined": 12
+        },
+        "priceAmount": {
+          "present": 12,
+          "examined": 12
+        },
+        "areaM2": {
+          "present": 12,
+          "examined": 12
+        },
+        "rooms": {
+          "present": 8,
+          "examined": 12
+        }
+      },
+      "refreshed": null,
+      "notes": "Las fichas muestreadas están en Glew y otras localidades, fuera del filtro de Mar del Plata.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://lascanopropiedades.com.ar/detalle-item.php?item_id=81360",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://lascanopropiedades.com.ar/detalle-item.php?item_id=90031",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://lascanopropiedades.com.ar/detalle-item.php?item_id=83889",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "barrio: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kisic Propiedades",
+      "url": "https://kisicpropiedades.com/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 2,
+      "sampleMatching": 1,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://kisicpropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://kisicpropiedades.com/",
+        "title": "Kisic Propiedades - Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://kisicpropiedades.com/listing?purpose=rent",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": ""
+        },
+        {
+          "url": "https://kisicpropiedades.com/listing?purpose=sale",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": ""
+        },
+        {
+          "url": "https://kisicpropiedades.com/listing?purpose=temporary_rental",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 0,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 2,
+          "examined": 3
+        }
+      },
+      "refreshed": 24,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://kisicpropiedades.com/ad/local-comercial-en-alquiler-42",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://kisicpropiedades.com/ad/alquiler-24-meses-semipiso-3-ambientes",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://kisicpropiedades.com/ad/alquiler-semipiso-3-ambientes-playa-varese",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "metros: missing or uncertain",
+            "tipo: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Del Prete Propiedades",
+      "url": "https://www.delpretepropiedades.com/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 2,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://www.delpretepropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://www.delpretepropiedades.com/",
+        "title": "Del Prete Propiedades - Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.delpretepropiedades.com/listing?user_id=1029&purpose=rent",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": ""
+        },
+        {
+          "url": "https://www.delpretepropiedades.com/listing?user_id=1029&purpose=sale",
+          "status": 200,
+          "error": "",
+          "discovered": 9,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 2,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 2,
+          "examined": 3
+        }
+      },
+      "refreshed": 74,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.delpretepropiedades.com/ad/departamento-monoambientes-alquiler-24-meses-ex-terminal",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.delpretepropiedades.com/ad/galpon-alquiler-comercial-saavedra-y-champagnat-mar-del-plata",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "barrio: missing or uncertain",
+            "precio: missing or uncertain",
+            "moneda: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.delpretepropiedades.com/ad/alquiler-24-meses-2-ambientes-y-escritorio-80m2-con-cochera-y-baulera-frente-al-mar-perla-norte",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "barrio: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Muiño Propiedades",
+      "url": "https://www.xn--muiopropiedades-0qb.com.ar/",
+      "enabled": true,
+      "verified": false,
+      "status": "extrae fichas; revisar filtros",
+      "sampleValid": 7,
+      "sampleMatching": 0,
+      "samplesExamined": 7,
+      "home": {
+        "url": "https://www.xn--muiopropiedades-0qb.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.xn--muiopropiedades-0qb.com.ar/",
+        "title": "Muiño Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/Alquiler",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/Venta",
+          "status": 200,
+          "error": "",
+          "discovered": 5,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/Alquiler-temporario",
+          "status": 200,
+          "error": "",
+          "discovered": 1,
+          "operation": "Alquiler temporario"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 7,
+          "examined": 7
+        },
+        "operation": {
+          "present": 7,
+          "examined": 7
+        },
+        "priceAmount": {
+          "present": 7,
+          "examined": 7
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 7
+        },
+        "rooms": {
+          "present": 5,
+          "examined": 7
+        }
+      },
+      "refreshed": null,
+      "notes": "Las fichas muestreadas están en San Bernardo del Tuyú/Costa Atlántica. Se mantiene el filtro de Mar del Plata.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/p/11176850-Departamento-en-Alquiler-en-San-Bernardo-Del-Tuyu-MITRE--al-1700",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/p/11176850-Departamento-en-Venta-en-San-Bernardo-Del-Tuyu-MITRE--al-1700",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://www.xn--muiopropiedades-0qb.com.ar/p/11104679-Casa-en-Venta-en-San-Bernardo-Del-Tuyu-CATAMARCA-al-2600",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alem Propiedades",
+      "url": "https://alempropiedades.com/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 2,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://alempropiedades.com/",
+        "status": 200,
+        "finalUrl": "https://alempropiedades.com/",
+        "title": "Pernice Edgardo Alem Propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://alempropiedades.com/search?business_type%5B0%5D=for_rent&order_by=created_at&order=desc&page=1&for_sale=0&for_rent=1&for_temporary_rent=0&for_transfer=0&lax_business_type=1",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        },
+        {
+          "url": "https://alempropiedades.com/search?business_type%5B0%5D=for_sale&order_by=created_at&order=desc&page=1&for_sale=1&for_rent=0&for_temporary_rent=0&for_transfer=0&lax_business_type=1",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 2,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 1,
+          "examined": 3
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://alempropiedades.com/departamento-alquiler-plaza-colon-mar-del-plata/10516062",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "metros: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://alempropiedades.com/galpon-industrial-alquiler-los-andes-mar-del-plata/10511537",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://alempropiedades.com/departamento-alquiler-centro-mar-del-plata/10505724",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Saforcada Propiedades",
+      "url": "https://www.saforcada.com/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 32,
+      "sampleMatching": 32,
+      "samplesExamined": 32,
+      "home": {
+        "url": "https://www.saforcada.com/",
+        "status": 200,
+        "finalUrl": "https://www.saforcada.com/",
+        "title": "",
+        "error": ""
+      },
+      "lists": [],
+      "fieldCoverage": {
+        "address": {
+          "present": 32,
+          "examined": 32
+        },
+        "operation": {
+          "present": 32,
+          "examined": 32
+        },
+        "priceAmount": {
+          "present": 31,
+          "examined": 32
+        },
+        "areaM2": {
+          "present": 32,
+          "examined": 32
+        },
+        "rooms": {
+          "present": 11,
+          "examined": 32
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.saforcada.com/saforcada-649"
+        },
+        {
+          "url": "https://www.saforcada.com/saforcada-648"
+        }
+      ]
+    },
+    {
+      "name": "Eduardo Villarreal Propiedades",
+      "url": "https://eduardovillarreal.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 1,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://eduardovillarreal.com.ar/",
+        "status": 200,
+        "finalUrl": "https://eduardovillarreal.com.ar/",
+        "title": "Eduardo Villarreal propiedades",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://eduardovillarreal.com.ar/search?business_type%5B0%5D=for_sale&order_by=max_price&order=desc&page=1&for_sale=1&for_rent=0&for_temporary_rent=0&for_transfer=0&lax_business_type=1",
+          "status": 200,
+          "error": "",
+          "discovered": 12,
+          "operation": ""
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 2,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 2,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 0,
+          "examined": 3
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://eduardovillarreal.com.ar/local-venta-centro-san-clemente-del-tuyu/5862703",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "direccion: missing or uncertain",
+            "metros: missing or uncertain",
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://eduardovillarreal.com.ar/galpon-industrial-venta-barrio-libertad-mar-del-plata/5862710",
+          "status": 200,
+          "matching": false,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        },
+        {
+          "url": "https://eduardovillarreal.com.ar/casa-venta-mar-del-plata/6626716",
+          "status": 200,
+          "matching": true,
+          "issues": [
+            "ambientes: missing or uncertain"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fulquet Propiedades",
+      "url": "https://www.fulquetpropiedades.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 3,
+      "sampleMatching": 3,
+      "samplesExamined": 3,
+      "home": {
+        "url": "https://www.fulquetpropiedades.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.fulquetpropiedades.com.ar/",
+        "title": "Fulquet Propiedades - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 25,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 27,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Venta"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 3,
+          "examined": 3
+        },
+        "operation": {
+          "present": 3,
+          "examined": 3
+        },
+        "priceAmount": {
+          "present": 3,
+          "examined": 3
+        },
+        "areaM2": {
+          "present": 3,
+          "examined": 3
+        },
+        "rooms": {
+          "present": 3,
+          "examined": 3
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/casa---chalet-venta-san-jose_474454_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/casa---chalet-venta-villa-primera_474319_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.fulquetpropiedades.com.ar/casa---chalet-venta-san-carlos_473936_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "name": "Groppo Propiedades",
+      "url": "https://www.inmobiliariagroppo.com.ar/",
+      "enabled": true,
+      "verified": true,
+      "status": "extracción verificada con muestra",
+      "sampleValid": 8,
+      "sampleMatching": 8,
+      "samplesExamined": 8,
+      "home": {
+        "url": "https://www.inmobiliariagroppo.com.ar/",
+        "status": 200,
+        "finalUrl": "https://www.inmobiliariagroppo.com.ar/",
+        "title": "Groppo Ricardo Enrique - Inmobiliaria en Mar del Plata",
+        "error": ""
+      },
+      "lists": [
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler.html",
+          "status": 200,
+          "error": "",
+          "discovered": 4,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-por-temporada.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler temporario"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-por-dia.html",
+          "status": 200,
+          "error": "",
+          "discovered": 2,
+          "operation": "Alquiler"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/casa-chalet-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 6,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 52,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/terreno-en-venta.html",
+          "status": 200,
+          "error": "",
+          "discovered": 8,
+          "operation": "Venta"
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-en-alquiler-para-estudiantes.html",
+          "status": 200,
+          "error": "",
+          "discovered": 3,
+          "operation": "Alquiler"
+        }
+      ],
+      "fieldCoverage": {
+        "address": {
+          "present": 8,
+          "examined": 8
+        },
+        "operation": {
+          "present": 8,
+          "examined": 8
+        },
+        "priceAmount": {
+          "present": 8,
+          "examined": 8
+        },
+        "areaM2": {
+          "present": 7,
+          "examined": 8
+        },
+        "rooms": {
+          "present": 8,
+          "examined": 8
+        }
+      },
+      "refreshed": null,
+      "notes": "Extracción de una muestra real verificada; se mantienen los filtros de ciudad y tipo.",
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-alquiler-plaza-colon_473499_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-alquiler-la-perla_470733_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        },
+        {
+          "url": "https://www.inmobiliariagroppo.com.ar/departamento-alquiler-plaza-colon_462351_propiedad-inmobiliaria.html",
+          "status": 200,
+          "matching": true,
+          "issues": []
+        }
+      ]
+    }
+  ]
+}
