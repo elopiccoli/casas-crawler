@@ -4,22 +4,23 @@ import { loadConfig } from "../src/config.js";
 import { crawlSources } from "../src/crawler.js";
 import { writeListingsJson } from "../src/json.js";
 import { writeListingsWorkbook } from "../src/excel.js";
-import { parseUrls, planSources, importListings, mergeListings, registerSources, incrementalReport } from "../src/incremental.js";
+import { parseUrls, planSources, mergeSnapshots, mergeListings, registerSources, incrementalReport } from "../src/incremental.js";
 
 async function main() {
 const config = await loadConfig("config.yml");
 const urls = parseUrls(process.env.CRAWLER_URLS || process.argv.slice(2).join("\n"));
 const kind = process.env.CRAWLER_URL_KIND || "Inmobiliarias";
 const sources = planSources(config, urls, kind);
-// In Actions, start with the currently published results, including prior manual runs.
+// Preserve both the repo snapshot and published results, including prior manual runs.
 // A failed download must stop the run instead of silently overwriting newer data.
+const saved = JSON.parse(await readFile("web/publicaciones.json", "utf8"));
 const baseline = process.env.CRAWLER_BASELINE_URL
   ? await fetch(process.env.CRAWLER_BASELINE_URL, { signal: AbortSignal.timeout(60000), cache: "no-store" }).then(response => {
     if (!response.ok) throw new Error(`No se pudieron cargar los resultados actuales: HTTP ${response.status}`);
     return response.json();
   })
-  : JSON.parse(await readFile("web/publicaciones.json", "utf8"));
-const previous = importListings(baseline);
+  : saved;
+const previous = mergeSnapshots(saved, baseline);
 console.log(`Se consultarán sólo ${sources.length} fuentes seleccionadas; se conservan ${previous.length} publicaciones.`);
 const messages = [];
 const crawled = await crawlSources({ ...config, sources }, { logger: message => { messages.push(message); console.log(message); } });

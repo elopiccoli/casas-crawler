@@ -101,6 +101,11 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
   const requests = [];
   const server = createServer((req, res) => {
     requests.push(req.url);
+    if (req.url === "/baseline") {
+      res.setHeader("Content-Type", "application/json");
+      res.end(JSON.stringify({listings:[{inmobiliaria:"PublishedOnly",link:"https://published-only.example/p/22",operacion:"Venta",tipo:"Casa",fechaExtraccion:"2026-10-24T00:00:00Z"}]}));
+      return;
+    }
     if (req.url === "/blocked") res.statusCode = 403;
     res.setHeader("Content-Type", "text/html");
     res.end(req.url === "/p/1" ? '<h1>Departamento en Alquiler en Centro</h1><span class="property-type">Departamento</span><span class="item-address">Colon 123</span>' : "<h1>Sin resultados</h1>");
@@ -131,6 +136,12 @@ test("incremental command crawls only selected URLs, exports merged Excel, and p
     fullConfig.sources = fullConfig.sources.filter(source => source.name === "Selected");
     const refreshed = await crawlSources(fullConfig);
     assert.equal(refreshed.length, 1, "future full refreshes must retain explicitly added property URLs without a city field");
+    const liveMerge = await runScript(dir, { CRAWLER_URLS: `${origin}/p/1`, CRAWLER_URL_KIND: "Publicaciones", CRAWLER_BASELINE_URL: `${origin}/baseline` });
+    assert.equal(liveMerge.code, 0, liveMerge.output);
+    const combined = JSON.parse(await readFile(path.join(dir, "web/publicaciones.json"), "utf8"));
+    assert.equal(combined.count, 3, "incremental jobs retain both repo-only and published-only properties");
+    assert.ok(combined.listings.some(item=>item.link===baseline.listings[0].link));
+    assert.ok(combined.listings.some(item=>item.inmobiliaria==="PublishedOnly"));
     const before = await readFile(path.join(dir, "web/publicaciones.json"), "utf8");
     const extraBefore = await readFile(path.join(dir, "config.extra.yml"), "utf8");
     const failed = await runScript(dir, { CRAWLER_URLS: `${origin}/empty`, CRAWLER_URL_KIND: "Publicaciones" });

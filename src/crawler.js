@@ -58,7 +58,8 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
     detailUrls.set(`${url}|${requestedOperation}`, { url, requestedOperation });
   }
 
-  for (const startUrl of source.startUrls || []) {
+  const startUrls = [...(source.startUrls || [])];
+  for (const startUrl of startUrls) {
     const start = new URL(startUrl);
     const requestedOperation = parseOperation(start.searchParams.get("operacion") || urlPath(startUrl));
     let pageUrl = startUrl;
@@ -78,6 +79,13 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
         break;
       }
       const $ = cheerio.load(html);
+      if (source.discoverCatalogs && start.pathname === "/" && pageCount === 1) {
+        const catalogs = discoverCatalogLinks($, pageUrl);
+        if (catalogs.length) logger?.(`  ${source.name}: se consultarán ${catalogs.length} listados enlazados desde la portada.`);
+        for (const catalogUrl of catalogs) {
+          if (!startUrls.includes(catalogUrl)) startUrls.push(catalogUrl);
+        }
+      }
 
       let discovered = 0;
       for (const cardListing of extractListingsFromPage($, pageUrl, source)) {
@@ -174,6 +182,22 @@ async function crawlRoblesCatalog(source, requestConfig, globalFilters) {
   }
 
   return uniqueBy(listings, (listing) => listing.url);
+}
+
+export function discoverCatalogLinks($, pageUrl) {
+  const domain = new URL(pageUrl).hostname.replace(/^www\./, "");
+  const urls = [];
+  for (const element of $("a[href]").toArray()) {
+    const href = absolutizeUrl($(element).attr("href"), pageUrl);
+    if (!href) continue;
+    const url = new URL(href);
+    if (!/^https?:$/.test(url.protocol) || url.hostname.replace(/^www\./, "") !== domain) continue;
+    if (!/^\/(?:Venta|Alquiler(?:-temporario)?|Propiedades)\/?$/i.test(url.pathname)) continue;
+    url.hash = "";
+    urls.push(url.href);
+  }
+  const operations = urls.filter(url => !/^\/Propiedades\/?$/i.test(new URL(url).pathname));
+  return [...new Set(operations.length ? operations : urls)];
 }
 
 export function extractListingsFromPage($, pageUrl, source) {

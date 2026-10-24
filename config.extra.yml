@@ -272,3 +272,29 @@ sources:
       summary: .descripcionDeFicha
     notes: Catálogo Inmobiliática verificado; listados de venta y alquiler descubiertos en el sitio. Campos de la ficha principal.
     skipJsonLdRooms: true
+  - name: Van Gool Bienes Raíces
+    startUrls:
+      - https://www.vangool.com.ar/Alquiler
+      - https://www.vangool.com.ar/Venta
+    pagination:
+      maxPages: 30
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields: {}
+    detailFields:
+      title: .single_property_title h2, meta[property="og:title"]::attr(content)
+      city: .slider-thumb::attr(alt), .single_property_title p, meta[property="og:title"]::attr(content)
+      address: .title-address
+      area: '.ficha_detalle_item:has(b:contains("Superficie cubierta")), #lista_superficies li:contains("Cubierta:"), .ficha_detalle_item:has(b:contains("Total construido"))'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: '#lista_informacion_basica li:contains(Ambientes), .ficha_detalle_item:has(b:contains("Ambientes"))'
+      parking: '#lista_informacion_basica li:contains(Cocheras)'
+    preferConfiguredFields: true
+    notes: 'Catálogo Tokko: la portada no contiene fichas. Consultar los listados públicos de venta y alquiler; ubicación y campos de cada propiedad.'
+    website: https://www.vangool.com.ar/
+    enabled: true
+    skipJsonLdRooms: true

@@ -17,7 +17,7 @@ const selectors = {
   neighborhood: [".ficha_detalle_item:has(b:contains('Ubicación'))", "#property-address-wrap .detail-area", ".areaDetalle .list-info-1a li:contains('Zona:')", "#Description .list-info-2 li:contains('Zona:')"],
   operation: [".prop-detail-op-tag", ".operations-box .operation-type-div", ".caracteristicasDeFicha li:contains('Tipo de Operación') span", ".list-info-1a li:contains('Tipo de negocio')", "#Description .list-info-2 li:contains('Tipo de negocio')", ".property-wrap .label-status"],
   propertyType: [".prop-ref-code", ".caracteristicasDeFicha li:contains('Tipo:') span", ".list-info-1a li:contains('Tipo de inmueble')", "#Description .list-info-2 li:contains('Tipo de inmueble')", ".property-type"],
-  city: ["#property-address-wrap .detail-city", ".list-info-1a li:contains('Ciudad:')", "#Description .list-info-2 li:contains('Ciudad:')", ".areaDetalle .ubicacion"],
+  city: ["#property-address-wrap .detail-city", ".list-info-1a li:contains('Ciudad:')", "#Description .list-info-2 li:contains('Ciudad:')", ".areaDetalle .ubicacion", ".slider-thumb::attr(alt)"],
   summary: [".full-description", "#property-description-wrap .block-content-wrap", ".areaDetalle article", ".descripcionDeFicha", "#ficha_descripcion"]
 };
 

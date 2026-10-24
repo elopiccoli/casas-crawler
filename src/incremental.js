@@ -26,7 +26,7 @@ export function planSources(config, urls, kind = "Inmobiliarias") {
     const name = known?.name || domain;
     if (!selected.has(name)) selected.set(name, {
       ...(known ? structuredClone(known) : {
-        name, website: new URL(url).origin, listingSelector: "a[href]",
+        name, website: new URL(url).origin, listingSelector: "a[href]", discoverCatalogs: true,
         publicationUrlRegex: "/p/\\d+|/propiedad(?:es)?/[^/?]+|propiedad-inmobiliaria\\.html|(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)",
         fields: { title: "h2, h3, .property-title" }, detailFields: {}, pagination: { maxPages: 1 },
         notes: "Fuente agregada por URL; usa extractores generales. Puede requerir selectores específicos."

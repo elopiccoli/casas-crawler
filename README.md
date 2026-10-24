@@ -46,6 +46,8 @@ En la web, **Agregar URLs** abre la accion de GitHub correspondiente. Con tu ses
 
 La accion consulta solo esas fuentes, combina sus publicaciones con las que estan publicadas y conserva las anteriores. Una misma URL y operacion se actualiza sin duplicarse. Las nuevas fuentes con resultados se guardan en `config.extra.yml` para las actualizaciones completas futuras. El Excel combinado se descarga desde el artifact **publicaciones-incrementales** de esa ejecucion.
 
+Si una inmobiliaria nueva no muestra fichas en su portada, el crawler sigue los enlaces de venta y alquiler del mismo sitio cuando están presentes. Van Gool tiene configurados sus listados Tokko de ambas operaciones. La carga incremental combina los avisos guardados en el repositorio con los publicados, para conservar incorporaciones que estén solo en una de las dos versiones.
+
 Si una inmobiliaria nueva necesita selectores especificos o no devuelve fichas, la accion lo informa en el registro. Si no obtiene ninguna publicacion valida, se detiene sin cambiar los resultados actuales.
 
 Un HTTP 403 significa que el sitio rechazo la solicitud. El resumen de la accion identifica esas fuentes y conserva los resultados. Si desde tu computadora el sitio responde, podes usar el comando local indicado abajo; luego guardar `config.extra.yml` y `web/publicaciones.json` en GitHub para publicar esas incorporaciones. El despliegue combina esas adiciones con los datos actuales de la web.
