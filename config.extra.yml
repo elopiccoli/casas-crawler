@@ -298,3 +298,4 @@ sources:
     website: https://www.vangool.com.ar/
     enabled: true
     skipJsonLdRooms: true
+    detailUrls: []
