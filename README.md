@@ -7,6 +7,7 @@ Crawler configurable para monitorear publicaciones inmobiliarias y exportarlas a
 - `inmobiliaria`
 - `direccion`
 - `metros`
+- `metros_totales`: superficie total informada por la inmobiliaria (en JSON: `metrosTotales`). Se conserva separada de la superficie cubierta. El selector configurable es `totalArea` en `detailFields`, o `totalAreaM2` en `jsonFields` para catálogos JSON.
 - `ambientes`
 - `cochera`: `Sí`, `No`, `Opcional` o `No informado`. Incluye garage/garaje. No se interpreta la falta de informacion como ausencia de cochera. Se prioriza la ficha tecnica; tambien se reconocen afirmaciones explicitas en el titulo o la descripcion del inmueble. Se puede configurar el selector `parking` en `fields` y `detailFields`.
 - `precio`
@@ -39,6 +40,8 @@ npm run crawl
 El Excel se genera en `outputs/publicaciones.xlsx`.
 
 ## Dashboard web
+
+El filtro **Metros totales como mínimo (m²)** incluye superficies iguales o mayores al valor ingresado. Al aplicarlo, se excluyen las publicaciones sin superficie total informada. Vacío o en cero muestra todas las superficies.
 
 ### Agregar URLs sin recorrer las anteriores
 

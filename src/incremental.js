@@ -1,4 +1,5 @@
 import { normalizeField } from "../web/property-fields.js";
+import { totalAreaFor } from "../web/listing-filters.js";
 
 const host = value => new URL(value).hostname.toLowerCase().replace(/^www\./, "");
 const sourceUrls = source => [source.website, source.siteUrl, ...(source.startUrls || []), ...(source.detailUrls || [])].filter(Boolean);
@@ -56,6 +57,7 @@ export function importListings(payload) {
     sourceName: item.inmobiliaria, url: item.link, address: item.direccion, neighborhood: item.barrio,
     operation: item.operacion, propertyType: item.tipo, rooms: item.ambientes ?? null,
     parking: item.cochera || "No informado", areaM2: item.metros, areaKind: item.superficieTipo,
+    totalAreaM2: totalAreaFor(item) ?? (Object.hasOwn(item, "metrosTotales") ? null : undefined),
     priceAmount: item.precio, currency: item.moneda, title: item.titulo, summary: item.resumen,
     issues: item.revision || [], evidence: item.evidencia || {}, scrapedAt: item.fechaExtraccion
   }));
@@ -72,7 +74,16 @@ function listingKey(item) {
 
 export function mergeListings(previous, added) {
   const merged = new Map(previous.map(item => [listingKey(item), item]));
-  for (const item of added) merged.set(listingKey(item), item);
+  for (const item of added) {
+    const key = listingKey(item);
+    const previous = merged.get(key);
+    // Legacy snapshots do not carry this column. Preserve enrichment while
+    // allowing a fresh extraction's explicit null to clear unavailable data.
+    merged.set(key, item.totalAreaM2 === undefined && previous?.totalAreaM2 != null
+      ? { ...item, totalAreaM2: previous.totalAreaM2,
+        evidence: { ...item.evidence, totalAreaRaw: previous.evidence?.totalAreaRaw } }
+      : item);
+  }
   return [...merged.values()];
 }
 

@@ -12,13 +12,14 @@ export function adincoFields(property) {
     roomsRaw: property.rooms > 0 ? String(property.rooms) : "",
     parkingRaw: property.optionalGarage ? "Cochera opcional" : counts.some(value=>Number(value)>0) ? "Con cochera" : counts.length ? "Sin cochera" : "",
     areaRaw: property.coveredArea > 0 ? `${property.coveredArea} m2 cubierta` : property.totalArea > 0 ? `${property.totalArea} m2 total` : "",
+    totalAreaRaw: property.totalArea > 0 ? `${property.totalArea} m2 total` : "",
     priceRaw: !property.hiddenPrice && currency && property.price > 0 ? `${currency} ${property.price}` : "",
     priceWithheld: !!property.hiddenPrice,
     summary: cheerio.load(property.description || "").text().replace(/\s+/g, " ").trim(), evidence: {}
   };
   const columns = { title: "title", propertyType: "type", operation: "operation", address: "address",
     city: "zp_2.name", neighborhood: "zp_3.name / address.neighborhood", roomsRaw: "rooms",
-    parkingRaw: "optionalGarage / garages / coveredGarages / semiCoveredGarages", areaRaw: "coveredArea / totalArea", priceRaw: "currencyId + price" };
+    parkingRaw: "optionalGarage / garages / coveredGarages / semiCoveredGarages", areaRaw: "coveredArea / totalArea", totalAreaRaw: "totalArea", priceRaw: "currencyId + price" };
   for (const [field, column] of Object.entries(columns)) if (fields[field]) fields.evidence[field] = { selector: `public property data: ${column}`, value: fields[field] };
   return fields;
 }

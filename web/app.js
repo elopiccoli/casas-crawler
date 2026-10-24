@@ -1,7 +1,7 @@
 import { listingHeading, listingType } from "./listing-format.js";
 import { neighborhoodFor, operationFor } from "./property-fields.js";
 import { roomOptions, matchesRooms } from "./room-filter.js";
-import { neighborhoodOptions, matchesNeighborhoods, matchesParking, matchesPropertyType } from "./listing-filters.js";
+import { neighborhoodOptions, matchesNeighborhoods, matchesParking, matchesPropertyType, totalAreaFor, matchesMinimumTotalArea } from "./listing-filters.js";
 
 const state = {
   listings: [],
@@ -15,6 +15,7 @@ const elements = {
   empty: document.querySelector("#empty"),
   search: document.querySelector("#search"),
   maxPrice: document.querySelector("#maxPrice"),
+  minTotalArea: document.querySelector("#minTotalArea"),
   neighborhoodDropdown: document.querySelector("#neighborhoodDropdown"),
   neighborhoodSummary: document.querySelector("#neighborhoodSummary"),
   neighborhoodOptions: document.querySelector("#neighborhoodOptions"),
@@ -89,6 +90,7 @@ function bindFilters() {
   for (const element of [
     elements.search,
     elements.maxPrice,
+    elements.minTotalArea,
     elements.parking,
     elements.operation,
     elements.propertyType,
@@ -180,6 +182,7 @@ function render() {
     if (operation && item.operacion !== operation && !(item.operacion === "Venta / Alquiler" && ["Venta", "Alquiler"].includes(operation))) return false;
     if (propertyType && !matchesPropertyType(item, propertyType)) return false;
     if (!matchesRooms(item, rooms)) return false;
+    if (!matchesMinimumTotalArea(item, elements.minTotalArea.value)) return false;
     if (maxPrice && Number(item.precio || 0) > maxPrice) return false;
     return true;
   });
@@ -203,7 +206,10 @@ function createListingElement(item) {
     pill(item.inmobiliaria),
     pill(item.barrio || "Barrio s/d"),
     pill(item.operacion || "Operación s/d"),
-    pill(item.metros ? `${formatNumber(item.metros)} m² ${item.superficieTipo || ""}`.trim() : "m² s/d"),
+    pill(totalAreaFor(item) ? `${formatNumber(totalAreaFor(item))} m² totales` : "m² totales s/d"),
+    ...(item.superficieTipo === "total" && totalAreaFor(item) === item.metros ? [] : [
+      pill(item.metros ? `${formatNumber(item.metros)} m² ${item.superficieTipo || ""}`.trim() : "m² s/d")
+    ]),
     pill(listingType(item))
   );
   if (item.ambientes) meta.append(pill(`${item.ambientes} amb.`));

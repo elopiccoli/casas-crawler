@@ -19,6 +19,7 @@ export async function writeListingsJson(listings, outputPath, config = {}) {
       direccion: listing.address,
       barrio: neighborhoodFor(listing),
       metros: listing.areaM2,
+      metrosTotales: listing.totalAreaM2 ?? null,
       ambientes: listing.rooms ?? null,
       cochera: listing.parking || "No informado",
       superficieTipo: listing.areaKind || "",

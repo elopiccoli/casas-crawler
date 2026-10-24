@@ -8,6 +8,7 @@ const area = /\d[\d.,]*\s*(?:m²|m2|metros)|(?:m²|m2)\s*(?:cubiert[oa]s?|totale
 // Only dedicated property elements may supply structured fields. Metadata
 // descriptions and body text are prose, even when they contain valid numbers.
 const selectors = {
+  totalAreaRaw: ["#lista_superficies li:contains('Total:')", ".ficha_detalle_item:has(b:contains('Total'))", ".caracteristicasDeFicha li:contains('Superficie Total')", ".fw-property-amenities-data:contains('Sup. total')", ".list-info-1a li:contains('Área Total')", "#Description .list-info-2 li:contains('Área Total')", "#property-detail-wrap li:contains('Totales')", "#property-detail-wrap li:contains('total')", "dl div:has(dt:contains('total'))", ".adic-chip:contains('Total')", ".mini-chip:contains('Total')"],
   parkingRaw: [".ficha_detalle_item", ".caracteristicasDeFicha li", ".fw-property-amenities-data", ".areaDetalle .list-info-1a li", "#Description .list-info-2 li", "#property-detail-wrap li", "dl div:has(dt)", ".adic-chip", ".mini-chip", ".item-garage", "[data-field='garage']"],
   roomsRaw: [".ficha_detalle_item:has(b:contains('Ambientes'))", ".caracteristicasDeFicha li:contains('Ambientes')", ".fw-property-amenities-data:contains('Ambientes')", ".list-info-1a li:contains('Ambientes')", "#Description .list-info-2 li:contains('Ambientes')", "#property-detail-wrap li:contains('Ambientes')", ".rooms", ".ambientes"],
   address: [".title-address", ".caracteristicasDeFicha li:contains('Dirección') span", "#property-address-wrap .detail-address span", "address.item-address"],
@@ -28,7 +29,7 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
   } catch { /* HTML parsers continue when an embedded payload is malformed. */ }
   const result = { evidence: {} };
   const configured = source.detailFields || {};
-  const names = { priceRaw: "price", areaRaw: "area", roomsRaw: "rooms", parkingRaw: "parking" };
+  const names = { priceRaw: "price", areaRaw: "area", totalAreaRaw: "totalArea", roomsRaw: "rooms", parkingRaw: "parking" };
   for (const [field, defaults] of Object.entries(selectors)) {
     const configuredParts = splitSelectors(configured[names[field] || field] || "");
     const candidates = source.preferConfiguredFields ? [...configuredParts, ...defaults] : [...defaults, ...configuredParts];
@@ -39,7 +40,7 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
       const elements = $(attr ? attr[1] : selector).toArray();
       const values = elements.map((element) => {
         const node = $(element).clone();
-        if (["parkingRaw", "areaRaw"].includes(field)) node.find("b,strong,dt,br").after(" ");
+        if (["parkingRaw", "areaRaw", "totalAreaRaw"].includes(field)) node.find("b,strong,dt,br").after(" ");
         if (["neighborhood", "city"].includes(field)) node.find("b,strong").remove();
         return normalizeText(attr ? $(element).attr(attr[2]) : node.text());
       }).filter(Boolean);
@@ -114,6 +115,30 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
       result.evidence.areaRaw = { selector: "Cubierta: + value", value };
     }
   }
+  if (!result.totalAreaRaw) {
+    // Exact technical labels only: never search descriptive prose for numbers.
+    for (const element of $("strong,b,dt,span,div").toArray()) {
+      const label = $(element);
+      if (label.children().length || !/^(?:(?:Superficie|Sup\.|Área|M[²2])\s*)?Total(?:es| construido)?\s*:?$/i.test(normalizeText(label.text()))) continue;
+      const container = label.parent().clone();
+      container.find("strong,b,dt").after(" ");
+      const text = normalizeText(container.text());
+      if (text.length > 100 || /cubiert|terreno|descubiert/i.test(text)) continue;
+      if (area.test(text)) {
+        result.totalAreaRaw = text;
+        result.evidence.totalAreaRaw = { selector: "exact total surface label and value", value: text };
+        break;
+      }
+    }
+  }
+  if (!result.totalAreaRaw) {
+    const label = $("li p").filter((i, e) => /^(?:(?:Superficie|Sup\.|Área)\s+)?Total(?:es| construido)?\s*:?$/i.test(normalizeText($(e).text()))).first();
+    const value = normalizeText(label.closest("ul").next("ul").text());
+    if (label.length && area.test(value)) {
+      result.totalAreaRaw = `Total: ${value}`;
+      result.evidence.totalAreaRaw = { selector: "Total: + value", value: result.totalAreaRaw };
+    }
+  }
   result.city ||= normalizeText($(".list-info-1a li:contains('Ciudad:'), #Description .list-info-2 li:contains('Ciudad:')").first().text()).replace(/^Ciudad:\s*/i, "");
   if (!result.neighborhood) {
     const description = normalizeText($(".descripcionDeFicha").first().text());
@@ -135,13 +160,14 @@ export function catalogFields(item) {
     neighborhood: item.location?.name || "", city: location.at(-2) || "",
     operation: operation.type || "", propertyType: item.property_type?.name || "",
     roomsRaw: item.room_amount ?? "",
+    totalAreaRaw: Number(item.total_surface) > 0 ? `${item.total_surface} m2 total` : "",
     parkingRaw: item.garage_amount == null ? "" : String(item.garage_amount),
-    areaRaw: Number(item.roofed_surface) > 0 ? `Cubierta: ${item.roofed_surface} m2` : Number(item.total_surface || item.surface) > 0 ? `Total: ${item.total_surface || item.surface} m2` : "",
+    areaRaw: Number(item.roofed_surface) > 0 ? `Cubierta: ${item.roofed_surface} m2` : Number(item.total_surface) > 0 ? `Total: ${item.total_surface} m2` : Number(item.surface) > 0 ? `Terreno: ${item.surface} m2` : "",
     priceRaw: item.web_price === false ? "" : operation.price ? `${operation.currency || ""} ${operation.price}` : "",
     priceWithheld: item.web_price === false,
     evidence: {}
   };
-  for (const field of ["address", "title", "neighborhood", "city", "operation", "propertyType", "areaRaw", "priceRaw", "roomsRaw", "parkingRaw"]) {
+  for (const field of ["address", "title", "neighborhood", "city", "operation", "propertyType", "areaRaw", "totalAreaRaw", "priceRaw", "roomsRaw", "parkingRaw"]) {
     result.evidence[field] = { selector: `Robles property JSON: ${field}`, value: result[field] };
   }
   return result;
@@ -152,7 +178,7 @@ function validField(field, text) {
   if (field === "summary") return text.length <= 20000;
   if (text.length > ({ address: 180, title: 200, priceRaw: 100, areaRaw: 100, neighborhood: 80, operation: 80, propertyType: 80 }[field] || 200)) return false;
   if (field === "priceRaw") return money.test(text);
-  if (field === "areaRaw") return area.test(text);
+  if (["areaRaw", "totalAreaRaw"].includes(field)) return text.length <= 100 && area.test(text);
   if (field === "roomsRaw") return parseRooms(text) != null;
   if (field === "parkingRaw") return !!parkingStatus(text, true);
   if (field === "address") return !/@|https?:|\b(venta|vende|ambientes|dormitorios|precio|descripcion|contacto|whatsapp)\b/i.test(text);

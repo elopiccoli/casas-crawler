@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Casas Mar del Plata</title>
-    <link rel="stylesheet" href="styles.css?v=20261018-filters">
+    <link rel="stylesheet" href="styles.css?v=20261024-total-area">
   </head>
   <body>
     <header class="topbar">
@@ -40,6 +40,10 @@
         <label>
           Precio máximo
           <input id="maxPrice" type="number" min="0" step="1000" placeholder="Moneda publicada">
+        </label>
+        <label>
+          Metros totales como mínimo (m²)
+          <input id="minTotalArea" type="number" min="0" step="any" placeholder="Sin mínimo">
         </label>
         <div class="rooms-filter">
           <span id="neighborhoodLabel" class="filter-label">Barrios</span>
@@ -106,6 +110,6 @@
       <p id="empty" class="empty" hidden>No hay publicaciones para esos filtros.</p>
     </main>
 
-    <script type="module" src="app.js?v=20261018-filters"></script>
+    <script type="module" src="app.js?v=20261024-total-area"></script>
   </body>
 </html>

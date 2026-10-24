@@ -391,7 +391,7 @@ function safeJsonParse(text) {
 function emptyToFallback(primary, fallback) {
   const result = {};
 
-  for (const key of ["address", "areaRaw", "roomsRaw", "parkingRaw", "priceRaw", "propertyType", "title", "summary", "rawText", "operation", "neighborhood", "city", "priceAmbiguous", "priceWithheld", "error"]) {
+  for (const key of ["address", "areaRaw", "totalAreaRaw", "roomsRaw", "parkingRaw", "priceRaw", "propertyType", "title", "summary", "rawText", "operation", "neighborhood", "city", "priceAmbiguous", "priceWithheld", "error"]) {
     result[key] = primary?.[key] || fallback?.[key] || "";
   }
   result.evidence = { ...fallback?.evidence, ...primary?.evidence };

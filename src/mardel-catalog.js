@@ -20,6 +20,7 @@ export function mardelCatalogFields(item) {
     operation: item.tipo_operacion, propertyType: item.tipo_inmueble,
     roomsRaw: rooms > 0 ? String(rooms) : "",
     parkingRaw: parking != null ? (Number(parking) > 0 ? "Con cochera" : "Sin cochera") : "",
+    totalAreaRaw: pick("sup_total") > 0 ? `${pick("sup_total")} m2 total` : "",
     areaRaw: covered > 0 ? `${covered} m2 cubierta` : land > 0 ? `${land} m2 terreno` : "",
     priceRaw: Number(item.no_publicar_precio) !== 1 && currency && Number(item.precio) > 0 ? `${currency} ${item.precio}` : "",
     priceWithheld: Number(item.no_publicar_precio) === 1,
@@ -27,7 +28,7 @@ export function mardelCatalogFields(item) {
   };
   const columns = { title: "titulo", address: "calle + numero", city: "ciudad", neighborhood: "barrio_nombre",
     operation: "tipo_operacion", propertyType: "tipo_inmueble", roomsRaw: `${prefix}_ambientes`,
-    parkingRaw: `${prefix}_cocheras`, areaRaw: `${prefix}_sup_cubierta / sup_terreno`, priceRaw: "moneda + precio" };
+    parkingRaw: `${prefix}_cocheras`, totalAreaRaw: `${prefix}_sup_total`, areaRaw: `${prefix}_sup_cubierta / sup_terreno`, priceRaw: "moneda + precio" };
   for (const [key, column] of Object.entries(columns)) if (fields[key]) {
     fields.evidence[key] = { selector: `public catalog: ${column}`, value: fields[key] };
   }

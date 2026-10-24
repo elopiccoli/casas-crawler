@@ -20,6 +20,7 @@ export function publicJsonFields(item, source) {
   if(rooms>0) put('roomsRaw',String(rooms),columns.rooms);
   if(read('parking')!=null) put('parkingRaw',typeof read('parking')==='boolean' ? read('parking')?'Con cochera':'Sin cochera' : read('parking'),columns.parking);
   if(Number(read('areaM2'))>0) put('areaRaw',`${read('areaM2')} m2 ${source.areaKind || ''}`,columns.areaM2);
+  if(Number(read('totalAreaM2'))>0) put('totalAreaRaw',`${read('totalAreaM2')} m2 total`,columns.totalAreaM2);
   if(read('priceWithheld')===true) fields.priceWithheld=true;
   if(!fields.priceWithheld && Number(read('priceAmount'))>0 && read('currency')) put('priceRaw',`${String(read('currency')).replace(/\/.*$/, '')} ${read('priceAmount')}`,`${columns.currency} + ${columns.priceAmount}`);
   return fields;

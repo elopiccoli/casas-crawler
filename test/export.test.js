@@ -15,7 +15,7 @@ test("JSON and Excel export the same normalized fields without re-reading page p
   try {
     const listing = finalizeListing("Example", "https://agency.com/casa-venta-los-troncos", {
       address: "Rawson 842", operation: "Venta", neighborhood: "Los Troncos", propertyType: "Casa",
-      priceRaw: "US$129,000", areaRaw: "Cubierta: 115.7 m²", roomsRaw: "Ambientes: 4", parkingRaw: "Cochera: 1", summary: "Cerca de Guemes, ideal alquiler", rawText: "Venta Alquiler Playa Grande"
+      priceRaw: "US$129,000", areaRaw: "Cubierta: 115.7 m²", totalAreaRaw: "Total: 150.5 m²", roomsRaw: "Ambientes: 4", parkingRaw: "Cochera: 1", summary: "Cerca de Guemes, ideal alquiler", rawText: "Venta Alquiler Playa Grande"
     });
     await writeListingsJson([listing], json);
     await writeListingsWorkbook([listing], excel);
@@ -24,12 +24,14 @@ test("JSON and Excel export the same normalized fields without re-reading page p
     assert.equal(item.barrio, "Los Troncos");
     assert.equal(item.precio, 129000);
     assert.equal(item.metros, 115.7);
+    assert.equal(item.metrosTotales, 150.5);
     assert.equal(item.ambientes, 4);
     assert.equal(item.cochera, "Sí");
     const book = new ExcelJS.Workbook();
     await book.xlsx.readFile(excel);
     const sheet = book.worksheets[0];
     const headers = sheet.getRow(1).values;
+    assert.equal(sheet.getRow(2).getCell(headers.indexOf("metros_totales")).value, item.metrosTotales);
     for (const name of ["operacion", "barrio", "precio", "moneda", "metros", "ambientes", "cochera", "tipo", "direccion"]) {
       assert.equal(sheet.getRow(2).getCell(headers.indexOf(name)).value, item[name]);
     }

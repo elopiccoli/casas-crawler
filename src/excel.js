@@ -20,6 +20,7 @@ export async function writeListingsWorkbook(listings, outputPath, options = {}) 
     { header: "ambientes", key: "rooms", width: 12 },
     { header: "cochera", key: "parking", width: 18 },
     { header: "metros", key: "areaM2", width: 12 },
+    { header: "metros_totales", key: "totalAreaM2", width: 16 },
     { header: "superficie_tipo", key: "areaKind", width: 18 },
     { header: "precio", key: "priceAmount", width: 16 },
     { header: "moneda", key: "currency", width: 10 },
@@ -44,6 +45,7 @@ export async function writeListingsWorkbook(listings, outputPath, options = {}) 
       rooms: listing.rooms ?? null,
       parking: listing.parking || "No informado",
       areaM2: listing.areaM2,
+      totalAreaM2: listing.totalAreaM2 ?? null,
       areaKind: listing.areaKind || "",
       priceAmount: listing.priceAmount,
       currency: listing.currency,
@@ -53,6 +55,7 @@ export async function writeListingsWorkbook(listings, outputPath, options = {}) 
   }
 
   sheet.getColumn("areaM2").numFmt = "#,##0.0";
+  sheet.getColumn("totalAreaM2").numFmt = "#,##0.0";
   sheet.getColumn("priceAmount").numFmt = "#,##0";
   sheet.getColumn("scrapedAt").numFmt = "yyyy-mm-dd hh:mm";
 

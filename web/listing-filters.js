@@ -1,5 +1,17 @@
 import { normalizeField, propertyTypeFor } from "./property-fields.js";
 
+export function totalAreaFor(item) {
+  const value = Number(item.metrosTotales ?? (item.superficieTipo === "total" ? item.metros : null));
+  return Number.isFinite(value) && value > 0 ? value : null;
+}
+
+export function matchesMinimumTotalArea(item, minimum) {
+  const limit = Number(minimum);
+  if (!Number.isFinite(limit) || limit <= 0) return true;
+  const total = totalAreaFor(item);
+  return total !== null && total >= limit;
+}
+
 export function neighborhoodOptions(listings) {
   const names = new Map();
   for (const item of listings) {

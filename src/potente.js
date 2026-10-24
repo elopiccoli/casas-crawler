@@ -8,9 +8,10 @@ export function potenteFields(item) {
     neighborhood:item.zona?.replace(/,\s*Mar del Plata\s*$/i,''),propertyType:item.categoria,operation:item.operacion,
     roomsRaw:item.ambientes>0?String(item.ambientes):'',parkingRaw:item.cocheras!=null?String(item.cocheras):'',
     areaRaw:item.m2cubiertos>0?`${item.m2cubiertos} m2 cubierta`:item.m2totales>0?`${item.m2totales} m2 total`:'',
+    totalAreaRaw:item.m2totales>0?`${item.m2totales} m2 total`:'',
     priceRaw:dollars!==pesos?`${dollars?'USD':'ARS'} ${dollars?item.precioUSD:item.precioARS}`:'',priceAmbiguous:dollars&&pesos,
     summary:normalizeText(item.descripcion),evidence:{}};
-  const columns={title:'titulo',address:'direccion',city:'zona + provincia',neighborhood:'zona',propertyType:'categoria',operation:'operacion',roomsRaw:'ambientes',parkingRaw:'cocheras',areaRaw:'m2cubiertos / m2totales',priceRaw:'precioUSD / precioARS'};
+  const columns={title:'titulo',address:'direccion',city:'zona + provincia',neighborhood:'zona',propertyType:'categoria',operation:'operacion',roomsRaw:'ambientes',parkingRaw:'cocheras',areaRaw:'m2cubiertos / m2totales',totalAreaRaw:'m2totales',priceRaw:'precioUSD / precioARS'};
   for(const [field,column]of Object.entries(columns))if(fields[field])fields.evidence[field]={selector:`public catalog: ${column}`,value:fields[field]};
   return fields;
 }
