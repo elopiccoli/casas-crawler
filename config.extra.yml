@@ -299,3 +299,31 @@ sources:
     enabled: true
     skipJsonLdRooms: true
     detailUrls: []
+  - name: inmobiliariavaresse.com.ar
+    website: https://inmobiliariavaresse.com.ar
+    listingSelector: a[href]
+    discoverCatalogs: true
+    publicationUrlRegex: /p/\d+|/propiedad(?:es)?/[^/?]+|propiedad-inmobiliaria\.html|(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
+    fields:
+      title: h2, h3, .property-title
+    detailFields: {}
+    pagination:
+      maxPages: 1
+    notes: Fuente agregada por URL; usa extractores generales. Puede requerir selectores específicos.
+    startUrls:
+      - https://inmobiliariavaresse.com.ar/
+    detailUrls: []
+  - name: barrerapropiedades.com
+    website: https://www.barrerapropiedades.com
+    listingSelector: a[href]
+    discoverCatalogs: true
+    publicationUrlRegex: /p/\d+|/propiedad(?:es)?/[^/?]+|propiedad-inmobiliaria\.html|(?:casa|chalet|departamento|terreno|lote)-(?:venta|alquiler)
+    fields:
+      title: h2, h3, .property-title
+    detailFields: {}
+    pagination:
+      maxPages: 1
+    notes: Fuente agregada por URL; usa extractores generales. Puede requerir selectores específicos.
+    startUrls:
+      - https://www.barrerapropiedades.com/
+    detailUrls: []
