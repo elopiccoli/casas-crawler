@@ -327,3 +327,29 @@ sources:
     startUrls:
       - https://www.barrerapropiedades.com/
     detailUrls: []
+  - name: Eduardo Ciriza
+    website: https://www.eduardociriza.com/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.eduardociriza.com/propiedad-en-alquiler.html
+      - https://www.eduardociriza.com/propiedad-en-alquiler-por-temporada.html
+      - https://www.eduardociriza.com/propiedad-en-venta.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: 'Catálogo Inmobiliática verificado: listados completos de venta, alquiler y alquiler por temporada. Se extraen los datos de la ficha principal, incluidos ambientes, cochera y superficie total.'
+    skipJsonLdRooms: true
+    detailUrls: []
