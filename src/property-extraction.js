@@ -64,6 +64,20 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
       result.evidence.city = {...result.evidence.city, value:parts[1]};
     }
   }
+  if (source.detailLabelSelector) {
+    const labels = { ambientes: "roomsRaw", cocheras: "parkingRaw", "superficie total": "totalAreaRaw", "superficie cub.": "areaRaw" };
+    for (const element of $(source.detailLabelSelector).toArray()) {
+      const label = normalizeText($(element).text()).toLowerCase();
+      const field = labels[label];
+      if (!field || result[field]) continue;
+      let value = "";
+      for (let node = element.nextSibling; node && node.type === "text"; node = node.nextSibling) value += node.data;
+      value = normalizeText(value);
+      if (!validField(field, value)) continue;
+      result[field] = field === "areaRaw" ? `Cubierta: ${value}` : field === "totalAreaRaw" ? `Total: ${value}` : value;
+      result.evidence[field] = { selector: `${source.detailLabelSelector}: ${label} + text`, value: result[field] };
+    }
+  }
   if (!result.parkingRaw) {
     const label = $("li p").filter((i, e) => /^(?:Cocheras?|Garages?|Garajes?):?$/i.test(normalizeText($(e).text()))).first();
     const value = normalizeText(label.closest("ul").next("ul").text());
@@ -73,6 +87,10 @@ export function extractPropertyFields($, source, url = "", requestedOperation = 
     }
   }
   requestedOperation ||= parseOperation(urlPath(url || $("link[rel='canonical']").attr("href")));
+  if (!parseOperation(result.operation) && requestedOperation) {
+    result.operation = requestedOperation;
+    result.evidence.operation = { selector: "operation-specific catalog", value: requestedOperation };
+  }
   if (["Venta", "Alquiler", "Alquiler temporario"].includes(requestedOperation)) {
     for (const block of $(".prop-detail-prices > p, .operations-box .operation-div").toArray()) {
       const node = $(block);
@@ -157,7 +175,8 @@ export function catalogFields(item) {
   const location = (item.location?.full_location || "").split("|").map((s) => s.trim());
   const result = {
     address: item.address || "", title: item.publication_title || "", summary: item.description || "",
-    neighborhood: item.location?.name || "", city: location.at(-2) || "",
+    neighborhood: item.location?.type === "Localidad" ? "" : item.location?.name || "",
+    city: item.location?.type === "Localidad" ? item.location.name : location.at(-2) || "",
     operation: operation.type || "", propertyType: item.property_type?.name || "",
     roomsRaw: item.room_amount ?? "",
     totalAreaRaw: Number(item.total_surface) > 0 ? `${item.total_surface} m2 total` : "",

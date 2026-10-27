@@ -353,3 +353,280 @@ sources:
     notes: 'Catálogo Inmobiliática verificado: listados completos de venta, alquiler y alquiler por temporada. Se extraen los datos de la ficha principal, incluidos ambientes, cochera y superficie total.'
     skipJsonLdRooms: true
     detailUrls: []
+  - name: Manzo Inmobiliaria
+    website: https://www.manzoinmobiliaria.com/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.manzoinmobiliaria.com/propiedad-en-alquiler.html
+      - https://www.manzoinmobiliaria.com/propiedad-en-alquiler-por-dia.html
+      - https://www.manzoinmobiliaria.com/propiedad-en-venta.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Sitio oficial Inmobiliática verificado. Catálogos completos enlazados por la inmobiliaria; campos de la ficha principal.
+    skipJsonLdRooms: true
+    detailUrls: []
+  - name: ND Propiedades - Natalia Depaoli
+    website: https://nataliadepaolipropiedades.com/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://nataliadepaolipropiedades.com/propiedad-en-alquiler.html
+      - https://nataliadepaolipropiedades.com/propiedad-en-alquiler-por-temporada.html
+      - https://nataliadepaolipropiedades.com/propiedad-en-venta.html
+      - https://nataliadepaolipropiedades.com/propiedad-en-alquiler-para-estudiantes.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Sitio oficial Inmobiliática verificado. Catálogos completos enlazados por la inmobiliaria; campos de la ficha principal.
+    skipJsonLdRooms: true
+    detailUrls: []
+  - name: Fernanda Artuso Propiedades
+    website: https://www.fernandaartuso.com/
+    enabled: true
+    pagination:
+      maxPages: 1
+    listingSelector: a[href]
+    preferConfiguredFields: true
+    startUrls:
+      - https://www.fernandaartuso.com/propiedad-en-alquiler.html
+      - https://www.fernandaartuso.com/propiedad-en-alquiler-por-temporada.html
+      - https://www.fernandaartuso.com/propiedad-en-alquiler-por-dia.html
+      - https://www.fernandaartuso.com/propiedad-en-venta.html
+    publicationUrlRegex: (?:casa---chalet|chalet|casa|departamento|terreno|lote)-(?:venta|alquiler).*propiedad-inmobiliaria\.html
+    detailFields:
+      title: h1.tituloDeFicha
+      address: .caracteristicasDeFicha li:contains(Dirección) span
+      city: meta[property='og:title']::attr(content)
+      neighborhood: .caracteristicasDeFicha li:contains('Zona:') span
+      price: .caracteristicasDeFicha li:contains(Valor) span
+      propertyType: .caracteristicasDeFicha li:has(strong:contains('Tipo:')) span, h1.tituloDeFicha
+      area: .caracteristicasDeFicha li:contains(Superficie Cubierta), .caracteristicasDeFicha li:contains(Superficie Total)
+      rooms: .caracteristicasDeFicha li:contains(Ambientes) span
+      parking: .caracteristicasDeFicha li:contains(Cochera) span
+      summary: .descripcionDeFicha
+    notes: Sitio oficial Inmobiliática verificado. Catálogos completos enlazados por la inmobiliaria; campos de la ficha principal.
+    skipJsonLdRooms: true
+    detailUrls: []
+  - name: VQL Real Estate
+    startUrls:
+      - https://www.vqlpropiedades.ar/Alquiler
+      - https://www.vqlpropiedades.ar/Venta
+      - https://www.vqlpropiedades.ar/Alquiler-temporario
+    pagination:
+      maxPages: 30
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields: {}
+    detailFields:
+      title: .single_property_title h2, meta[property="og:title"]::attr(content)
+      city: .slider-thumb::attr(alt), .single_property_title p, meta[property="og:title"]::attr(content)
+      address: .title-address
+      area: '.ficha_detalle_item:has(b:contains("Superficie cubierta")), #lista_superficies li:contains("Cubierta:"), .ficha_detalle_item:has(b:contains("Total construido"))'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: '#lista_informacion_basica li:contains(Ambientes), .ficha_detalle_item:has(b:contains("Ambientes"))'
+      parking: '#lista_informacion_basica li:contains(Cocheras)'
+    preferConfiguredFields: true
+    notes: Sitio oficial Tokko verificado. Venta y alquiler; se mantiene la ciudad del inmueble y los campos de su propia ficha.
+    website: https://www.vqlpropiedades.ar/
+    enabled: true
+    skipJsonLdRooms: true
+    detailUrls: []
+  - name: Etchegaray Estudio Inmobiliario
+    startUrls:
+      - https://www.inmobiliariaetchegaray.com.ar/Alquiler
+      - https://www.inmobiliariaetchegaray.com.ar/Venta
+      - https://www.inmobiliariaetchegaray.com.ar/Alquiler-temporario
+    pagination:
+      maxPages: 30
+      pageParam: p
+      firstPage: 2
+      params:
+        o: 2,2
+    listingSelector: a[href^="/p/"]
+    publicationUrlRegex: /p/
+    fields: {}
+    detailFields:
+      title: .single_property_title h2, meta[property="og:title"]::attr(content)
+      city: .slider-thumb::attr(alt), .single_property_title p, meta[property="og:title"]::attr(content)
+      address: .title-address
+      area: '.ficha_detalle_item:has(b:contains("Superficie cubierta")), #lista_superficies li:contains("Cubierta:"), .ficha_detalle_item:has(b:contains("Total construido"))'
+      propertyType: .ficha_detalle_item:has(b:contains("Tipo de Propiedad"))
+      rooms: '#lista_informacion_basica li:contains(Ambientes), .ficha_detalle_item:has(b:contains("Ambientes"))'
+      parking: '#lista_informacion_basica li:contains(Cocheras)'
+    preferConfiguredFields: true
+    notes: Sitio oficial Tokko verificado. Venta y alquiler; se mantiene la ciudad del inmueble y los campos de su propia ficha.
+    website: https://www.inmobiliariaetchegaray.com.ar/
+    enabled: true
+    skipJsonLdRooms: true
+    detailUrls: []
+    request:
+      delayMs: 2500
+  - name: Analía Daconte Inversiones Inmobiliarias
+    website: https://www.analiadaconte.com.ar/
+    enabled: true
+    startUrls:
+      - https://www.analiadaconte.com.ar/listing?user_id=941&purpose=sale
+      - https://www.analiadaconte.com.ar/listing?user_id=941&purpose=rent
+      - https://www.analiadaconte.com.ar/listing?user_id=941&purpose=temporary_rental
+    listingSelector: a[href]
+    publicationUrlRegex: /ad/[^/?#]+
+    operationQueryParam: purpose
+    operationQueryValues:
+      sale: Venta
+      rent: Alquiler
+      temporary_rental: Alquiler temporario
+    pagination:
+      maxPages: 40
+      nextSelector: a[rel="next"]
+    preferConfiguredFields: true
+    detailFields:
+      title: .icon_default h5
+      address: .icon_default p
+      city: .icon_default p
+      price: .property-price .sale
+      propertyType: .property-price .amount
+      operation: .sale > div
+      rooms: .btn-group button:contains("Ambientes") .number
+      area: .btn-group button:contains("Cubiertos")
+      totalArea: .btn-group button:contains("Totales")
+      summary: .pro_det:has(h4:contains("Descripción"))
+    notes: Sitio oficial Pixel Inmobiliario verificado. Operación tomada de cada catálogo; ambientes y superficies de sus campos dedicados.
+  - name: Villaverde Propiedades
+    website: https://www.villaverdeinmo.com/
+    enabled: true
+    startUrls:
+      - https://www.villaverdeinmo.com/listing?user_id=361&purpose=sale
+      - https://www.villaverdeinmo.com/listing?user_id=361&purpose=rent
+      - https://www.villaverdeinmo.com/listing?user_id=361&purpose=temporary_rental
+    listingSelector: a[href]
+    publicationUrlRegex: /ad/[^/?#]+
+    operationQueryParam: purpose
+    operationQueryValues:
+      sale: Venta
+      rent: Alquiler
+      temporary_rental: Alquiler temporario
+    pagination:
+      maxPages: 40
+      nextSelector: a[rel="next"]
+    preferConfiguredFields: true
+    detailFields:
+      title: .icon_default h5
+      address: .icon_default p
+      city: .icon_default p
+      price: .property-price .sale
+      propertyType: .property-price .amount
+      operation: .sale > div
+      rooms: .btn-group button:contains("Ambientes") .number
+      area: .btn-group button:contains("Cubiertos")
+      totalArea: .btn-group button:contains("Totales")
+      summary: .pro_det:has(h4:contains("Descripción"))
+    notes: Sitio oficial Pixel Inmobiliario verificado. Operación tomada de cada catálogo; ambientes y superficies de sus campos dedicados.
+  - name: Rodríguez-Amigo Negocios Inmobiliarios
+    website: https://rodriguezamigo.com/
+    enabled: true
+    startUrls:
+      - https://rodriguezamigo.com/s/ventas
+      - https://rodriguezamigo.com/s/alquileres
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:[^/?]+)-(?:venta|alquiler)-[^/?]+/\d+
+    pagination:
+      maxPages: 30
+      nextSelector: .pagination a.page-link:contains("Siguiente")
+    preferConfiguredFields: true
+    detailFields:
+      title: h1.title
+      city: .area-description .list-info-2 li:contains("Ciudad:")
+      price: .area-description .blq_precio span
+      propertyType: .area-description .list-info-2 li:contains("Tipo de inmueble:")
+      rooms: .area-description .list-info-2 li:contains("Ambientes:")
+      parking: .area-description .list-info-2 li:contains("Garaje:")
+      summary: .area-description article
+      operation: .area-description .list-info-2 li:contains("Tipo de negocio:")
+      area: .area-description .list-info-2 li:contains("Área Construida:"), .area-description .list-info-2 li:contains("Área Terreno:")
+    skipJsonLdRooms: true
+    notes: Sitio oficial Wasi verificado. Catálogos de venta y alquiler; no se confunden dormitorios con ambientes.
+  - name: Sauce Propiedades
+    website: https://www.saucepropiedades.com/
+    enabled: true
+    startUrls:
+      - https://www.saucepropiedades.com/ventas
+      - https://www.saucepropiedades.com/alquileres
+    listingSelector: a[href]
+    publicationUrlRegex: /(?:venta|alquiler)/[^/?]+/\d+
+    pagination:
+      maxPages: 30
+      nextSelector: .ClipPaginador a.next
+    detailLabelSelector: .resumen > span
+    preferConfiguredFields: true
+    detailFields:
+      title: .col_principal h1
+      city: .ClipUbicacion span
+      price: .col_principal .precio
+      propertyType: .col_principal .categoria
+      summary: .descricion
+    notes: Sitio oficial verificado. Superficies, ambientes y cocheras se leen del resumen técnico; el guion se conserva como dato desconocido.
+  - name: Moccia Inmobiliaria
+    website: https://mocciainmobiliaria.com.ar/
+    enabled: true
+    startUrls:
+      - https://mocciainmobiliaria.com.ar/etiquetas/mar-del-plata
+    listingSelector: a[href]
+    publicationUrlRegex: /propiedades/[^/?#]+
+    pagination:
+      maxPages: 30
+      nextSelector: a.next.page-numbers
+    preferConfiguredFields: true
+    detailFields:
+      title: h1.entry-title
+      address: '#cp_street .listing-custom-field-value'
+      city: '#cp_city .listing-custom-field-value'
+      propertyType: .entry-category a
+      operation: .trail-items a[href*="/categorias/ventas"], .trail-items a[href*="/categorias/alquileres"]
+      rooms: '#cp_ambientes .listing-custom-field-value'
+      price: .cp_price
+      summary: .widget_cp_widget_listing_description
+    notes: Sitio oficial de Moccia en Santa Clara del Mar con propiedades en Mar del Plata. Se mantiene el filtro geográfico por localidad de la ficha.
+  - name: Beber Negocios Inmobiliarios
+    website: https://www.beberinmobiliariacentro.com.ar/
+    enabled: true
+    format: tokkoPublicCatalog
+    catalogUrl: https://api.mediacore.app/api/owner/tokko-propiedades/search/?client=48
+    catalogRequest:
+      method: POST
+      body: {}
+    propertyPath: /tokko/{id}
+    pagination:
+      maxPages: 10
+    startUrls:
+      - https://www.beberinmobiliariacentro.com.ar/busqueda/
+    notes: Catálogo público de la propia web (MediaCore/Tokko), consulta de búsqueda sin credenciales. Se conservan las operaciones, precios y medidas informadas por propiedad.

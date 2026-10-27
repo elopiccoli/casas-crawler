@@ -31,6 +31,31 @@ export async function crawlSources(config, options = {}) {
 
 async function crawlSource(source, requestConfig, globalFilters, logger) {
   if (source.format === "potenteCatalog") return crawlPotente(source,requestConfig,globalFilters);
+  if (source.format === "tokkoPublicCatalog") {
+    const listings = [];
+    const pageSize = 1000;
+    for (let page = 0; page < (source.pagination?.maxPages || 10); page++) {
+      const url = new URL(source.catalogUrl);
+      url.searchParams.set("limit", String(pageSize));
+      url.searchParams.set("offset", String(page * pageSize));
+      const payload = await fetchJson(url.href, requestConfig, source.catalogRequest);
+      if (!Array.isArray(payload.objects)) throw new Error("El catálogo público no devolvió propiedades válidas");
+      for (const item of payload.objects) {
+        if (!item.id || !item.publication_title || !item.type?.name) continue;
+        for (const operation of item.operations || []) {
+          const fields = catalogFields({ ...item, property_type: item.type, garage_amount: item.parking_lot_amount,
+            operations: [{ type: operation.operation_type, ...operation.prices?.[0] }] });
+          const propertyUrl = publicJsonUrl(item, source);
+          if (!propertyUrl) continue;
+          const listing = finalizeListing(source.name, propertyUrl, fields);
+          if (matchesFilters(listing, mergeFilters(globalFilters, source.filters || {}))) listings.push(listing);
+        }
+      }
+      if (payload.objects.length < pageSize || (page + 1) * pageSize >= Number(payload.meta?.total_count)) break;
+      await sleep(requestConfig.delayMs || 1000);
+    }
+    return listings;
+  }
   if (source.format === "publicJsonCatalog") {
     const payload = await fetchJson(source.catalogUrl, requestConfig);
     const items = source.itemsPath ? jsonValue(payload, source.itemsPath) : payload;
@@ -61,7 +86,8 @@ async function crawlSource(source, requestConfig, globalFilters, logger) {
   const startUrls = [...(source.startUrls || [])];
   for (const startUrl of startUrls) {
     const start = new URL(startUrl);
-    const requestedOperation = parseOperation(start.searchParams.get("operacion") || urlPath(startUrl));
+    const queryOperation = source.operationQueryValues?.[start.searchParams.get(source.operationQueryParam)];
+    const requestedOperation = queryOperation || parseOperation(start.searchParams.get("operacion") || urlPath(startUrl));
     let pageUrl = startUrl;
     let pageCount = 0;
     const maxPages = source.pagination?.maxPages || 1;
@@ -295,16 +321,19 @@ async function fetchHtml(url, requestConfig, listingRequest) {
   }
 }
 
-async function fetchJson(url, requestConfig) {
+async function fetchJson(url, requestConfig, catalogRequest) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), requestConfig.timeoutMs || 20000);
 
   try {
     const response = await fetch(url, {
       signal: controller.signal,
+      method: catalogRequest?.method || "GET",
+      ...(catalogRequest?.method === "POST" ? { body: JSON.stringify(catalogRequest.body || {}) } : {}),
       headers: {
         "user-agent": requestConfig.userAgent || "Mozilla/5.0 (compatible; CasasCrawler/0.1)",
-        "accept": "application/json,text/plain,*/*"
+        "accept": "application/json,text/plain,*/*",
+        ...(catalogRequest?.method === "POST" ? { "content-type": "application/json" } : {})
       }
     });
 

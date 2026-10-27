@@ -9,7 +9,7 @@ export function urlPath(value) {
 
 export function parseOperation(value) {
   const text = normalizeField(value);
-  const sale = /\b(venta|vende|comprar|for sale)\b/.test(text);
+  const sale = /\b(venta|ventas|vende|comprar|for sale)\b/.test(text);
   const rent = /\b(alquiler|alquila|alquilar|alquileres|for rent)\b/.test(text);
   if (sale && rent) return "Venta / Alquiler";
   if (sale) return "Venta";

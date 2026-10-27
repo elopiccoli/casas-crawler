@@ -115,7 +115,7 @@ export function matchesFilters(listing, filters = {}) {
     return false;
   }
 
-  if (filters.city && !text.includes(normalizeForSearch(filters.city))) {
+  if (filters.city && !normalizeForSearch(listing.city || text).includes(normalizeForSearch(filters.city))) {
     return false;
   }
 
